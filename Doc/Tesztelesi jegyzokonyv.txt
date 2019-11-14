@@ -1,0 +1,64 @@
+Alkalmazások fejlesztése és tervezése, Projekt labor I. projekt feladat
+
+	Tesztelési jegyzõkönyv
+
+ 1. Tesztelésekben résztvevõk meghatározása
+
+	Tesztcsapatban tevékenykedõ személyek:
+		
+		Tüzes Balázs (projekt manager és fejlesztõ)
+		Tüzes Dániel (projekt manager és fejlesztõ)
+		Tóth Zsolt (projekt manager és fejlesztõ)
+
+ 2. Jegyzõkönyvi jegyzetek
+
+
+
+	2018.12.10.: Regisztrációs folyamat tesztelése
+
+	- Reg_insert(): Futási idõ internetkapcsolattól és az adatbázis válaszidejétõl nagyban függ.
+			Hibakezelés megfelelõ. Kis teljesítményigény.
+			Azonos név esetén megfelelõ kivételkezelés.
+
+	
+	2018.12.10.: Employee_page.java modul tesztek
+	
+	- betolt(): Futási ideje internetkapcsolattól és az adatbázis válaszidejétõl nagyban függ.
+		    Hibafaktor rendkívül kicsi. Kis teljesítményigény.
+		    Esetleges problémát az adatbázis hibája okozhat a használat során.
+
+	- Button_modositasActionPerformed() "betöltött dolgozó adatait módosító eseménykezelõ metódus":
+		
+		Futási ideje internetkapcsolattól és az adatbázis válaszidejétõl nagyban függ.
+		Hibafaktor a nem megfelelõ adatokból kifolyólag fordulhat elõ, ezt a kivételkezelõ megfelelõen korrigálja. 
+  		Kis teljesítményigény.
+		Esetleges problémát az adatbázis hibája okozhat a használat során.
+
+
+	2018.12.11.: Employee_list.java modul tesztek
+			
+	- formWindowOpened(java.awt.event.WindowEvent evt) "form ablak megnyitását követõen lefutó eseménykód":
+		
+		Sebessége a bejelentkezésre használt adatbáziskapcsolat miatt gyors. Adatok megfelelõen jelennek meg.
+		Formai változtatás javasolt az elrendezettebb kinézet miatt.
+		Fontos!: Adatmódosítás során a lista nem frissül, így az esetlegesen törölt rekordok is látszódhatnak a listában.
+		
+	- jList1MouseClicked(java.awt.event.MouseEvent evt) "lista elemek kattintásra lefutó eseménykezelõ kód":
+
+		Mûködés minden szempontból tökéletes. refaktorálás szempontjából a késõbbiekben a mûkõdés újraírása javasolt.
+
+
+	2018.12.12.: Database.java modul teszt
+
+	- dolgozo_insert() "új dolgozo objektum adatainak felvitele a form textbox tartalmai alapján"
+
+		Tesztelés során a hibás értékek megadása során nem megfelelõen tájékoztatja a program a felhasználót.
+		Javasolt egy MessageBox-ban megjeleníteni a hibaüzenetet. Sikeres validálás esetén a folyamat megfelelõen fut.
+		Sikeres felvitel esetén a felhasználó egy párbeszédablakban tájékoztatva van az állapotról.
+		
+	- connect() "Adatbáziskapcsolatot létesítõ metódus"
+
+		Kapcsolat létrehozása minden teszteset alatt megfelelõ volt. A kiszolgáló aktuális terheltségétõl,
+		valamint az internetkapcsolattól nagyban függ a sebessége.
+		Javasolt a késõbbiekben POSTGRESql vagy saját MySql adatbázis használata biztonságosabb kapcsolati forrással.
+		

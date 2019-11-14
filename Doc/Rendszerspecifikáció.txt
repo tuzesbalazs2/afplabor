@@ -1,0 +1,106 @@
+﻿Alkalmazások fejlesztése és tervezése, Projekt labor I. projekt feladat
+Rendszerspecifikáció
+
+███1. Áttekintés
+
+	Egyetemi gyakorlati órára fejlesztünk projektet. 
+	A projektet be kell mutatni.
+	Az alkalmazás célja, hogy a projektfejlesztési folyamatot gyakoroljuk, dokumentálás és csapatban dolgozás főképpen.
+
+
+
+███2.A projekt alatt fejlesztett szoftver követelményei
+
+-Dolgozók adatainak felvitele:
+	Az Employee_list-en a felvitel gombbal az Employee_add.java jön be, ahol teljesen új dolgozókat lehet felvinni az adatbázisba, az egyes helyekre beírt adatokkal. Az itteni felvitel gombra kattintva lesz az adartbázishoz hozzáadva az új rekord, az adatbázis objektum példány dolgozo_insert metódus bevitt adatokkal való meghívásával. A kép szövegű objektum alatti feltöltés gombbal lehetne képet feltölteni.
+
+- Dolgozók adatainak tárolása
+
+- Dolgozók adatainak módosítása
+	A lista elemekre való kattintáskor bejön az Employee_page.java, aminek átadódik a public static index változó értéke, ami az éppen általunk kiválasztott dolgozó indexe a sorban, ami alapján a megfelelő dolgozó adatait fogja kilistázni az oldalra. Itt a kiválasztott dolgozó adatai lesznek módosítható módon, szövegdobozokban felsorolva, címkékkel ellátva, amik elmagyarázzák hogy mik is azok. Az itt felül lévő módosítás gombbal lehet a beírt módosításokat felvinni az adatbázisba az eredeti adatok helyére.
+	A gomb megnyomásakor egy felugró üzenet jelzi, hogy az adatok az adatbázisban sikeresen módosításra kerültek-e vagy sem.
+
+- A tárolt adatok: Név, Szül.év, fizetés, Lakcím
+
+- Profilkép feltöltésének lehetősége.
+
+- Dokumentum exportálás adatokból PDF-be vagy bármilyen formátumba (word).
+	Az Export_PDf.java-ban a PDFben exportáláshoz szükséges kód van.
+	Az Employee_page-ben export gombra PDF formátumban kiexportálná az adatlapot. A kép szövegű objektum helyén az adott dolgozóhoz az adatbázisba felvitt kép jelenne meg. A kép alatt levő módosítás gombbal lehetne a képet módosítani.
+
+- Bejelentkezési funkció
+	MainPage.java-n név és jelszó mezők amikbe be lehet írni a nevet és jelszót, amiket majd a bejelentkezéshez összehasonlít a program az adatbázisban lévőkkel. A jelszó mezőben a karakterek el vannak rejtve. A bejelentkezés gomb megnyomásával meghívódik a Database.java-ban definiált connect metódusa az adatbázis objektum példányának ami csatlakozik az adatbázishoz, és az ugyanitt definiált login metódus, ami az összehasonlítást végzi. A sikertelen bejelentkezést egy felugró üzenet jelzi.
+
+- A kinézete az előzetesen elkészített Mockupra épüljön.
+	Az ablakok háttere zöld színű, a kilépés gombok pirosak, a fejléc szövegek háttere fekete és a szövegük fehér, az elemek mérete és elrendezése, száma, helyzete, akár funkciója, és az egész, nagyban hasonlít a Pencil nevű programban előzetesen megcsinált „mockup” kinézet kivitelezéséhez.
+
+- Új felhasználó regisztrálásának lehetősége.
+	A Regisztráció gomb megnyomására a Registration.java jön be, ahol új felhasználót lehet felvinni az adatbázisba, az oda beírt névvel és kétszer beírt jelszóval. Ez a Kész gomb megnyomásával történik, ami meghívja az adatbázis objektum példány reg_insert metódusát a szövegdobozokból kinyert adatokkal. A program egy felugró üzenettel jelzi, hogy a regisztráció sikeres volt-e vagy sem. Ezután  az adatbázis objektum példány close() metódusát meghívva lezárja az adatbázissal létrejött kapcsolatot, mivel ezzel még nem jelentkeztünk be.
+	Sikeres Bejelentkezés után az Employee_list.java jön be, ahol az adatbázisban lévő dolgozók és adataik lesznek  kilistázva, az.ablak megnyílásakor elinduló MySQL lekérdezés segítségével, aminek a visszatérési eredmény értékei vannak hozzáadva soronként a listához.
+
+- Programból kilépés és ablakok bezárásának lehetősége.
+	A kilépés gombra való kattintással bezáródik az éppen aktuális ablak, a program nyitva marad és nem kell újra bejelentkezni. A piros X gombra való kattintással is hasonló eredményt lehet elérni, de ha a MainPage.java bezáródik akkor az egész program leáll.
+
+- Dolgozók adatainak listaszerű és átlátható megjelenítése.
+
+
+███3. programnyelvi követelmények
+
+- A feladat meghatározottan JAVA nyelven fog készülni
+	NetBeans nevű java fejlesztői környezetben készült a program.
+
+- mögötte pedig egy ingyenesen elérehtő MySQL adatbázis fog működni az adatok tárolásához.
+	Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor címen. Az adatok itt vannak tárolva és innen vannak kiolvasva.
+
+- A teljes projekt objektum-orientáltan lesz elkészítve, a kód további egyszerű fejlesztése érdekében.
+	A külön oldalai a programnak mind külön fájlban vannak, és azon belül külön Classban, amik külön objektumokat képviselnek. Azokon belül az összes külön eleme az oldalaknak objektumokkal vannak megoldva. A Dolgozo.java-ban az adatbázisban szereplő dolgozók lennének objektumként megadva.
+
+- A működéshez szükséges interneten elérhető java Library-k beszerzése és projekthez adása.
+	A Libraries mappában a PDFben exportáláshoz szükséges pdfbox library, a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
+
+███5. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása.
+
+A rendszert a készítők szellemi tulajdona, tulajdoni jog végi, a jogtalan felhasználást és lopást a törvény bünteti. Megmásítani tilos jogtalanul, rendeletek is kimondják hogy jogtalanul tilos használni is.
+A rendszer a Java programnyelvi szabványt használja, és a MySQL adatbázis szabványt ami relációs adatbáiz szabvány. Ajánljuk a felhasználóknak a programokt.
+
+███6. Fogalomszótár
+
+
+
+
+███7. Nemfunkcionális követelmények 
+-helyesség
+	- A program helyesen működjön, az elvárt és megfogalmazott módokon.
+	A program helyesen működik, el tudja végezni ami elvárt.
+-használhatóság
+	- A program ne fagyjon be (könnyen), a hibákat lekezelje.
+	A projektben lévő potenciálisan futtatásra kerülő kódrészek try-catch blokkokba vannak ágyazva, hogy az esetleges hibákat lekezelje, és  a program ne fagyjon be, és ne produkáljon nemkívánatos tevékenységeket.
+	- Használni lehessen windows 7 től Windows 10 en, Asztali számítógépen.
+	Használni lehet windows 7 től 10 en, asztali számítógépen bővebben a tesztelésnél.
+-megbízhatóság
+	- A program megbízhatóan működjön, minden időben amikor kell.
+	A program elindításra elindul és folyamatosan tud működni amikor kell.
+-adaptálhatóság / hordozhatóság
+	- A programnak működnie kell adathordozókra való feltevés után, akár interneten való elküldés után.
+	A program működik hordozás utánh, például GITről le pullolás után, e-mailben elküldés után.
+-karbantarthatóság
+	- Program hibáknál, vagy esetleges félreműködéseknél könnyen javíthatónak kell lennie.
+	A Program hibáknál a netbeans fejlesztői környezetben könnyen ki lehet javítani a hibákat, a kód átlátható, az online adatbázis hibái nem a program készítőinek felelőssége.
+-hatékonyság / magas teljesítmény
+	- A programnak hatékonynak kelll lennie, gyorsnak, és kevés erőforrást kell használnia.
+	A program gyorsanfut, az egyetlen lassú rész amikor az online adatbázishoz kell kapcsolódni, ez nem a program készítőinek felelőssége. a program kevés erőforrást igényel,  a hatékonysága csak mininmálisan lehetne jobb egyáltalán.
+-hibatűrés / robosztusság
+	- Ha a programban hiba merülne fel, akkor azt jól kell hogy kezelje.
+	A program tökéletesen jól lekezeli a hibákat, try-catch blokkban van minden, felugró üzenetek is vannak rájuk.
+-bővíthetőség / flexibilitás
+	- A programnak nem kell bővíthetőnek lennie, úgy lesz használva ahogy van.
+	Nem is bővíthető, legfeljebb a forrással.
+-újrahasznosíthatóság
+	- A programnak nem feltétlenül csak dolgozókat kell tárolnia, könnyen megváltoztathatónak kell lennie.
+	Ha a forrást odaadjuk akkor simán megváltoztatható, egy programozót fogadjanak fel erre.
+-kompatibilitás
+	- A programnak kompatibilisnek kell lennie más jáva programokkal potenciálisan.
+	A program sima Java nyelven készült, egy programozó kompatibilissé tudná tenni akkár más programokkal vagy adatbázisokkal is.
+-könnyen megvásárolható vagy letölthető
+	- A program legyen könnyen terjeszthető.
+	A program kevés lemezterületet foglal, könnyen terjeszthető, eladható, korlátozva nincsen.

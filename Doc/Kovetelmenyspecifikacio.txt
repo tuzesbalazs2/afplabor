@@ -1,0 +1,98 @@
+﻿Alkalmazások fejlesztése és tervezése, Projekt labor I. projekt feladat
+
+Követelményspecifikáció 
+
+
+	1. Kiindulási helyzet
+
+
+Egyetemi gyakorlati órán felkértek bennünket egy közös projekt elkészítésére saját választásunk alapján.
+Csapatunk egy kisebb (vagy akár nagyobb) cég dolgozóinak alapszintű adatait tárolja a cég informálódása, és működőképessége érdekében.
+
+
+	2. A projekt alatt fejlesztett szoftver követelményei
+
+
+Feladatai:
+	
+		- Dolgozók adatainak felvitele, tárolása, módosítása, törlése.
+		- A tárolt adatok: Név, Szül.év, fizetés, Lakcím
+		- Profilkép feltöltésének lehetősége.
+		- Dokumentum exportálás adatokból PDF-be vagy bármilyen formátumba (word).
+		- Bejelentkezési funkció
+		- A kinézete az előzetesen elkészített Mockupra épüljön.
+		- Új felhasználó regisztrálásának lehetősége.
+		- Programból kilépés és ablakok bezárásának lehetősége.
+		- Dolgozók adatainak listaszerű és átlátható megjelenítése.
+
+
+	3. programnyelvi követelmények
+
+
+A feladat meghatározottan JAVA nyelven fog készülni, mögötte pedig egy ingyenesen elérehtő MySQL adatbázis fog működni
+az adatok tárolásához.
+A teljes projekt objektum-orientáltan lesz elkészítve, a kód további egyszerű fejlesztése érdekében.
+A működéshez szükséges interneten elérhető java Library-k beszerzése és projekthez adása.
+
+
+
+	4. A projekt határideje
+
+
+A projekt legvégső határidejére egyelőre nincs meghatározott időpont.
+
+Változás: lehetséges bemutatási időpontok:	- Dec 7. Délután
+
+Változás: lehetséges bemutatási időpontok:	- Dec 14. Délután
+
+
+	5. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása.
+
+A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint megrendelő használjuk fel csak legálisan a programot.
+
+	6. Fogalomszótár
+
+	projekt - annak a programnak és a hozzá tartozó dokumentációnak az elkészítése amiről szó van
+	követelmény - amit majd teljesíteni kell
+	Dolgozó - olyan személyek akikhez tartozó adatokat tárolni kell majd
+	adat - tulajdonsága a dolgozóknak amiket külön feldolgozható módon tárolni és elérni kell
+  	Program - a kód ami egy adott programozási nyelven leszt megírva
+	Dokumentum exportál - kimenteni az adatokat egy különböző formátumba
+	határidő - ameddigre készen kell lenni a projekktel
+	tárolás - meghatározatlan időre elmenteni és elérhetővé tenni adatokat
+	feltöltés - a tárplóhelyre való dinamikus eltárolás
+	Bejelentkezés - egy felhasználó kilétének igazolása
+	felhasználó - egy szeemély aki majd a programot használja
+	használás - csinálni vele dolgokat amikre meg lett csinálnva
+
+
+
+	7. Nemfunkcionális követelmények 
+		-helyesség
+			A program helyesen működjön, az elvárt és megfogalmazott módokon.
+		-használhatóság
+			A program ne fagyjon be (könnyen), a hibákat lekezelje.
+			Használni lehessen windows 7 től Windows 10 en, Asztali számítógépen.
+		-megbízhatóság
+			A program megbízhatóan működjön, minden időben amikor kell.
+		-adaptálhatóság / hordozhatóság
+			A programnak működnie kell adathordozókra való feltevés után, akár interneten való elküldés után.
+		-karbantarthatóság
+			Program hibáknál, vagy esetleges félreműködéseknél könnyen javíthatónak kell lennie.
+		-hatékonyság / magas teljesítmény
+			A programnak hatékonynak kelll lennie, gyorsnak, és kevés erőforrást kell használnia.
+		-hibatűrés / robosztusság
+			Ha a programban hiba merülne fel, akkor azt jól kell hogy kezelje.
+		-bővíthetőség / flexibilitás
+			A programnak nem kell bővíthetőnek lennie, úgy lesz használva ahogy van.
+		-újrahasznosíthatóság
+			A programnak nem feltétlenül csak dolgozókat kell tárolnia, könnyen megváltoztathatónak kell lennie.
+		-kompatibilitás
+			A programnak kompatibilisnek kell lennie más Java programokkal potenciálisan.
+		-könnyen megvásárolható vagy letölthető
+			A program legyen könnyen terjeszthető.
+
+	8. Használati esetek.:
+		Zsiga megnyitja a programot, azután bejelentkezik és a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
+	módosítani is tudja azokat Zsiga, hogyha arkarja. Felvinni is tud új dolgozót az új dolgozó felvitele funkcióval. Ha már befejezte a munkáját,
+	akkor egyszerűen ki tud lépni és örül annak, hogy egy ilyen könnyen kezelhető programot használ.

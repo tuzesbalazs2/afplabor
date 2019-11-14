@@ -1,0 +1,70 @@
+Alkalmazások fejlesztése és tervezése, Projekt labor I. projekt feladat
+
+Tesztelési terv
+
+
+ 1. Tesztelési terv hatóköre, célja 
+
+A tesztelési terv célja a tesztelés teljes körûségének biztosítása, a tesztelés során alkalmazott eljárások és megoldások meghatározásával.
+
+A teszt végrehajtásáért a projekten dolgozó csapat felel hajtja végre a meghatározott módokon.
+
+
+ 2.  A tesztelési terv elvárásai
+
+Az alábbi alap elvárások képezik ennek a teszttervnek az alapját:
+
+	Az olvasó ismeri az alapdokumentumokat, amelyek meghatározzák a rendszert. 
+	A projektcsapat felelõs a tesztadatok elõállításáért.  
+	A tesztprogram az ebben a dokumentumban meghatározott tesztterv alapján fut.
+
+ 3. Tesztcsapat meghatározása
+
+	Tesztcsapatban tevékenykedõ személyek:
+		
+		Tüzes Balázs (projekt manager és fejlesztõ)
+		Tüzes Dániel (projekt manager és fejlesztõ)
+		Tóth Zsolt (projekt manager és fejlesztõ)
+
+ 4. A Tesztelési jegyzõkönyben található tesztek fajtái
+
+	Az alábbi teszttípusok jelenneg meg a tervezetben:
+		
+		Fejlesztõi teszt: 
+
+		A fejlesztõi tesztelés célja a rendszer alapvetõ funkcióinak ellenõrzése,
+		a hibakezelés és az alapvetõ funkciók mûködésének vizsgálata. 
+		
+		Prototípus (modul) teszt: 
+
+		A prototípustesztelés (vagy másik nevén modultesztelés) célja a rendszer már mûködõ moduljainak
+		önálló tesztelése, a modulon belüli hibák azonosításának és kiküszöbölésének érdekében.
+		
+		Elfogadási teszt: 
+
+		Az integrációs teszt célja a rendszer más rendszerekhez történõ illesztésének vizsgálata,
+ 		a több rendszereken keresztül átívelõ funkciók tesztelésének érdekében. 
+		Az adatmigrációs tesztelés az integrációs teszteléshez tartozik,
+   		ennek lényege, hogy a bevezetendõ rendszerbe áttöltik azokat az adatokat,
+		amelyekkel a rendszer dolgozni fog és letesztelik a betöltött adatok,
+ 		illetve az adatokat kezelõ funkciók helyességét.
+		
+		Terheléses teszt: 
+
+		A terheléses teszt célja a tervezett kapacitások, valamint a rendelkezésre álló növekedési potenciál
+		meghatározása.
+
+
+ 5. Tesztelések elfogadási kritériuma:
+
+	A tesztelések során az alkalmazás egyszerûségébõl kifolyólag kizárólag tökéletesen megfelelõ teszteredmények elfogadhatóak.
+	A tesztelési terv változtatását a felelõs csapat Go live teszt elvégzéséig fenntartja.
+
+ 6. A Tesztelés folyamata:
+
+	A tesztelõk a tesztforgatókönyvnek megfelelõen elvégzik a tesztelést és az eredményt tesztjegyzõkönyvekben dokumentálják. 
+	A teszt kimenetelést minden esetben jelenteni kell a tesztkoordinátornak. A tesztkoordinátor a szakértõkkel együtt megoldást keres a problémákra,
+	majd frissíti a tesztforgatókönyvet. Ha a problémát megoldották, a tesztelõ újrakezdheti a tesztelést,
+	majd dokumentálja az eredményeket. Ha a hiba továbbra is fennáll,
+	és harmadik félen múlik a megoldása, tovább kell irányítani a problémát a projekt menedzser részére döntéshozatal szempontjából. 
+
