@@ -1,16 +1,28 @@
 ﻿Alkalmazások fejlesztése és tervezése, Projekt labor I. projekt feladat
 
-Követelményspecifikáció 
+Követelményspecifikáció
 
 
-	1. Kiindulási helyzet
+	1. Bevezetés
 
 
 Egyetemi gyakorlati órán felkértek bennünket egy közös projekt elkészítésére saját választásunk alapján.
-Csapatunk egy kisebb (vagy akár nagyobb) cég dolgozóinak alapszintű adatait tárolja a cég informálódása, és működőképessége érdekében.
+Csapatunk egy olyan programot fog készíteni, mely egy kisebb (vagy akár nagyobb) cég dolgozóinak alapszintű adatait kezeli a cég informálódása, és működőképessége érdekében.
 
 
-	2. A projekt alatt fejlesztett szoftver követelményei
+	2. Jelenlegi helyzet
+
+
+Tanár úr kezében nincs általunk elkészített és bemutatott program.
+
+
+	3. Vágyálomrendszer
+
+
+JAVA-ban íródott három rétegű alkalmazás, aminek elkészítése csapatokban történik, a Trello feladatkövetőt és a Git verziókövetőt használva.
+
+
+	4. A projekt alatt fejlesztett szoftver követelményei
 
 
 Feladatai:
@@ -26,7 +38,7 @@ Feladatai:
 		- Dolgozók adatainak listaszerű és átlátható megjelenítése.
 
 
-	3. programnyelvi követelmények
+	5. programnyelvi követelmények
 
 
 A feladat meghatározottan JAVA nyelven fog készülni, mögötte pedig egy ingyenesen elérehtő MySQL adatbázis fog működni
@@ -36,7 +48,7 @@ A működéshez szükséges interneten elérhető java Library-k beszerzése és
 
 
 
-	4. A projekt határideje
+	6. A projekt határideje
 
 
 A projekt legvégső határidejére egyelőre nincs meghatározott időpont.
@@ -46,11 +58,11 @@ Változás: lehetséges bemutatási időpontok:	- Dec 7. Délután
 Változás: lehetséges bemutatási időpontok:	- Dec 14. Délután
 
 
-	5. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása.
+	7. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások
 
 A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint megrendelő használjuk fel csak legálisan a programot.
 
-	6. Fogalomszótár
+	8. Fogalomszótár
 
 	projekt - annak a programnak és a hozzá tartozó dokumentációnak az elkészítése amiről szó van
 	követelmény - amit majd teljesíteni kell
@@ -67,7 +79,7 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 
 
 
-	7. Nemfunkcionális követelmények 
+	9. Nemfunkcionális követelmények
 		-helyesség
 			A program helyesen működjön, az elvárt és megfogalmazott módokon.
 		-használhatóság
@@ -92,7 +104,7 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 		-könnyen megvásárolható vagy letölthető
 			A program legyen könnyen terjeszthető.
 
-	8. Használati esetek.:
+	10. Használati esetek
 		Zsiga megnyitja a programot, azután bejelentkezik és a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
 	módosítani is tudja azokat Zsiga, hogyha arkarja. Felvinni is tud új dolgozót az új dolgozó felvitele funkcióval. Ha már befejezte a munkáját,
 	akkor egyszerűen ki tud lépni és örül annak, hogy egy ilyen könnyen kezelhető programot használ.
