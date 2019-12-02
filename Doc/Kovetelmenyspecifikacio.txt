@@ -61,6 +61,7 @@ A feladat meghatározottan Java nyelven fog készülni, mögötte pedig egy ingy
 az adatok tárolásához.
 A teljes projekt objektum-orientáltan lesz elkészítve, a kód további egyszerű fejlesztése érdekében.
 A működéshez szükséges interneten elérhető Java Library-k beszerzése és projekthez adása.
+Három rétegű modell alapján, kliens-szerver-adatbázis rétegekre bontva kell működnie a programnak.
 
 
 
