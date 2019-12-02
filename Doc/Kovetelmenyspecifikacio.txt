@@ -114,6 +114,9 @@ A rendszerfejlesztés technológiája tárgy vizsgája előttig.
 	Bejelentkezés - egy felhasználó kilétének igazolása és ezzel rá vonatkozó jogosultságok megszerzése.
 	felhasználó - egy személy aki majd a programot használja.
 	használás - a program által nyújtott/meghatározott funkcionalitások igénybe vétele.
+	kliens - a felhasználó oldali része a programnak, ami a kiszolgáló oldalihoz kapcsolódik.ű
+	szerver - a kiszolgáló oldali része a programnak, namihez a felhasználó oldali kapcsolódik, és ami az adatbázishoz kapcsolódik
+	adatbázis - adatok egymáshohopz kapcsolódó tárolására szolgáló rendszer
 
 
 
