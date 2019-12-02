@@ -193,4 +193,6 @@ listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el l
 	adatok - az egyes "dolgozók"hoz rendelt vagy rendelésre kerülő tulajdonságok, eltárolt információk, értékek, szövegek
 	export - kiírás különböző formátumban, felhasználhatóságban , stb
 	elem - egy különálló egység a programban 
+	kliens - a felhasználó oldali program, ami a szerveroldali programhoz kapcsolódik
+	szerver - a kiszolgáló oldali program, amihez a kliens program csatlakozik, és ami az adatbázishoz csatlakozik
 
