@@ -130,7 +130,7 @@ Architekturális terv:
 		hibák le vannak kezelve, bejelentkezés és hitelesítés
 Adatbázisterv:
 	Logikai adatmodell
-		A felhasználók és a tárolt dolgozók adatai külön  táblákban vannak eltárolva, semmilyen tábla nem kapcsolódik egymáshoz.
+		A felhasználók, a tárolt dolgozók adatai és a városok és irányítószámaik külön  táblákban vannak eltárolva. A dologozók adatai között szereplő város mező kapcsolódik a városok táblájában lévő név mezőhöz.
 		A "felhasznalo" tábla tartalmazza a felhasználók adatait, ezért az azok tárolására szánt mezők lettek itt létrehozva.
 		A "felhasznalo" tábla mezői:
 			- A legfeljebb 11 számjegyű egész szám azonosító (id), ami automatikusan hozzá van rendelve minden egyes felvitt felhasználóhoz, ez az elsődleges kulcs.
@@ -144,10 +144,14 @@ Adatbázisterv:
 			- A dolgozó fizetését tartalmazó legfeljebb 11 karakter hosszú egész szám (fizetes), ennek tartalmát a program Dolgozó hozzáadása része adja át az adatbázisnak, ezt ezután a dolgozó adatlapján lehet szerkeszteni.
 			- A dolgozó lakóhelyének város részét tartalmazó legfeljebb 45 betű hosszú karaktersorozat (varos), ennek tartalmát a program Dolgozó hozzáadása része adja át az adatbázisnak, ezt ezután a dolgozó adatlapján lehet szerkeszteni.
 			- A dolgozó lakóhelyének utca és hazszám részét tartalmazó legfeljebb 45 betű hosszú karaktersorozat (utca_hsz), ennek tartalmát a program Dolgozó hozzáadása része adja át az adatbázisnak, ezt ezután a dolgozó adatlapján lehet szerkeszteni.
+		A "varos" tábla tartalmazza a városokat és irányítószámaikat.
+		A "varos" tábla mezői:
+			- A legfeljebb 11 számjegyű egész szám azonosító (irsz), , ez az elsődleges kulcs.
+			- A város nevét tartalmazó legfeljebb 45 betű hosszú karaktersorozat (nev), 
 	Tárolt eljárások
 		nincsenek
 	Fizikai adatmodellt legeneráló SQL szkript
-		nincsen
+		Megtalálható az afplabor\Sql\database.sql elérési úton.
 
 Implementációs terv:
 	Perzisztencia osztályok
