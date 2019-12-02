@@ -16,7 +16,7 @@ amit nyomon lehet követni és rendesen dokumentálni
 
 A rendszer célja:
 	Dolgozók adatainak tárolása és visszaolvasása online adatbázisból hibátlanul. Új felhasználók és új dolgozók és ezek adatainak felvitele, módosítása és listaszerű megjelenítése. Hitelesítés bejelentkezéssel és regiszrációval.
-	Nem cél semmi más ami nincs leírva, kivéve ha egyértelműen következik ezekből vagy magától érthetődő.
+	Nem cél semmi más ami nincs leírva, kivéve ha egyértelműen következik ezekből vagy magától értetődő.
 
 Projektterv:
 	Projektszerepkörök, felelősségek
@@ -102,8 +102,8 @@ Funkcionális terv
 Fizikai környezet:
 	Vásárolt softwarekomponensek és külső rendszerek
 		A Libraries mappában a PDFben exportáláshoz szükséges pdfbox library, a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
-	 Hardver és hálózati topológia
-		Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor címen. Az adatok itt vannak tárolva és innen vannak kiolvasva.
+	Hardver és hálózati topológia
+		Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor címen. Az adatok itt vannak tárolva és innen vannak kiolvasva. A 
 	Fizikai alrendszerek
 		a futtató gép és az online adatbázis.
 	Fejlesztő eszközök
@@ -115,15 +115,15 @@ Absztrakt domain modell:
 	Domainspecifikáció, fogalmak
 
 	Absztrakt komponensek, ezek kapcsolatai
-		Egy online adatbázis és a program, ami kapcsolódik hozzá. A programon belüli file-ok és komponensek (Dolgozo, Employee_add, Employee_list, Employee_page, Export_PDF,MainPage, Registrtation) is kapcsolódnak egymáshoz.
+		Egy online adatbázis és a program, ami kapcsolódik hozzá. A programon belüli file-ok és komponensek (Dolgozo, Employee_add, Employee_list, Employee_page, Export_PDF,MainPage, Registrtation) is kapcsolódnak egymáshoz. A programnak kliens és szerver oldali része is van amik kapcsolódnak egymáshoz.
 
 Architekturális terv:
 	Egy architekturális tervezési minta
-		kétrétegű alkalmazás
+		háromrétegű alkalmazás
 	Az alkalmazás rétegei, fő komponensei, ezek kapcsolatai
-		rétegei: adatbázis és program. fő komponensei: adatbázis és program, ezek kapcsolatai: mysql-connectorral
+		rétegei: adatbázis, szerver oldali program, kliens oldali program. fő komponensei: adatbázis, kliens program, szerver program, ezek kapcsolatai: mysql-connectorral
 	Változások kezelése
-		kezerlve vannak
+		kezelve vannak
 	Rendszer bővíthetősége
 		a programot bővíteni lehet programozóknak
 	Biztonsági funkciók
