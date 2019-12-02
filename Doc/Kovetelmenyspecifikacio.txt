@@ -70,7 +70,7 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 	tárolás - meghatározatlan időre elmenteni és elérhetővé tenni adatokat.
 	feltöltés - a tárolóhelyre való dinamikus eltárolás.
 	Bejelentkezés - egy felhasználó kilétének igazolása és ezzel rá vonatkozó jogosultságok megszerzése.
-	felhasználó - egy szeemély aki majd a programot használja.
+	felhasználó - egy személy aki majd a programot használja.
 	használás - a program által nyújtott/meghatározott funkcionalitások igénybe vétele.
 
 
@@ -101,6 +101,6 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 			A program legyen könnyen terjeszthető.
 
 	10. Használati esetek
-		Zsiga megnyitja a programot, azután bejelentkezik és a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
-	módosítani is tudja azokat Zsiga, hogyha arkarja. Felvinni is tud új dolgozót az új dolgozó felvitele funkcióval. Ha már befejezte a munkáját,
+		Egy átlag szintű felhasználó megnyitja a programot, azután bejelentkezik és a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
+	módosítani is tudja azokat a felhasználó, hogy ha akarja. Felvinni is tud új dolgozót az új dolgozó felvitele funkcióval. Ha már befejezte a munkáját,
 	akkor egyszerűen ki tud lépni és örül annak, hogy egy ilyen könnyen kezelhető programot használ.
