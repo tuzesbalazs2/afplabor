@@ -28,7 +28,7 @@ JAVA-ban íródott három rétegű alkalmazás, aminek elkészítése csapatokba
 Feladatai:
 	
 		- Dolgozók adatainak felvitele, tárolása, módosítása, törlése.
-		- A tárolt adatok: Név, Szül.év, fizetés, Lakcím
+		- A tárolt adatok: Név, Születési év, fizetés, Lakcím.
 		- Profilkép feltöltésének lehetősége.
 		- Dokumentum exportálás adatokból PDF-be vagy bármilyen formátumba (word).
 		- Bejelentkezési funkció
@@ -51,11 +51,7 @@ A működéshez szükséges interneten elérhető java Library-k beszerzése és
 	6. A projekt határideje
 
 
-A projekt legvégső határidejére egyelőre nincs meghatározott időpont.
-
-Változás: lehetséges bemutatási időpontok:	- Dec 7. Délután
-
-Változás: lehetséges bemutatási időpontok:	- Dec 14. Délután
+A rendszerfejlesztés technológiája tárgy vizsgája előttig.
 
 
 	7. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások
@@ -64,18 +60,18 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 
 	8. Fogalomszótár
 
-	projekt - annak a programnak és a hozzá tartozó dokumentációnak az elkészítése amiről szó van
-	követelmény - amit majd teljesíteni kell
-	Dolgozó - olyan személyek akikhez tartozó adatokat tárolni kell majd
-	adat - tulajdonsága a dolgozóknak amiket külön feldolgozható módon tárolni és elérni kell
-  	Program - a kód ami egy adott programozási nyelven leszt megírva
-	Dokumentum exportál - kimenteni az adatokat egy különböző formátumba
-	határidő - ameddigre készen kell lenni a projekktel
-	tárolás - meghatározatlan időre elmenteni és elérhetővé tenni adatokat
-	feltöltés - a tárplóhelyre való dinamikus eltárolás
-	Bejelentkezés - egy felhasználó kilétének igazolása
-	felhasználó - egy szeemély aki majd a programot használja
-	használás - csinálni vele dolgokat amikre meg lett csinálnva
+	projekt - a szóban forgó programnak és a hozzá tartozó dokumentációnak az elkészítése.
+	követelmény - aminek majd eleget kell tennie a programnak.
+	Dolgozó - olyan személyek akikhez tartozó adatokat tárolni és a programnak elérni és feldolgozni kell majd.
+	adat - tulajdonsága a dolgozóknak amiket külön feldolgozható módon tárolni és elérni kell a programnak.
+  	Program - a kód ami egy adott programozási nyelven lesz megírva.
+	Dokumentum exportálás - kimenteni az adatokat egy különböző formátumba.
+	határidő - ameddigre a projektnek el kell készülnie.
+	tárolás - meghatározatlan időre elmenteni és elérhetővé tenni adatokat.
+	feltöltés - a tárolóhelyre való dinamikus eltárolás.
+	Bejelentkezés - egy felhasználó kilétének igazolása és ezzel rá vonatkozó jogosultságok megszerzése.
+	felhasználó - egy szeemély aki majd a programot használja.
+	használás - a program által nyújtott/meghatározott funkcionalitások igénybe vétele.
 
 
 
@@ -92,7 +88,7 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 		-karbantarthatóság
 			Program hibáknál, vagy esetleges félreműködéseknél könnyen javíthatónak kell lennie.
 		-hatékonyság / magas teljesítmény
-			A programnak hatékonynak kelll lennie, gyorsnak, és kevés erőforrást kell használnia.
+			A programnak hatékonynak kell lennie, gyorsnak, és kevés erőforrást kell használnia.
 		-hibatűrés / robosztusság
 			Ha a programban hiba merülne fel, akkor azt jól kell hogy kezelje.
 		-bővíthetőség / flexibilitás
