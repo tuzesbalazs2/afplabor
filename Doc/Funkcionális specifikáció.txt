@@ -67,6 +67,9 @@ Pályázat nincs.
 - A működéshez szükséges interneten elérhető Java Library-k beszerzése és projekthez adása.
 	A Libraries mappában a PDFben exportáláshoz szükséges pdfbox library, a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
 
+- Három rétegű alkalmazás legyen a program
+	A program kliens-szerver-adatbázis rétegekre bontva van, a működése megfelel a három rétegű alkalmazás modellnek.
+
 
 ███9. Nemfunkcionális követelmények 
 -helyesség
