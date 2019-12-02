@@ -41,7 +41,7 @@ Feladatai:
 	5. programnyelvi követelmények
 
 
-A feladat meghatározottan JAVA nyelven fog készülni, mögötte pedig egy ingyenesen elérehtő MySQL adatbázis fog működni
+A feladat meghatározottan JAVA nyelven fog készülni, mögötte pedig egy ingyenesen elérhető MySQL adatbázis fog működni
 az adatok tárolásához.
 A teljes projekt objektum-orientáltan lesz elkészítve, a kód további egyszerű fejlesztése érdekében.
 A működéshez szükséges interneten elérhető java Library-k beszerzése és projekthez adása.
@@ -89,7 +89,7 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 			Program hibáknál, vagy esetleges félreműködéseknél könnyen javíthatónak kell lennie.
 		-hatékonyság / magas teljesítmény
 			A programnak hatékonynak kell lennie, gyorsnak, és kevés erőforrást kell használnia.
-		-hibatűrés / robosztusság
+		-hibatűrés / robusztusság
 			Ha a programban hiba merülne fel, akkor azt jól kell hogy kezelje.
 		-bővíthetőség / flexibilitás
 			A programnak nem kell bővíthetőnek lennie, úgy lesz használva ahogy van.
