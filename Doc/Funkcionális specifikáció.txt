@@ -10,7 +10,7 @@ Fejlesztési dokumentáció
 
 	Egyetemi gyakorlati órára fejlesztünk projektet. 
 	A projektet be kell mutatni.
-	Az alkalmazás célja, hogy a projektfejlesztési folyamatot gyakoroljuk, a dokumentálás és csapatban dolgozás rézsét főképpen.
+	Az alkalmazás célja, hogy a projektfejlesztési folyamatot gyakoroljuk, a dokumentálás és csapatban dolgozás részét főképpen.
 
 
 ███1.1. Vágyálomrendszer leírása

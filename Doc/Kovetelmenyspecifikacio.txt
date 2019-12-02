@@ -3,26 +3,26 @@
 Követelményspecifikáció
 
 
-	1. Bevezetés
+███	1. Bevezetés
 
 
 Egyetemi gyakorlati órán felkértek bennünket egy közös projekt elkészítésére saját választásunk alapján.
 Csapatunk egy olyan programot fog készíteni, mely egy kisebb (vagy akár nagyobb) cég dolgozóinak alapszintű adatait kezeli a cég informálódása, és működőképessége érdekében.
 
 
-	2. Jelenlegi helyzet
+███	2. Jelenlegi helyzet
 
 
 Tanár úr kezében nincs általunk elkészített és bemutatott program.
 
 
-	3. Vágyálomrendszer
+███	3. Vágyálomrendszer
 
 
 Java-ban íródott három rétegű alkalmazás, aminek elkészítése csapatokban történik, a Trello feladatkövetőt és a Git verziókövetőt használva.
 
 
-	4. A projekt alatt fejlesztett szoftver követelményei
+███	4. A projekt alatt fejlesztett szoftver követelményei
 
 
 Feladatai:
@@ -38,7 +38,7 @@ Feladatai:
 		- Dolgozók adatainak listaszerű és átlátható megjelenítése.
 
 
-	5. programnyelvi követelmények
+███	5. programnyelvi követelmények
 
 
 A feladat meghatározottan Java nyelven fog készülni, mögötte pedig egy ingyenesen elérhető MySQL adatbázis fog működni
@@ -48,17 +48,17 @@ A működéshez szükséges interneten elérhető Java Library-k beszerzése és
 
 
 
-	6. A projekt határideje
+███	6. A projekt határideje
 
 
 A rendszerfejlesztés technológiája tárgy vizsgája előttig.
 
 
-	7. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások
+███	7. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások
 
 A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint megrendelő használjuk fel csak legálisan a programot.
 
-	8. Fogalomszótár
+███	8. Fogalomszótár
 
 	projekt - a szóban forgó programnak és a hozzá tartozó dokumentációnak az elkészítése.
 	követelmény - aminek majd eleget kell tennie a programnak.
@@ -75,7 +75,7 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 
 
 
-	9. Nemfunkcionális követelmények
+███	9. Nemfunkcionális követelmények
 		-helyesség
 			A program helyesen működjön, az elvárt és megfogalmazott módokon.
 		-használhatóság
@@ -100,7 +100,7 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 		-könnyen megvásárolható vagy letölthető
 			A program legyen könnyen terjeszthető.
 
-	10. Használati esetek
+███	10. Használati esetek
 		Egy még be nem regisztrált felhasználó be tud regisztrálni.
 		Egy már beregisztrált felhasználó ("user" szintű) megnyitja a programot, azután bejelentkezik és a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
 	módosítani is tudja azokat a felhasználó, hogy ha akarja. Felvinni is tud új dolgozót az új dolgozó felvitele funkcióval. Ha már befejezte a munkáját,
