@@ -10,17 +10,17 @@ Fejlesztési dokumentáció
 
 	Egyetemi gyakorlati órára fejlesztünk projektet. 
 	A projektet be kell mutatni.
-	Az alkalmazás célja, hogy a projektfejlesztési folyamatot gyakoroljuk, dokumentálás és csapatban dolgozás főképpen.
+	Az alkalmazás célja, hogy a projektfejlesztési folyamatot gyakoroljuk, a dokumentálás és csapatban dolgozás rézsét főképpen.
 
 
 ███1.1. Vágyálomrendszer leírása
 	
-	Vágyunk az, hogy a program kész legyen és a dokumentáció is. Megfelelően működjön és megfelelően legyen leírva. 
+	Vágyunk az, hogy a program kész legyen és a dokumentáció is. A követelményeknek megfelelően működjön és megfelelően legyen leírva. 
 
 
 ███1.2 Jelenlegi üzleti folyamatok modellje
 	
-	Üzleti folyamat, hogy egyetemi tantárgy elvégzésének követelményeként be kell mutatni a programot, de főleg a dokumentációt.
+	Üzleti folyamat, hogy egyetemi tantárgy elvégzésének követelményeként be kell mutatni az elkészített programot, de főleg az elkészített dokumentációt.
 
 ███1.3 Igényelt üzleti folyamatok modellje
 	
@@ -32,7 +32,7 @@ Fejlesztési dokumentáció
 - Dolgozók adatainak felvitele
 - Dolgozók adatainak tárolása
 - Dolgozók adatainak módosítása
-- A tárolt adatok: Név, Szül.év, fizetés, Lakcím
+- A tárolt adatok: Név, Születési év, fizetés, Lakcím
 - Profilkép feltöltésének lehetősége.
 - Dokumentum exportálás adatokból PDF-be vagy bármilyen formátumba (word).
 - Bejelentkezési funkció
@@ -59,30 +59,30 @@ Fejlesztési dokumentáció
 ███4. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások
 
 A rendszert a készítők szellemi tulajdona, tulajdoni jog végi, a jogtalan felhasználást és lopást a törvény bünteti. Megmásítani tilos jogtalanul, rendeletek is kimondják, hogy jogtalanul tilos használni is.
-A rendszer a Java programnyelvi szabványt használja, és a MySQL adatbázis szabványt ami relációs adatbáiz szabvány. Ajánljuk a felhasználóknak a programokt.
+A rendszer a Java programnyelvi szabványt használja, és a MySQL adatbázis szabványt ami relációs adatbáiz szabvány. Ajánljuk a felhasználóknak a programot.
 Pályázat nincs.
 
 ███5. Fogalomszótár
 	projekt - a jelenlegi, dolgozó rendszer projekt van értve alatta
 	oldal - az egyes ablakokban megjelenő tartalom tartalmazója a programon belül
 	ablak - az oldalakat tartalmazza, grafikus operációs rendszerek elemei általában
-	program - a projekt szinonimája, vagyis inkább annak kész verziója, a projekt terméke
-	felhasználó - olyan személy aki használja a programot, a programon belül a bejelentkezéshez szükséges adatbázisban levő  név és jelszó párat jelenti
-	bejelentkezés - a felhasználó kilétének igazolása felhasználónévvel és jelszóval a programon belül
+	program - a projekt szinonimája a dokumentáció kivételével, vagyis inkább azoknak a kész verziója, a projekt terméke
+	felhasználó - olyan személy aki használja a programot, a programon belül a bejelentkezéshez szükséges adatbázisban levő név és jelszó párat jelenti
+	bejelentkezés - a felhasználó kilétének igazolása felhasználónévvel és jelszóval a programon belül, a hozzá tartozó jogosultságok eléréséhez
 	adatbázis - adatok egymáshoz kapcsolt módon való tárolására szolgáló rendszer
 	library - könyvtárak, amik a program funkcionalitását terjesztik ki
-	funkció - képesség amit használni akarunk a programon belül
+	funkció - képesség ami a felhasználó általi használatra van a programon belül
 	Java - a programozási nyelv amiben a program készült.
-	pdf - formázott szöveget  és különféle dokumentumokban használatos elemek tartalmazható fájltípus
+	pdf - formázott szöveget és különféle dokumentumokban használatos elemeket tartalmazható fájltípus
 	mappa - hely az informatikai tároló eszközön
 	NetBeans - fejlesztői környezet, többek között Java-hoz
 	mockup - programozás elkezdése előtt a megrendelőnek bemutatott tervrajz a kinézetre és néhány működési elemre
-	gomb - aktív elem a programban, ami kattintásra  művel valamit
-	mezők/szövegdoboz - aktív elemek  a programon belül, amik szöveg bevitelére alkalmasak
+	gomb - aktív elem a programban, ami kattintásra műveletet végez
+	mezők/szövegdoboz - aktív elemek a programon belül, amik szöveg bevitelére alkalmasak
 	dolgozó - az adatbázisban tárolt adatok tulajdonosa, hozzárendeltje
-	adatok - az egyes "dolgozók"hoz rendelt vagy rendelésre kerülő tulajdonságok, eltárolt dolgok, értékek, szövegek
+	adatok - az egyes "dolgozók"hoz rendelt vagy rendelésre kerülő tulajdonságok, eltárolt információk, értékek, szövegek
 	export - kiírás különböző formátumban, felhasználhatóságban , stb
-	elem - egy egység a programban ami különálló
+	elem - egy különálló egység a programban 
 
 
 
@@ -94,13 +94,13 @@ Pályázat nincs.
 	- A program ne fagyjon be (könnyen), a hibákat lekezelje.
 	A projektben lévő potenciálisan futtatásra kerülő kódrészek try-catch blokkokba vannak ágyazva, hogy az esetleges hibákat lekezelje, és  a program ne fagyjon be, és ne produkáljon nemkívánatos tevékenységeket.
 	- Használni lehessen windows 7 től Windows 10 en, Asztali számítógépen.
-	Használni lehet windows 7 től 10 en, asztali számítógépen bővebben a tesztelésnél.
+	Használni lehet windows 7 től 10 en, asztali számítógépen. Bővebben a tesztelésnél.
 -megbízhatóság
 	- A program megbízhatóan működjön, minden időben amikor kell.
 	A program elindításra elindul és folyamatosan tud működni amikor kell.
 -adaptálhatóság / hordozhatóság
 	- A programnak működnie kell adathordozókra való feltevés után, akár interneten való elküldés után.
-	A program működik hordozás utánh, például GITről le pullolás után, e-mailben elküldés után.
+	A program működik hordozás után, például GITről le pullolás után, e-mailben elküldés után.
 -karbantarthatóság
 	- Program hibáknál, vagy esetleges félreműködéseknél könnyen javíthatónak kell lennie.
 	A Program hibáknál a netbeans fejlesztői környezetben könnyen ki lehet javítani a hibákat, a kód átlátható, az online adatbázis hibái nem a program készítőinek felelőssége.
@@ -108,35 +108,35 @@ Pályázat nincs.
 	- A programnak hatékonynak kell lennie, gyorsnak, és kevés erőforrást kell használnia.
 	A program gyorsan fut, az egyetlen lassú rész amikor az online adatbázishoz kell kapcsolódni, ez nem a program készítőinek felelőssége. A program kevés erőforrást igényel, a hatékonysága csak minimálisan lehetne jobb egyáltalán.
 -hibatűrés / robusztusság
-	- A programnak ha hibák merülnek fel, akkor tűrnie kell jól. 
+	- A programban ha hibák merülnek fel, akkor tűrnie kell jól. 
 	A program tökéletesen jól lekezeli a hibákat, try-catch blokkban van minden, felugró üzenetek is vannak rájuk.
 -bővíthetőség / flexibilitás
 	- A programnak nem kell bővíthetőnek lennie, úgy lesz használva, ahogy van.
 	Nem is bővíthető, legfeljebb a forrással.
 -újrahasznosíthatóság
 	- A programnak nem feltétlenül csak dolgozókat kell tárolnia, könnyen megváltoztathatónak kell lennie.
-	Ha a forrást odaadjuk akkor simán megváltoztatható, egy programozót fogadjanak fel erre.
+	Ha a forrást odaadjuk akkor könnyen megváltoztatható, egy programozót fogadjanak fel erre.
 -kompatibilitás
-	- A programnak kompatibilisnek kell lennie más jáva programokkal potenciálisan.
+	- A programnak kompatibilisnek kell lennie más java programokkal potenciálisan.
 	A program sima jáva nyelven készült, egy programozó kompatibilissé tudná tenni akár más programokkal vagy adatbázisokkal is.
 -könnyen megvásárolható vagy letölthető
 	- A program legyen könnyen terjeszthető.
 	A program keveset foglal, könnyen terjeszthető, eladható, korlátozva nincsen.
 
 ███7. Használati esetek
-	A programot lehet használni mindenre amire ki lett alakítva,  tesztelve is volt hogy működik, használni lehet dolgozók adatainak tárolására, és ezzel kapcsolatos mindenre, például visszaolvasására,
-listaszerű megjelenítésére, meg módosítására, meg minden ami már el lett mondva több tízszer ezekben a dokumentumokban.
+	A programot lehet használni mindenre amire ki lett alakítva,  tesztelve is volt hogy működik, használni lehet dolgozók adatainak tárolására, és ezzel kapcsolatban mindenre, például visszaolvasására,
+listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el lett mondva több tízszer ezekben a dokumentumokban.
 	Életszerű példa:
-			Gazsi a programot elindítja, beírja a név és jelszót ha van. Ha nincs akkor regisztrációra kattint és ott ír be valamit. Ezután Gazsi bejelentkezik és a lista megjelenik a dolgozókról. Ezután rákattint duplán valamelyikre és behozza az oldalt az adatokról
+			Egy átlag szintű felhasználó a programot elindítja, beírja a név és jelszót ha van. Ha nincs akkor regisztrációra kattint és ott ír be valamit. Ezután az átlag szintű felhasználó bejelentkezik és a lista megjelenik a dolgozókról. Ezután rákattint duplán valamelyikre és behozza az oldalt az adatokról
 	és ahol módosítani is lehet azokat.  Ki is exportálhatja az export gommbbal vagy akár új dolgozókat is felvihet a felvitel gombbal. Ezután beírja az adatokat és ezeket a felvitel gomb megnyomásával fel is viszi, tetszeni fog neki, hogy az adatok már fent is vannak az adatbázisban és minden naprakész.
-	A kilépés gombokkal tud Gazsi kilépni de ezt már tudja mert egyértelmű.
+	A kilépés gombokkal tud az átlag szintű felhasználó kilépni de ezt már tudja mert egyértelmű.
 
 ███8. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
-	Úgy, hogy Gazsi ezt azért tudja megcsinálni mert a program úgy működik ahogy már a követelményekben részletesen le volt írva már ez is.
+	Úgy, hogy az átlag szintű felhasználó ezt azért tudja megcsinálni mert a program úgy működik ahogy már a követelményekben részletesen le volt írva már ez is.
 
 ███9. Forgatókönyvek
 
-	Bemegy az alkalmazott aki ezért felelős, aztán megcsinálja ugyanazt mint a történetben Gazsi, és aztán problémák nélkül kész lesz a munkájával és megcsinálja
+	Bemegy az alkalmazott aki ezért felelős, aztán megcsinálja ugyanazt mint a történetben az átlag szintű felhasználó, és azután problémák nélkül kész lesz a munkájával és megcsinálja
 
 ███10. Funkció – követelmény megfeleltetés
 
@@ -144,13 +144,13 @@ listaszerű megjelenítésére, meg módosítására, meg minden ami már el let
 	A dolgozó lista oldalon a felvitel gombbal a dolgozó felvitel oldal jön be, ahol teljesen új dolgozókat lehet felvinni az adatbázisba, az egyes helyekre beírt adatokkal. Az itteni felvitel gombra kattintva lesz az adatbázishoz hozzáadva az új dolgozó. A kép szövegű objektum alatti feltöltés gombbal lehetne képet feltölteni.
 
 - Dolgozók adatainak tárolása
-	A felvitt adatok határozatlan ideig az ingyenes online adatbázisban leszenk tárolva.	
+	A felvitt adatok határozatlan ideig az ingyenes online adatbázisban lesznek tárolva.	
 
 - Dolgozók adatainak módosítása
 	A lista elemekre való kattintáskor bejön a dolgozó oldala, a megfelelő dolgozó adatait fogja kilistázni az oldalra az alapján, hogy melyikre kattintottunk. Itt a kiválasztott dolgozó adatai lesznek módosítható módon, szövegdobozokban felsorolva, címkékkel ellátva, amik elmagyarázzák, hogy mik is azok. Az itt felül lévő módosítás gombbal lehet a beírt módosításokat felvinni az adatbázisba az eredeti adatok helyére.
 	A gomb megnyomásakor egy felugró üzenet jelzi, hogy az adatok az adatbázisban sikeresen módosításra kerültek-e vagy sem.
 
-- A tárolt adatok: Név, Szül.év, fizetés, Lakcím
+- A tárolt adatok: Név, Születési év, fizetés, Lakcím
 	Ezeknek az adatoknak van hely az adatbázisban és a programban is egy adott dologóznak.
 	
 - Profilkép feltöltésének lehetősége.
@@ -169,7 +169,7 @@ listaszerű megjelenítésére, meg módosítására, meg minden ami már el let
 	A kilépés gombra való kattintással bezáródik az éppen aktuális ablak, a program nyitva marad és nem kell újra bejelentkezni. A piros X gombra való kattintással is hasonló eredményt lehet elérni, de ha a legelső ablak bezáródik akkor az egész program leáll.
 	
 - Dolgozók adatainak listaszerű és átlátható megjelenítése.
-	Sikeres Bejelentkezés után a dolgozó lista jön be, ahol az adatbázisban lévő dolgozók és adataik lesznek  kilistázva, az ablak megnyílásakor.
+	Sikeres Bejelentkezés után a dolgozó lista jön be, ahol az adatbázisban lévő dolgozók és adataik lesznek kilistázva, az ablak megnyílásakor.
 
 ███11. Képernyőtervek.
 	
