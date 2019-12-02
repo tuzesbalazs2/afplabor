@@ -1,33 +1,40 @@
 ﻿Alkalmazások fejlesztése és tervezése, Projekt labor I. projekt feladat
 Fejlesztési dokumentáció
 
-███0. A rendszer céljai és nem céljai.
+███1. A rendszer céljai és nem céljai.
 
 	A rendszernek célja a követelmények között leírt funkciók megvalósítása, ami a 2. pontban van leírva. a rendszernek nem célja ezeket nem csinálni, és nem célja nem ezeket csinálni.
 
 
-███1. Jelenlegi helyzet leírása.
+███2. Jelenlegi helyzet leírása.
 
 	Egyetemi gyakorlati órára fejlesztünk projektet. 
 	A projektet be kell mutatni.
 	Az alkalmazás célja, hogy a projektfejlesztési folyamatot gyakoroljuk, a dokumentálás és csapatban dolgozás részét főképpen.
 
 
-███1.1. Vágyálomrendszer leírása
+███3. Vágyálomrendszer leírása
 	
 	Vágyunk az, hogy a program kész legyen és a dokumentáció is. A követelményeknek megfelelően működjön és megfelelően legyen leírva. 
 
 
-███1.2 Jelenlegi üzleti folyamatok modellje
+███4. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások
+
+A rendszert a készítők szellemi tulajdona, tulajdoni jog végi, a jogtalan felhasználást és lopást a törvény bünteti. Megmásítani tilos jogtalanul, rendeletek is kimondják, hogy jogtalanul tilos használni is.
+A rendszer a Java programnyelvi szabványt használja, és a MySQL adatbázis szabványt ami relációs adatbáiz szabvány. Ajánljuk a felhasználóknak a programot.
+Pályázat nincs.
+
+
+███5. Jelenlegi üzleti folyamatok modellje
 	
 	Üzleti folyamat, hogy egyetemi tantárgy elvégzésének követelményeként be kell mutatni az elkészített programot, de főleg az elkészített dokumentációt.
 
-███1.3 Igényelt üzleti folyamatok modellje
+███6. Igényelt üzleti folyamatok modellje
 	
 	Igényelt üzleti folyamat, hogy ez meg legyen és ne legyen továbbra gond.
 
 
-███2. A projekt alatt fejlesztett szoftver követelményei
+███7. A projekt alatt fejlesztett szoftver követelményei
 
 - Dolgozók adatainak felvitele
 - Dolgozók adatainak tárolása
@@ -42,7 +49,8 @@ Fejlesztési dokumentáció
 - Programból kilépés és ablakok bezárásának lehetősége.
 - Dolgozók adatainak listaszerű és átlátható megjelenítése.
 
-███3. programnyelvi követelmények
+
+███8. programnyelvi követelmények
 
 - A feladat meghatározottan Java nyelven fog készülni
 	NetBeans nevű Java fejlesztői környezetben készül a program.
@@ -56,37 +64,8 @@ Fejlesztési dokumentáció
 - A működéshez szükséges interneten elérhető Java Library-k beszerzése és projekthez adása.
 	A Libraries mappában a PDFben exportáláshoz szükséges pdfbox library, a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
 
-███4. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások
 
-A rendszert a készítők szellemi tulajdona, tulajdoni jog végi, a jogtalan felhasználást és lopást a törvény bünteti. Megmásítani tilos jogtalanul, rendeletek is kimondják, hogy jogtalanul tilos használni is.
-A rendszer a Java programnyelvi szabványt használja, és a MySQL adatbázis szabványt ami relációs adatbáiz szabvány. Ajánljuk a felhasználóknak a programot.
-Pályázat nincs.
-
-███5. Fogalomszótár
-	projekt - a jelenlegi, dolgozó rendszer projekt van értve alatta
-	oldal - az egyes ablakokban megjelenő tartalom tartalmazója a programon belül
-	ablak - az oldalakat tartalmazza, grafikus operációs rendszerek elemei általában
-	program - a projekt szinonimája a dokumentáció kivételével, vagyis inkább azoknak a kész verziója, a projekt terméke
-	felhasználó - olyan személy aki használja a programot, a programon belül a bejelentkezéshez szükséges adatbázisban levő név és jelszó párat jelenti
-	bejelentkezés - a felhasználó kilétének igazolása felhasználónévvel és jelszóval a programon belül, a hozzá tartozó jogosultságok eléréséhez
-	adatbázis - adatok egymáshoz kapcsolt módon való tárolására szolgáló rendszer
-	library - könyvtárak, amik a program funkcionalitását terjesztik ki
-	funkció - képesség ami a felhasználó általi használatra van a programon belül
-	Java - a programozási nyelv amiben a program készült.
-	pdf - formázott szöveget és különféle dokumentumokban használatos elemeket tartalmazható fájltípus
-	mappa - hely az informatikai tároló eszközön
-	NetBeans - fejlesztői környezet, többek között Java-hoz
-	mockup - programozás elkezdése előtt a megrendelőnek bemutatott tervrajz a kinézetre és néhány működési elemre
-	gomb - aktív elem a programban, ami kattintásra műveletet végez
-	mezők/szövegdoboz - aktív elemek a programon belül, amik szöveg bevitelére alkalmasak
-	dolgozó - az adatbázisban tárolt adatok tulajdonosa, hozzárendeltje
-	adatok - az egyes "dolgozók"hoz rendelt vagy rendelésre kerülő tulajdonságok, eltárolt információk, értékek, szövegek
-	export - kiírás különböző formátumban, felhasználhatóságban , stb
-	elem - egy különálló egység a programban 
-
-
-
-███6. Nemfunkcionális követelmények 
+███9. Nemfunkcionális követelmények 
 -helyesség
 	- A program helyesen működjön, az elvárt és megfogalmazott módokon.
 	A program helyesen működik, el tudja végezni ami elvárt.
@@ -123,7 +102,9 @@ Pályázat nincs.
 	- A program legyen könnyen terjeszthető.
 	A program keveset foglal, könnyen terjeszthető, eladható, korlátozva nincsen.
 
-███7. Használati esetek
+
+
+███10. Használati esetek
 	A programot lehet használni mindenre amire ki lett alakítva,  tesztelve is volt hogy működik, használni lehet dolgozók adatainak tárolására, és ezzel kapcsolatban mindenre, például visszaolvasására,
 listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el lett mondva több tízszer ezekben a dokumentumokban.
 	Életszerű példa:
@@ -132,14 +113,24 @@ listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el l
 	és ahol módosítani is lehet azokat.  Ki is exportálhatja az export gommbbal vagy akár új dolgozókat is felvihet a felvitel gombbal. Ezután beírja az adatokat és ezeket a felvitel gomb megnyomásával fel is viszi, tetszeni fog neki, hogy az adatok már fent is vannak az adatbázisban és minden naprakész.
 	A kilépés gombokkal tud az átlag szintű felhasználó kilépni de ezt már tudja mert egyértelmű.
 
-███8. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
+
+███11. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
 	Úgy, hogy az átlag szintű felhasználó ezt azért tudja megcsinálni mert a program úgy működik ahogy már a követelményekben részletesen le volt írva már ez is.
 
-███9. Forgatókönyvek
+
+
+███12. Képernyőtervek.
+	
+	A mockup a Pencil nevű ingyenes programban készült és lefedi az összes elkészíteni kívánt felhasználói felületet: Bejelentkezés, Regisztráció, Dolgozók listája, Dolgozó adatai és Dolgozó hozzáadása.
+
+
+███13. Forgatókönyvek
 
 	Bemegy az alkalmazott aki ezért felelős, aztán megcsinálja ugyanazt mint a történetben az átlag szintű felhasználó, és azután problémák nélkül kész lesz a munkájával és megcsinálja
 
-███10. Funkció – követelmény megfeleltetés
+
+
+███14. Funkció – követelmény megfeleltetés
 
 - Dolgozók adatainak felvitele:
 	A dolgozó lista oldalon a felvitel gombbal a dolgozó felvitel oldal jön be, ahol teljesen új dolgozókat lehet felvinni az adatbázisba, az egyes helyekre beírt adatokkal. Az itteni felvitel gombra kattintva lesz az adatbázishoz hozzáadva az új dolgozó. A kép szövegű objektum alatti feltöltés gombbal lehetne képet feltölteni.
@@ -172,6 +163,28 @@ listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el l
 - Dolgozók adatainak listaszerű és átlátható megjelenítése.
 	Sikeres Bejelentkezés után a dolgozó lista jön be, ahol az adatbázisban lévő dolgozók és adataik lesznek kilistázva, az ablak megnyílásakor.
 
-███11. Képernyőtervek.
-	
-	A mockup a Pencil nevű ingyenes programban készült és lefedi az összes elkészíteni kívánt felhasználói felületet: Bejelentkezés, Regisztráció, Dolgozók listája, Dolgozó adatai és Dolgozó hozzáadása.
+
+
+
+███15. Fogalomszótár
+	projekt - a jelenlegi, dolgozó rendszer projekt van értve alatta
+	oldal - az egyes ablakokban megjelenő tartalom tartalmazója a programon belül
+	ablak - az oldalakat tartalmazza, grafikus operációs rendszerek elemei általában
+	program - a projekt szinonimája a dokumentáció kivételével, vagyis inkább azoknak a kész verziója, a projekt terméke
+	felhasználó - olyan személy aki használja a programot, a programon belül a bejelentkezéshez szükséges adatbázisban levő név és jelszó párat jelenti
+	bejelentkezés - a felhasználó kilétének igazolása felhasználónévvel és jelszóval a programon belül, a hozzá tartozó jogosultságok eléréséhez
+	adatbázis - adatok egymáshoz kapcsolt módon való tárolására szolgáló rendszer
+	library - könyvtárak, amik a program funkcionalitását terjesztik ki
+	funkció - képesség ami a felhasználó általi használatra van a programon belül
+	Java - a programozási nyelv amiben a program készült.
+	pdf - formázott szöveget és különféle dokumentumokban használatos elemeket tartalmazható fájltípus
+	mappa - hely az informatikai tároló eszközön
+	NetBeans - fejlesztői környezet, többek között Java-hoz
+	mockup - programozás elkezdése előtt a megrendelőnek bemutatott tervrajz a kinézetre és néhány működési elemre
+	gomb - aktív elem a programban, ami kattintásra műveletet végez
+	mezők/szövegdoboz - aktív elemek a programon belül, amik szöveg bevitelére alkalmasak
+	dolgozó - az adatbázisban tárolt adatok tulajdonosa, hozzárendeltje
+	adatok - az egyes "dolgozók"hoz rendelt vagy rendelésre kerülő tulajdonságok, eltárolt információk, értékek, szövegek
+	export - kiírás különböző formátumban, felhasználhatóságban , stb
+	elem - egy különálló egység a programban 
+

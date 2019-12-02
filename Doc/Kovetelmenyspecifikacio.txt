@@ -22,7 +22,22 @@ Tanár úr kezében nincs általunk elkészített és bemutatott program.
 Java-ban íródott három rétegű alkalmazás, aminek elkészítése csapatokban történik, a Trello feladatkövetőt és a Git verziókövetőt használva.
 
 
-███	4. A projekt alatt fejlesztett szoftver követelményei
+███	4. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások
+
+A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint megrendelő használjuk fel csak legálisan a programot.
+
+
+███	5. Jelenlegi üzleti folyamatok modellje
+	
+Üzleti folyamat, hogy egyetemi tantárgy elvégzésének követelményeként be kell mutatni az elkészített programot, de főleg az elkészített dokumentációt.
+
+
+███	6. Igényelt üzleti folyamatok modellje
+	
+Igényelt üzleti folyamat, hogy ez meg legyen és ne legyen továbbra gond.
+
+
+███	7. A projekt alatt fejlesztett szoftver követelményei
 
 
 Feladatai:
@@ -38,40 +53,13 @@ Feladatai:
 		- Dolgozók adatainak listaszerű és átlátható megjelenítése.
 
 
-███	5. programnyelvi követelmények
+███	8. programnyelvi követelmények
 
 
 A feladat meghatározottan Java nyelven fog készülni, mögötte pedig egy ingyenesen elérhető MySQL adatbázis fog működni
 az adatok tárolásához.
 A teljes projekt objektum-orientáltan lesz elkészítve, a kód további egyszerű fejlesztése érdekében.
 A működéshez szükséges interneten elérhető Java Library-k beszerzése és projekthez adása.
-
-
-
-███	6. A projekt határideje
-
-
-A rendszerfejlesztés technológiája tárgy vizsgája előttig.
-
-
-███	7. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások
-
-A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint megrendelő használjuk fel csak legálisan a programot.
-
-███	8. Fogalomszótár
-
-	projekt - a szóban forgó programnak és a hozzá tartozó dokumentációnak az elkészítése.
-	követelmény - aminek majd eleget kell tennie a programnak.
-	Dolgozó - olyan személyek akikhez tartozó adatokat tárolni és a programnak elérni és feldolgozni kell majd.
-	adat - tulajdonsága a dolgozóknak amiket külön feldolgozható módon tárolni és elérni kell a programnak.
-  	Program - a kód ami egy adott programozási nyelven lesz megírva.
-	Dokumentum exportálás - kimenteni az adatokat egy különböző formátumba.
-	határidő - ameddigre a projektnek el kell készülnie.
-	tárolás - meghatározatlan időre elmenteni és elérhetővé tenni adatokat.
-	feltöltés - a tárolóhelyre való dinamikus eltárolás.
-	Bejelentkezés - egy felhasználó kilétének igazolása és ezzel rá vonatkozó jogosultságok megszerzése.
-	felhasználó - egy személy aki majd a programot használja.
-	használás - a program által nyújtott/meghatározott funkcionalitások igénybe vétele.
 
 
 
@@ -100,7 +88,34 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 		-könnyen megvásárolható vagy letölthető
 			A program legyen könnyen terjeszthető.
 
-███	10. Használati esetek
+
+
+
+███	10. A projekt határideje
+
+
+A rendszerfejlesztés technológiája tárgy vizsgája előttig.
+
+
+
+███	11. Fogalomszótár
+
+	projekt - a szóban forgó programnak és a hozzá tartozó dokumentációnak az elkészítése.
+	követelmény - aminek majd eleget kell tennie a programnak.
+	Dolgozó - olyan személyek akikhez tartozó adatokat tárolni és a programnak elérni és feldolgozni kell majd.
+	adat - tulajdonsága a dolgozóknak amiket külön feldolgozható módon tárolni és elérni kell a programnak.
+  	Program - a kód ami egy adott programozási nyelven lesz megírva.
+	Dokumentum exportálás - kimenteni az adatokat egy különböző formátumba.
+	határidő - ameddigre a projektnek el kell készülnie.
+	tárolás - meghatározatlan időre elmenteni és elérhetővé tenni adatokat.
+	feltöltés - a tárolóhelyre való dinamikus eltárolás.
+	Bejelentkezés - egy felhasználó kilétének igazolása és ezzel rá vonatkozó jogosultságok megszerzése.
+	felhasználó - egy személy aki majd a programot használja.
+	használás - a program által nyújtott/meghatározott funkcionalitások igénybe vétele.
+
+
+
+███	12. Használati esetek
 		Egy még be nem regisztrált felhasználó be tud regisztrálni.
 		Egy már beregisztrált felhasználó ("user" szintű) megnyitja a programot, azután bejelentkezik és a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
 	módosítani is tudja azokat a felhasználó, hogy ha akarja. Felvinni is tud új dolgozót az új dolgozó felvitele funkcióval. Ha már befejezte a munkáját,
