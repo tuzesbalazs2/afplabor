@@ -35,7 +35,7 @@ Nem tudja lekérdezni és módosítani a dolgozók adatait, mivel hogy nem csak 
 
 ███	6. Igényelt üzleti folyamatok modellje
 	
-Regisztrálás után az ember hozzá tud férni a dolgozók adataihoz és módosítani is tudja azokat.
+Az ember megnyitja a kliensprogramot, ami csatlakozik a szerverprogramhoz, ami csatlakozik az adatbázishoz. Regisztrálás után hozzá tud férni a dolgozók adataihoz és módosítani is tudja azokat.
 
 
 ███	7. A projekt alatt fejlesztett szoftver követelményei
