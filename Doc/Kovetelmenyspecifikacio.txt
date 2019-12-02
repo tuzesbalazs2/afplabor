@@ -29,12 +29,13 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 
 ███	5. Jelenlegi üzleti folyamatok modellje
 	
-Üzleti folyamat, hogy egyetemi tantárgy elvégzésének követelményeként be kell mutatni az elkészített programot, de főleg az elkészített dokumentációt.
+Jelenleg az ember nem tudja magát beregisztrálni a programon keresztül, mivel még nincs program, amivel ezt megtehetné.
+Nem tudja lekérdezni és módosítani a dolgozók adatait, mivel hogy nem csak az ehhez szükséges program, de még az adatbázis sem létezik.
 
 
 ███	6. Igényelt üzleti folyamatok modellje
 	
-Igényelt üzleti folyamat, hogy ez meg legyen és ne legyen továbbra gond.
+Regisztrálás után az ember hozzá tud férni a dolgozók adataihoz és módosítani is tudja azokat.
 
 
 ███	7. A projekt alatt fejlesztett szoftver követelményei
@@ -117,6 +118,6 @@ A rendszerfejlesztés technológiája tárgy vizsgája előttig.
 
 ███	12. Használati esetek
 		Egy még be nem regisztrált felhasználó be tud regisztrálni.
-		Egy már beregisztrált felhasználó ("user" szintű) megnyitja a programot, azután bejelentkezik és a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
-	módosítani is tudja azokat a felhasználó, hogy ha akarja. Felvinni is tud új dolgozót az új dolgozó felvitele funkcióval. Ha már befejezte a munkáját,
+		Egy már beregisztrált felhasználó megnyitja a programot, azután bejelentkezik és a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
+	módosítani is tudja azokat a felhasználó hogyha akarja. Felvinni is tud új dolgozót az új dolgozó felvitele funkcióval. Ha már befejezte a munkáját,
 	akkor egyszerűen ki tud lépni és örül annak, hogy egy ilyen könnyen kezelhető programot használ.

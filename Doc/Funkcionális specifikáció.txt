@@ -27,11 +27,14 @@ Pályázat nincs.
 
 ███5. Jelenlegi üzleti folyamatok modellje
 	
-	Üzleti folyamat, hogy egyetemi tantárgy elvégzésének követelményeként be kell mutatni az elkészített programot, de főleg az elkészített dokumentációt.
+	Nem létezik program, amivel a dolgozók adatait lekérdezni és módosítani tudná, ezen kívül nem létezik adatbázis sem, amihez kapcsolódni tudna.
 
 ███6. Igényelt üzleti folyamatok modellje
 	
-	Igényelt üzleti folyamat, hogy ez meg legyen és ne legyen továbbra gond.
+	Az ember megnyitja a programot. Ha még nics beregisztrálva, akkor ezt megteszi a Regisztráció gombra való kattintás után bejövő felületen.
+	Sikeres bejelentkezés után a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
+	módosítani is tudja azokat, hogyha akarja. Felvinni is tud új dolgozót az új dolgozó felvitele funkcióval. Ha már befejezte a munkáját,
+	akkor egyszerűen ki tud lépni a programból.
 
 
 ███7. A projekt alatt fejlesztett szoftver követelményei
