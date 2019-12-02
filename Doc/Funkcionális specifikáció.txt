@@ -27,11 +27,11 @@ Pályázat nincs.
 
 ███5. Jelenlegi üzleti folyamatok modellje
 	
-	Nem létezik program, amivel az ember a dolgozók adatait lekérdezni és módosítani tudná. Nincs kliensprogram, nincs szerverprogram, ezen kívül nem létezik adatbázis sem, amihez kapcsolódni tudna.
+	Nem létezik program, amivel a felhasználók a dolgozók adatait lekérdezni és módosítani tudnák. Nincs kliensprogram, nincs szerverprogram, ezen kívül nem létezik adatbázis sem, amihez kapcsolódni tudna.
 
 ███6. Igényelt üzleti folyamatok modellje
 	
-	Az ember megnyitja a krliensprogramot, ami csatlakozik egy szerverprogramhoz, ami csatlakozik az adatbázishoz. Ha még nics beregisztrálva, akkor ezt megteszi a Regisztráció gombra való kattintás után bejövő felületen.
+	A felhasználó megnyitja a krliensprogramot, ami csatlakozik egy szerverprogramhoz, ami csatlakozik az adatbázishoz. Ha még nics beregisztrálva, akkor ezt megteszi a Regisztráció gombra való kattintás után bejövő felületen.
 	Sikeres bejelentkezés után a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
 	módosítani is tudja azokat, hogyha akarja. Felvinni is tud új dolgozót az új dolgozó felvitele funkcióval.
 	Ha már befejezte a munkáját,akkor egyszerűen ki tud lépni a programból.
