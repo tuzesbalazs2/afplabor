@@ -19,7 +19,7 @@ Tanár úr kezében nincs általunk elkészített és bemutatott program.
 	3. Vágyálomrendszer
 
 
-JAVA-ban íródott három rétegű alkalmazás, aminek elkészítése csapatokban történik, a Trello feladatkövetőt és a Git verziókövetőt használva.
+Java-ban íródott három rétegű alkalmazás, aminek elkészítése csapatokban történik, a Trello feladatkövetőt és a Git verziókövetőt használva.
 
 
 	4. A projekt alatt fejlesztett szoftver követelményei
@@ -41,10 +41,10 @@ Feladatai:
 	5. programnyelvi követelmények
 
 
-A feladat meghatározottan JAVA nyelven fog készülni, mögötte pedig egy ingyenesen elérhető MySQL adatbázis fog működni
+A feladat meghatározottan Java nyelven fog készülni, mögötte pedig egy ingyenesen elérhető MySQL adatbázis fog működni
 az adatok tárolásához.
 A teljes projekt objektum-orientáltan lesz elkészítve, a kód további egyszerű fejlesztése érdekében.
-A működéshez szükséges interneten elérhető java Library-k beszerzése és projekthez adása.
+A működéshez szükséges interneten elérhető Java Library-k beszerzése és projekthez adása.
 
 
 

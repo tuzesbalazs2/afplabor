@@ -44,8 +44,8 @@ Fejlesztési dokumentáció
 
 ███3. programnyelvi követelmények
 
-- A feladat meghatározottan JAVA nyelven fog készülni
-	NetBeans nevű java fejlesztői környezetben készül a program.
+- A feladat meghatározottan Java nyelven fog készülni
+	NetBeans nevű Java fejlesztői környezetben készül a program.
 
 - mögötte pedig egy ingyenesen elérehtő MySQL adatbázis fog működni az adatok tárolásához.
 	Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor címen. Az adatok itt vannak tárolva és innen vannak kiolvasva.
@@ -53,7 +53,7 @@ Fejlesztési dokumentáció
 - A teljes projekt objektum-orientáltan lesz elkészítve, a kód további egyszerű fejlesztése érdekében.
 	A külön oldalai a programnak mind külön fájlban vannak, és azon belül külön Classban, amik külön objektumokat képviselnek. Azokon belül az összes külön eleme az oldalaknak objektumokkal vannak megoldva. A Dolgozo.java-ban az adatbázisban szereplő dolgozók lennének objektumként megadva.
 
-- A működéshez szükséges interneten elérhető java Library-k beszerzése és projekthez adása.
+- A működéshez szükséges interneten elérhető Java Library-k beszerzése és projekthez adása.
 	A Libraries mappában a PDFben exportáláshoz szükséges pdfbox library, a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
 
 ███4. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások
@@ -117,7 +117,7 @@ Pályázat nincs.
 	- A programnak nem feltétlenül csak dolgozókat kell tárolnia, könnyen megváltoztathatónak kell lennie.
 	Ha a forrást odaadjuk akkor könnyen megváltoztatható, egy programozót fogadjanak fel erre.
 -kompatibilitás
-	- A programnak kompatibilisnek kell lennie más java programokkal potenciálisan.
+	- A programnak kompatibilisnek kell lennie más Java programokkal potenciálisan.
 	A program sima jáva nyelven készült, egy programozó kompatibilissé tudná tenni akár más programokkal vagy adatbázisokkal is.
 -könnyen megvásárolható vagy letölthető
 	- A program legyen könnyen terjeszthető.

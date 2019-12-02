@@ -2,10 +2,10 @@
 
 
 Mit: Egyetemes tantárgyhoz dolgozók adatait kilistázó programot kell írni
-Hogyan: Úgy hogy netbeans nevű fejlesztői környezetben _Java programozási nyelven megírjuk
+Hogyan: Úgy hogy NetBeans nevű fejlesztői környezetben _Java programozási nyelven megírjuk
 Miből: saját időnkből, 0 forintból, még ebben a tanulmányi félévben
 Miért (miért pont azt):
-- Mert a program szóbeli leírása el lett fogadva. 
+- Mert a program szóbeli leírása el lett fogadva.
 - A csoportvezetőnknek ezzel már van tapasztalata
 - Megvalósíthatónak is tűnt
 - Követelmény volt hogy Java nyelven készüljön és csoportmunka legyen,
@@ -23,10 +23,11 @@ Projektterv:
 		programozó - programoz, a program kódjában
 		csoportvezető - javasolja hogy nagyjából mit kellene csinálni
 		dokumentáló - dokumentációt írja
+		tesztelő - a program tesztelését végzi
 	Projektmunkások és felelősségeik
 		Tóth Zsolt - programozó, dokumentáló, csoportvezető
-		Tüzes Balázs - programozó, dokumentáló
-		Tüzes Dániel - programozó, dokumentáló
+		Tüzes Balázs - programozó, dokumentáló, tesztelő
+		Tüzes Dániel - programozó, dokumentáló, tesztelő
 	Ütemterv
 		Trellora kiírt feladatok és időpontok alapján
 	Mérföldkövek
@@ -106,7 +107,7 @@ Fizikai környezet:
 	Fizikai alrendszerek
 		a futtató gép és az online adatbázis.
 	Fejlesztő eszközök
-		NetBeans nevű java fejlesztői környezetben készült a program.
+		NetBeans nevű Java fejlesztői környezetben készült a program.
 	Keretrendszer
 		Java
 
