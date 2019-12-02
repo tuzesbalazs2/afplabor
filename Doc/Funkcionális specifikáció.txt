@@ -127,7 +127,8 @@ Pályázat nincs.
 	A programot lehet használni mindenre amire ki lett alakítva,  tesztelve is volt hogy működik, használni lehet dolgozók adatainak tárolására, és ezzel kapcsolatban mindenre, például visszaolvasására,
 listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el lett mondva több tízszer ezekben a dokumentumokban.
 	Életszerű példa:
-			Egy átlag szintű felhasználó a programot elindítja, beírja a név és jelszót ha van. Ha nincs akkor regisztrációra kattint és ott ír be valamit. Ezután az átlag szintű felhasználó bejelentkezik és a lista megjelenik a dolgozókról. Ezután rákattint duplán valamelyikre és behozza az oldalt az adatokról
+			Egy még be nem regisztrált felhasználó elindítja a programot, ezután a Regisztráció gombra kattint, itt megadja a kívánt felhasználónevét és jelszavát, majd a Kész gombra kattint a regisztráció befejezéséhez.
+			Egy már beregisztrált felhasználó a programot elindítja, beírja a nevét és jelszavát. Ezután az átlag szintű felhasználó bejelentkezik és a lista megjelenik a dolgozókról. Ezután rákattint duplán valamelyikre és behozza az oldalt az adatokról
 	és ahol módosítani is lehet azokat.  Ki is exportálhatja az export gommbbal vagy akár új dolgozókat is felvihet a felvitel gombbal. Ezután beírja az adatokat és ezeket a felvitel gomb megnyomásával fel is viszi, tetszeni fog neki, hogy az adatok már fent is vannak az adatbázisban és minden naprakész.
 	A kilépés gombokkal tud az átlag szintű felhasználó kilépni de ezt már tudja mert egyértelmű.
 

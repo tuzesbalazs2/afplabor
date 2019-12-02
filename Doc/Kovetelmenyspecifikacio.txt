@@ -101,6 +101,7 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 			A program legyen könnyen terjeszthető.
 
 	10. Használati esetek
-		Egy átlag szintű felhasználó megnyitja a programot, azután bejelentkezik és a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
+		Egy még be nem regisztrált felhasználó be tud regisztrálni.
+		Egy már beregisztrált felhasználó ("user" szintű) megnyitja a programot, azután bejelentkezik és a dolgozók listáját látja. Rá tud menni a dolgozók adatlapjaira és itt látja az adataikat és
 	módosítani is tudja azokat a felhasználó, hogy ha akarja. Felvinni is tud új dolgozót az új dolgozó felvitele funkcióval. Ha már befejezte a munkáját,
 	akkor egyszerűen ki tud lépni és örül annak, hogy egy ilyen könnyen kezelhető programot használ.
