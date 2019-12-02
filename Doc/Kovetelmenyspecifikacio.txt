@@ -29,7 +29,7 @@ A vonatkozó törvények értelmében mi, a készítők és Tanár úr, mint meg
 
 ███	5. Jelenlegi üzleti folyamatok modellje
 	
-Jelenleg az ember nem tudja magát beregisztrálni a programon keresztül, mivel még nincs program, amivel ezt megtehetné.
+Jelenleg a felhasználók nem tudják magukat beregisztrálni és magukat és/vagy másokat felvinni adatbázisba a programon keresztül, mivel még nincs program, amivel ezt megtehetnék.
 Nem tudja lekérdezni és módosítani a dolgozók adatait, mivel hogy nem csak az ehhez szükséges program, de még az adatbázis sem létezik.
 
 
