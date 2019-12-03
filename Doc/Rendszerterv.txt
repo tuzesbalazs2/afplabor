@@ -97,15 +97,23 @@ Funkcionális terv
 
 - Dolgozók adatainak listaszerű és átlátható megjelenítése.
 	Az Employee_list.java oldalon JList elem feltöltésre kerül az ablak megnyitásakor az adatbázisból kiolvasandó dolgozó adatokkal listaszerűen megjelenítve, átláthatóan
+
+
+	Határ osztályok
+		{A határ osztályok (presenter) a képernyők tartalmát és funkcionalitását leíró osztályok.}
+
+
+	Képernyőtervek
+		Megtalálható az afplabor\Mockup\ elérési úton.
 	
 
 Fizikai környezet:
 	Vásárolt softwarekomponensek és külső rendszerek
 		A Libraries mappában a PDFben exportáláshoz szükséges pdfbox library, a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
 	Hardver és hálózati topológia
-		Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor címen. Az adatok itt vannak tárolva és innen vannak kiolvasva. A 
+		Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor_rft címen. Az adatok itt vannak tárolva és innen vannak kiolvasva.
 	Fizikai alrendszerek
-		a futtató gép és az online adatbázis.
+		A futtató gép és az online adatbázis.
 	Fejlesztő eszközök
 		NetBeans nevű Java fejlesztői környezetben készült a program.
 	Keretrendszer
@@ -166,7 +174,7 @@ Implementációs terv:
 		Employee_page
 		Export_PDF
 		MainPage
-		Registrtation 
+		Registrtation
 
 Tesztterv:
 	Teszteljük úgy mint ahogy a használati esetekben le van írva, mint ahogy a funkcióknál is le van írva, meg a követelményeknél is le van írva
