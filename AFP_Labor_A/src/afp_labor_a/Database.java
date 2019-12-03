@@ -43,16 +43,16 @@ public class Database {
                 System.out.println("Connected to the database");
             }
 
-        } catch (SQLException e) {
-            System.out.print(e);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Hiba az adatbázishoz kapcsolódáskor", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }
     
     public void close() {
         try {
             this.conn.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"HIba a kapdcsolat zárásakor", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -92,8 +92,8 @@ public class Database {
             Class.forName("com.mysql.jdbc.Driver");
             Statement st = this.conn.createStatement();
             //TODO..
-        } catch (SQLException ex) {
-            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Hiba történt");
         }
     }
 
@@ -102,8 +102,8 @@ public class Database {
             Class.forName("com.mysql.jdbc.Driver");
             Statement st = this.conn.createStatement();
             //TODO..
-        } catch (SQLException ex) {
-            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Hiba a törlésnél", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -123,8 +123,9 @@ public class Database {
                return rowCount;
            }         
            
-        } catch (SQLException ex) {
-            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception e) {
+            System.out.println("Hiba a feltöltéssel!");  
+        JOptionPane.showMessageDialog(null, "Hiba a feltöltéssel!", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
         return 0;
     }
@@ -133,8 +134,8 @@ public class Database {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Statement st = this.conn.createStatement();
-        } catch (SQLException ex) {
-            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Hiba a módosításnál", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }
     
@@ -156,8 +157,8 @@ public class Database {
                return true;
             }
             
-        } catch (SQLException ex) {
-            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Hiba a beszúrásnál", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
         return false;
     }

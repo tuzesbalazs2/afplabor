@@ -163,8 +163,8 @@ public class Registration extends javax.swing.JFrame {
             //db.reg_insert(username, password);
             
             
-        } catch (SQLException | ClassNotFoundException ex) {
-            Logger.getLogger(Registration.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Hiba a regisztráláskor", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_Button_keszActionPerformed
 
