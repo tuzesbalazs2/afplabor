@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product name="Internet Server Service" version="1.0" logpath=".">
+    <service name="SMTP server" port="2525" adapter="org.jSyncManager.SJS.Adapters.SMTPServer.SMTPServer" logpath="." classpath="" timeout="30" maxconnections="10">
+    </service>
+</product>

@@ -1,0 +1,1584 @@
+------------------------------------------------------------------------
+r8 | yaztromo | 2006-10-31 13:30:13 -0700 (Tue, 31 Oct 2006) | 2 lines
+
+Fixed a few issues int he build.xml file.
+
+------------------------------------------------------------------------
+r9 | yaztromo | 2007-09-09 15:04:50 -0700 (Sun, 09 Sep 2007) | 2 lines
+
+Fixed an out-of-date reference in the properties file.
+
+------------------------------------------------------------------------
+r10 | yaztromo | 2007-09-09 15:07:06 -0700 (Sun, 09 Sep 2007) | 2 lines
+
+Fixed a stale reference in a JavaDoc comment.
+
+------------------------------------------------------------------------
+r11 | yaztromo | 2007-09-09 15:08:22 -0700 (Sun, 09 Sep 2007) | 2 lines
+
+Added a basic JUnit test to for the TestAdapter to the project.
+
+------------------------------------------------------------------------
+r12 | yaztromo | 2007-09-09 16:13:35 -0700 (Sun, 09 Sep 2007) | 2 lines
+
+Removed the CVSROOT directory.
+
+------------------------------------------------------------------------
+r80 | yaztromo | 2007-09-16 20:53:23 -0700 (Sun, 16 Sep 2007) | 2 lines
+
+Moved the JUnit tests to their own test directory (they shouldn't be compiled into the distribution JAR)
+
+------------------------------------------------------------------------
+r81 | yaztromo | 2007-09-16 22:07:23 -0700 (Sun, 16 Sep 2007) | 2 lines
+
+Added a directory for submitting documentation.
+
+------------------------------------------------------------------------
+r84 | cecelia | 2007-09-21 14:08:07 -0700 (Fri, 21 Sep 2007) | 1 line
+
+created install directory for the install scripts
+------------------------------------------------------------------------
+r85 | muttonchop | 2007-09-21 15:08:03 -0700 (Fri, 21 Sep 2007) | 1 line
+
+Added batch file for starting the server in Windows
+------------------------------------------------------------------------
+r86 | tianfan | 2007-09-23 14:57:43 -0700 (Sun, 23 Sep 2007) | 2 lines
+
+added the mac version shell script for running the server
+
+------------------------------------------------------------------------
+r87 | muttonchop | 2007-09-23 16:16:27 -0700 (Sun, 23 Sep 2007) | 1 line
+
+Added a line to startserver.bat to start rmiregistry
+------------------------------------------------------------------------
+r88 | cgold | 2007-09-25 14:05:51 -0700 (Tue, 25 Sep 2007) | 1 line
+
+Added completed Linux install script
+------------------------------------------------------------------------
+r89 | yaztromo | 2007-09-25 15:02:37 -0700 (Tue, 25 Sep 2007) | 2 lines
+
+Changed the location of the JavaDoc build results, added unsafe typechecking for generic collection classes, and fixed unsafe collection usage in Server.java.
+
+------------------------------------------------------------------------
+r90 | muttonchop | 2007-09-25 22:27:27 -0700 (Tue, 25 Sep 2007) | 1 line
+
+Modified startserver.bat to navigate to ../dist before running the server
+------------------------------------------------------------------------
+r91 | cgold | 2007-09-26 13:34:37 -0700 (Wed, 26 Sep 2007) | 1 line
+
+Updated path in Linux install script to reflect agreed-upon install directory
+------------------------------------------------------------------------
+r92 | cgold | 2007-09-27 21:08:54 -0700 (Thu, 27 Sep 2007) | 1 line
+
+Corrected path in Linux install script
+------------------------------------------------------------------------
+r93 | yaztromo | 2007-09-30 19:23:23 -0700 (Sun, 30 Sep 2007) | 2 lines
+
+Moved the tests directory to insie the source directory to make it easier to build and identify them.
+
+------------------------------------------------------------------------
+r94 | yaztromo | 2007-09-30 19:24:41 -0700 (Sun, 30 Sep 2007) | 2 lines
+
+Changed the package for the TestAdapterTester to match the new Tests package.
+
+------------------------------------------------------------------------
+r95 | cpang | 2007-10-01 14:10:37 -0700 (Mon, 01 Oct 2007) | 2 lines
+
+added jalopy and jalopy-ant jars in extlib
+
+------------------------------------------------------------------------
+r96 | cpang | 2007-10-02 14:17:34 -0700 (Tue, 02 Oct 2007) | 2 lines
+
+added log.jar whatever it's for... added readme
+
+------------------------------------------------------------------------
+r97 | jeffcrowe | 2007-10-03 22:41:00 -0700 (Wed, 03 Oct 2007) | 1 line
+
+added the initial implementation for the smtp adapter
+------------------------------------------------------------------------
+r98 | yaztromo | 2007-10-03 23:30:50 -0700 (Wed, 03 Oct 2007) | 2 lines
+
+Fixed up the existing unit test, and added the JUnit JAR file to extlib.
+
+------------------------------------------------------------------------
+r99 | andrew_garber | 2007-10-05 10:27:10 -0700 (Fri, 05 Oct 2007) | 1 line
+
+Removed improper line endings. Fixed indenting. Got rid of Whitespace inconsistencies.
+------------------------------------------------------------------------
+r100 | jeffcrowe | 2007-10-05 19:48:44 -0700 (Fri, 05 Oct 2007) | 1 line
+
+Update the AbstractSmtpAdapter to use a hashmap for command, add a stud smtpadapter
+------------------------------------------------------------------------
+r101 | jeffcrowe | 2007-10-05 22:14:59 -0700 (Fri, 05 Oct 2007) | 1 line
+
+renamed SmtpAdapter stuff to SMTPServer as it is supposed to be according to the assignment, oops!
+------------------------------------------------------------------------
+r102 | yaztromo | 2007-10-05 23:01:16 -0700 (Fri, 05 Oct 2007) | 2 lines
+
+Fixed a case issue with a package name.
+
+------------------------------------------------------------------------
+r103 | Cecelia | 2007-10-05 23:18:19 -0700 (Fri, 05 Oct 2007) | 1 line
+
+Adding JUnit test class SMTPServerTest - contains QUIT test.
+------------------------------------------------------------------------
+r104 | jeffcrowe | 2007-10-06 10:59:43 -0700 (Sat, 06 Oct 2007) | 1 line
+
+added command quit, fixed up some return codes
+------------------------------------------------------------------------
+r105 | sstel | 2007-10-07 01:12:18 -0700 (Sun, 07 Oct 2007) | 1 line
+
+Shaun: added the intial handeling of commands 'HELP' and 'NOOP' 
+------------------------------------------------------------------------
+r106 | jeffcrowe | 2007-10-07 16:23:04 -0700 (Sun, 07 Oct 2007) | 1 line
+
+added quit command to registercommands
+------------------------------------------------------------------------
+r107 | jeffcrowe | 2007-10-07 16:38:16 -0700 (Sun, 07 Oct 2007) | 1 line
+
+changes to improve the use of the commands map in the enclosing instance of AbstractSMTPServer by the SmtpCommand instances
+------------------------------------------------------------------------
+r108 | sstel | 2007-10-07 17:24:08 -0700 (Sun, 07 Oct 2007) | 1 line
+
+updated command map referencing in 'HELP' 
+------------------------------------------------------------------------
+r109 | irislai | 2007-10-08 11:28:53 -0700 (Mon, 08 Oct 2007) | 1 line
+
+Added RSET, VRFY, and EXPN commands
+------------------------------------------------------------------------
+r110 | Cecelia | 2007-10-08 14:44:27 -0700 (Mon, 08 Oct 2007) | 1 line
+
+Added NOOP JUnit test case
+------------------------------------------------------------------------
+r111 | mwalts | 2007-10-08 15:53:13 -0700 (Mon, 08 Oct 2007) | 2 lines
+
+Added a clearBits method to allow a mask of bits to be removed
+from the state
+------------------------------------------------------------------------
+r112 | mwalts | 2007-10-08 17:39:17 -0700 (Mon, 08 Oct 2007) | 1 line
+
+Added SMTP on port 2000 for testing
+------------------------------------------------------------------------
+r113 | mwalts | 2007-10-08 18:25:04 -0700 (Mon, 08 Oct 2007) | 1 line
+
+Added MAIL FROM (not done) and DATA (Needs Abstract class change)
+------------------------------------------------------------------------
+r114 | ay58 | 2007-10-08 18:33:34 -0700 (Mon, 08 Oct 2007) | 1 line
+
+Ehlo and RCPT commands added
+------------------------------------------------------------------------
+r115 | mwalts | 2007-10-08 18:41:15 -0700 (Mon, 08 Oct 2007) | 1 line
+
+Added welcome message and getAddress method
+------------------------------------------------------------------------
+r116 | mwalts | 2007-10-08 18:42:25 -0700 (Mon, 08 Oct 2007) | 1 line
+
+Removed getAddress method, moved to absract class
+------------------------------------------------------------------------
+r117 | jeffcrowe | 2007-10-08 21:12:58 -0700 (Mon, 08 Oct 2007) | 1 line
+
+opened up the socket in AbstractAdapter so that the client ip information can be accessed. Generally improved things and stuff for the smtp server
+------------------------------------------------------------------------
+r118 | mwalts | 2007-10-08 21:31:26 -0700 (Mon, 08 Oct 2007) | 1 line
+
+Deals with backspaces in commands now
+------------------------------------------------------------------------
+r119 | mwalts | 2007-10-08 21:40:42 -0700 (Mon, 08 Oct 2007) | 1 line
+
+Fixed applyState, now doesn't kill previous state
+------------------------------------------------------------------------
+r120 | mwalts | 2007-10-08 22:43:09 -0700 (Mon, 08 Oct 2007) | 1 line
+
+Fixing up MAIL FROM and DATA commands
+------------------------------------------------------------------------
+r122 | yaztromo | 2007-10-09 00:33:46 -0700 (Tue, 09 Oct 2007) | 1 line
+
+Reverted the change that exposed the underlying socket to the adapter implementation directly, and instead added a proxy to the desired call.
+------------------------------------------------------------------------
+r123 | cgold | 2007-10-09 11:26:32 -0700 (Tue, 09 Oct 2007) | 1 line
+
+Added test for HELP
+------------------------------------------------------------------------
+r124 | cgold | 2007-10-09 11:47:54 -0700 (Tue, 09 Oct 2007) | 1 line
+
+Added EXPN test
+------------------------------------------------------------------------
+r125 | ay58 | 2007-10-09 13:13:30 -0700 (Tue, 09 Oct 2007) | 1 line
+
+RCPT command added
+------------------------------------------------------------------------
+r126 | jeffcrowe | 2007-10-09 13:50:25 -0700 (Tue, 09 Oct 2007) | 1 line
+
+update helo command to fix state, make some syntax changes
+------------------------------------------------------------------------
+r127 | cgold | 2007-10-09 14:01:46 -0700 (Tue, 09 Oct 2007) | 1 line
+
+Added remaining EXPN tests
+------------------------------------------------------------------------
+r128 | jeffcrowe | 2007-10-09 14:11:42 -0700 (Tue, 09 Oct 2007) | 1 line
+
+made things better, added back comment about helo ehlo order, yeah, more comments and stuff..
+------------------------------------------------------------------------
+r129 | Irislai | 2007-10-09 15:38:08 -0700 (Tue, 09 Oct 2007) | 1 line
+
+Fixed VRFY's response message
+------------------------------------------------------------------------
+r130 | mwalts | 2007-10-09 15:59:32 -0700 (Tue, 09 Oct 2007) | 2 lines
+
+EXPN and VRFY now match proposed testing, old implementation still
+there, might improve for initial release
+------------------------------------------------------------------------
+r131 | mwalts | 2007-10-09 16:11:52 -0700 (Tue, 09 Oct 2007) | 1 line
+
+Commented out import for REGEX since section is commented out
+------------------------------------------------------------------------
+r132 | mwalts | 2007-10-09 17:12:28 -0700 (Tue, 09 Oct 2007) | 3 lines
+
+Fixed DATA command, fixed trailing > from address that
+someone put back in for no reason,
+Fixed MAIL FROM and RCPT TO
+------------------------------------------------------------------------
+r133 | Cecelia | 2007-10-09 17:21:26 -0700 (Tue, 09 Oct 2007) | 1 line
+
+updating NOOP and QUIT commands, adding general syntax testing
+------------------------------------------------------------------------
+r134 | Irislai | 2007-10-09 21:50:55 -0700 (Tue, 09 Oct 2007) | 1 line
+
+re-implement VRFY and EXPN
+------------------------------------------------------------------------
+r135 | tianfan | 2007-10-09 23:53:40 -0700 (Tue, 09 Oct 2007) | 2 lines
+
+added the test case for EHLO and HELO
+
+------------------------------------------------------------------------
+r136 | tianfan | 2007-10-10 00:00:51 -0700 (Wed, 10 Oct 2007) | 2 lines
+
+modified the two EHLO and HELO classes, added two more classed to handle the wrong multiple parameters
+
+------------------------------------------------------------------------
+r137 | cecelia | 2007-10-10 11:09:26 -0700 (Wed, 10 Oct 2007) | 1 line
+
+Changed command too long and added check for unknown command
+------------------------------------------------------------------------
+r138 | cecelia | 2007-10-10 11:14:10 -0700 (Wed, 10 Oct 2007) | 1 line
+
+typos...
+------------------------------------------------------------------------
+r139 | Cecelia | 2007-10-10 20:08:18 -0700 (Wed, 10 Oct 2007) | 1 line
+
+updated NOOP command
+------------------------------------------------------------------------
+r140 | Cecelia | 2007-10-10 20:27:27 -0700 (Wed, 10 Oct 2007) | 1 line
+
+added e.toString's for the exception catching
+------------------------------------------------------------------------
+r141 | liyy | 2007-10-10 21:47:46 -0700 (Wed, 10 Oct 2007) | 1 line
+
+
+------------------------------------------------------------------------
+r142 | mwalts | 2007-10-10 22:07:07 -0700 (Wed, 10 Oct 2007) | 4 lines
+
+Fixed EXPN error codes
+Fixed HELP error code on single param that isn't a command
+Fixed RSET on params given
+Fixed HELO, EHLO, and QUIT for NullPointer from JUnit tests (messy)
+------------------------------------------------------------------------
+r143 | mwalts | 2007-10-10 22:17:22 -0700 (Wed, 10 Oct 2007) | 3 lines
+
+Whoops, Commited at too high a level in my source tree,
+uncommenting the test cases that I accidently commited after
+commenting them out locally :-S
+------------------------------------------------------------------------
+r144 | liyy | 2007-10-10 22:26:22 -0700 (Wed, 10 Oct 2007) | 1 line
+
+delete some unnecessary code
+------------------------------------------------------------------------
+r145 | muttonchop | 2007-10-10 22:34:57 -0700 (Wed, 10 Oct 2007) | 1 line
+
+Added rcpt and data tests
+------------------------------------------------------------------------
+r146 | mwalts | 2007-10-10 22:48:01 -0700 (Wed, 10 Oct 2007) | 2 lines
+
+Fixed issue I created with HELP command
+Fixed another issue with EXPN and invalid syntax
+------------------------------------------------------------------------
+r147 | mwalts | 2007-10-10 22:52:36 -0700 (Wed, 10 Oct 2007) | 1 line
+
+Applied HELO param limiter (sent by Jeff Crowe)
+------------------------------------------------------------------------
+r148 | Cecelia | 2007-10-10 22:53:35 -0700 (Wed, 10 Oct 2007) | 1 line
+
+changed HELP to NOOP for checking command long command; changed parameter values to something better
+------------------------------------------------------------------------
+r149 | liyy | 2007-10-10 23:08:57 -0700 (Wed, 10 Oct 2007) | 1 line
+
+modify the MAIL part
+------------------------------------------------------------------------
+r150 | mwalts | 2007-10-10 23:14:14 -0700 (Wed, 10 Oct 2007) | 2 lines
+
+QUIT now explicitly clears state, help's Unit tests test for
+sequence violations
+------------------------------------------------------------------------
+r151 | mwalts | 2007-10-10 23:21:43 -0700 (Wed, 10 Oct 2007) | 2 lines
+
+Changed port of SMTP server to 2525, to follow the convention
+for secondary servers
+------------------------------------------------------------------------
+r152 | sstel | 2007-10-10 23:54:09 -0700 (Wed, 10 Oct 2007) | 1 line
+
+Added logging to SMTP adapter
+------------------------------------------------------------------------
+r153 | yaztromo | 2007-10-11 00:58:16 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Added checks in getInetAddress() and disconnect() to prevent NPEs if the Socket and ConnectionManager are null (which should only be the case when unit tests are executed).
+------------------------------------------------------------------------
+r154 | sstel | 2007-10-11 01:00:33 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Removed extra log entry
+------------------------------------------------------------------------
+r155 | mwindle | 2007-10-11 03:07:58 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Added RSET and VRFY test implementations
+------------------------------------------------------------------------
+r156 | Cecelia | 2007-10-11 09:15:43 -0700 (Thu, 11 Oct 2007) | 1 line
+
+change RSET to VRFY in VRFY function
+------------------------------------------------------------------------
+r157 | mwalts | 2007-10-11 12:42:10 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Fixed null pointer exception for testing commands after logging
+------------------------------------------------------------------------
+r159 | mwindle | 2007-10-11 15:01:43 -0700 (Thu, 11 Oct 2007) | 2 lines
+
+- Added/Updated sequence command tests
+- Changed example parameters to remove personal info
+------------------------------------------------------------------------
+r160 | mercury1964 | 2007-10-11 16:52:42 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Added properties to build.xml for junit target
+------------------------------------------------------------------------
+r161 | andrew_garber | 2007-10-11 16:58:44 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Added JUnit targets.
+------------------------------------------------------------------------
+r162 | andrew_garber | 2007-10-11 17:06:56 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Implemented each JUnit target.
+------------------------------------------------------------------------
+r163 | mercury1964 | 2007-10-11 17:14:24 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Fixed classpath issue that caused build failure.
+------------------------------------------------------------------------
+r164 | anthonymah | 2007-10-11 17:28:17 -0700 (Thu, 11 Oct 2007) | 1 line
+
+
+------------------------------------------------------------------------
+r165 | andrew_garber | 2007-10-11 17:40:18 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Reverted to previous revision due to bad line endings.
+------------------------------------------------------------------------
+r166 | andrew_garber | 2007-10-11 17:44:19 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Changed order of properties to fix test targets.
+------------------------------------------------------------------------
+r167 | andrew_garber | 2007-10-11 18:04:28 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Added smtpmailtest property and target. Also, renamed run.tests to smtpservertests.
+------------------------------------------------------------------------
+r168 | andrew_garber | 2007-10-11 18:16:37 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Excluded test class files for the dist.
+------------------------------------------------------------------------
+r169 | andrew_garber | 2007-10-11 18:22:52 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Fixed whitespacing.
+------------------------------------------------------------------------
+r170 | Irislai | 2007-10-11 20:50:10 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Modify VRFY command
+------------------------------------------------------------------------
+r171 | sstel | 2007-10-11 21:03:36 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Bug Fix: 1811900 , fixed null exception in abstractSmtpAdapter
+------------------------------------------------------------------------
+r172 | mwalts | 2007-10-11 22:00:19 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Moved Data check to AbstractSMTPAdapter from SMTPAdapter
+------------------------------------------------------------------------
+r173 | jeffcrowe | 2007-10-11 22:09:35 -0700 (Thu, 11 Oct 2007) | 1 line
+
+removed try catch NPEs, which are just plain naughty
+------------------------------------------------------------------------
+r174 | jeffcrowe | 2007-10-11 22:10:25 -0700 (Thu, 11 Oct 2007) | 2 lines
+
+fix silly spacing
+
+------------------------------------------------------------------------
+r175 | mwalts | 2007-10-11 22:20:27 -0700 (Thu, 11 Oct 2007) | 2 lines
+
+DATA command now returns null when in DATA mode
+processRequest now logs DATA sections as well
+------------------------------------------------------------------------
+r176 | mwalts | 2007-10-11 23:26:55 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Removed null checks for getLogManager, now testing teams problem
+------------------------------------------------------------------------
+r177 | Cecelia | 2007-10-11 23:47:06 -0700 (Thu, 11 Oct 2007) | 1 line
+
+Changed return check from empty string to null string while in DATA mode; instantiated a new LogManager to remove NPEs as per described in bug 1811846
+------------------------------------------------------------------------
+r178 | Irislai | 2007-10-12 11:00:29 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Added comments and modify VRFY to take username or email address
+------------------------------------------------------------------------
+r179 | mercury1964 | 2007-10-12 16:57:12 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Rewrote the run.junit.tests to run all test classes created in the org.jSyncManager.SJS.Tests package.  Removed unnecessary properties. Also removed targets that were created to run junit tests, but are not necessary anymore.
+------------------------------------------------------------------------
+r180 | mercury1964 | 2007-10-12 17:25:44 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Fixed line endings, white space issues in the build.xml.
+------------------------------------------------------------------------
+r181 | mercury1964 | 2007-10-12 17:36:31 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Fixed white spacing, and added pathelement for junit.jar
+------------------------------------------------------------------------
+r182 | mercury1964 | 2007-10-12 19:04:00 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Fixed more white space issues, and corrected junit classpath
+------------------------------------------------------------------------
+r183 | mwalts | 2007-10-12 19:10:44 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Reverted JUnit test breaking change to VRFY, started on standards
+------------------------------------------------------------------------
+r184 | mercury1964 | 2007-10-12 19:11:41 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Removed duplicate properties
+------------------------------------------------------------------------
+r185 | mercury1964 | 2007-10-12 19:16:08 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Corrected formatting.
+------------------------------------------------------------------------
+r186 | mercury1964 | 2007-10-12 19:17:59 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Corrected more formatting, indentation on build.xml.
+------------------------------------------------------------------------
+r187 | mwalts | 2007-10-12 19:35:25 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Added commenting to match coding standards
+------------------------------------------------------------------------
+r188 | mercury1964 | 2007-10-12 19:55:12 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Made compile depend on run.junit.tests as per the requirements of assignment 2.
+------------------------------------------------------------------------
+r189 | Irislai | 2007-10-12 20:03:53 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Fix VRFY bug
+------------------------------------------------------------------------
+r190 | mercury1964 | 2007-10-12 20:06:08 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Added the halt on failure property name and value.
+------------------------------------------------------------------------
+r191 | mercury1964 | 2007-10-12 22:14:58 -0700 (Fri, 12 Oct 2007) | 1 line
+
+To run just the junit tests, added depends=compile.core.
+------------------------------------------------------------------------
+r192 | mwalts | 2007-10-12 23:29:45 -0700 (Fri, 12 Oct 2007) | 1 line
+
+Changed code formatting and commenting to meet coding standards
+------------------------------------------------------------------------
+r193 | mwalts | 2007-10-14 00:21:34 -0700 (Sun, 14 Oct 2007) | 5 lines
+
+Refactored code to conform to instructors wishes.
+Each command now has an abstract and concrete method
+on top of the Class for each that checks the syntax.
+Added mechanism for concrete class to deal with the end of 
+a mail message
+------------------------------------------------------------------------
+r194 | yaztromo | 2007-10-17 03:16:26 -0700 (Wed, 17 Oct 2007) | 1 line
+
+Removed the instances of the TestAdapter from the example server.xml file.
+------------------------------------------------------------------------
+r195 | yaztromo | 2007-10-17 04:25:27 -0700 (Wed, 17 Oct 2007) | 1 line
+
+Added a regex to test for valid MAIL FROM and RCPT TO parameters, added the ability to parse out the addresses in both standard and IP (v4 and v6) domain formats, and added the ability to parse out relays in RCPT TO commands.  Updated the testcases to test and verify these.
+------------------------------------------------------------------------
+r196 | yaztromo | 2007-10-17 04:33:47 -0700 (Wed, 17 Oct 2007) | 1 line
+
+Added a different form of the 501 message for RCPT when an e-mail address has been deemed to be of an invalid form.
+------------------------------------------------------------------------
+r197 | yaztromo | 2007-10-17 18:21:53 -0700 (Wed, 17 Oct 2007) | 1 line
+
+Changed the MAIL and RCPT commands so that they don't change the current state if the delegate determines there is a problem with the input.
+------------------------------------------------------------------------
+r198 | cpang | 2007-10-21 17:17:21 -0700 (Sun, 21 Oct 2007) | 1 line
+
+added formatConvention.xml into buildconfig
+------------------------------------------------------------------------
+r199 | yaztromo | 2007-10-21 22:03:10 -0700 (Sun, 21 Oct 2007) | 1 line
+
+Renamed SMTPServer to TestSMTPServer.
+------------------------------------------------------------------------
+r200 | yaztromo | 2007-10-22 01:41:08 -0700 (Mon, 22 Oct 2007) | 1 line
+
+Added a sample property file for SMTP delivery.
+------------------------------------------------------------------------
+r201 | yaztromo | 2007-10-22 01:41:33 -0700 (Mon, 22 Oct 2007) | 1 line
+
+Added and fixed the jalopy formatting target.
+------------------------------------------------------------------------
+r202 | yaztromo | 2007-10-22 01:55:57 -0700 (Mon, 22 Oct 2007) | 1 line
+
+Fixed some invalid characters in JavaDoc comments that was crashing the Jalopy format task.
+------------------------------------------------------------------------
+r203 | yaztromo | 2007-10-22 02:22:40 -0700 (Mon, 22 Oct 2007) | 1 line
+
+Fixed some bad characters in JavaDoc.
+------------------------------------------------------------------------
+r204 | yaztromo | 2007-10-22 02:37:46 -0700 (Mon, 22 Oct 2007) | 1 line
+
+Changed the name of the demo SMTPAdapter used for unit testing.
+------------------------------------------------------------------------
+r205 | yaztromo | 2007-10-23 00:08:46 -0700 (Tue, 23 Oct 2007) | 1 line
+
+Modified the format tasks dependency to "init", as compilation isn't a requirement for code formatting.
+------------------------------------------------------------------------
+r206 | cecelia | 2007-10-25 18:07:50 -0700 (Thu, 25 Oct 2007) | 1 line
+
+Added indentation for readability.
+------------------------------------------------------------------------
+r207 | cecelia | 2007-10-25 22:21:59 -0700 (Thu, 25 Oct 2007) | 1 line
+
+Fix some more tags that make Jalopy fail.
+------------------------------------------------------------------------
+r208 | cecelia | 2007-10-25 22:23:37 -0700 (Thu, 25 Oct 2007) | 1 line
+
+Multiple license headers were being added as soon as the year, author or e-mail address was changed within the file. Setting the ignore flag seems to fix the problem.
+------------------------------------------------------------------------
+r209 | nclark | 2007-10-27 00:14:49 -0700 (Sat, 27 Oct 2007) | 1 line
+
+BUG: [ 1821034 ] Invalid xml syntax /trunk/sjs/property_files/smtp_server.xml
+------------------------------------------------------------------------
+r210 | nclark | 2007-10-27 01:43:21 -0700 (Sat, 27 Oct 2007) | 1 line
+
+BUG: [ 1821034 ] Invalid xml syntax /trunk/sjs/property_files/smtp_server.xml
+------------------------------------------------------------------------
+r211 | nclark | 2007-10-27 19:43:24 -0700 (Sat, 27 Oct 2007) | 1 line
+
+FRE: [ 1821457 ] Xml configuration for SMTPServer
+------------------------------------------------------------------------
+r212 | Torbinsky | 2007-10-28 18:48:54 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Added toString() to the Domain object.
+------------------------------------------------------------------------
+r213 | Torbinsky | 2007-10-28 18:49:57 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Added the toString() method to the User object.
+------------------------------------------------------------------------
+r214 | Torbinsky | 2007-10-28 20:16:19 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Initial import of the source files for the message storing framework (mbox).
+------------------------------------------------------------------------
+r215 | Torbinsky | 2007-10-28 20:17:17 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Removed unused import.
+------------------------------------------------------------------------
+r216 | Torbinsky | 2007-10-28 20:19:27 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Added license comment to top of source files.
+------------------------------------------------------------------------
+r217 | Torbinsky | 2007-10-28 20:38:56 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Added path seperator constant.
+------------------------------------------------------------------------
+r218 | Torbinsky | 2007-10-28 21:10:18 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Initial import of the SMTPServer (SMTPAdapter) class.
+------------------------------------------------------------------------
+r219 | Torbinsky | 2007-10-28 21:13:10 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Added commenting/JavaDoc.
+------------------------------------------------------------------------
+r220 | Torbinsky | 2007-10-28 21:34:48 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Added JavaDoc commenting to the ReceivedMessage, SentMessage, and Message classes.
+------------------------------------------------------------------------
+r221 | Torbinsky | 2007-10-28 22:29:06 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Initial import of the Storable interface and the Folder class. Intending to build a framework for handling folders that store other folders or mbox messages.
+------------------------------------------------------------------------
+r222 | Torbinsky | 2007-10-28 22:29:55 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Removed an unused import from the Storable interface.
+------------------------------------------------------------------------
+r223 | Torbinsky | 2007-10-28 22:30:24 -0700 (Sun, 28 Oct 2007) | 1 line
+
+Added a to-do comment to Message.
+------------------------------------------------------------------------
+r224 | cgold | 2007-10-29 12:20:36 -0700 (Mon, 29 Oct 2007) | 1 line
+
+Added Javadoc commenting for SMTPMailTest class.
+------------------------------------------------------------------------
+r225 | Torbinsky | 2007-10-29 21:04:46 -0700 (Mon, 29 Oct 2007) | 1 line
+
+Removed @Overide comments.
+------------------------------------------------------------------------
+r226 | cecelia | 2007-10-29 23:07:13 -0700 (Mon, 29 Oct 2007) | 1 line
+
+Fix indentation of comment separators.
+------------------------------------------------------------------------
+r227 | cgold | 2007-10-30 11:41:28 -0700 (Tue, 30 Oct 2007) | 1 line
+
+Corrected Javadoc commenting for SMTPMailTest class.
+------------------------------------------------------------------------
+r228 | cgold | 2007-10-30 12:00:34 -0700 (Tue, 30 Oct 2007) | 1 line
+
+Added Javadoc commenting for SMTPServerTest class.
+------------------------------------------------------------------------
+r229 | cgold | 2007-10-30 12:06:30 -0700 (Tue, 30 Oct 2007) | 1 line
+
+Added Javadoc commenting for TestAdapterTester class.
+------------------------------------------------------------------------
+r230 | erikaz | 2007-10-30 14:29:01 -0700 (Tue, 30 Oct 2007) | 1 line
+
+added getters to SMTPServer.java
+------------------------------------------------------------------------
+r231 | torbinsky | 2007-10-30 14:29:43 -0700 (Tue, 30 Oct 2007) | 2 lines
+
+Added an empty, default constructor.
+
+------------------------------------------------------------------------
+r232 | mhp5432 | 2007-10-30 14:33:46 -0700 (Tue, 30 Oct 2007) | 1 line
+
+added stuff for init
+------------------------------------------------------------------------
+r233 | mhp5432 | 2007-10-30 15:21:01 -0700 (Tue, 30 Oct 2007) | 1 line
+
+processRcpt worked on, checking for valid user@domain
+------------------------------------------------------------------------
+r234 | erikaz | 2007-10-30 15:36:16 -0700 (Tue, 30 Oct 2007) | 1 line
+
+added getter guts to smtpserver.java
+------------------------------------------------------------------------
+r235 | mhp5432 | 2007-10-30 15:37:36 -0700 (Tue, 30 Oct 2007) | 1 line
+
+removed extra imports
+------------------------------------------------------------------------
+r236 | torbinsky | 2007-10-30 16:32:24 -0700 (Tue, 30 Oct 2007) | 2 lines
+
+Implemented the mbox message storing function. Updated the interface for message stores. Added the forgotten getReceievedDate method to Message.
+
+------------------------------------------------------------------------
+r237 | cecelia | 2007-10-30 19:07:30 -0700 (Tue, 30 Oct 2007) | 1 line
+
+Formatted method names to convention.
+------------------------------------------------------------------------
+r238 | cecelia | 2007-10-30 19:51:30 -0700 (Tue, 30 Oct 2007) | 1 line
+
+Formatting using Jalopy (take I)... then some manual fixes: indentation, comment separators and annotations.
+------------------------------------------------------------------------
+r239 | jeffcrowe | 2007-10-31 00:44:09 -0700 (Wed, 31 Oct 2007) | 1 line
+
+added initial version of ant build config for nightly builds
+------------------------------------------------------------------------
+r240 | torbinsky | 2007-10-31 22:33:12 -0700 (Wed, 31 Oct 2007) | 1 line
+
+Removed the "subject" field from the Message objects. The subject field is redundant and is part of the message body.
+------------------------------------------------------------------------
+r241 | tianfan | 2007-10-31 23:23:34 -0700 (Wed, 31 Oct 2007) | 2 lines
+
+added the comment for RCPT
+
+------------------------------------------------------------------------
+r242 | Torbinsky | 2007-10-31 23:50:07 -0700 (Wed, 31 Oct 2007) | 1 line
+
+Added constructors.
+------------------------------------------------------------------------
+r243 | Torbinsky | 2007-10-31 23:52:57 -0700 (Wed, 31 Oct 2007) | 1 line
+
+Added a utils package. Added SMTPUtils class with an address validation method and regular expressions.
+------------------------------------------------------------------------
+r244 | tianfan | 2007-10-31 23:54:45 -0700 (Wed, 31 Oct 2007) | 2 lines
+
+added some comments
+
+------------------------------------------------------------------------
+r245 | Torbinsky | 2007-11-01 00:00:33 -0700 (Thu, 01 Nov 2007) | 1 line
+
+Finished implementing message storage and retrieval routines.  Made some changes to the Message objects.
+------------------------------------------------------------------------
+r246 | tianfan | 2007-11-01 00:00:39 -0700 (Thu, 01 Nov 2007) | 2 lines
+
+added comments
+
+------------------------------------------------------------------------
+r247 | Torbinsky | 2007-11-01 00:02:19 -0700 (Thu, 01 Nov 2007) | 1 line
+
+Began implementing message storing.
+------------------------------------------------------------------------
+r248 | Torbinsky | 2007-11-01 00:04:31 -0700 (Thu, 01 Nov 2007) | 1 line
+
+Added comments to classes which are not currently being used (consider for deletion).
+------------------------------------------------------------------------
+r249 | tianfan | 2007-11-01 00:08:58 -0700 (Thu, 01 Nov 2007) | 2 lines
+
+added comments
+
+------------------------------------------------------------------------
+r250 | tianfan | 2007-11-01 00:12:59 -0700 (Thu, 01 Nov 2007) | 2 lines
+
+added comments
+
+------------------------------------------------------------------------
+r251 | tianfan | 2007-11-01 11:33:22 -0700 (Thu, 01 Nov 2007) | 1 line
+
+added comments
+------------------------------------------------------------------------
+r252 | tianfan | 2007-11-01 12:08:39 -0700 (Thu, 01 Nov 2007) | 2 lines
+
+added comments
+
+------------------------------------------------------------------------
+r253 | tianfan | 2007-11-01 12:22:08 -0700 (Thu, 01 Nov 2007) | 2 lines
+
+added comments
+
+------------------------------------------------------------------------
+r254 | tianfan | 2007-11-01 12:30:24 -0700 (Thu, 01 Nov 2007) | 2 lines
+
+added comments
+
+------------------------------------------------------------------------
+r255 | erikaz | 2007-11-01 14:44:03 -0700 (Thu, 01 Nov 2007) | 1 line
+
+added test adapter code
+------------------------------------------------------------------------
+r256 | torbinsky | 2007-11-01 14:55:20 -0700 (Thu, 01 Nov 2007) | 2 lines
+
+TW: Added setter methods to the Message object (need to comment).
+
+------------------------------------------------------------------------
+r257 | torbinsky | 2007-11-01 15:08:57 -0700 (Thu, 01 Nov 2007) | 2 lines
+
+Removed ghost classes (unused classes).
+
+------------------------------------------------------------------------
+r258 | torbinsky | 2007-11-01 15:17:31 -0700 (Thu, 01 Nov 2007) | 2 lines
+
+Added override methods to Message.
+
+------------------------------------------------------------------------
+r259 | krisclarke | 2007-11-01 19:56:28 -0700 (Thu, 01 Nov 2007) | 1 line
+
+A skeleton for this test class. No useful test functionality at this point.
+------------------------------------------------------------------------
+r260 | nclark | 2007-11-01 20:45:24 -0700 (Thu, 01 Nov 2007) | 1 line
+
+updating documentation for configuration classes and removed test class
+------------------------------------------------------------------------
+r261 | campbelm | 2007-11-02 00:44:43 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Committed the SMTPServerDeliveryTest the test is mostly complete but still must be tested against the MBox implimentation as it does not appear to be finished yet.
+------------------------------------------------------------------------
+r262 | campbelm | 2007-11-02 10:45:44 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Renaming of the Mail Tests to what was asked in the assignment
+------------------------------------------------------------------------
+r263 | torbinsky | 2007-11-02 10:57:47 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added comment to get rid of setTo(String to).
+------------------------------------------------------------------------
+r264 | muttonchop | 2007-11-02 11:20:38 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added separator comments and missing closing brace comments
+------------------------------------------------------------------------
+r265 | campbelm | 2007-11-02 11:24:35 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Ran Jalopy on MailDeliveryTest
+------------------------------------------------------------------------
+r266 | erikaz | 2007-11-02 12:25:44 -0700 (Fri, 02 Nov 2007) | 1 line
+
+changes to smtpserver
+------------------------------------------------------------------------
+r267 | mwalts | 2007-11-02 13:16:48 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added to use the svn ant task
+------------------------------------------------------------------------
+r268 | mwalts | 2007-11-02 13:20:12 -0700 (Fri, 02 Nov 2007) | 2 lines
+
+Changed halt on failure property for junit task.
+Added preliminary nightly build task, will be called from seperate build file
+------------------------------------------------------------------------
+r269 | mwalts | 2007-11-02 13:24:38 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Temp nightly build, so desemination
+------------------------------------------------------------------------
+r270 | torbinsky | 2007-11-02 13:40:07 -0700 (Fri, 02 Nov 2007) | 2 lines
+
+SMTP server now sends an Address to when setting the "to" field of a Message
+
+------------------------------------------------------------------------
+r274 | mercury1964 | 2007-11-02 14:14:31 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Adding BitRock installation xml file, needed for creation for MacOS, Linux and Windows installers.
+------------------------------------------------------------------------
+r277 | torbinsky | 2007-11-02 14:33:07 -0700 (Fri, 02 Nov 2007) | 2 lines
+
+Updated property xml files.
+
+------------------------------------------------------------------------
+r280 | ay58 | 2007-11-02 15:00:06 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Ali's additional code
+------------------------------------------------------------------------
+r281 | jeffcrowe | 2007-11-02 15:07:13 -0700 (Fri, 02 Nov 2007) | 1 line
+
+update to build stuff, make email work properly and all that nonsense, removed alis test email message
+------------------------------------------------------------------------
+r282 | jeffcrowe | 2007-11-02 15:11:12 -0700 (Fri, 02 Nov 2007) | 1 line
+
+adding jars for nightly build
+------------------------------------------------------------------------
+r283 | jeffcrowe | 2007-11-02 15:35:14 -0700 (Fri, 02 Nov 2007) | 1 line
+
+added stub Address.java to fix broken build, please replace with real class ASAPsvn add source/org/jSyncManager/SJS/Adapters/SMTPServer/Address.java
+------------------------------------------------------------------------
+r284 | jeffcrowe | 2007-11-02 16:08:47 -0700 (Fri, 02 Nov 2007) | 1 line
+
+updated nightlybuild and build to make things awesomeness to the maxsvn status okay pretty much everything is working now, generating the tar and gz and all that nonsense, just needa do some cleanup now, go teamsvn status
+------------------------------------------------------------------------
+r285 | jeffcrowe | 2007-11-02 16:12:00 -0700 (Fri, 02 Nov 2007) | 1 line
+
+added paths.properties to version contorl, now needed for building
+------------------------------------------------------------------------
+r286 | jeffcrowe | 2007-11-02 16:29:25 -0700 (Fri, 02 Nov 2007) | 1 line
+
+changed from gzip to bzip2 for the nightly build and stuff
+------------------------------------------------------------------------
+r287 | cecelia | 2007-11-02 16:57:34 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Fix strange indenting issue.
+------------------------------------------------------------------------
+r288 | torbinsky | 2007-11-02 17:47:45 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added the Address class that I forgot to add earlier.
+------------------------------------------------------------------------
+r289 | torbinsky | 2007-11-02 17:48:43 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added forgotten import statements.
+------------------------------------------------------------------------
+r290 | ahmad2121 | 2007-11-02 18:26:43 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added javadocs and comments.
+------------------------------------------------------------------------
+r291 | mwindle | 2007-11-02 18:31:06 -0700 (Fri, 02 Nov 2007) | 1 line
+
+- Made a bunch of doc & standards changes, yippee!
+------------------------------------------------------------------------
+r292 | campbelm | 2007-11-02 18:38:48 -0700 (Fri, 02 Nov 2007) | 2 lines
+
+Fixed comments and merged in changes to MailDeliveryTest
+
+------------------------------------------------------------------------
+r293 | mwalts | 2007-11-02 18:53:14 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added install teams targets
+------------------------------------------------------------------------
+r294 | torbinsky | 2007-11-02 19:06:24 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added some handling for null values in Message objects.
+------------------------------------------------------------------------
+r295 | torbinsky | 2007-11-02 19:19:21 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added code to instantiate a new Message object.
+------------------------------------------------------------------------
+r296 | torbinsky | 2007-11-02 20:12:03 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Fixed getUser() in Message.
+------------------------------------------------------------------------
+r297 | torbinsky | 2007-11-02 20:14:18 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Fixed a bug where SMTP server was getting the wrong user (FROM and TO users were switched).
+------------------------------------------------------------------------
+r298 | torbinsky | 2007-11-02 20:20:55 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added missing "\n" to msg body (all lines were being put on first line) in Mbox method.
+------------------------------------------------------------------------
+r299 | torbinsky | 2007-11-02 20:24:44 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Fixed Bug: SMTPServer wasn't appending body data with newlines. IGNORE previous bug.
+------------------------------------------------------------------------
+r300 | campbelm | 2007-11-02 21:28:30 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Fixed a Spelling Error in MailDeliveryTest
+------------------------------------------------------------------------
+r301 | krisclarke | 2007-11-02 21:39:52 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added method seperators to MailDeliveryTest class.
+------------------------------------------------------------------------
+r302 | krisclarke | 2007-11-02 21:53:01 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added method separators to MailDeliveryTest class.
+------------------------------------------------------------------------
+r303 | mwalts | 2007-11-02 22:00:52 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added comments and fixed up properties
+------------------------------------------------------------------------
+r304 | mwalts | 2007-11-02 22:13:57 -0700 (Fri, 02 Nov 2007) | 2 lines
+
+Fixed source jar task
+Added the api source jaring to the nightly build task
+------------------------------------------------------------------------
+r305 | mwalts | 2007-11-02 22:14:56 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Added the api bin and api source file to the bziped tar file
+------------------------------------------------------------------------
+r306 | aaron__k | 2007-11-02 22:23:26 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Spelling corrections...
+------------------------------------------------------------------------
+r307 | campbelm | 2007-11-02 22:49:37 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Fixed standards, comments and spelling errors in MailDeliveryTest.java
+------------------------------------------------------------------------
+r308 | aaron__k | 2007-11-02 23:43:27 -0700 (Fri, 02 Nov 2007) | 1 line
+
+Removed DATA_BAD_SYNTAX_ERROR since it is not used.
+------------------------------------------------------------------------
+r309 | cpang | 2007-11-02 23:45:28 -0700 (Fri, 02 Nov 2007) | 2 lines
+
+resolved conflict in processmessagefinished with the printing of error message
+
+------------------------------------------------------------------------
+r310 | cpang | 2007-11-05 13:12:50 -0800 (Mon, 05 Nov 2007) | 2 lines
+
+sorry... the missing semi-colon was my mistake... added back into processmessagefinish in SMTPServer.java
+
+------------------------------------------------------------------------
+r311 | cpang | 2007-11-05 13:32:03 -0800 (Mon, 05 Nov 2007) | 2 lines
+
+added findbugs-ant.jar to extlib
+
+------------------------------------------------------------------------
+r312 | krisclarke | 2007-11-07 01:21:22 -0800 (Wed, 07 Nov 2007) | 1 line
+
+Preliminary SJS Manual LaTeX source with associated test image and resultant PDF.
+------------------------------------------------------------------------
+r313 | cpang | 2007-11-07 12:42:23 -0800 (Wed, 07 Nov 2007) | 5 lines
+
+added findbugs installation to extlib
+added findbugs ant task to build.xml
+added findbugs report (findbugs.xml)
+removed my old readme file from extlib
+
+------------------------------------------------------------------------
+r314 | cpang | 2007-11-07 12:53:34 -0800 (Wed, 07 Nov 2007) | 2 lines
+
+removed a chunk of the findbugs installation so checkouts can be faster
+
+------------------------------------------------------------------------
+r315 | tianfan | 2007-11-07 17:54:55 -0800 (Wed, 07 Nov 2007) | 1 line
+
+added the DNSUtil class, just added, not finished
+------------------------------------------------------------------------
+r316 | tianfan | 2007-11-07 18:00:53 -0800 (Wed, 07 Nov 2007) | 2 lines
+
+formatted the file
+
+------------------------------------------------------------------------
+r317 | tianfan | 2007-11-07 18:28:10 -0800 (Wed, 07 Nov 2007) | 1 line
+
+reformatted the file
+------------------------------------------------------------------------
+r318 | tianfan | 2007-11-07 21:24:27 -0800 (Wed, 07 Nov 2007) | 1 line
+
+finished the class DNSUtil
+------------------------------------------------------------------------
+r319 | tianfan | 2007-11-07 22:53:32 -0800 (Wed, 07 Nov 2007) | 1 line
+
+put some formatting
+------------------------------------------------------------------------
+r320 | tianfan | 2007-11-07 23:03:53 -0800 (Wed, 07 Nov 2007) | 1 line
+
+change the substring index
+------------------------------------------------------------------------
+r321 | tianfan | 2007-11-07 23:12:42 -0800 (Wed, 07 Nov 2007) | 1 line
+
+added the package org.jSyncManager.SJS.Adapters.SMTPServer
+------------------------------------------------------------------------
+r322 | tianfan | 2007-11-07 23:28:55 -0800 (Wed, 07 Nov 2007) | 2 lines
+
+removed the package include
+
+------------------------------------------------------------------------
+r323 | tianfan | 2007-11-07 23:55:23 -0800 (Wed, 07 Nov 2007) | 1 line
+
+reenable the package
+------------------------------------------------------------------------
+r324 | tianfan | 2007-11-08 00:06:20 -0800 (Thu, 08 Nov 2007) | 1 line
+
+reenable the package
+------------------------------------------------------------------------
+r325 | tianfan | 2007-11-08 12:24:57 -0800 (Thu, 08 Nov 2007) | 1 line
+
+fixed the only one mail server bug
+------------------------------------------------------------------------
+r326 | tianfan | 2007-11-08 12:29:37 -0800 (Thu, 08 Nov 2007) | 1 line
+
+fixed the Hashtable error
+------------------------------------------------------------------------
+r327 | torbinsky | 2007-11-09 15:13:23 -0800 (Fri, 09 Nov 2007) | 2 lines
+
+TW: Fixed nightly build e-mail address.
+
+------------------------------------------------------------------------
+r328 | mwindle | 2007-11-09 18:40:25 -0800 (Fri, 09 Nov 2007) | 5 lines
+
+- Made changes to allow messages to have multiple recipients
+- Made Config/Configuration.java a singleton in case it needs to be used in other places
+- Updated the Mbox object to save messages and include ALL recipients. The reverse of this process (deserialization of mbox messages) needs to be fixed, and is no longer working properly
+- Updated SMTPServer to use updated processMessageFinished algorithm that will queue up remote addresses also
+- This should build okay, but some of the tests will fail at this point
+------------------------------------------------------------------------
+r329 | cecelia | 2007-11-09 20:31:14 -0800 (Fri, 09 Nov 2007) | 1 line
+
+In the default Message constructor we need to instantiate the to List<Address>; otherwise the junit tests fail with NPEs when trying to add a RCPT to a null list!
+------------------------------------------------------------------------
+r330 | cecelia | 2007-11-09 21:53:39 -0800 (Fri, 09 Nov 2007) | 2 lines
+
+Added the RemoteServerMessage class. This class contains the name of a remote server, the message to be relayed and which recipients get sent the message from this server. 
+- send() still to be implemented.
+------------------------------------------------------------------------
+r331 | cecelia | 2007-11-09 23:30:44 -0800 (Fri, 09 Nov 2007) | 1 line
+
+Fix last part of bug 1828343, improper use of generics for ArrayList
+------------------------------------------------------------------------
+r332 | muttonchop | 2007-11-11 13:17:45 -0800 (Sun, 11 Nov 2007) | 1 line
+
+Added RemoteSMTPServer.java: a class for relaying messages to a remote SMTP server.
+------------------------------------------------------------------------
+r333 | muttonchop | 2007-11-12 00:39:40 -0800 (Mon, 12 Nov 2007) | 1 line
+
+Moved RemoteSMTPServer's functionality into RemoteServerMessage.java.
+------------------------------------------------------------------------
+r334 | liyy | 2007-11-12 13:08:22 -0800 (Mon, 12 Nov 2007) | 1 line
+
+modify some code in send()
+------------------------------------------------------------------------
+r335 | cgold | 2007-11-12 13:45:37 -0800 (Mon, 12 Nov 2007) | 1 line
+
+Added incomplete RemoteMessageHandler Class
+------------------------------------------------------------------------
+r336 | cgold | 2007-11-12 13:46:44 -0800 (Mon, 12 Nov 2007) | 1 line
+
+Updated to use RemoteMessageHandler where required.
+------------------------------------------------------------------------
+r337 | campbelm | 2007-11-12 17:25:17 -0800 (Mon, 12 Nov 2007) | 3 lines
+
+Changed the folder structure of the Docs folder to include a section for the manual.
+
+Added the manual source to the new folder structure.
+------------------------------------------------------------------------
+r338 | campbelm | 2007-11-12 17:41:36 -0800 (Mon, 12 Nov 2007) | 1 line
+
+Added the images for the Windows Installer portion of the manual/src/images
+------------------------------------------------------------------------
+r339 | torbinsky | 2007-11-13 16:41:30 -0800 (Tue, 13 Nov 2007) | 2 lines
+
+Fixed From address for SPF bounce-back.
+
+------------------------------------------------------------------------
+r340 | cgold | 2007-11-13 18:33:13 -0800 (Tue, 13 Nov 2007) | 1 line
+
+Added store() and send() funtionality.  Logging not yet added.
+------------------------------------------------------------------------
+r341 | cecelia | 2007-11-13 21:37:16 -0800 (Tue, 13 Nov 2007) | 1 line
+
+Rename MessageStore to MessageStoreInterface as per standards.
+------------------------------------------------------------------------
+r342 | krisclarke | 2007-11-14 01:29:10 -0800 (Wed, 14 Nov 2007) | 1 line
+
+Added draft content to the Introduction section.
+------------------------------------------------------------------------
+r343 | mhp5432 | 2007-11-14 10:19:23 -0800 (Wed, 14 Nov 2007) | 1 line
+
+fixed a few javadoc comments
+------------------------------------------------------------------------
+r344 | torbinsky | 2007-11-14 11:27:10 -0800 (Wed, 14 Nov 2007) | 1 line
+
+TW: Added build task for e-mailing weekly FindBug results.
+------------------------------------------------------------------------
+r345 | cecelia | 2007-11-14 11:41:48 -0800 (Wed, 14 Nov 2007) | 1 line
+
+Put in some type-check for the generics and fixed the second addDomain to addRcpt for the store() function.
+------------------------------------------------------------------------
+r346 | torbinsky | 2007-11-14 11:42:05 -0800 (Wed, 14 Nov 2007) | 2 lines
+
+TW: Added svn checkout capability to findbug task in main build file. (Can't depend on nightly being run before weekly and being on the same machine).
+
+------------------------------------------------------------------------
+r347 | cecelia | 2007-11-14 14:05:31 -0800 (Wed, 14 Nov 2007) | 3 lines
+
+Fix bug 1829402 by finding the correct smtp_server.xml file in one of three locations. If not found, throw an exception (not call system.exit).
+Also fixed processRcpts() to take into consideration a non-local domain could be specified, and if so create a new Domain object instead of passing null into the Address object.
+Some JUnit tests are failing, and the exact cause is still being determined.
+------------------------------------------------------------------------
+r348 | cecelia | 2007-11-14 14:21:54 -0800 (Wed, 14 Nov 2007) | 1 line
+
+Fix some JavaDoc and type-checking warnings.
+------------------------------------------------------------------------
+r349 | tianfan | 2007-11-14 16:40:42 -0800 (Wed, 14 Nov 2007) | 1 line
+
+added java doc
+------------------------------------------------------------------------
+r350 | tianfan | 2007-11-14 18:27:04 -0800 (Wed, 14 Nov 2007) | 1 line
+
+0 mail server, return "null", has mail servers, return the first one
+------------------------------------------------------------------------
+r351 | tianfan | 2007-11-14 18:28:32 -0800 (Wed, 14 Nov 2007) | 2 lines
+
+fixed the class name error
+
+------------------------------------------------------------------------
+r352 | cecelia | 2007-11-14 19:33:50 -0800 (Wed, 14 Nov 2007) | 3 lines
+
+Change to return null if no servers or unknown domain (not the string "null").
+Also return null if an error occurred - TODO record error in the log for unknown domain name.
+Added comment separators. 
+------------------------------------------------------------------------
+r353 | krisclarke | 2007-11-15 01:05:35 -0800 (Thu, 15 Nov 2007) | 1 line
+
+Additional Introduction content added.
+------------------------------------------------------------------------
+r354 | cgold | 2007-11-15 11:15:27 -0800 (Thu, 15 Nov 2007) | 1 line
+
+Added logging functionality to RemoteMessageHandler
+------------------------------------------------------------------------
+r355 | cgold | 2007-11-15 12:09:04 -0800 (Thu, 15 Nov 2007) | 1 line
+
+updates remotemessagehandler store() method
+------------------------------------------------------------------------
+r356 | aaron__k | 2007-11-15 13:07:09 -0800 (Thu, 15 Nov 2007) | 1 line
+
+Added Mac screenshots of Install process
+------------------------------------------------------------------------
+r357 | aaron__k | 2007-11-15 13:08:55 -0800 (Thu, 15 Nov 2007) | 1 line
+
+Changed format of tiff file to jpg.
+------------------------------------------------------------------------
+r358 | mwalts | 2007-11-15 16:33:27 -0800 (Thu, 15 Nov 2007) | 1 line
+
+Started adding new interface
+------------------------------------------------------------------------
+r359 | mwalts | 2007-11-15 17:36:58 -0800 (Thu, 15 Nov 2007) | 1 line
+
+UI for SMTP server setup
+------------------------------------------------------------------------
+r360 | jeffcrowe | 2007-11-15 18:03:02 -0800 (Thu, 15 Nov 2007) | 1 line
+
+added property converter thing for making silly little property files into nice fancy xml with a magical one click tool, hurray
+------------------------------------------------------------------------
+r361 | jeffcrowe | 2007-11-15 19:08:39 -0800 (Thu, 15 Nov 2007) | 1 line
+
+made the property thing even awesomnesser
+------------------------------------------------------------------------
+r362 | mwalts | 2007-11-15 20:47:31 -0800 (Thu, 15 Nov 2007) | 1 line
+
+added property file info for server.xml
+------------------------------------------------------------------------
+r363 | mwalts | 2007-11-15 21:46:34 -0800 (Thu, 15 Nov 2007) | 1 line
+
+Added properties section for testAdapter, also added section for domains and users for the SMTP server
+------------------------------------------------------------------------
+r364 | jeffcrowe | 2007-11-15 22:46:10 -0800 (Thu, 15 Nov 2007) | 1 line
+
+added VALUE tag for property converter
+------------------------------------------------------------------------
+r365 | cecelia | 2007-11-15 23:03:21 -0800 (Thu, 15 Nov 2007) | 1 line
+
+Add some logging, remove some logging TODOs, change passing of logManager into RemoteMessageHandler to be done once in the constructor.
+------------------------------------------------------------------------
+r366 | campbelm | 2007-11-15 23:07:27 -0800 (Thu, 15 Nov 2007) | 1 line
+
+Removed some out of date documents that used to be used by the manual
+------------------------------------------------------------------------
+r367 | mwalts | 2007-11-15 23:30:39 -0800 (Thu, 15 Nov 2007) | 1 line
+
+Fixed up interface
+------------------------------------------------------------------------
+r368 | cpang | 2007-11-15 23:40:56 -0800 (Thu, 15 Nov 2007) | 2 lines
+
+Running and Stopping SJS added into sjsManual.tex
+
+------------------------------------------------------------------------
+r369 | campbelm | 2007-11-16 01:59:36 -0800 (Fri, 16 Nov 2007) | 6 lines
+
+Updated the manual section of the docs folder as follows:
+1. Added Pictures For the new Installer
+2. Created separate .tex files for each section of the document (will make merging easier)
+	-Finished the Install Section
+3. Updated sjsManual.tex to use the separate files
+4. Added auxFiles folder so that the build target will work
+------------------------------------------------------------------------
+r370 | aaron__k | 2007-11-16 02:30:42 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Partially complete administration section of the sjs Manual.
+------------------------------------------------------------------------
+r371 | campbelm | 2007-11-16 02:45:28 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Fixed some formatting in the manual
+------------------------------------------------------------------------
+r372 | aaron__k | 2007-11-16 03:35:35 -0800 (Fri, 16 Nov 2007) | 1 line
+
+More updates to the Admin section.
+------------------------------------------------------------------------
+r373 | aaron__k | 2007-11-16 04:21:12 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Another version of the Admin commands section.  Still some stuff to fill in.
+------------------------------------------------------------------------
+r374 | mwindle | 2007-11-16 07:57:53 -0800 (Fri, 16 Nov 2007) | 1 line
+
+- Updated Mbox deserialization to handle multiple recipients
+------------------------------------------------------------------------
+r375 | mwalts | 2007-11-16 11:59:05 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Added post build event
+------------------------------------------------------------------------
+r376 | mwalts | 2007-11-16 12:00:12 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Now ignores special VALUE tag from the attributes
+------------------------------------------------------------------------
+r377 | mwalts | 2007-11-16 12:02:25 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Added post install scripts to run Java property file converter
+------------------------------------------------------------------------
+r378 | muttonchop | 2007-11-16 12:49:06 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Updated RemoteServerMessage.send() to append Return-Path and Received lines to the message body.
+------------------------------------------------------------------------
+r379 | cecelia | 2007-11-16 12:53:39 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Add back in the other relative path the smtp_server.xml file could be located at. If you wish to override this location, you must specify the sjs.smtpserver.propertyfile property when you start the server.
+------------------------------------------------------------------------
+r380 | cecelia | 2007-11-16 13:56:28 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Removed references to the logManager from the init() function, because it has not been initialized at this point in creation.
+------------------------------------------------------------------------
+r381 | cecelia | 2007-11-16 15:13:16 -0800 (Fri, 16 Nov 2007) | 4 lines
+
+Fixed one of the JUnit tests (looking for the wrong error codes).
+Fixed part of the other JUnit test (not sending in the right username to get MBox, and reading the MBox was in an infinite loop) - for some reason this second test does not create the MBox files user1 and user2, therefore it is still failing...
+Fixed the returned MBox file for a specific user (was just creating a file from the path variable, should be path+name). Also fixed containsValue to containsKey (username is a String not a User).
+
+------------------------------------------------------------------------
+r382 | mwalts | 2007-11-16 15:15:31 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Fix for linux install
+------------------------------------------------------------------------
+r383 | mwindle | 2007-11-16 17:04:38 -0800 (Fri, 16 Nov 2007) | 1 line
+
+- updated message forwarding
+------------------------------------------------------------------------
+r384 | cecelia | 2007-11-16 17:45:12 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Clean up the remote message forwarding code - it works!
+------------------------------------------------------------------------
+r385 | ahmad2121 | 2007-11-16 18:54:53 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Added configuring the SMTP Adapter and the Test Adapter.
+------------------------------------------------------------------------
+r386 | ahmad2121 | 2007-11-16 19:27:37 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Updates to using SMTP Adapter and Test Adapter. Switched sections around in sjsManual.tex. Minor updates to manual_intro.tex.
+------------------------------------------------------------------------
+r387 | ahmad2121 | 2007-11-16 19:37:39 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Added some sample commands to send the SMTP server.
+------------------------------------------------------------------------
+r388 | aaron__k | 2007-11-16 20:07:49 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Nearly all sections complete.
+------------------------------------------------------------------------
+r389 | aaron__k | 2007-11-16 20:09:55 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Added label to Starting Server section so I could refer to it.
+------------------------------------------------------------------------
+r390 | jmschwartz | 2007-11-16 22:04:52 -0800 (Fri, 16 Nov 2007) | 3 lines
+
+Configuration section added.
+
+
+------------------------------------------------------------------------
+r391 | aaron__k | 2007-11-16 22:43:43 -0800 (Fri, 16 Nov 2007) | 3 lines
+
+Clarified some of the steps.  
+Added instructions for people running from an installed version of the SJS.
+Added instructions for how to properly shut down the SJS.
+------------------------------------------------------------------------
+r392 | aaron__k | 2007-11-16 22:46:47 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Minor formatting changes.
+------------------------------------------------------------------------
+r393 | aaron__k | 2007-11-16 22:51:52 -0800 (Fri, 16 Nov 2007) | 1 line
+
+More formatting changes.
+------------------------------------------------------------------------
+r394 | aaron__k | 2007-11-16 22:58:43 -0800 (Fri, 16 Nov 2007) | 2 lines
+
+Formatting changes.
+
+------------------------------------------------------------------------
+r395 | krisclarke | 2007-11-16 23:17:31 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Made spelling corrections.
+------------------------------------------------------------------------
+r396 | krisclarke | 2007-11-16 23:23:14 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Removed place holder text in the manual section summary.
+------------------------------------------------------------------------
+r397 | aaron__k | 2007-11-16 23:57:13 -0800 (Fri, 16 Nov 2007) | 1 line
+
+Added commands for all systems.
+------------------------------------------------------------------------
+r398 | yaztromo | 2007-11-19 02:28:18 -0800 (Mon, 19 Nov 2007) | 2 lines
+
+Added a directory for Java Web Start data files.
+
+------------------------------------------------------------------------
+r399 | andrew_garber | 2007-11-19 19:40:02 -0800 (Mon, 19 Nov 2007) | 1 line
+
+Added the beginnings of a website for SJS.
+------------------------------------------------------------------------
+r400 | andrew_garber | 2007-11-20 03:07:20 -0800 (Tue, 20 Nov 2007) | 1 line
+
+Created basic site structure.
+------------------------------------------------------------------------
+r408 | erikaz | 2007-11-21 15:19:46 -0800 (Wed, 21 Nov 2007) | 1 line
+
+creating testlog directory for junit test results
+------------------------------------------------------------------------
+r409 | cpang | 2007-11-22 01:17:41 -0800 (Thu, 22 Nov 2007) | 2 lines
+
+added initial draft of webstartserver.java in trunk/install/webstart
+
+------------------------------------------------------------------------
+r410 | erikaz | 2007-11-22 14:57:00 -0800 (Thu, 22 Nov 2007) | 1 line
+
+adding files
+------------------------------------------------------------------------
+r411 | erikaz | 2007-11-22 15:02:43 -0800 (Thu, 22 Nov 2007) | 1 line
+
+change to webstart jnlp file
+------------------------------------------------------------------------
+r412 | andrew_garber | 2007-11-24 14:05:55 -0800 (Sat, 24 Nov 2007) | 1 line
+
+Designed a 'look' for the SJS website.
+------------------------------------------------------------------------
+r413 | andrew_garber | 2007-11-24 18:13:17 -0800 (Sat, 24 Nov 2007) | 1 line
+
+Changes to typography and colours.
+------------------------------------------------------------------------
+r414 | andrew_garber | 2007-11-24 18:28:11 -0800 (Sat, 24 Nov 2007) | 1 line
+
+Copied content from current web site to the new SJS home page.
+------------------------------------------------------------------------
+r415 | andrew_garber | 2007-11-24 19:08:20 -0800 (Sat, 24 Nov 2007) | 1 line
+
+Added favourite icon, and changed administrators and developers to read "Comming soon...".
+------------------------------------------------------------------------
+r416 | andrew_garber | 2007-11-24 20:28:46 -0800 (Sat, 24 Nov 2007) | 1 line
+
+Added CSS for <code> tag.
+------------------------------------------------------------------------
+r417 | andrew_garber | 2007-11-24 20:42:20 -0800 (Sat, 24 Nov 2007) | 1 line
+
+Fixed typo in CSS for <code> tag: I meant to use 'monospace', but I wrote 'fixed'. Also, font-size is now 100%.
+------------------------------------------------------------------------
+r418 | andrew_garber | 2007-11-24 20:44:24 -0800 (Sat, 24 Nov 2007) | 1 line
+
+Fixed spelling mistake.
+------------------------------------------------------------------------
+r419 | andrew_garber | 2007-11-24 21:26:53 -0800 (Sat, 24 Nov 2007) | 1 line
+
+Changed body's min-width to 900px so that a gutter would show.
+------------------------------------------------------------------------
+r420 | andrew_garber | 2007-11-25 01:49:40 -0800 (Sun, 25 Nov 2007) | 1 line
+
+Tweaked navbar colours.
+------------------------------------------------------------------------
+r421 | andrew_garber | 2007-11-25 03:22:36 -0800 (Sun, 25 Nov 2007) | 1 line
+
+Floated #banner in order to hack around the IE Margin Transference Bug.
+------------------------------------------------------------------------
+r422 | andrew_garber | 2007-11-25 04:04:58 -0800 (Sun, 25 Nov 2007) | 1 line
+
+Moved the min-width property from the body element to the html element.
+------------------------------------------------------------------------
+r423 | andrew_garber | 2007-11-25 04:49:38 -0800 (Sun, 25 Nov 2007) | 1 line
+
+Removed 'manager' param from JavaDoc since it wasn't part of the method signature.
+------------------------------------------------------------------------
+r424 | andrew_garber | 2007-11-26 02:03:03 -0800 (Mon, 26 Nov 2007) | 1 line
+
+Fixed improper ordering of anchor pseudo-classes in CSS. Also added link to Javadocs on developers page.
+------------------------------------------------------------------------
+r425 | erikaz | 2007-11-26 14:50:09 -0800 (Mon, 26 Nov 2007) | 1 line
+
+change to index
+------------------------------------------------------------------------
+r426 | torbinsky | 2007-11-26 15:12:08 -0800 (Mon, 26 Nov 2007) | 2 lines
+
+TW: Added vendor information to JNLP.
+
+------------------------------------------------------------------------
+r427 | andrew_garber | 2007-11-26 20:38:44 -0800 (Mon, 26 Nov 2007) | 1 line
+
+Since IE6 does not support PNGs containing an alpha channel, and ~ 1/3 of all users still use IE6, I was forced to come up with an alternative solution: use GIFs and JPEGs. While this is not an ideal solution due to the colour matching inaccuracies of the JPEG format, it's good enough for now. In the future, I might provide a more robust solution.
+------------------------------------------------------------------------
+r430 | jmschwartz | 2007-11-29 01:51:07 -0800 (Thu, 29 Nov 2007) | 1 line
+
+Added Design By Contract system (via C4J). One minimal contract inserted as sample. Server can be invoked using: 'java -javaagent:../extlib/c4j.jar -ea -jar sjs.jar start server ../property_files/server.xml' to run C4J DBC.
+------------------------------------------------------------------------
+r433 | torbinsky | 2007-11-29 13:32:21 -0800 (Thu, 29 Nov 2007) | 1 line
+
+TW: Added optimization to Message.java. Message body is now a StringBuffer rather than a String. This greatly increases the efficiency of the appendData method in the Message object.
+------------------------------------------------------------------------
+r434 | jmschwartz | 2007-11-29 15:05:02 -0800 (Thu, 29 Nov 2007) | 1 line
+
+implemented org.jSyncManager.SJS.Adapters.SMTPServer.MboxContract. No longer just a place holder.
+------------------------------------------------------------------------
+r435 | campbelm | 2007-11-29 23:51:24 -0800 (Thu, 29 Nov 2007) | 1 line
+
+Added the contracts package to the SMTPServer package
+------------------------------------------------------------------------
+r436 | wenfeng | 2007-11-30 00:15:48 -0800 (Fri, 30 Nov 2007) | 1 line
+
+
+------------------------------------------------------------------------
+r437 | wenfeng | 2007-11-30 00:16:23 -0800 (Fri, 30 Nov 2007) | 1 line
+
+
+------------------------------------------------------------------------
+r438 | campbelm | 2007-11-30 02:06:30 -0800 (Fri, 30 Nov 2007) | 20 lines
+
+Added all the contracts for AbstractSMTPServer.
+
+New Contracts include:
+AbstractSMTPServer
+CommandData
+CommandEhlo
+CommandExpn
+CommandHelo
+CommandHelp
+CommandMail
+CommandNoop
+CommandQuit
+CommandRcpt
+CommandRset
+CommandVrfy
+
+Updated Class files:
+AbstractSMTPServer
+-Some Scope Changes
+-Added in support for contracts
+------------------------------------------------------------------------
+r439 | ahmad2121 | 2007-11-30 11:04:52 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Added contracts for SMTPUtils.java, Message.java, DAOFactory.java, and Domain.java.
+------------------------------------------------------------------------
+r440 | campbelm | 2007-11-30 14:14:22 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Added Javadoc comments and ran Jalopy on the contracts package
+------------------------------------------------------------------------
+r441 | aaron__k | 2007-11-30 14:21:57 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Added contracts for SMTPServer and Address
+------------------------------------------------------------------------
+r442 | aaron__k | 2007-11-30 14:26:14 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Formatted classes and added contract references.
+------------------------------------------------------------------------
+r443 | aaron__k | 2007-11-30 14:41:37 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Properly formatted the classes using Jalopy.
+------------------------------------------------------------------------
+r444 | ahmad2121 | 2007-11-30 16:01:41 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Updated DAOFactoryContract.java, DomainContract.java, MessageContract.java, and SMTPUtilsContract.java with Javadoc and standards junk.
+------------------------------------------------------------------------
+r445 | andrew_garber | 2007-11-30 17:06:17 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Added web site content.
+------------------------------------------------------------------------
+r446 | andrew_garber | 2007-11-30 17:24:04 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Added correct hyperlinks on website.
+------------------------------------------------------------------------
+r447 | andrew_garber | 2007-11-30 17:46:48 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Fixed some hyperlinks, changed list style in CSS.
+------------------------------------------------------------------------
+r448 | nclark | 2007-11-30 18:09:36 -0800 (Fri, 30 Nov 2007) | 1 line
+
+committing first version of GUI code
+------------------------------------------------------------------------
+r449 | nclark | 2007-11-30 18:19:27 -0800 (Fri, 30 Nov 2007) | 1 line
+
+added launch method
+------------------------------------------------------------------------
+r450 | andrew_garber | 2007-11-30 20:02:53 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Minor edits to website.
+------------------------------------------------------------------------
+r451 | andrew_garber | 2007-11-30 20:15:05 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Updated content on 'developers' section of web site.
+------------------------------------------------------------------------
+r452 | andrew_garber | 2007-11-30 20:39:20 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Updated class diagrams section of web site's developers page.
+------------------------------------------------------------------------
+r453 | wenfeng | 2007-11-30 21:23:06 -0800 (Fri, 30 Nov 2007) | 1 line
+
+
+------------------------------------------------------------------------
+r454 | wenfeng | 2007-11-30 21:24:48 -0800 (Fri, 30 Nov 2007) | 1 line
+
+
+------------------------------------------------------------------------
+r455 | campbelm | 2007-11-30 21:55:33 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Made changes tot he UserContract file to correct errors.
+------------------------------------------------------------------------
+r456 | campbelm | 2007-11-30 22:14:30 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Added the GenericDAOContract class and created contracts for that interface class.
+------------------------------------------------------------------------
+r457 | campbelm | 2007-11-30 23:10:16 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Updated contract files
+------------------------------------------------------------------------
+r458 | krisclarke | 2007-11-30 23:15:48 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Contract class reference added.
+------------------------------------------------------------------------
+r459 | campbelm | 2007-11-30 23:39:49 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Added the contracts to ConfigDAOXML(PlayerHandeler) and RemoteMessage
+------------------------------------------------------------------------
+r460 | aaron__k | 2007-11-30 23:44:06 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Created Configuration contract.
+------------------------------------------------------------------------
+r461 | campbelm | 2007-11-30 23:52:48 -0800 (Fri, 30 Nov 2007) | 1 line
+
+Added a contract for DNSUtils
+------------------------------------------------------------------------
+r462 | campbelm | 2007-11-30 23:55:08 -0800 (Fri, 30 Nov 2007) | 1 line
+
+added the reference to the contract in GenericDAO
+------------------------------------------------------------------------
+r463 | krisclarke | 2007-12-01 00:00:00 -0800 (Sat, 01 Dec 2007) | 1 line
+
+Contract Class for RemoteServerMessage.
+------------------------------------------------------------------------
