@@ -1,1 +1,0 @@
-set CLASSPATH=$CLASSPATH:./dist/commons-beanutils.jar:./dist/commons-collections.jar:./dist/commons-pool.jar:./dist/commons-digester.jar:./dist/commons-logging.jar
