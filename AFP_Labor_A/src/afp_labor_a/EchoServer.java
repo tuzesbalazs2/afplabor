@@ -72,7 +72,8 @@ public final class EchoServer {
 
             // Wait until the server socket is closed.
             f.channel().closeFuture().sync();
-        } finally {
+        } //catch (Exception e) {}
+            finally {
             // Shut down all event loops to terminate all threads.
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();

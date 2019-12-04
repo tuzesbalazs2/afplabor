@@ -6,9 +6,13 @@
 package afp_labor_a;
 
 
+import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
+import io.netty.util.ReferenceCountUtil;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -24,12 +28,26 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
-        ctx.write(msg);
+        //ChannelFuture write = ctx.write(msg);
+        //System.out.print((char) msg.readByte());
+        ByteBuf in = (ByteBuf) msg;
+    try {
+        while (in.isReadable()) { // (1)
+            JOptionPane.showMessageDialog(null, msg, "msg", JOptionPane.PLAIN_MESSAGE);
+            //System.out.print((char) in.readByte());
+            //System.out.flush();
+        }
+    } finally {
+        ReferenceCountUtil.release(msg); // (2)
+    }
+        
+        
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) {
         ctx.flush();
+        
     }
 
     @Override
