@@ -5,8 +5,11 @@
  */
 package afp_labor_a;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.util.ReferenceCountUtil;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -21,7 +24,15 @@ public class DiscardServerHandler extends SimpleChannelInboundHandler<Object> {
 
     @Override
     public void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
-        // discard
+        ByteBuf in = (ByteBuf) msg;
+    try {
+        while (in.isReadable()) { // (1)
+            //System.out.print((char) in.readByte());
+            JOptionPane.showMessageDialog(null, (char) in.readByte(), "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+        }
+    } finally {
+        ReferenceCountUtil.release(msg); // (2)
+    }
     }
 
     @Override
