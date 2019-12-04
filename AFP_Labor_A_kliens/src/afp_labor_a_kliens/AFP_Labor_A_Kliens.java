@@ -13,9 +13,9 @@ public class AFP_Labor_A_Kliens {
     
     
 
-    public static final String DB_ADDRESS = "jdbc:mysql://85.10.205.173:3306/afplabor";
-    public static final String DB_NAME = "afplabor";
-    public static final String DB_USERNAME = "zsolt1";
+    public static final String DB_ADDRESS = "jdbc:mysql://85.10.205.173:3306/afplabor_rft";
+    public static final String DB_NAME = "afplabor_rft";
+    public static final String DB_USERNAME = "felhasznalo1";
     public static final String DB_PASSWORD = "abcdefgh";
     
     public static Database db = new Database(DB_ADDRESS, DB_NAME,
