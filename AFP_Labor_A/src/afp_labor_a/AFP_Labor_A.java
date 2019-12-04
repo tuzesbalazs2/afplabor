@@ -36,6 +36,7 @@ public class AFP_Labor_A {
             //EchoServer.main();
             //EchoServer.echo();//echo();
             EchoServer.main(args);
+            //DiscardServer.main(args);
         } catch (Exception ex) {
             Logger.getLogger(AFP_Labor_A.class.getName()).log(Level.SEVERE, null, ex);
         }

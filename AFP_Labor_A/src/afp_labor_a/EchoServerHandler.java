@@ -30,16 +30,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         //ChannelFuture write = ctx.write(msg);
         //System.out.print((char) msg.readByte());
-        ByteBuf in = (ByteBuf) msg;
-    try {
-        while (in.isReadable()) { // (1)
-            JOptionPane.showMessageDialog(null, msg, "msg", JOptionPane.PLAIN_MESSAGE);
-            //System.out.print((char) in.readByte());
-            //System.out.flush();
-        }
-    } finally {
-        ReferenceCountUtil.release(msg); // (2)
-    }
+        ctx.write(msg);
         
         
     }
