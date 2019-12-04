@@ -5,6 +5,9 @@
  */
 package afp_labor_a_kliens;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Tóth_Zsolt
@@ -27,6 +30,16 @@ public class AFP_Labor_A_Kliens {
         MainPage m = new MainPage();
         m.setVisible(true);
         
+        try {
+            //EchoServer echoServer = new EchoServer();
+            //echoServer.main();
+            //EchoServer.main();
+            //EchoServer.echo();//echo();
+            EchoServer.main(args);
+            //DiscardServer.main(args);
+        } catch (Exception ex) {
+            Logger.getLogger(AFP_Labor_A_Kliens.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }
     
