@@ -48,7 +48,7 @@ public final class SecureChatClient {
 
             // Read commands from the stdin.
             ChannelFuture lastWriteFuture = null;
-            BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+            BufferedReader in = new BufferedReader(new InputStreamReader(AFP_Labor_A_Kliens.stream));
             for (;;) {
                 String line = in.readLine();
                 if (line == null) {

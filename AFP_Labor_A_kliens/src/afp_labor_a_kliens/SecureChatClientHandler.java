@@ -7,6 +7,7 @@ package afp_labor_a_kliens;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -20,7 +21,8 @@ public class SecureChatClientHandler extends SimpleChannelInboundHandler<String>
 
     @Override
     public void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
-        System.err.println(msg);
+        //System.err.println(msg);
+        JOptionPane.showMessageDialog(null, msg, "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
     }
 
     @Override
