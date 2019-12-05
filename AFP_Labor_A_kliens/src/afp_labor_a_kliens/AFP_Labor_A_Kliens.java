@@ -28,7 +28,8 @@ public class AFP_Labor_A_Kliens {
     public static final String DB_PASSWORD = "abcdefgh";
     public static String fukk = "fukk";
     //public static InputStream stream = new ByteArrayOutputStream(fukk.getBytes(StandardCharsets.UTF_8));
-    public static InputStream stream = new ByteArrayInputStream(fukk.getBytes(StandardCharsets.UTF_8));
+    //public static InputStream stream = new ByteArrayInputStream(fukk.getBytes(StandardCharsets.UTF_8));
+    public static boolean messagenez = false;
     public static Database db = new Database(DB_ADDRESS, DB_NAME,
             DB_USERNAME, DB_PASSWORD);
     /**
@@ -40,8 +41,8 @@ public class AFP_Labor_A_Kliens {
         
         try {
             //String fukkk = "affff";
-            String fukkk = "afff";
-       AFP_Labor_A_Kliens.stream=new ByteArrayInputStream(fukkk.getBytes(StandardCharsets.UTF_8));
+            //String fukkk = "afff";
+       //AFP_Labor_A_Kliens.stream=new ByteArrayInputStream(fukkk.getBytes(StandardCharsets.UTF_8));
             //stream.write(fukk.getBytes(Charset.forName("UTF-8")));
             //EchoServer echoServer = new EchoServer();
             //echoServer.main();

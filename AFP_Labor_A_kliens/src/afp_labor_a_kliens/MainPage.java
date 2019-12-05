@@ -150,9 +150,11 @@ String password = jelszo_bejelentkezes.getText();
 
 
    try {
-       String fukkk = "afff";
-       AFP_Labor_A_Kliens.stream=new ByteArrayInputStream(fukkk.getBytes(StandardCharsets.UTF_8));
-       //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.stream, "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+       AFP_Labor_A_Kliens.fukk = "afff";
+       AFP_Labor_A_Kliens.messagenez = true;
+       
+       //AFP_Labor_A_Kliens.stream=new ByteArrayInputStream(fukkk.getBytes(StandardCharsets.UTF_8));
+       //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.fukk, "AFP_Labor_A_Kliens.fukk", JOptionPane.PLAIN_MESSAGE);
        //InputStream stream = new ByteArrayInputStream(fukk.getBytes(StandardCharsets.UTF_8));
        //System.setIn("fukk");
        //StringBufferInputStream stream = new StringBufferInputStream("fukk");
