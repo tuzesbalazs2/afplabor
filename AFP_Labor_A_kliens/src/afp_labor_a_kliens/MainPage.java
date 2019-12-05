@@ -5,6 +5,10 @@
  */
 package afp_labor_a_kliens;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.StringBufferInputStream;
+import java.nio.charset.StandardCharsets;
 import javax.swing.JOptionPane;
 
 /**
@@ -146,9 +150,15 @@ String password = jelszo_bejelentkezes.getText();
 
 
    try {
-       
-      AFP_Labor_A_Kliens.db.connect();
-      AFP_Labor_A_Kliens.db.login(username, password);
+       //String fukk = "fukk";
+       //InputStream stream = new ByteArrayInputStream(fukk.getBytes(StandardCharsets.UTF_8));
+       //System.setIn("fukk");
+       StringBufferInputStream stream = new StringBufferInputStream("fukk");
+       System.setIn(stream);
+       //JOptionPane.showMessageDialog(null,System.out, "Hiba", JOptionPane.ERROR_MESSAGE);
+       //JOptionPane.showMessageDialog(null,System.setIn(stream), "Hiba", JOptionPane.ERROR_MESSAGE);
+      //AFP_Labor_A_Kliens.db.connect();
+      //AFP_Labor_A_Kliens.db.login(username, password);
       
    }
    catch(Exception e)

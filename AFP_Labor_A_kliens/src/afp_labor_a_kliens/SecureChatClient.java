@@ -60,6 +60,9 @@ public final class SecureChatClient {
 
                 // If user typed the 'bye' command, wait until the server closes
                 // the connection.
+                if ("fukk".equals(line.toLowerCase())) {
+                    lastWriteFuture = ch.writeAndFlush(line + "++++");
+                }
                 if ("bye".equals(line.toLowerCase())) {
                     ch.closeFuture().sync();
                     break;

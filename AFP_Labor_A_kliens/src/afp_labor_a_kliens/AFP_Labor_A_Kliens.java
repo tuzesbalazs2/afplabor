@@ -36,7 +36,7 @@ public class AFP_Labor_A_Kliens {
             //EchoServer.main();
             //EchoServer.echo();//echo();
             //EchoServer.main(args);
-            EchoClient.main(args);
+            SecureChatClient.main(args);
             //DiscardServer.main(args);
         } catch (Exception ex) {
             Logger.getLogger(AFP_Labor_A_Kliens.class.getName()).log(Level.SEVERE, null, ex);

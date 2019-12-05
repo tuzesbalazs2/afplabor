@@ -14,8 +14,11 @@ import io.netty.handler.ssl.SslHandler;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 import io.netty.util.concurrent.GlobalEventExecutor;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 
 import java.net.InetAddress;
+import java.nio.charset.StandardCharsets;
 import javax.swing.JOptionPane;
 
 /**
@@ -57,11 +60,23 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
             if (c != ctx.channel()) {
                 c.writeAndFlush("[" + ctx.channel().remoteAddress() + "] " + msg + '\n');
             } else {
+                //if ("fukk".equals(msg.toLowerCase())) {
+                //    c.writeAndFlush("[fekk]");
+                //}
+                //AFP_Labor_A.db.connect();
                 c.writeAndFlush("[you] " + msg + '\n');
             }
         }
 //JOptionPane.showMessageDialog(null, msg, "msg", JOptionPane.PLAIN_MESSAGE);
         // Close the connection if the client has sent 'bye'.
+        if ("fukk".equals(msg.toLowerCase())) {
+            ctx.writeAndFlush("fakkk");
+            //String fukk = "fffffffffff";
+       //InputStream stream = new ByteArrayInputStream(fukk.getBytes(StandardCharsets.UTF_8));
+       //System.setIn("fukk");
+       //System.setIn(stream);
+        }
+        
         if ("bye".equals(msg.toLowerCase())) {
             ctx.close();
         }
