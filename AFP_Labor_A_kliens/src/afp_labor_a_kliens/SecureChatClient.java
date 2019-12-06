@@ -50,15 +50,15 @@ public final class SecureChatClient {
             // Read commands from the stdin.
             ChannelFuture lastWriteFuture = null;
             //BufferedReader in = new BufferedReader(new InputStreamReader(AFP_Labor_A_Kliens.stream));
-            for (;;) {
+            //for (;;) {
                 //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.messagenez, "nez", JOptionPane.PLAIN_MESSAGE);
-              if (AFP_Labor_A_Kliens.messagenez == true){
+              //if (AFP_Labor_A_Kliens.messagenez == true){
                 //String line = in.readLine();
                 String line = AFP_Labor_A_Kliens.fukk;
                 //if (line == null) {
                 //    break;
                 //}
-                JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.fukk, "line", JOptionPane.PLAIN_MESSAGE);
+                //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.fukk, "line", JOptionPane.PLAIN_MESSAGE);
                 // Sends the received line to the server.
                 lastWriteFuture = ch.writeAndFlush(line + "\r\n");
 
@@ -69,12 +69,12 @@ public final class SecureChatClient {
                 }
                 if ("bye".equals(line.toLowerCase())) {
                     ch.closeFuture().sync();
-                    break;
+                    //break;
                 }
-                AFP_Labor_A_Kliens.messagenez = false;
+                //AFP_Labor_A_Kliens.messagenez = false;
                 //break;
-              }
-            }
+              //}
+            //}
 
             // Wait until all messages are flushed before closing the channel.
             if (lastWriteFuture != null) {
