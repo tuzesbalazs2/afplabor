@@ -5,6 +5,7 @@
  */
 package afp_labor_a;
 
+import io.netty.channel.ChannelHandlerContext;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -15,7 +16,10 @@ import javax.swing.JOptionPane;
  */
 public class AFP_Labor_A {
     
-    public static void aaa(){JOptionPane.showMessageDialog(null, "ehehe", "aaa", JOptionPane.PLAIN_MESSAGE);}
+    public static void aaa(ChannelHandlerContext ctx){
+        
+        JOptionPane.showMessageDialog(null, "ehehe", "aaa", JOptionPane.PLAIN_MESSAGE);
+    }
     public static void bbb(){JOptionPane.showMessageDialog(null, "aaahaaaaaaa", "aaa", JOptionPane.PLAIN_MESSAGE);}
 
     public static final String DB_ADDRESS = "jdbc:mysql://85.10.205.173:3306/afplabor_rft";

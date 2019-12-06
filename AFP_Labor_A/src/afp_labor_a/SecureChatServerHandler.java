@@ -41,13 +41,14 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                 new GenericFutureListener<Future<Channel>>() {
                     @Override
                     public void operationComplete(Future<Channel> future) throws Exception {
+                        //ctx.writeAndFlush("arghghgfhh\n");
                         //ctx.writeAndFlush(
                         //        "Welcome to " + InetAddress.getLocalHost().getHostName() + " secure chat service!\n");
-                       // ctx.writeAndFlush(
+                        //ctx.writeAndFlush(
                         //        "Your session is protected by " +
-                         //               ctx.pipeline().get(SslHandler.class).engine().getSession().getCipherSuite() +
-                         //               " cipher suite.\n");
-
+                        //                ctx.pipeline().get(SslHandler.class).engine().getSession().getCipherSuite() +
+                        //                " cipher suite.\n");
+                            //
                         channels.add(ctx.channel());
                     }
         });
@@ -56,24 +57,27 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
     @Override
     public void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         // Send the received message to all channels but the current one.
+        
         for (Channel c: channels) {
+            //c.writeAndFlush("fakkk");
             if (c != ctx.channel()) {
-                //c.writeAndFlush("[" + ctx.channel().remoteAddress() + "] " + msg + '\n');
+                c.writeAndFlush("[" + ctx.channel().remoteAddress() + "] " + msg + '\n');
                 
             } else {
                 if ("afff".equals(msg.toLowerCase())) {
-                ctx.writeAndFlush("fakkk");//ű
-                AFP_Labor_A.aaa();
+                //ű
+                //c.writeAndFlush("fakkk\n");
+                //AFP_Labor_A.aaa(ctx);
                     //String fukk = "fffffffffff";
                      //InputStream stream = new ByteArrayInputStream(fukk.getBytes(StandardCharsets.UTF_8));
                      //System.setIn("fukk");
                     //System.setIn(stream);
                 }
                 if ("fukk".equals(msg.toLowerCase())) {
-                    AFP_Labor_A.bbb();
+                //    AFP_Labor_A.bbb();
                 }
                 //AFP_Labor_A.db.connect();
-                //c.writeAndFlush("[you] " + msg + '\n');
+                c.writeAndFlush("[you] " + msg + '\n');
             }
             
         }

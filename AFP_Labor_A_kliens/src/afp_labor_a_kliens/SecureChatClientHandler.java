@@ -22,11 +22,13 @@ public class SecureChatClientHandler extends SimpleChannelInboundHandler<String>
     @Override
     public void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         //System.err.println(msg);
+        //JOptionPane.showMessageDialog(null, "fakkk", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
         JOptionPane.showMessageDialog(null, msg, "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
     }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+        //JOptionPane.showMessageDialog(null, "fakkk", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
         cause.printStackTrace();
         ctx.close();
     }

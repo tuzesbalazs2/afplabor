@@ -5,6 +5,8 @@
  */
 package afp_labor_a;
 
+import static afp_labor_a.SecureChatServerHandler.channels;
+import io.netty.channel.Channel;
 import javax.swing.JOptionPane;
 
 /**
@@ -146,9 +148,13 @@ String password = jelszo_bejelentkezes.getText();
 
 
    try {
+       for (Channel c: channels) {
+           c.writeAndFlush("[you] " + '\n');
+            //c.writeAndFlush("fakkkk");
+        }
        
-      AFP_Labor_A.db.connect();
-      AFP_Labor_A.db.login(username, password);
+      //AFP_Labor_A.db.connect();
+      //AFP_Labor_A.db.login(username, password);
       
    }
    catch(Exception e)
