@@ -152,10 +152,12 @@ String password = jelszo_bejelentkezes.getText();
 
 
    try {
-       AFP_Labor_A_Kliens.fukk = nev_bejelentkezes.getText();
+       //AFP_Labor_A_Kliens.uzenet.set(0, username);
+       AFP_Labor_A_Kliens.uzenet.add(username);
        //AFP_Labor_A_Kliens.messagenez = true;
        //String[] args = null;
        //SecureChatClient.main(args);
+       JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.uzenet, "AFP_Labor_A_Kliens.uzenet", JOptionPane.PLAIN_MESSAGE);
        
        //AFP_Labor_A_Kliens.stream=new ByteArrayInputStream(fukkk.getBytes(StandardCharsets.UTF_8));
        //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.fukk, "AFP_Labor_A_Kliens.fukk", JOptionPane.PLAIN_MESSAGE);
@@ -174,7 +176,7 @@ String password = jelszo_bejelentkezes.getText();
     //  JOptionPane.showMessageDialog(this,"Hibás felhasználónév és/vagy jelszó!",
     //  "Hiba",JOptionPane.ERROR_MESSAGE);  
    System.out.println("Hibás felhasználónév és/vagy jelszó!");
-   JOptionPane.showMessageDialog(null, "Hibás felhasználónév és/vagy jelszó!", "Hiba", JOptionPane.ERROR_MESSAGE);
+   JOptionPane.showMessageDialog(null, e, "Hiba", JOptionPane.ERROR_MESSAGE);
    
    }
    
@@ -185,7 +187,9 @@ String password = jelszo_bejelentkezes.getText();
     private void Button_regisztracioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_regisztracioActionPerformed
         //Registration r = new Registration();
         //r.setVisible(true);
-        AFP_Labor_A_Kliens.fukk = "fukk";
+        //AFP_Labor_A_Kliens.uzenet.add("fukk");
+        AFP_Labor_A_Kliens.uzenet.clear();
+        AFP_Labor_A_Kliens.uzenet.add("x");
        //String[] args = null;
        // try {
        //     SecureChatClient.main(args);

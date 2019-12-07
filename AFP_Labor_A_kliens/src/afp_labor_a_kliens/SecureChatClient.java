@@ -17,6 +17,7 @@ import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -51,33 +52,47 @@ public final class SecureChatClient {
             ChannelFuture lastWriteFuture = null;
             //BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
             for (;;) {
+                try{
                 //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.messagenez, "nez", JOptionPane.PLAIN_MESSAGE);
               //if (AFP_Labor_A_Kliens.messagenez == true){
                 //String line = in.readLine();
-                String line = AFP_Labor_A_Kliens.fukk;
-                if ("".equals(line.toLowerCase())) {
-                    continue;
-                }
+                
+                //List<String> line = AFP_Labor_A_Kliens.uzenet;
+                
+                //if (!"x".equals(line.get(0))) {
+                if (AFP_Labor_A_Kliens.uzenet.size() > 1) {
+                //if (line..isEmpty()) {
+                //if (line.isEmpty()) {
+                //AFP_Labor_A_Kliens.uzenet.clear();
+                //AFP_Labor_A_Kliens.uzenet.add("x");
+                    //continue;
+                
+                //AFP_Labor_A_Kliens.uzenet.clear();
                 //if (line == null) {
                 //    break;
                 //}
                 //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.fukk, "line", JOptionPane.PLAIN_MESSAGE);
                 // Sends the received line to the server.
-                lastWriteFuture = ch.writeAndFlush(line + "\r\n");
+                
+                JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.uzenet, "Sikerestttttt", JOptionPane.PLAIN_MESSAGE);
+                lastWriteFuture = ch.writeAndFlush(AFP_Labor_A_Kliens.uzenet + "\r\n");
 
                 // If user typed the 'bye' command, wait until the server closes
                 // the connection.
-                if ("fukk".equals(line.toLowerCase())) {
-                    lastWriteFuture = ch.writeAndFlush(line + "++++");
+                if ("fukk".equals(AFP_Labor_A_Kliens.uzenet.get(0))) {
+                    lastWriteFuture = ch.writeAndFlush(AFP_Labor_A_Kliens.uzenet + "++++");
                 }
-                if ("bye".equals(line.toLowerCase())) {
+                if ("bye".equals(AFP_Labor_A_Kliens.uzenet.get(0))) {
                     ch.closeFuture().sync();
                     break;
                 }
                 //AFP_Labor_A_Kliens.messagenez = false;
                 //break;
               //}
-                AFP_Labor_A_Kliens.fukk = "";
+                AFP_Labor_A_Kliens.uzenet.clear();
+                AFP_Labor_A_Kliens.uzenet.add("x");
+                }
+                } catch (Exception e) {JOptionPane.showMessageDialog(null, e, "fffffffff", JOptionPane.PLAIN_MESSAGE);}
             }
 
             // Wait until all messages are flushed before closing the channel.

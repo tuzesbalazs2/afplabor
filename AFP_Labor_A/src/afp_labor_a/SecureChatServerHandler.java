@@ -19,6 +19,8 @@ import java.io.InputStream;
 
 import java.net.InetAddress;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -29,7 +31,7 @@ import javax.swing.JOptionPane;
 /**
  * Handles a server-side channel.
  */
-public class SecureChatServerHandler extends SimpleChannelInboundHandler<String> {
+public class SecureChatServerHandler extends SimpleChannelInboundHandler<ArrayList> {
 
     static final ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
@@ -55,11 +57,12 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
     }
 
     @Override
-    public void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
+    public void channelRead0(ChannelHandlerContext ctx, ArrayList msg) throws Exception {
         // Send the received message to all channels but the current one.
-        if ("megkapodott".equals(msg.toLowerCase())) {
-                AFP_Labor_A.megkapta = true;
-                }
+        //if ("megkapodott".equals(msg.toLowerCase())) {
+        //        AFP_Labor_A.megkapta = true;
+        //        }
+        JOptionPane.showMessageDialog(null, msg.get(0), "Sikerestttttt", JOptionPane.PLAIN_MESSAGE);
         for (Channel c: channels) {
             //c.writeAndFlush("fakkk");
             if (c == ctx.channel())
@@ -69,7 +72,7 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
 //               // }
 //            } else
             {
-                if ("afff".equals(msg.toLowerCase())) {
+                if ("afff".equals(msg.get(0))) {
                 //ű
                 //c.writeAndFlush("fakkk\n");
                 //AFP_Labor_A.aaa(ctx);
@@ -78,13 +81,13 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                      //System.setIn("fukk");
                     //System.setIn(stream);
                 }
-                if ("fukk".equals(msg.toLowerCase())) {
+                if ("fukk".equals(msg.get(0))) {
                 //    AFP_Labor_A.bbb();
                 }
                 //AFP_Labor_A.db.connect();
                 //for (;;) {
-                    //JOptionPane.showMessageDialog(null, msg, "Sikerestttttt", JOptionPane.PLAIN_MESSAGE);
-                c.writeAndFlush("[you] " + msg + '\n');
+                    
+                c.writeAndFlush("[you] " + msg.get(0) + '\n');
                 //}
             }
             
@@ -93,7 +96,7 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
         // Close the connection if the client has sent 'bye'.
         
         
-        if ("bye".equals(msg.toLowerCase())) {
+        if ("bye".equals(msg.get(0))) {
             ctx.close();
         }
 //        if ("a".equals(msg.toLowerCase())) {

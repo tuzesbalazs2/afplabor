@@ -7,6 +7,8 @@ package afp_labor_a_kliens;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,17 +19,17 @@ import javax.swing.JOptionPane;
 /**
  * Handles a client-side channel.
  */
-public class SecureChatClientHandler extends SimpleChannelInboundHandler<String> {
+public class SecureChatClientHandler extends SimpleChannelInboundHandler<ArrayList> {
 
     @Override
-    public void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
+    public void channelRead0(ChannelHandlerContext ctx, ArrayList msg) throws Exception {
         //System.err.println(msg);
         //JOptionPane.showMessageDialog(null, "fakkk", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
         //AFP_Labor_A_Kliens.fukk = "megkapodott";
        
        //String[] args = null;
        //SecureChatClient.main(args);
-        JOptionPane.showMessageDialog(null, msg, "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, msg.get(0), "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
     }
 
     @Override
