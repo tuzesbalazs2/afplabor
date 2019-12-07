@@ -154,8 +154,8 @@ String password = jelszo_bejelentkezes.getText();
    try {
        AFP_Labor_A_Kliens.fukk = "afff";
        //AFP_Labor_A_Kliens.messagenez = true;
-       String[] args = null;
-       SecureChatClient.main(args);
+       //String[] args = null;
+       //SecureChatClient.main(args);
        
        //AFP_Labor_A_Kliens.stream=new ByteArrayInputStream(fukkk.getBytes(StandardCharsets.UTF_8));
        //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.fukk, "AFP_Labor_A_Kliens.fukk", JOptionPane.PLAIN_MESSAGE);
@@ -186,12 +186,12 @@ String password = jelszo_bejelentkezes.getText();
         //Registration r = new Registration();
         //r.setVisible(true);
         AFP_Labor_A_Kliens.fukk = "fukk";
-       String[] args = null;
-        try {
-            SecureChatClient.main(args);
-        } catch (Exception ex) {
-            Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       //String[] args = null;
+       // try {
+       //     SecureChatClient.main(args);
+        //} catch (Exception ex) {
+        //    Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
+        //}
     }//GEN-LAST:event_Button_regisztracioActionPerformed
 
     private void jelszo_bejelentkezesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jelszo_bejelentkezesActionPerformed

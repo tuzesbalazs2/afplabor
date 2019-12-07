@@ -32,6 +32,8 @@ public class AFP_Labor_A {
     /**
      * @param args the command line arguments
      */
+    public static boolean megkapta = false;
+    
     public static void main(String[] args) {
         MainPage m = new MainPage();
         m.setVisible(true);

@@ -57,12 +57,15 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
     @Override
     public void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         // Send the received message to all channels but the current one.
-        
+        if ("megkapodott".equals(msg.toLowerCase())) {
+                AFP_Labor_A.megkapta = true;
+                }
         for (Channel c: channels) {
             //c.writeAndFlush("fakkk");
             if (c != ctx.channel()) {
+                //for (;;) {
                 c.writeAndFlush("[" + ctx.channel().remoteAddress() + "] " + msg + '\n');
-                
+               // }
             } else {
                 if ("afff".equals(msg.toLowerCase())) {
                 //ű
@@ -77,7 +80,10 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                 //    AFP_Labor_A.bbb();
                 }
                 //AFP_Labor_A.db.connect();
+                //for (;;) {
+                    //JOptionPane.showMessageDialog(null, msg, "Sikerestttttt", JOptionPane.PLAIN_MESSAGE);
                 c.writeAndFlush("[you] " + msg + '\n');
+                //}
             }
             
         }

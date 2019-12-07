@@ -23,6 +23,10 @@ public class SecureChatClientHandler extends SimpleChannelInboundHandler<String>
     public void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         //System.err.println(msg);
         //JOptionPane.showMessageDialog(null, "fakkk", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+        //AFP_Labor_A_Kliens.fukk = "megkapodott";
+       
+       //String[] args = null;
+       //SecureChatClient.main(args);
         JOptionPane.showMessageDialog(null, msg, "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
     }
 
