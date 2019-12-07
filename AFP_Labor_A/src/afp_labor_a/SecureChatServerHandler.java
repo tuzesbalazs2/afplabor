@@ -62,11 +62,13 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                 }
         for (Channel c: channels) {
             //c.writeAndFlush("fakkk");
-            if (c != ctx.channel()) {
-                //for (;;) {
-                c.writeAndFlush("[" + ctx.channel().remoteAddress() + "] " + msg + '\n');
-               // }
-            } else {
+            if (c == ctx.channel())
+//            if (c != ctx.channel()) {
+//                //for (;;) {
+//                c.writeAndFlush("[" + ctx.channel().remoteAddress() + "] " + msg + '\n');
+//               // }
+//            } else
+            {
                 if ("afff".equals(msg.toLowerCase())) {
                 //ű
                 //c.writeAndFlush("fakkk\n");

@@ -27,6 +27,7 @@ public class AFP_Labor_A_Kliens {
     public static final String DB_USERNAME = "felhasznalo1";
     public static final String DB_PASSWORD = "abcdefgh";
     public static String fukk = "";
+    public static String[] uzenet ={""};
     //public static InputStream stream = new ByteArrayOutputStream(fukk.getBytes(StandardCharsets.UTF_8));
     //public static InputStream stream = new ByteArrayInputStream(fukk.getBytes(StandardCharsets.UTF_8));
     public static boolean messagenez = false;

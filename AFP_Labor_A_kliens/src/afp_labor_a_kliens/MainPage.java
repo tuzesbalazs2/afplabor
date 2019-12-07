@@ -27,7 +27,7 @@ public class MainPage extends javax.swing.JFrame {
     public MainPage() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(0, 153, 0) );
-        setTitle("Főoldal");
+        setTitle("Főoldal, kliens");
     }
 
     /**
@@ -152,7 +152,7 @@ String password = jelszo_bejelentkezes.getText();
 
 
    try {
-       AFP_Labor_A_Kliens.fukk = "afff";
+       AFP_Labor_A_Kliens.fukk = nev_bejelentkezes.getText();
        //AFP_Labor_A_Kliens.messagenez = true;
        //String[] args = null;
        //SecureChatClient.main(args);
