@@ -28,6 +28,16 @@ public class SecureChatClientHandler extends SimpleChannelInboundHandler<String>
        //String[] args = null;
        //SecureChatClient.main(args);
         JOptionPane.showMessageDialog(null, msg, "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+        
+        String[] msgsplit = {""};
+        
+        msgsplit = msg.split("\\$\\$\\$");
+        
+        if ("bejelentkezes".equals(msgsplit[0])) {
+                AFP_Labor_A_Kliens.db.login(msgsplit);
+        }
+        
+        
     }
 
     @Override

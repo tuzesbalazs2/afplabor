@@ -63,7 +63,7 @@ public final class SecureChatClient {
                 //}
                 //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.fukk, "line", JOptionPane.PLAIN_MESSAGE);
                 // Sends the received line to the server.
-                lastWriteFuture = ch.writeAndFlush(line + "\r\n");
+                lastWriteFuture = ch.writeAndFlush(line + "$$$" + "\r\n");
 
                 // If user typed the 'bye' command, wait until the server closes
                 // the connection.

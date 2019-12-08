@@ -166,7 +166,8 @@ String password = jelszo_bejelentkezes.getText();
        //JOptionPane.showMessageDialog(null,System.out, "Hiba", JOptionPane.ERROR_MESSAGE);
        //JOptionPane.showMessageDialog(null,System.setIn(stream), "Hiba", JOptionPane.ERROR_MESSAGE);
       //AFP_Labor_A_Kliens.db.connect();
-      //AFP_Labor_A_Kliens.db.login(username, password);
+      //AFP_Labor_A_Kliens.db.login(username, password);      
+     
       
    }
    catch(Exception e)

@@ -56,31 +56,34 @@ public class Database {
         }
     }
 
-    public void login(String username, String password) throws ClassNotFoundException {
+//    public void login(String username, String password) throws ClassNotFoundException {
+      public void login(String[] bejelentkeztet) throws ClassNotFoundException {
 
-        String q_username = null;
-        String q_password = null;
+//        String q_username = null;
+//        String q_password = null;
+//
+//        try {
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Statement st = this.conn.createStatement();
+//            ResultSet rs = st.executeQuery("SELECT * FROM felhasznalo WHERE username='"
+//                    + username + "' AND password='" + password + "'");
+//
+//            while (rs.next()) {
+//
+//                int id = rs.getInt("id");
+//                q_username = rs.getString("username");
+//                q_password = rs.getString("password");
+//
+//            }
 
+//            if ((q_username.equals((String)username)) && (q_password.equals((String)password))) {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Statement st = this.conn.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM felhasznalo WHERE username='"
-                    + username + "' AND password='" + password + "'");
-
-            while (rs.next()) {
-
-                int id = rs.getInt("id");
-                q_username = rs.getString("username");
-                q_password = rs.getString("password");
-
-            }
-
-            if ((q_username.equals((String)username)) && (q_password.equals((String)password))) {
+            if ("bejelentkezesjo".equals((String)bejelentkeztet[1])) {
 
                 Employee_list empList = new Employee_list();
                 empList.setVisible(true);
 
-            }
+            }         
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"HIbás felhasználónév vagy jelszó");
