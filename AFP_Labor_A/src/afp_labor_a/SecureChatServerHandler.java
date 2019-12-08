@@ -57,9 +57,12 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
     @Override
     public void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         // Send the received message to all channels but the current one.
-        if ("megkapodott".equals(msg.toLowerCase())) {
-                AFP_Labor_A.megkapta = true;
-                }
+//        if ("megkapodott".equals(msg.toLowerCase())) {
+//                AFP_Labor_A.megkapta = true;
+//                }
+
+        String[] msgsplit = {""};
+
         for (Channel c: channels) {
             //c.writeAndFlush("fakkk");
             if (c == ctx.channel())
@@ -68,7 +71,20 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
 //                c.writeAndFlush("[" + ctx.channel().remoteAddress() + "] " + msg + '\n');
 //               // }
 //            } else
+                
+                
             {
+                msgsplit = msg.split("\\$\\$\\$");
+                
+                if ("bejelentkezes".equals(msgsplit[0])) {
+                
+                          AFP_Labor_A.db.connect();
+//                          AFP_Labor_A.db.login(msgsplit[1], msgsplit[2]);
+                    //c.writeAndFlush(msg + " " + msgsplit[0] + " " + msgsplit[1] + '\n');
+//                    c.writeAndFlush("bejelentkezesjo" + '\n');
+                      c.writeAndFlush(AFP_Labor_A.db.login(msgsplit[1], msgsplit[2]) + '\n');
+                }
+                
                 if ("afff".equals(msg.toLowerCase())) {
                 //ű
                 //c.writeAndFlush("fakkk\n");
@@ -84,7 +100,9 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                 //AFP_Labor_A.db.connect();
                 //for (;;) {
                     //JOptionPane.showMessageDialog(null, msg, "Sikerestttttt", JOptionPane.PLAIN_MESSAGE);
-                c.writeAndFlush("[you] " + msg + '\n');
+//                c.writeAndFlush("[you] " + msg + '\n');
+                  c.writeAndFlush(msg + " " + msgsplit[0] + " " + msgsplit[1] + '\n');
+                  
                 //}
             }
             

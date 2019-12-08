@@ -152,7 +152,7 @@ String password = jelszo_bejelentkezes.getText();
 
 
    try {
-       AFP_Labor_A_Kliens.fukk = nev_bejelentkezes.getText();
+       AFP_Labor_A_Kliens.fukk = "bejelentkezes$$$" + nev_bejelentkezes.getText() + "$$$" + jelszo_bejelentkezes.getText();
        //AFP_Labor_A_Kliens.messagenez = true;
        //String[] args = null;
        //SecureChatClient.main(args);

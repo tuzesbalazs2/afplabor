@@ -56,7 +56,7 @@ public class Database {
         }
     }
 
-    public void login(String username, String password) throws ClassNotFoundException {
+    public String login(String username, String password) throws ClassNotFoundException {
 
         String q_username = null;
         String q_password = null;
@@ -75,16 +75,34 @@ public class Database {
 
             }
 
-            if ((q_username.equals((String)username)) && (q_password.equals((String)password))) {
+//            if ((q_username.equals((String)username)) && (q_password.equals((String)password))) {
 
-                Employee_list empList = new Employee_list();
-                empList.setVisible(true);
+//                Employee_list empList = new Employee_list();
+//                empList.setVisible(true);
+                  
 
-            }
+//            }
+
+             if ((q_username.equals((String)username)) && (q_password.equals((String)password))) {
+                 
+                 return "bejelentkezesjo";
+             }
+             
+             else {return "bejelentkezesrossz";}
+
+            
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"HIbás felhasználónév vagy jelszó");
+//            JOptionPane.showMessageDialog(null,"HIbás felhasználónév vagy jelszó");
+              JOptionPane.showMessageDialog(null,e);
+            return "bejelentkezeshiba";
+            
         }
+
+             
+                         
+            
+        
     }
 
     public void select(String q) throws ClassNotFoundException {
