@@ -142,22 +142,38 @@ public class Database {
         }
     }
     
-    public boolean reg_insert(String username, String password) throws ClassNotFoundException {
+    public boolean reg_insert(String[] regisztraltat) throws ClassNotFoundException {
         try {
             
-            Class.forName("com.mysql.jdbc.Driver");
-            Statement st = this.conn.createStatement();
-            
-            ResultSet rs = st.executeQuery("SELECT COUNT(*) AS rc FROM felhasznalo WHERE username='" + username +"'");            
-            rs.next();
-            int rc = rs.getInt("rc");
-            rs.close();
-            if(rc > 0) {
-                return false;
-            } 
-            
-            if(st.executeUpdate("INSERT INTO felhasznalo (username, password) VALUES ('" + username + "', '" + password + "')" ) > 0) {
-               return true;
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Statement st = this.conn.createStatement();
+//            
+//            ResultSet rs = st.executeQuery("SELECT COUNT(*) AS rc FROM felhasznalo WHERE username='" + username +"'");            
+//            rs.next();
+//            int rc = rs.getInt("rc");
+//            rs.close();
+//            if(rc > 0) {
+//                return false;
+//            } 
+//            
+//            if(st.executeUpdate("INSERT INTO felhasznalo (username, password) VALUES ('" + username + "', '" + password + "')" ) > 0) {
+//               return true;
+//            }
+
+            if ("regisztraciojo".equals((String)regisztraltat[1])) {
+
+                JOptionPane.showMessageDialog(null, "Sikeres Regisztráció!", "Sikeres regisztráció", JOptionPane.PLAIN_MESSAGE);
+
+            }
+            if ("regisztraciorossz".equals((String)regisztraltat[1])) {
+
+                JOptionPane.showMessageDialog(null, "Sikertelen regisztráció: Már létezik ilyen felhasználónév.", "Hiba", JOptionPane.ERROR_MESSAGE);
+
+            }
+            if ("regisztraciohiba".equals((String)regisztraltat[1])) {
+
+            JOptionPane.showMessageDialog(null,"Hiba a beszúrásnál", "Hiba", JOptionPane.ERROR_MESSAGE);
+
             }
             
         } catch (Exception e) {

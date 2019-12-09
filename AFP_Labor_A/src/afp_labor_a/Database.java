@@ -157,7 +157,7 @@ public class Database {
         }
     }
     
-    public boolean reg_insert(String username, String password) throws ClassNotFoundException {
+    public String reg_insert(String username, String password) throws ClassNotFoundException {
         try {
             
             Class.forName("com.mysql.jdbc.Driver");
@@ -168,16 +168,16 @@ public class Database {
             int rc = rs.getInt("rc");
             rs.close();
             if(rc > 0) {
-                return false;
+                return "regisztraciorossz";
             } 
             
             if(st.executeUpdate("INSERT INTO felhasznalo (username, password) VALUES ('" + username + "', '" + password + "')" ) > 0) {
-               return true;
+               return "regisztraciojo";
             }
             
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"Hiba a beszúrásnál", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
-        return false;
+        return "regisztraciohiba";
     }
 }

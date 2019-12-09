@@ -152,12 +152,12 @@ public class Registration extends javax.swing.JFrame {
         String password = String.copyValueOf(jelszo_regisztracio.getPassword());
         
         try {
-            AFP_Labor_A.db.connect();
-            if(AFP_Labor_A.db.reg_insert(username, password)) {
-                JOptionPane.showMessageDialog(rootPane, "Sikeres Regisztráció!", "Sikeres regisztráció", JOptionPane.PLAIN_MESSAGE);
-            } else {
-                JOptionPane.showMessageDialog(rootPane, "Sikertelen regisztráció: Már létezik ilyen felhasználónév.", "Hiba", JOptionPane.ERROR_MESSAGE);
-            }
+//            AFP_Labor_A.db.connect();
+//            if(AFP_Labor_A.db.reg_insert(username, password)) {
+//                JOptionPane.showMessageDialog(rootPane, "Sikeres Regisztráció!", "Sikeres regisztráció", JOptionPane.PLAIN_MESSAGE);
+//            } else {
+//                JOptionPane.showMessageDialog(rootPane, "Sikertelen regisztráció: Már létezik ilyen felhasználónév.", "Hiba", JOptionPane.ERROR_MESSAGE);
+//            }
             AFP_Labor_A.db.close();
             
             //db.reg_insert(username, password);

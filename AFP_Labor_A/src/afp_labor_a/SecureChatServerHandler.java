@@ -85,6 +85,12 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                       c.writeAndFlush("bejelentkezes" + "$$$" + AFP_Labor_A.db.login(msgsplit[1], msgsplit[2]) + "$$$" + '\n');
                 }
                 
+                if ("regisztracio".equals(msgsplit[0])){
+                AFP_Labor_A.db.connect();
+                c.writeAndFlush("regisztacio" + "$$$" + AFP_Labor_A.db.reg_insert(msgsplit[1], msgsplit[2]) + "$$$" + '\n');
+                
+                }
+                
                 if ("afff".equals(msg.toLowerCase())) {
                 //ű
                 //c.writeAndFlush("fakkk\n");

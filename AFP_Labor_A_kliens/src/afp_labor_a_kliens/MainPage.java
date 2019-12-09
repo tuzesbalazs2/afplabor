@@ -184,9 +184,9 @@ String password = jelszo_bejelentkezes.getText();
     }//GEN-LAST:event_Button_bejelentkezesActionPerformed
 
     private void Button_regisztracioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_regisztracioActionPerformed
-        //Registration r = new Registration();
-        //r.setVisible(true);
-        AFP_Labor_A_Kliens.fukk = "fukk";
+        Registration r = new Registration();
+        r.setVisible(true);
+//        AFP_Labor_A_Kliens.fukk = "fukk";
        //String[] args = null;
        // try {
        //     SecureChatClient.main(args);

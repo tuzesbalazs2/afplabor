@@ -148,20 +148,41 @@ public class Registration extends javax.swing.JFrame {
     }//GEN-LAST:event_regSubmitButtonActionPerformed
 
     private void Button_keszActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_keszActionPerformed
-        String username = nev_regisztracio.getText();
-        String password = String.copyValueOf(jelszo_regisztracio.getPassword());
+//        String username = nev_regisztracio.getText();
+//        String password = String.copyValueOf(jelszo_regisztracio.getPassword());
         
-        try {
-            AFP_Labor_A_Kliens.db.connect();
-            if(AFP_Labor_A_Kliens.db.reg_insert(username, password)) {
-                JOptionPane.showMessageDialog(rootPane, "Sikeres Regisztráció!", "Sikeres regisztráció", JOptionPane.PLAIN_MESSAGE);
-            } else {
-                JOptionPane.showMessageDialog(rootPane, "Sikertelen regisztráció: Már létezik ilyen felhasználónév.", "Hiba", JOptionPane.ERROR_MESSAGE);
-            }
-            AFP_Labor_A_Kliens.db.close();
+//        try {
+//            AFP_Labor_A_Kliens.db.connect();
+//            if(AFP_Labor_A_Kliens.db.reg_insert(username, password)) {
+//                JOptionPane.showMessageDialog(rootPane, "Sikeres Regisztráció!", "Sikeres regisztráció", JOptionPane.PLAIN_MESSAGE);
+//            } else {
+//                JOptionPane.showMessageDialog(rootPane, "Sikertelen regisztráció: Már létezik ilyen felhasználónév.", "Hiba", JOptionPane.ERROR_MESSAGE);
+//            }
+//            AFP_Labor_A_Kliens.db.close();
             
             //db.reg_insert(username, password);
             
+                    try {
+                        
+                        
+            AFP_Labor_A_Kliens.db.connect();
+//            if(AFP_Labor_A_Kliens.db.reg_insert(username, password)) {
+//                JOptionPane.showMessageDialog(rootPane, "Sikeres Regisztráció!", "Sikeres regisztráció", JOptionPane.PLAIN_MESSAGE);
+//            } else {
+//                JOptionPane.showMessageDialog(rootPane, "Sikertelen regisztráció: Már létezik ilyen felhasználónév.", "Hiba", JOptionPane.ERROR_MESSAGE);
+//            }
+            AFP_Labor_A_Kliens.db.close();
+            
+            if (String.copyValueOf(jelszo_regisztracio.getPassword()) == String.copyValueOf(jelszomegint_regisztracio.getPassword())){
+            
+            AFP_Labor_A_Kliens.fukk = "regisztracio$$$" + nev_regisztracio.getText() + "$$$" + String.copyValueOf(jelszo_regisztracio.getPassword());
+            
+            }
+            
+            else
+            {
+            JOptionPane.showMessageDialog(rootPane, "A jelszó nem egyezik a két mezőben!", "Hiba", JOptionPane.ERROR_MESSAGE);
+            }
             
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(Registration.class.getName()).log(Level.SEVERE, null, ex);
