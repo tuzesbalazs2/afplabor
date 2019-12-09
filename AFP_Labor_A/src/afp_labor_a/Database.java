@@ -114,6 +114,23 @@ public class Database {
             JOptionPane.showMessageDialog(null,"Hiba történt");
         }
     }
+    
+    public String list() throws ClassNotFoundException {
+        try {
+            String lista = "";
+            //String l = "";
+            Statement st = AFP_Labor_A.db.conn.createStatement();
+            ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo");
+            while (rs.next()) {
+                lista += (rs.getInt("id") + " " + rs.getString("nev") + " " + rs.getInt("szul_ev") + " " + rs.getInt("fizetes") + " " + rs.getString("varos") + " " + rs.getString("utca_hsz") + "$$$");
+            }
+            //String l = String.join(",", lista);
+            return lista;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Hiba történt");
+            return "listahiba";
+        }
+    }
 
     public void delete(String q) throws ClassNotFoundException {
         try {

@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,7 +26,7 @@ public class Database {
     private final String dbpassword;
     
     Connection conn;
-    
+    public Employee_list empList;
 
     public Database(String dbaddress, String database, String dbusername, String dbpassword) {
         this.dbaddress = dbaddress;
@@ -80,7 +81,7 @@ public class Database {
         try {
             if ("bejelentkezesjo".equals((String)bejelentkeztet[1])) {
 
-                Employee_list empList = new Employee_list();
+                empList = new Employee_list();
                 empList.setVisible(true);
 
             }         
@@ -99,6 +100,8 @@ public class Database {
             JOptionPane.showMessageDialog(null,"Hiba történt");
         }
     }
+    
+    
 
     public void delete(String q) throws ClassNotFoundException {
         try {

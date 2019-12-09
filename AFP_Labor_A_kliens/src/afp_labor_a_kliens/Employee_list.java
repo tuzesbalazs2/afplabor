@@ -8,6 +8,7 @@ package afp_labor_a_kliens;
 import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Arrays;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -27,6 +28,23 @@ public class Employee_list extends javax.swing.JFrame {
         setTitle("Dolgózó lista");
     }
 
+    public void list(String[] lista) throws ClassNotFoundException {
+        try {
+            
+           DefaultListModel listModel = new DefaultListModel();
+           //subList( 1, lista.length )
+           lista = Arrays.copyOfRange(lista, 1, lista.length);
+           for (String i : lista) { 
+               listModel.addElement(i);
+           }
+           
+           jList1.setModel(listModel);
+            
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Hiba történt");
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,6 +60,7 @@ public class Employee_list extends javax.swing.JFrame {
         copyright = new javax.swing.JTextPane();
         dolgozo_lista = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
+        Button_frissites = new javax.swing.JButton();
 
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -88,6 +107,14 @@ public class Employee_list extends javax.swing.JFrame {
         });
         dolgozo_lista.setViewportView(jList1);
 
+        Button_frissites.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        Button_frissites.setText("FRISSÍTÉS");
+        Button_frissites.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_frissitesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -97,7 +124,9 @@ public class Employee_list extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(dolgozoklistaja_szoveg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 504, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Button_frissites)
+                        .addGap(18, 18, 18)
                         .addComponent(Button_felvitel)
                         .addGap(18, 18, 18)
                         .addComponent(Button_kilepes))
@@ -105,7 +134,7 @@ public class Employee_list extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(copyright, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(dolgozo_lista, javax.swing.GroupLayout.PREFERRED_SIZE, 878, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 11, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -116,7 +145,8 @@ public class Employee_list extends javax.swing.JFrame {
                     .addComponent(dolgozoklistaja_szoveg, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Button_kilepes)
-                        .addComponent(Button_felvitel)))
+                        .addComponent(Button_felvitel)
+                        .addComponent(Button_frissites)))
                 .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(dolgozo_lista, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -129,17 +159,14 @@ public class Employee_list extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         try {
-            DefaultListModel listModel = new DefaultListModel();
             
-            Statement st = AFP_Labor_A_Kliens.db.conn.createStatement();
-            ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo");
             
-            while (rs.next()) {
-                listModel.addElement(rs.getInt("id") + " " + rs.getString("nev") + " " + rs.getInt("szul_ev") + " " + rs.getInt("fizetes") + " " + rs.getString("varos") + " " + rs.getString("utca_hsz"));
-            }
             
-            jList1.setModel(listModel);
             
+            
+            
+            
+            AFP_Labor_A_Kliens.fukk = "listazas";
         } catch (Exception e) {
               System.out.println(e.getMessage());
               JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);
@@ -164,6 +191,22 @@ public class Employee_list extends javax.swing.JFrame {
     private void Button_kilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_kilepesActionPerformed
 dispose();
     }//GEN-LAST:event_Button_kilepesActionPerformed
+
+    private void Button_frissitesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_frissitesActionPerformed
+        try {
+            
+            
+            
+            
+            
+            
+            
+            AFP_Labor_A_Kliens.fukk = "listazas";
+        } catch (Exception e) {
+              System.out.println(e.getMessage());
+              JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_Button_frissitesActionPerformed
 
     
     /**
@@ -204,6 +247,7 @@ dispose();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Button_felvitel;
+    private javax.swing.JButton Button_frissites;
     private javax.swing.JButton Button_kilepes;
     private javax.swing.JTextPane copyright;
     private javax.swing.JScrollPane dolgozo_lista;

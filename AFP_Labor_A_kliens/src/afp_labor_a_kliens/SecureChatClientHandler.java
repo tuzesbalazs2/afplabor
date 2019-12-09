@@ -39,6 +39,9 @@ public class SecureChatClientHandler extends SimpleChannelInboundHandler<String>
         if ("resgisztracio".equals(msgsplit[0])) {
                 AFP_Labor_A_Kliens.db.reg_insert(msgsplit);
         }
+        if ("listazas".equals(msgsplit[0])) {
+                AFP_Labor_A_Kliens.db.empList.list(msgsplit);
+        }
         
         
     }

@@ -31,7 +31,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="dolgozoklistaja_szoveg" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="504" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="Button_frissites" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="Button_felvitel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="Button_kilepes" min="-2" max="-2" attributes="0"/>
@@ -41,7 +43,7 @@
                           <Component id="copyright" min="-2" pref="143" max="-2" attributes="0"/>
                           <Component id="dolgozo_lista" min="-2" pref="878" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -57,6 +59,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Button_kilepes" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Button_felvitel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Button_frissites" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="32767" attributes="0"/>
@@ -147,5 +150,16 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="Button_frissites">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="12" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="FRISS&#xcd;T&#xc9;S"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button_frissitesActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>

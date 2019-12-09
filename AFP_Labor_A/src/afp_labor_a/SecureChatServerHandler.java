@@ -91,17 +91,10 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                 
                 }
                 
-                if ("afff".equals(msg.toLowerCase())) {
-                //ű
-                //c.writeAndFlush("fakkk\n");
-                //AFP_Labor_A.aaa(ctx);
-                    //String fukk = "fffffffffff";
-                     //InputStream stream = new ByteArrayInputStream(fukk.getBytes(StandardCharsets.UTF_8));
-                     //System.setIn("fukk");
-                    //System.setIn(stream);
-                }
-                if ("fukk".equals(msg.toLowerCase())) {
-                //    AFP_Labor_A.bbb();
+              if ("listazas".equals(msgsplit[0])){
+                AFP_Labor_A.db.connect();
+                c.writeAndFlush("listazas" + "$$$" + AFP_Labor_A.db.list() + "$$$" + '\n');
+                
                 }
                 //AFP_Labor_A.db.connect();
                 //for (;;) {
