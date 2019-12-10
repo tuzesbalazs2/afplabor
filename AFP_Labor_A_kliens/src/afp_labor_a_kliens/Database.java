@@ -27,6 +27,7 @@ public class Database {
     
     Connection conn;
     public Employee_list empList;
+    public Employee_page empage;
 
     public Database(String dbaddress, String database, String dbusername, String dbpassword) {
         this.dbaddress = dbaddress;
@@ -96,6 +97,18 @@ public class Database {
             Class.forName("com.mysql.jdbc.Driver");
             Statement st = this.conn.createStatement();
             //TODO..
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Hiba történt");
+        }
+    }
+    
+    public void dolgozoldal(int ind) throws ClassNotFoundException {
+        try {
+            //JOptionPane.showMessageDialog(null,ind);
+            empage = new Employee_page();
+            empage.setVisible(true);
+            empage.lekerdez(ind);
+            //empage.ind = ind;
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"Hiba történt");
         }

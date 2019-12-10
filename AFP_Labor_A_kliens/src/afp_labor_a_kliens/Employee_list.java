@@ -9,6 +9,8 @@ import java.awt.Color;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -182,10 +184,17 @@ public class Employee_list extends javax.swing.JFrame {
 
     private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
     if (evt.getClickCount() == 2) {
+        try {
         index = jList1.locationToIndex(evt.getPoint());
         System.out.println("index: "+index);
-        new Employee_page().setVisible(true);
-        //Employee_page.betolt();
+        
+            AFP_Labor_A_Kliens.db.dolgozoldal(index);
+            //Employee_page empage = new Employee_page();
+            //empage.setVisible(true);
+            //Employee_page.betolt();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Employee_list.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     }//GEN-LAST:event_jList1MouseClicked
 

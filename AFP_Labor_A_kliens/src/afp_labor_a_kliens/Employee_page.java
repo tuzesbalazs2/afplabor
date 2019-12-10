@@ -19,13 +19,17 @@ public class Employee_page extends javax.swing.JFrame {
     /**
      * Creates new form List
      */
+    public int ind;
     public Employee_page() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(0, 153, 0) );  
         setTitle("Dolgozó oldal");
-        betolt();
+        //int ind = Employee_list.index+1;
+        
+        
+        //betolt();
     }
-
+    public void lekerdez(int ind){AFP_Labor_A_Kliens.fukk = "dolgozotolt"+"$$$"+ind;}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -288,17 +292,17 @@ JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
         });
     }
     
-    public void betolt(){
+    public void betolt(String[] msgsplit){
         try {
-            int ind = Employee_list.index+1;
-    Statement st = AFP_Labor_A_Kliens.db.conn.createStatement();
-            ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo WHERE id="+ind);
-            rs.next();
-            nev_adat.setText(rs.getString("nev"));
-            szulev_adat.setText(Integer.toString(rs.getInt("szul_ev")));
-            fizetes_adat.setText(Integer.toString(rs.getInt("fizetes")));
-            varos_adat.setText(rs.getString("varos"));
-            utcahazszam_adat.setText(rs.getString("utca_hsz"));
+            
+    //Statement st = AFP_Labor_A_Kliens.db.conn.createStatement();
+            //ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo WHERE id="+ind);
+            //rs.next();
+            nev_adat.setText(msgsplit[1]);
+            szulev_adat.setText(msgsplit[2]);
+            fizetes_adat.setText(msgsplit[3]);
+            varos_adat.setText(msgsplit[4]);
+            utcahazszam_adat.setText(msgsplit[5]);
             } catch (Exception e) {
               System.out.println(e.getMessage());
         }

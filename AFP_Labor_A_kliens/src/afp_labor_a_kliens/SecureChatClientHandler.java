@@ -45,7 +45,10 @@ public class SecureChatClientHandler extends SimpleChannelInboundHandler<String>
         if ("dolgozofelvitel".equals(msgsplit[0])) {
                 AFP_Labor_A_Kliens.db.dolgozo_insert(msgsplit);
         }
-        
+        if ("dolgozotolt".equals(msgsplit[0])) {
+                //Employee_page.
+                AFP_Labor_A_Kliens.db.empage.betolt(msgsplit);
+        }
         
     }
 

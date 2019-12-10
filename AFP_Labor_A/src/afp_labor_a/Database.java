@@ -131,6 +131,24 @@ public class Database {
             return "listahiba";
         }
     }
+    
+    public String employee_page(int ind) throws ClassNotFoundException {
+        try {
+            //String dolgozo = "";
+            //String l = "";
+            //JOptionPane.showMessageDialog(null,ind);
+            //ind = 4;
+            Statement st = AFP_Labor_A.db.conn.createStatement();
+            //ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo WHERE id="+ind);
+            ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo LIMIT "+ind+",1");
+            rs.next();
+            //String l = String.join(",", lista);
+            return (rs.getString("nev")+"$$$"+Integer.toString(rs.getInt("szul_ev"))+"$$$"+Integer.toString(rs.getInt("fizetes"))+"$$$"+rs.getString("varos")+"$$$"+rs.getString("utca_hsz"));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,e);
+            return "dolgozoadathiba";
+        }
+    }
 
     public void delete(String q) throws ClassNotFoundException {
         try {
