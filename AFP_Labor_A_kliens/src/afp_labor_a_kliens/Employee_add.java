@@ -61,6 +61,7 @@ public class Employee_add extends javax.swing.JFrame {
         dolgozoadatfelvitel_szoveg.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
         dolgozoadatfelvitel_szoveg.setForeground(new java.awt.Color(255, 255, 255));
         dolgozoadatfelvitel_szoveg.setText("Dolgozó adat felvitel");
+        dolgozoadatfelvitel_szoveg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         dolgozoadatfelvitel_szoveg.setFocusable(false);
 
         dolgozo_kep.setText("kép");
@@ -95,6 +96,7 @@ public class Employee_add extends javax.swing.JFrame {
         dolgozo_neve_szoveg.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
         dolgozo_neve_szoveg.setForeground(new java.awt.Color(255, 255, 255));
         dolgozo_neve_szoveg.setText("Dolgozó Neve");
+        dolgozo_neve_szoveg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         dolgozo_neve_szoveg.setFocusable(false);
 
         dolgozo_neve_input.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
@@ -225,19 +227,23 @@ public class Employee_add extends javax.swing.JFrame {
 
     private void Button_felvitelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_felvitelActionPerformed
     //System.out.println("az");
-    String nev = dolgozo_nev.getText();
-    short szulev = Short.parseShort((dolgozo_szul_ev.getText()));
-    int fizetes = Integer.parseInt(dolgozo_fizetes.getText());
-    String varos = dolgozo_varos.getText();
-    String utca_hsz = dolgozo_utca_hsz.getText();
+//    String nev = dolgozo_nev.getText();
+//    short szulev = Short.parseShort((dolgozo_szul_ev.getText()));
+//    int fizetes = Integer.parseInt(dolgozo_fizetes.getText());
+//    String varos = dolgozo_varos.getText();
+//    String utca_hsz = dolgozo_utca_hsz.getText();
     
     try{
-       int insert = AFP_Labor_A_Kliens.db.dolgozo_insert(nev, szulev, varos, fizetes, utca_hsz);
-        
-        if (insert > 0) {
-           System.out.println("Sikeres feltöltés");
-           JOptionPane.showMessageDialog(null, "Sikeres feltöltés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
-        }
+//       int insert = AFP_Labor_A_Kliens.db.dolgozo_insert(nev, szulev, varos, fizetes, utca_hsz);
+//        
+//        if (insert > 0) {
+//           System.out.println("Sikeres feltöltés");
+//           JOptionPane.showMessageDialog(null, "Sikeres feltöltés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+//        }
+
+AFP_Labor_A_Kliens.fukk = "dolgozofelvitel$$$" + dolgozo_nev.getText() + "$$$" + dolgozo_szul_ev.getText() + "$$$" + dolgozo_fizetes.getText() + "$$$" + dolgozo_varos.getText() + "$$$" + dolgozo_utca_hsz.getText();
+System.out.println("Button_felvitelActionPerformed lefut!");
+
     }
     catch(Exception e)
     {

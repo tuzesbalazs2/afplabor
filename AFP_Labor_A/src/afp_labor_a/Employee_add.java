@@ -232,12 +232,12 @@ public class Employee_add extends javax.swing.JFrame {
     String utca_hsz = dolgozo_utca_hsz.getText();
     
     try{
-       int insert = AFP_Labor_A.db.dolgozo_insert(nev, szulev, varos, fizetes, utca_hsz);
-        
-        if (insert > 0) {
-           System.out.println("Sikeres feltöltés");
-           JOptionPane.showMessageDialog(null, "Sikeres feltöltés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
-        }
+//       int insert = AFP_Labor_A.db.dolgozo_insert(nev, szulev, varos, fizetes, utca_hsz);
+//        
+//        if (insert > 0) {
+//           System.out.println("Sikeres feltöltés");
+//           JOptionPane.showMessageDialog(null, "Sikeres feltöltés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+//        }
     }
     catch(Exception e)
     {

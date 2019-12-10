@@ -142,7 +142,7 @@ public class Database {
         }
     }
 
-    public int dolgozo_insert(String nev, short szul_ev, String varos, int fizetes, String utca_hsz) throws ClassNotFoundException {
+    public String dolgozo_insert(String nev, short szul_ev, int fizetes, String varos, String utca_hsz) throws ClassNotFoundException {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Statement st = this.conn.createStatement();
@@ -155,14 +155,16 @@ public class Database {
                                  + "'" + utca_hsz + "'" + ") ");
            
            if (rowCount > 0) {
-               return rowCount;
+//               return rowCount;
+               return "dolgozofelviteljo";
            }         
            
         } catch (Exception e) {
             System.out.println("Hiba a feltöltéssel!");  
         JOptionPane.showMessageDialog(null, "Hiba a feltöltéssel!", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
-        return 0;
+//        return 0;
+          return "dolgozofelvitelhiba";
     }
 
     public void update(String q) throws ClassNotFoundException {

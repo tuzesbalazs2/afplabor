@@ -113,21 +113,37 @@ public class Database {
         }
     }
 
-    public int dolgozo_insert(String nev, short szul_ev, String varos, int fizetes, String utca_hsz) throws ClassNotFoundException {
+    public int dolgozo_insert(String[] dolgozofelvisz) throws ClassNotFoundException {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Statement st = this.conn.createStatement();
-            
-           int rowCount = st.executeUpdate("INSERT INTO dolgozo (nev, szul_ev, fizetes, varos, utca_hsz)"
-                    + " VALUES(" + "'" + nev + "'" + ", "
-                                 + szul_ev + ", "
-                                 + fizetes + ", "
-                                 + "'" + varos + "'" + ", "
-                                 + "'" + utca_hsz + "'" + ") ");
-           
-           if (rowCount > 0) {
-               return rowCount;
-           }         
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Statement st = this.conn.createStatement();
+//            
+//           int rowCount = st.executeUpdate("INSERT INTO dolgozo (nev, szul_ev, fizetes, varos, utca_hsz)"
+//                    + " VALUES(" + "'" + nev + "'" + ", "
+//                                 + szul_ev + ", "
+//                                 + fizetes + ", "
+//                                 + "'" + varos + "'" + ", "
+//                                 + "'" + utca_hsz + "'" + ") ");
+//           
+//           if (rowCount > 0) {
+//               return rowCount;
+//           }         
+
+System.out.println("dolgozo_insert lefut!");
+
+            if ("dolgozofelviteljo".equals((String)dolgozofelvisz[1])) {
+
+                System.out.println("Sikeres feltöltés");
+           JOptionPane.showMessageDialog(null, "Sikeres feltöltés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+
+            }        
+            if ("dolgozofelvitelhiba".equals((String)dolgozofelvisz[1])) {
+
+                System.out.println("Hiba a feltöltéssel!");
+           JOptionPane.showMessageDialog(null, "Hiba a feltöltéssel!", "Hiba", JOptionPane.ERROR_MESSAGE);
+
+            }      
+
            
         } catch (Exception e) {
             System.out.println("Hiba a feltöltéssel!");  
