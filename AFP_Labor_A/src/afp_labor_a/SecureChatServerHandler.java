@@ -96,11 +96,19 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                 c.writeAndFlush("listazas" + "$$$" + AFP_Labor_A.db.list() + "$$$" + '\n');
                 
                 }
+                if ("dolgozofelvitel".equals(msgsplit[0])){
+                AFP_Labor_A.db.connect();
+                c.writeAndFlush("dolgozofelvitel" + "$$$" + AFP_Labor_A.db.dolgozo_insert(msgsplit[1], Short.parseShort(msgsplit[2]), Integer.parseInt(msgsplit[3]), msgsplit[4], msgsplit[5]) + "$$$" + '\n');
+                System.out.println("dolgozo_insert meghívása lefut!");
+                
+                }
                 //AFP_Labor_A.db.connect();
                 //for (;;) {
                     //JOptionPane.showMessageDialog(null, msg, "Sikerestttttt", JOptionPane.PLAIN_MESSAGE);
 //                c.writeAndFlush("[you] " + msg + '\n');
-                  c.writeAndFlush(msg + " " + msgsplit[0] + " " + msgsplit[1] + '\n');
+                  c.writeAndFlush(msg + " " + msgsplit[0] + " "
+//                          + msgsplit[1]
+                          + '\n');
                   
                 //}
             }

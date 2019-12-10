@@ -59,6 +59,7 @@ public class Employee_page extends javax.swing.JFrame {
         dolgozoneve_szoveg.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
         dolgozoneve_szoveg.setForeground(new java.awt.Color(255, 255, 255));
         dolgozoneve_szoveg.setText("Dolgozó Neve");
+        dolgozoneve_szoveg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         dolgozoneve_szoveg.setFocusable(false);
 
         dolgozo_kep.setText("kép");

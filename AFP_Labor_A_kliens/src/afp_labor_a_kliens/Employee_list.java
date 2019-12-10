@@ -25,7 +25,7 @@ public class Employee_list extends javax.swing.JFrame {
     public Employee_list() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(0, 153, 0) );
-        setTitle("Dolgózó lista");
+        setTitle("Dolgozó lista");
     }
 
     public void list(String[] lista) throws ClassNotFoundException {
@@ -73,6 +73,7 @@ public class Employee_list extends javax.swing.JFrame {
         dolgozoklistaja_szoveg.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
         dolgozoklistaja_szoveg.setForeground(new java.awt.Color(255, 255, 255));
         dolgozoklistaja_szoveg.setText("Dolgozók listája");
+        dolgozoklistaja_szoveg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         dolgozoklistaja_szoveg.setFocusable(false);
 
         Button_kilepes.setBackground(new java.awt.Color(204, 0, 0));
