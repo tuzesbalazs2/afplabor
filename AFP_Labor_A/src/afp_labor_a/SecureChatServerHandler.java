@@ -19,6 +19,7 @@ import java.io.InputStream;
 
 import java.net.InetAddress;
 import java.nio.charset.StandardCharsets;
+import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 
 /**
@@ -106,6 +107,29 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                 AFP_Labor_A.db.connect();
                 c.writeAndFlush("dolgozotolt" + "$$$" + AFP_Labor_A.db.employee_page(Integer.parseInt(msgsplit[1])) + "$$$" + '\n');
                 
+                }
+                                if ("dolgozomodosit".equals(msgsplit[0])){
+//                AFP_Labor_A.db.connect();
+//                c.writeAndFlush("dolgozomodosit" + "$$$" + AFP_Labor_A.db.employee_page(Integer.parseInt(msgsplit[1])) + "$$$" + '\n');
+                
+          try {
+            int aff = 4;//Integer.parseInt(msgsplit[6]);
+            PreparedStatement pstmt = AFP_Labor_A.db.conn.prepareStatement("UPDATE dolgozo SET nev = ?, szul_ev = ?, fizetes = ?, varos = ?, utca_hsz = ? WHERE id IN (SELECT id FROM (SELECT id FROM dolgozo ORDER BY id ASC LIMIT "+aff+", 1) tmp)");
+    pstmt.setString(1, msgsplit[1]);
+    pstmt.setShort(2, Short.parseShort(msgsplit[2]));
+    pstmt.setInt(3, Integer.parseInt(msgsplit[3]));
+    pstmt.setString(4, msgsplit[4]);
+    pstmt.setString(5, msgsplit[5]);
+    //pstmt.setInt(6, Integer.parseInt(msgsplit[6]));
+    pstmt.executeUpdate();
+//JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
+System.out.println("Sikeres módosítás!");
+c.writeAndFlush(msgsplit[0] + "$$$" + msgsplit[1] + "$$$" + msgsplit[2] + "$$$" + msgsplit[3] + "$$$" + msgsplit[4] + "$$$" + msgsplit[5] + "$$$" + msgsplit[6] + "$$$" + '\n');
+            } catch (Exception e) {
+              System.out.println(e.getMessage());
+              JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+
                 }
                 //AFP_Labor_A.db.connect();
                 //for (;;) {

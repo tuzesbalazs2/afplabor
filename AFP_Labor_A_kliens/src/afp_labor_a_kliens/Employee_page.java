@@ -29,7 +29,7 @@ public class Employee_page extends javax.swing.JFrame {
         
         //betolt();
     }
-    public void lekerdez(int ind){AFP_Labor_A_Kliens.fukk = "dolgozotolt"+"$$$"+ind;}
+    public void lekerdez(int indx){AFP_Labor_A_Kliens.fukk = "dolgozotolt"+"$$$"+indx;ind = indx;}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -238,14 +238,17 @@ dispose();
     private void Button_modositasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_modositasActionPerformed
           try {
             
-            PreparedStatement pstmt = AFP_Labor_A_Kliens.db.conn.prepareStatement("UPDATE dolgozo SET nev = ?, szul_ev = ?, fizetes = ?, varos = ?, utca_hsz = ? WHERE id = ?");
-    pstmt.setString(1, nev_adat.getText());
-    pstmt.setShort(2, Short.parseShort((szulev_adat.getText())));
-    pstmt.setInt(3, Integer.parseInt(fizetes_adat.getText()));
-    pstmt.setString(4, varos_adat.getText());
-    pstmt.setString(5, utcahazszam_adat.getText());
-    pstmt.setInt(6, Employee_list.index+1);
-    pstmt.executeUpdate();
+//            PreparedStatement pstmt = AFP_Labor_A_Kliens.db.conn.prepareStatement("UPDATE dolgozo SET nev = ?, szul_ev = ?, fizetes = ?, varos = ?, utca_hsz = ? WHERE id = ?");
+//    pstmt.setString(1, nev_adat.getText());
+//    pstmt.setShort(2, Short.parseShort((szulev_adat.getText())));
+//    pstmt.setInt(3, Integer.parseInt(fizetes_adat.getText()));
+//    pstmt.setString(4, varos_adat.getText());
+//    pstmt.setString(5, utcahazszam_adat.getText());
+//    pstmt.setInt(6, Employee_list.index+1);
+//    pstmt.executeUpdate();
+
+AFP_Labor_A_Kliens.fukk = "dolgozomodosit$$$" + nev_adat.getText() + "$$$" + szulev_adat.getText() + "$$$" + fizetes_adat.getText() + "$$$" + varos_adat.getText() + "$$$" + utcahazszam_adat.getText() + "$$$" +  ind;
+
 JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
             } catch (Exception e) {
               System.out.println(e.getMessage());
