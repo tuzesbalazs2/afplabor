@@ -173,7 +173,10 @@ public class Registration extends javax.swing.JFrame {
 //            }
             AFP_Labor_A_Kliens.db.close();
             
-            if (String.copyValueOf(jelszo_regisztracio.getPassword()) == String.copyValueOf(jelszomegint_regisztracio.getPassword())){
+//            if (String.copyValueOf(jelszo_regisztracio.getPassword()) == String.copyValueOf(jelszomegint_regisztracio.getPassword())){
+//      if (String.copyValueOf(jelszo_regisztracio.getPassword()) != "" && String.copyValueOf(jelszomegint_regisztracio.getPassword()) != ""){
+          if (!"".equals(String.copyValueOf(jelszo_regisztracio.getPassword())) && !"".equals(String.copyValueOf(jelszomegint_regisztracio.getPassword()))){
+            if (String.copyValueOf(jelszo_regisztracio.getPassword()) == null ? String.copyValueOf(jelszomegint_regisztracio.getPassword()) == null : String.copyValueOf(jelszo_regisztracio.getPassword()).equals(String.copyValueOf(jelszomegint_regisztracio.getPassword()))){
             
             AFP_Labor_A_Kliens.fukk = "regisztracio$$$" + nev_regisztracio.getText() + "$$$" + String.copyValueOf(jelszo_regisztracio.getPassword());
             
@@ -183,7 +186,12 @@ public class Registration extends javax.swing.JFrame {
             {
             JOptionPane.showMessageDialog(rootPane, "A jelszó nem egyezik a két mezőben!", "Hiba", JOptionPane.ERROR_MESSAGE);
             }
-            
+            }
+            else
+            {
+            JOptionPane.showMessageDialog(rootPane, "A felhasználónév és a jelszó mezők egyike sem lehet üres!", "Hiba", JOptionPane.ERROR_MESSAGE);
+            }
+
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(Registration.class.getName()).log(Level.SEVERE, null, ex);
         }

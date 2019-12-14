@@ -113,7 +113,8 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
 //                c.writeAndFlush("dolgozomodosit" + "$$$" + AFP_Labor_A.db.employee_page(Integer.parseInt(msgsplit[1])) + "$$$" + '\n');
                 
           try {
-            int aff = 4;//Integer.parseInt(msgsplit[6]);
+//            int aff = 4;//Integer.parseInt(msgsplit[6]);
+            int aff = Integer.parseInt(msgsplit[6]);
             PreparedStatement pstmt = AFP_Labor_A.db.conn.prepareStatement("UPDATE dolgozo SET nev = ?, szul_ev = ?, fizetes = ?, varos = ?, utca_hsz = ? WHERE id IN (SELECT id FROM (SELECT id FROM dolgozo ORDER BY id ASC LIMIT "+aff+", 1) tmp)");
     pstmt.setString(1, msgsplit[1]);
     pstmt.setShort(2, Short.parseShort(msgsplit[2]));

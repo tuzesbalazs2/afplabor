@@ -193,7 +193,7 @@ String password = jelszo_bejelentkezes.getText();
         //} catch (Exception ex) {
         //    Logger.getLogger(MainPage.class.getName()).log(Level.SEVERE, null, ex);
         //}
-        dispose();
+//        dispose();
     }//GEN-LAST:event_Button_regisztracioActionPerformed
 
     private void jelszo_bejelentkezesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jelszo_bejelentkezesActionPerformed
