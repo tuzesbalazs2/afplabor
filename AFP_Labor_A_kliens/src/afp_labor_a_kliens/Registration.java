@@ -165,13 +165,13 @@ public class Registration extends javax.swing.JFrame {
                     try {
                         
                         
-            AFP_Labor_A_Kliens.db.connect();
+            //AFP_Labor_A_Kliens.db.connect();
 //            if(AFP_Labor_A_Kliens.db.reg_insert(username, password)) {
 //                JOptionPane.showMessageDialog(rootPane, "Sikeres Regisztráció!", "Sikeres regisztráció", JOptionPane.PLAIN_MESSAGE);
 //            } else {
 //                JOptionPane.showMessageDialog(rootPane, "Sikertelen regisztráció: Már létezik ilyen felhasználónév.", "Hiba", JOptionPane.ERROR_MESSAGE);
 //            }
-            AFP_Labor_A_Kliens.db.close();
+            //AFP_Labor_A_Kliens.db.close();
             
 //            if (String.copyValueOf(jelszo_regisztracio.getPassword()) == String.copyValueOf(jelszomegint_regisztracio.getPassword())){
 //      if (String.copyValueOf(jelszo_regisztracio.getPassword()) != "" && String.copyValueOf(jelszomegint_regisztracio.getPassword()) != ""){
@@ -192,7 +192,7 @@ public class Registration extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "A felhasználónév és a jelszó mezők egyike sem lehet üres!", "Hiba", JOptionPane.ERROR_MESSAGE);
             }
 
-        } catch (SQLException | ClassNotFoundException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(Registration.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_Button_keszActionPerformed

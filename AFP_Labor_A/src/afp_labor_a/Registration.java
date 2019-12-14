@@ -158,7 +158,7 @@ public class Registration extends javax.swing.JFrame {
 //            } else {
 //                JOptionPane.showMessageDialog(rootPane, "Sikertelen regisztráció: Már létezik ilyen felhasználónév.", "Hiba", JOptionPane.ERROR_MESSAGE);
 //            }
-            AFP_Labor_A.db.close();
+            //AFP_Labor_A.db.close();
             
             //db.reg_insert(username, password);
             

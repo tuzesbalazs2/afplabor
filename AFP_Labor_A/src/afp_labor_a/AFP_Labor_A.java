@@ -43,7 +43,7 @@ public class AFP_Labor_A {
             //echoServer.main();
             //EchoServer.main();
             //EchoServer.echo();//echo();
-            SecureChatServer.main(args);
+            SecureChatServer.main(args);AFP_Labor_A.db.connect();
             //DiscardServer.main(args);
         } catch (Exception ex) {
             Logger.getLogger(AFP_Labor_A.class.getName()).log(Level.SEVERE, null, ex);

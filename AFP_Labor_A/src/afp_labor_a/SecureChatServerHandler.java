@@ -79,7 +79,7 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                 
                 if ("bejelentkezes".equals(msgsplit[0])) {
                 
-                          AFP_Labor_A.db.connect();
+                          //AFP_Labor_A.db.connect();
 //                          AFP_Labor_A.db.login(msgsplit[1], msgsplit[2]);
                     //c.writeAndFlush(msg + " " + msgsplit[0] + " " + msgsplit[1] + '\n');
 //                    c.writeAndFlush("bejelentkezesjo" + '\n');
@@ -87,24 +87,24 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                 }
                 
                 if ("regisztracio".equals(msgsplit[0])){
-                AFP_Labor_A.db.connect();
+                //AFP_Labor_A.db.connect();
                 c.writeAndFlush("regisztacio" + "$$$" + AFP_Labor_A.db.reg_insert(msgsplit[1], msgsplit[2]) + "$$$" + '\n');
                 
                 }
                 
               if ("listazas".equals(msgsplit[0])){
-                AFP_Labor_A.db.connect();
+                //AFP_Labor_A.db.connect();
                 c.writeAndFlush("listazas" + "$$$" + AFP_Labor_A.db.list() + "$$$" + '\n');
                 
                 }
                 if ("dolgozofelvitel".equals(msgsplit[0])){
-                AFP_Labor_A.db.connect();
+                //AFP_Labor_A.db.connect();
                 c.writeAndFlush("dolgozofelvitel" + "$$$" + AFP_Labor_A.db.dolgozo_insert(msgsplit[1], Short.parseShort(msgsplit[2]), Integer.parseInt(msgsplit[3]), msgsplit[4], msgsplit[5]) + "$$$" + '\n');
                 System.out.println("dolgozo_insert meghívása lefut!");
                 
                 }
                 if ("dolgozotolt".equals(msgsplit[0])){
-                AFP_Labor_A.db.connect();
+                //AFP_Labor_A.db.connect();
                 c.writeAndFlush("dolgozotolt" + "$$$" + AFP_Labor_A.db.employee_page(Integer.parseInt(msgsplit[1])) + "$$$" + '\n');
                 
                 }
@@ -114,14 +114,14 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                 
           try {
 //            int aff = 4;//Integer.parseInt(msgsplit[6]);
-            int aff = Integer.parseInt(msgsplit[6]);
-            PreparedStatement pstmt = AFP_Labor_A.db.conn.prepareStatement("UPDATE dolgozo SET nev = ?, szul_ev = ?, fizetes = ?, varos = ?, utca_hsz = ? WHERE id IN (SELECT id FROM (SELECT id FROM dolgozo ORDER BY id ASC LIMIT "+aff+", 1) tmp)");
+            //int aff = Integer.parseInt(msgsplit[6]);
+            PreparedStatement pstmt = AFP_Labor_A.db.conn.prepareStatement("UPDATE dolgozo SET nev = ?, szul_ev = ?, fizetes = ?, varos = ?, utca_hsz = ? WHERE id IN (SELECT id FROM (SELECT id FROM dolgozo ORDER BY id ASC LIMIT ?, 1) tmp)");
     pstmt.setString(1, msgsplit[1]);
     pstmt.setShort(2, Short.parseShort(msgsplit[2]));
     pstmt.setInt(3, Integer.parseInt(msgsplit[3]));
     pstmt.setString(4, msgsplit[4]);
     pstmt.setString(5, msgsplit[5]);
-    //pstmt.setInt(6, Integer.parseInt(msgsplit[6]));
+    pstmt.setInt(6, Integer.parseInt(msgsplit[6]));
     pstmt.executeUpdate();
 //JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
 System.out.println("Sikeres módosítás!");
