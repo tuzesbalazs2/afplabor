@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a_kliens;
 
 import javax.swing.JOptionPane;
@@ -13,9 +8,6 @@ import javax.swing.JOptionPane;
  */
 public class Employee_add extends javax.swing.JFrame {
 
-    /**
-     * Creates new form List
-     */
     public Employee_add() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(0, 153, 0) );  
@@ -241,7 +233,7 @@ public class Employee_add extends javax.swing.JFrame {
 //           JOptionPane.showMessageDialog(null, "Sikeres feltöltés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
 //        }
 
-AFP_Labor_A_Kliens.fukk = "dolgozofelvitel$$$" + dolgozo_nev.getText() + "$$$" + dolgozo_szul_ev.getText() + "$$$" + dolgozo_fizetes.getText() + "$$$" + dolgozo_varos.getText() + "$$$" + dolgozo_utca_hsz.getText();
+AFP_Labor_A_Kliens.uzenet = "dolgozofelvitel$$$" + dolgozo_nev.getText() + "$$$" + dolgozo_szul_ev.getText() + "$$$" + dolgozo_fizetes.getText() + "$$$" + dolgozo_varos.getText() + "$$$" + dolgozo_utca_hsz.getText();
 System.out.println("Button_felvitelActionPerformed lefut!");
 
     }

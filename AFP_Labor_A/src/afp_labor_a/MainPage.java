@@ -1,17 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a;
 
-import static afp_labor_a.SecureChatServerHandler.channels;
+import static afp_labor_a.ServerHandler.channels;
 import io.netty.channel.Channel;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author Tóth_Zsolt
+ * @author Tüzes
  */
 public class MainPage extends javax.swing.JFrame {
 
@@ -23,7 +18,7 @@ public class MainPage extends javax.swing.JFrame {
     public MainPage() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(0, 153, 0) );
-        setTitle("Főoldal");
+        setTitle("Főoldal, szerver");
     }
 
     /**
@@ -137,46 +132,19 @@ public class MainPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nev_bejelentkezesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nev_bejelentkezesActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_nev_bejelentkezesActionPerformed
 
     private void Button_bejelentkezesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_bejelentkezesActionPerformed
-        // TODO add your handling code here:
-//Login hibaüzenet teszt
-String username = nev_bejelentkezes.getText();
-String password = jelszo_bejelentkezes.getText();
-
-
-   try {
-       for (Channel c: channels) {
-           c.writeAndFlush("[you] " + '\n');
-            //c.writeAndFlush("fakkkk");
-        }
-       
-      //AFP_Labor_A.db.connect();
-      //AFP_Labor_A.db.login(username, password);
-      
-   }
-   catch(Exception e)
-   {
-    //  JOptionPane.showMessageDialog(this,"Hibás felhasználónév és/vagy jelszó!",
-    //  "Hiba",JOptionPane.ERROR_MESSAGE);  
-   System.out.println("Hibás felhasználónév és/vagy jelszó!");
-   JOptionPane.showMessageDialog(null, "Hibás felhasználónév és/vagy jelszó!", "Hiba", JOptionPane.ERROR_MESSAGE);
-   
-   }
-   
-
-
+ 
     }//GEN-LAST:event_Button_bejelentkezesActionPerformed
 
     private void Button_regisztracioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_regisztracioActionPerformed
-        Registration r = new Registration();
-        r.setVisible(true);
+
     }//GEN-LAST:event_Button_regisztracioActionPerformed
 
     private void jelszo_bejelentkezesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jelszo_bejelentkezesActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jelszo_bejelentkezesActionPerformed
 
     /**

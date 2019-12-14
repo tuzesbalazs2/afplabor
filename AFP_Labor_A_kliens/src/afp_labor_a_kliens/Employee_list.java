@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a_kliens;
 
 import java.awt.Color;
@@ -169,7 +164,7 @@ public class Employee_list extends javax.swing.JFrame {
             
             
             
-            AFP_Labor_A_Kliens.fukk = "listazas";
+            AFP_Labor_A_Kliens.uzenet = "listazas";
         } catch (Exception e) {
               System.out.println(e.getMessage());
               JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);
@@ -205,13 +200,7 @@ dispose();
     private void Button_frissitesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_frissitesActionPerformed
         try {
             
-            
-            
-            
-            
-            
-            
-            AFP_Labor_A_Kliens.fukk = "listazas";
+            AFP_Labor_A_Kliens.uzenet = "listazas";
         } catch (Exception e) {
               System.out.println(e.getMessage());
               JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);

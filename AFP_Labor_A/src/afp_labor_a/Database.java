@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a;
 
 import java.sql.*;
@@ -16,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Tóth_Zsolt
+ * @author Tüzes
  */
 public class Database {
 
@@ -31,6 +26,13 @@ public class Database {
         this.dbaddress = dbaddress;
         this.dbusername = dbusername;
         this.dbpassword = dbpassword;
+        try {
+            this.connect();
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void connect() throws SQLException, ClassNotFoundException {
@@ -40,7 +42,7 @@ public class Database {
             this.conn = DriverManager.getConnection(dbaddress, dbusername, dbpassword);
 
             if (conn != null) {
-                System.out.println("Connected to the database");
+                System.out.println("Az adatbázishoz való kapcsolódás sikeres");
             }
 
         } catch (Exception e) {
@@ -52,7 +54,7 @@ public class Database {
         try {
             this.conn.close();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"HIba a kapdcsolat zárásakor", "Hiba", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Hiba a kapdcsolat zárásakor", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }
 

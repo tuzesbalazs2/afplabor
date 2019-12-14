@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a;
 
 import io.netty.channel.ChannelInitializer;
@@ -23,11 +18,11 @@ import io.netty.handler.ssl.SslContext;
 /**
  * Creates a newly configured {@link ChannelPipeline} for a new channel.
  */
-public class SecureChatServerInitializer extends ChannelInitializer<SocketChannel> {
+public class ServerInitializer extends ChannelInitializer<SocketChannel> {
 
     private final SslContext sslCtx;
 
-    public SecureChatServerInitializer(SslContext sslCtx) {
+    public ServerInitializer(SslContext sslCtx) {
         this.sslCtx = sslCtx;
     }
 
@@ -48,7 +43,7 @@ public class SecureChatServerInitializer extends ChannelInitializer<SocketChanne
         pipeline.addLast(new StringEncoder());
 
         // and then business logic.
-        pipeline.addLast(new SecureChatServerHandler());
+        pipeline.addLast(new ServerHandler());
     }
 }
 

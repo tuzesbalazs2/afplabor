@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a_kliens;
 
 import java.sql.SQLException;
@@ -16,10 +11,6 @@ import javax.swing.JOptionPane;
  * @author Tüzes
  */
 public class Registration extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Registration
-     */
     
     
     public Registration() {
@@ -178,7 +169,7 @@ public class Registration extends javax.swing.JFrame {
           if (!"".equals(String.copyValueOf(jelszo_regisztracio.getPassword())) && !"".equals(String.copyValueOf(jelszomegint_regisztracio.getPassword()))){
             if (String.copyValueOf(jelszo_regisztracio.getPassword()) == null ? String.copyValueOf(jelszomegint_regisztracio.getPassword()) == null : String.copyValueOf(jelszo_regisztracio.getPassword()).equals(String.copyValueOf(jelszomegint_regisztracio.getPassword()))){
             
-            AFP_Labor_A_Kliens.fukk = "regisztracio$$$" + nev_regisztracio.getText() + "$$$" + String.copyValueOf(jelszo_regisztracio.getPassword());
+            AFP_Labor_A_Kliens.uzenet = "regisztracio$$$" + nev_regisztracio.getText() + "$$$" + String.copyValueOf(jelszo_regisztracio.getPassword());
             
             }
             

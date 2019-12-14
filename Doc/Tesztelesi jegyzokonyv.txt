@@ -8,7 +8,6 @@ Alkalmazások fejlesztése és tervezése, Projekt labor I. projekt feladat
 		
 		Tüzes Balázs (projekt manager és fejlesztõ)
 		Tüzes Dániel (projekt manager és fejlesztõ)
-		Tóth Zsolt (projekt manager és fejlesztõ)
 
  2. Jegyzõkönyvi jegyzetek
 

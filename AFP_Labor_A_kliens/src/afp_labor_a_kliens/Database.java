@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a_kliens;
 
 import java.sql.*;
@@ -17,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Tóth_Zsolt
+ * @author Tüzes
  */
 public class Database {
 
@@ -54,7 +49,7 @@ public class Database {
         try {
             this.conn.close();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"HIba a kapdcsolat zárásakor", "Hiba", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Hiba a kapdcsolat zárásakor", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -84,11 +79,12 @@ public class Database {
 
                 empList = new Employee_list();
                 empList.setVisible(true);
-
+                System.out.println("Sikeres bejelentkezés!");
             }         
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"HIbás felhasználónév vagy jelszó");
+            System.out.println("Hibás felhasználónév vagy jelszó");
+            JOptionPane.showMessageDialog(null,"Hibás felhasználónév vagy jelszó");
         }
     }
 
@@ -98,6 +94,7 @@ public class Database {
             Statement st = this.conn.createStatement();
             //TODO..
         } catch (Exception e) {
+            System.out.println("Hiba történt");
             JOptionPane.showMessageDialog(null,"Hiba történt");
         }
     }
@@ -110,6 +107,7 @@ public class Database {
             empage.lekerdez(ind);
             //empage.ind = ind;
         } catch (Exception e) {
+            System.out.println("Hiba történt");
             JOptionPane.showMessageDialog(null,"Hiba történt");
         }
     }
@@ -122,6 +120,7 @@ public class Database {
             Statement st = this.conn.createStatement();
             //TODO..
         } catch (Exception e) {
+            System.out.println("Hiba a törlésnél");
             JOptionPane.showMessageDialog(null,"Hiba a törlésnél", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }
@@ -170,6 +169,7 @@ System.out.println("dolgozo_insert lefut!");
             Class.forName("com.mysql.jdbc.Driver");
             Statement st = this.conn.createStatement();
         } catch (Exception e) {
+            System.out.println("Hiba a módosításnál");  
             JOptionPane.showMessageDialog(null,"Hiba a módosításnál", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }
@@ -192,23 +192,29 @@ System.out.println("dolgozo_insert lefut!");
 //               return true;
 //            }
 
+            System.out.println("reg_insert lefut!");
+
             if ("regisztraciojo".equals((String)regisztraltat[1])) {
 
+            System.out.println("Sikeres Regisztráció!");
                 JOptionPane.showMessageDialog(null, "Sikeres Regisztráció!", "Sikeres regisztráció", JOptionPane.PLAIN_MESSAGE);
 
             }
             if ("regisztraciorossz".equals((String)regisztraltat[1])) {
 
+            System.out.println("Sikertelen regisztráció: Már létezik ilyen felhasználónév.");
                 JOptionPane.showMessageDialog(null, "Sikertelen regisztráció: Már létezik ilyen felhasználónév.", "Hiba", JOptionPane.ERROR_MESSAGE);
 
             }
             if ("regisztraciohiba".equals((String)regisztraltat[1])) {
 
+            System.out.println("Hiba a beszúrásnál");
             JOptionPane.showMessageDialog(null,"Hiba a beszúrásnál", "Hiba", JOptionPane.ERROR_MESSAGE);
 
             }
             
         } catch (Exception e) {
+            System.out.println("Hiba a beszúrásnál");
             JOptionPane.showMessageDialog(null,"Hiba a beszúrásnál", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
         return false;

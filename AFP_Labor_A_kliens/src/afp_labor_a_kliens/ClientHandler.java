@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a_kliens;
 
 import io.netty.channel.ChannelHandlerContext;
@@ -17,16 +12,17 @@ import javax.swing.JOptionPane;
 /**
  * Handles a client-side channel.
  */
-public class SecureChatClientHandler extends SimpleChannelInboundHandler<String> {
+public class ClientHandler extends SimpleChannelInboundHandler<String> {
 
     @Override
     public void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         //System.err.println(msg);
         //JOptionPane.showMessageDialog(null, "fakkk", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
-        //AFP_Labor_A_Kliens.fukk = "megkapodott";
+        //AFP_Labor_A_Kliens.uzenet = "megkapodott";
        
        //String[] args = null;
        //SecureChatClient.main(args);
+       System.out.println("Sikeres feltöltés!");
         JOptionPane.showMessageDialog(null, msg, "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
         
         String[] msgsplit = {""};
@@ -36,8 +32,9 @@ public class SecureChatClientHandler extends SimpleChannelInboundHandler<String>
         if ("bejelentkezes".equals(msgsplit[0])) {
                 AFP_Labor_A_Kliens.db.login(msgsplit);
         }
-        if ("resgisztracio".equals(msgsplit[0])) {
+        if ("regisztracio".equals(msgsplit[0])) {
                 AFP_Labor_A_Kliens.db.reg_insert(msgsplit);
+                System.out.println("reg_insert meghívva a ClientHandler-ből!");
         }
         if ("listazas".equals(msgsplit[0])) {
                 AFP_Labor_A_Kliens.db.empList.list(msgsplit);

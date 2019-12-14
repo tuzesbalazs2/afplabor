@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a_kliens;
 
 import java.io.ByteArrayInputStream;
@@ -15,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Tóth_Zsolt
+ * @author Tüzes
  */
 public class MainPage extends javax.swing.JFrame {
 
@@ -27,7 +22,7 @@ public class MainPage extends javax.swing.JFrame {
     public MainPage() {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(0, 153, 0) );
-        setTitle("Főoldal, kliens");
+        setTitle("Főoldal");
     }
 
     /**
@@ -152,16 +147,16 @@ String password = jelszo_bejelentkezes.getText();
 
 
    try {
-       AFP_Labor_A_Kliens.fukk = "bejelentkezes$$$" + nev_bejelentkezes.getText() + "$$$" + jelszo_bejelentkezes.getText();
+       AFP_Labor_A_Kliens.uzenet = "bejelentkezes$$$" + nev_bejelentkezes.getText() + "$$$" + jelszo_bejelentkezes.getText();
        //AFP_Labor_A_Kliens.messagenez = true;
        //String[] args = null;
        //SecureChatClient.main(args);
        
        //AFP_Labor_A_Kliens.stream=new ByteArrayInputStream(fukkk.getBytes(StandardCharsets.UTF_8));
-       //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.fukk, "AFP_Labor_A_Kliens.fukk", JOptionPane.PLAIN_MESSAGE);
-       //InputStream stream = new ByteArrayInputStream(fukk.getBytes(StandardCharsets.UTF_8));
-       //System.setIn("fukk");
-       //StringBufferInputStream stream = new StringBufferInputStream("fukk");
+       //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.uzenet, "AFP_Labor_A_Kliens.uzenet", JOptionPane.PLAIN_MESSAGE);
+       //InputStream stream = new ByteArrayInputStream(uzenet.getBytes(StandardCharsets.UTF_8));
+       //System.setIn("uzenet");
+       //StringBufferInputStream stream = new StringBufferInputStream("uzenet");
        //System.setIn(stream);
        //JOptionPane.showMessageDialog(null,System.out, "Hiba", JOptionPane.ERROR_MESSAGE);
        //JOptionPane.showMessageDialog(null,System.setIn(stream), "Hiba", JOptionPane.ERROR_MESSAGE);
@@ -186,7 +181,7 @@ String password = jelszo_bejelentkezes.getText();
     private void Button_regisztracioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_regisztracioActionPerformed
         Registration r = new Registration();
         r.setVisible(true);
-//        AFP_Labor_A_Kliens.fukk = "fukk";
+//        AFP_Labor_A_Kliens.uzenet = "uzenet";
        //String[] args = null;
        // try {
        //     SecureChatClient.main(args);

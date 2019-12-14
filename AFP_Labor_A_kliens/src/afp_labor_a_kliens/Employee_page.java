@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a_kliens;
 
 import java.sql.PreparedStatement;
@@ -29,7 +24,7 @@ public class Employee_page extends javax.swing.JFrame {
         
         //betolt();
     }
-    public void lekerdez(int indx){AFP_Labor_A_Kliens.fukk = "dolgozotolt"+"$$$"+indx;ind = indx;}
+    public void lekerdez(int indx){AFP_Labor_A_Kliens.uzenet = "dolgozotolt"+"$$$"+indx;ind = indx;}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -247,7 +242,7 @@ dispose();
 //    pstmt.setInt(6, Employee_list.index+1);
 //    pstmt.executeUpdate();
 
-AFP_Labor_A_Kliens.fukk = "dolgozomodosit$$$" + nev_adat.getText() + "$$$" + szulev_adat.getText() + "$$$" + fizetes_adat.getText() + "$$$" + varos_adat.getText() + "$$$" + utcahazszam_adat.getText() + "$$$" +  ind;
+AFP_Labor_A_Kliens.uzenet = "dolgozomodosit$$$" + nev_adat.getText() + "$$$" + szulev_adat.getText() + "$$$" + fizetes_adat.getText() + "$$$" + varos_adat.getText() + "$$$" + utcahazszam_adat.getText() + "$$$" +  ind;
 
 JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
             } catch (Exception e) {

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a_kliens;
 
 import io.netty.bootstrap.Bootstrap;
@@ -27,7 +22,7 @@ import javax.swing.JOptionPane;
 /**
  * Simple SSL chat client modified from {@link TelnetClient}.
  */
-public final class SecureChatClient {
+public final class Client {
 
     static final String HOST = System.getProperty("host", "127.0.0.1");
     static final int PORT = Integer.parseInt(System.getProperty("port", "8992"));
@@ -42,7 +37,7 @@ public final class SecureChatClient {
             Bootstrap b = new Bootstrap();
             b.group(group)
              .channel(NioSocketChannel.class)
-             .handler(new SecureChatClientInitializer(sslCtx));
+             .handler(new ClientInitializer(sslCtx));
 
             // Start the connection attempt.
             Channel ch = b.connect(HOST, PORT).sync().channel();
@@ -54,14 +49,14 @@ public final class SecureChatClient {
                 //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.messagenez, "nez", JOptionPane.PLAIN_MESSAGE);
               //if (AFP_Labor_A_Kliens.messagenez == true){
                 //String line = in.readLine();
-                String line = AFP_Labor_A_Kliens.fukk;
+                String line = AFP_Labor_A_Kliens.uzenet;
                 if ("".equals(line.toLowerCase())) {
                     continue;
                 }
                 //if (line == null) {
                 //    break;
                 //}
-                //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.fukk, "line", JOptionPane.PLAIN_MESSAGE);
+                //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.uzenet, "line", JOptionPane.PLAIN_MESSAGE);
                 // Sends the received line to the server.
                 lastWriteFuture = ch.writeAndFlush(line + "$$$" + "\r\n");
 
@@ -77,7 +72,7 @@ public final class SecureChatClient {
                 //AFP_Labor_A_Kliens.messagenez = false;
                 //break;
               //}
-                AFP_Labor_A_Kliens.fukk = "";
+                AFP_Labor_A_Kliens.uzenet = "";
             }
 
             // Wait until all messages are flushed before closing the channel.

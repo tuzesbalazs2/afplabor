@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package afp_labor_a;
 
 import io.netty.channel.Channel;
@@ -30,7 +25,7 @@ import javax.swing.JOptionPane;
 /**
  * Handles a server-side channel.
  */
-public class SecureChatServerHandler extends SimpleChannelInboundHandler<String> {
+public class ServerHandler extends SimpleChannelInboundHandler<String> {
 
     static final ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
@@ -88,7 +83,7 @@ public class SecureChatServerHandler extends SimpleChannelInboundHandler<String>
                 
                 if ("regisztracio".equals(msgsplit[0])){
                 //AFP_Labor_A.db.connect();
-                c.writeAndFlush("regisztacio" + "$$$" + AFP_Labor_A.db.reg_insert(msgsplit[1], msgsplit[2]) + "$$$" + '\n');
+                c.writeAndFlush("regisztracio" + "$$$" + AFP_Labor_A.db.reg_insert(msgsplit[1], msgsplit[2]) + "$$$" + '\n');
                 
                 }
                 
