@@ -187,12 +187,26 @@ public class Database {
           return "dolgozofelvitelhiba";
     }
 
-    public void update(String q) throws ClassNotFoundException {
+    public String dolgozomodosit(String[] msgsplit) throws ClassNotFoundException {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Statement st = this.conn.createStatement();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Hiba a módosításnál", "Hiba", JOptionPane.ERROR_MESSAGE);
+//            int aff = 4;//Integer.parseInt(msgsplit[6]);
+            //int aff = Integer.parseInt(msgsplit[6]);
+            PreparedStatement pstmt = AFP_Labor_A.db.conn.prepareStatement("UPDATE dolgozo SET nev = ?, szul_ev = ?, fizetes = ?, varos = ?, utca_hsz = ? WHERE id IN (SELECT id FROM (SELECT id FROM dolgozo ORDER BY id ASC LIMIT ?, 1) tmp)");
+    pstmt.setString(1, msgsplit[1]);
+    pstmt.setShort(2, Short.parseShort(msgsplit[2]));
+    pstmt.setInt(3, Integer.parseInt(msgsplit[3]));
+    pstmt.setString(4, msgsplit[4]);
+    pstmt.setString(5, msgsplit[5]);
+    pstmt.setInt(6, Integer.parseInt(msgsplit[6]));
+    pstmt.executeUpdate();
+//JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
+//System.out.println("Sikeres módosítás!");
+//return (msgsplit[0] + "$$$" + msgsplit[1] + "$$$" + msgsplit[2] + "$$$" + msgsplit[3] + "$$$" + msgsplit[4] + "$$$" + msgsplit[5] + "$$$" + msgsplit[6] + "$$$" + '\n');
+return "dolgozomodositjo";
+            } catch (Exception e) {
+              //System.out.println(e.getMessage());
+              return "dolgozomodosítHiba";
+              //JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }
     

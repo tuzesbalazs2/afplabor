@@ -2,7 +2,7 @@
 
 
 Mit: Egyetemes tantárgyhoz dolgozók adatait kilistázó programot kell írni
-Hogyan: Úgy hogy NetBeans nevű fejlesztői környezetben _Java programozási nyelven megírjuk
+Hogyan: Úgy hogy NetBeans nevű fejlesztői környezetben Java programozási nyelven megírjuk
 Miből: saját időnkből, 0 forintból, még ebben a tanulmányi félévben
 Miért (miért pont azt):
 - Mert a program szóbeli leírása el lett fogadva.
@@ -63,13 +63,13 @@ Funkcionális terv
 	Rendszerhasználati esetek és lefutásaik:::
 
 - Dolgozók adatainak felvitele:
-	Az Employee_list-en a felvitel gombbal az Employee_add.java jön be, ahol teljesen új dolgozókat lehet felvinni az adatbázisba, az egyes helyekre beírt adatokkal. Az itteni felvitel gombra kattintva lesz az adartbázishoz hozzáadva az új rekord, az adatbázis objektum példány dolgozo_insert metódus bevitt adatokkal való meghívásával. A kép szövegű objektum alatti feltöltés gombbal lehetne képet feltölteni.
+	Az Employee_list-en a felvitel gombbal az Employee_add.java jön be, ahol teljesen új dolgozókat lehet felvinni az adatbázisba, az egyes helyekre beírt adatokkal. Az itteni felvitel gombra kattintva lesz a szerver programnak elküldve az adat, amit a ServerHandler.java channelRead0 metódusa kap meg, és ezután a létrehozott Database példány dolgoz fel a dolgozo_insert metódus bevitt adatokkal való meghívásával, ezután lesz az adartbázishoz hozzáadva az új rekord. A kép szövegű objektum alatti feltöltés gombbal lehetne képet feltölteni.
 
 - Dolgozók adatainak tárolása
 	Az ingyenes online adatbázis meghatározatlan ideig tárolja a felvitt adatokat.
 
 - Dolgozók adatainak módosítása
-	A lista elemekre való kattintáskor bejön az Employee_page.java, aminek átadódik a public static index változó értéke, ami az éppen általunk kiválasztott dolgozó indexe a sorban, ami 	alapján a megfelelő dolgozó adatait fogja kilistázni az oldalra. Itt a kiválasztott dolgozó adatai lesznek módosítható módon, szövegdobozokban felsorolva, címkékkel ellátva, amik elmagyarázzák hogy mik is azok. Az itt felül lévő módosítás gombbal lehet a beírt módosításokat felvinni az adatbázisba az eredeti adatok helyére.
+	A lista elemekre való dupla kattintáskor bejön az Employee_page.java, aminek átadódik a public static index változó értéke, ami az éppen általunk kiválasztott dolgozó indexe a sorban, ami alapján a megfelelő dolgozó adatait fogja kilistázni az oldalra, nem az id alapján hanem az adatbázis táblában a sorszáma alapján. Itt a kiválasztott dolgozó adatai lesznek kijelezve módosítható módon, szövegdobozokban felsorolva, címkékkel ellátva, amik elmagyarázzák hogy mik is azok. Az itt felül lévő módosítás gombbal lehet a beírt módosításokat felvinni az adatbázisba az eredeti adatok helyére. A gomb megnyomására az adatok elküldődnek a szerver programnak, ahol a ServerHandler.java channelRead0 metódusa megkapja, és meghívja a Database példány dolgozomodosit metódusát ami módosítja az adatbázisban a rekordot.
 	A gomb megnyomásakor egy felugró üzenet jelzi, hogy az adatok az adatbázisban sikeresen módosításra kerültek-e vagy sem.
 
 - A tárolt adatok: Név, Szül.év, fizetés, Lakcím
@@ -83,20 +83,20 @@ Funkcionális terv
 	Az Employee_page-ben export gombra PDF formátumban kiexportálná az adatlapot. A kép szövegű objektum helyén az adott dolgozóhoz az adatbázisba felvitt kép jelenne meg. A kép alatt levő módosítás gombbal lehetne a képet módosítani.
 
 - Bejelentkezési funkció
-	MainPage.java-n név és jelszó mezők amikbe be lehet írni a nevet és jelszót, amiket majd a bejelentkezéshez összehasonlít a program az adatbázisban lévőkkel. A jelszó mezőben a karakterek el vannak rejtve. A bejelentkezés gomb megnyomásával meghívódik a Database.java-ban definiált connect metódusa az adatbázis objektum példányának ami csatlakozik az adatbázishoz, és az ugyanitt definiált login metódus, ami az összehasonlítást végzi. A sikertelen bejelentkezést egy felugró üzenet jelzi.
+	MainPage.java-n név és jelszó mezők amikbe be lehet írni a nevet és jelszót, amiket majd a bejelentkezéshez összehasonlít a program az adatbázisban lévőkkel. A jelszó mezőben a karakterek el vannak rejtve. A bejelentkezés gomb megnyomásával a kredenciálok elküldődnek a szerver programnak, ahol a ServerHandler.java channelRead0 metódusa által meghívódik a Database.java osztály-ban definiált connect metódusa az adatbázis objektum példányának ami kapcsolatot létesít az adatbázissal, és az ugyanitt definiált login metódus ami az összehasonlítást végzi és eldönti hogy a kliensnek engedi-e a belépést. A sikertelen bejelentkezést egy felugró üzenet jelzi.
 
 - A kinézete az előzetesen elkészített Mockupra épüljön.
 	Az ablakok háttere zöld színű, a kilépés gombok pirosak, a fejléc szövegek háttere fekete és a szövegük fehér, az elemek mérete és elrendezése, száma, helyzete, akár funkciója, és az egész, nagyban hasonlít a Pencil nevű programban előzetesen megcsinált „mockup” kinézet kivitelezéséhez.
 
 - Új felhasználó regisztrálásának lehetősége.
-	A Regisztráció gomb megnyomására a Registration.java jön be, ahol új felhasználót lehet felvinni az adatbázisba, az oda beírt névvel és kétszer beírt jelszóval. Ez a Kész gomb megnyomásával történik, ami meghívja az adatbázis objektum példány reg_insert metódusát a szövegdobozokból kinyert adatokkal. A program egy felugró üzenettel jelzi, hogy a regisztráció sikeres volt-e vagy sem. Ezután  az adatbázis objektum példány close() metódusát meghívva lezárja az adatbázissal létrejött kapcsolatot, mivel ezzel még nem jelentkeztünk be.
-	Sikeres Bejelentkezés után az Employee_list.java jön be, ahol az adatbázisban lévő dolgozók és adataik lesznek  kilistázva, az.ablak megnyílásakor elinduló MySQL lekérdezés segítségével, aminek a visszatérési eredmény értékei vannak hozzáadva soronként a listához.
+	A Regisztráció gomb megnyomására a Registration.java jön be, ahol új felhasználót lehet felvinni az adatbázisba, az oda beírt névvel és kétszer beírt jelszóval. Ez a Kész gomb megnyomásával történik, ami elküldi a szervernek a létrehozandó felhasználó szövegdobozokból kinyert adatait, ahol a ServerHandler.java channelRead0 metódusa fogadja, és meghívja az adatbázis objektum példány reg_insert metódusát . A program egy felugró üzenettel jelzi, hogy a regisztráció sikeres volt-e vagy sem. Ezután  az adatbázis objektum példány close() metódusát meghívva lezárja az adatbázissal létrejött kapcsolatot, mivel ezzel még nem jelentkeztünk be.
+	Sikeres Bejelentkezés után az Employee_list.java jön be, ahol az adatbázisban lévő dolgozók és adataik lesznek kilistázva, az ablak megnyílásakor szerver felé küldött listázási kérelem után elinduló MySQL lekérdezés segítségével, aminek a visszatérési eredmény értékei vannak hozzáadva soronként a listához, egyszerű és átlátható módon.
 
 - Programból kilépés és ablakok bezárásának lehetősége.
 	A kilépés gombra való kattintással bezáródik az éppen aktuális ablak, a program nyitva marad és nem kell újra bejelentkezni. A piros X gombra való kattintással is hasonló eredményt lehet elérni, de ha a MainPage.java bezáródik akkor az egész program leáll.
 
 - Dolgozók adatainak listaszerű és átlátható megjelenítése.
-	Az Employee_list.java oldalon JList elem feltöltésre kerül az ablak megnyitásakor az adatbázisból kiolvasandó dolgozó adatokkal listaszerűen megjelenítve, átláthatóan
+	Az Employee_list.java oldalon JList elem feltöltésre kerül az ablak megnyitásakor az adatbázisból kiolvasandó dolgozó adatokkal listaszerűen megjelenítve, átláthatóan. a Frissítés gombra kattintva a lista rögtön frissül, elénk tárva a frissült adatokat.
 
 
 	Határ osztályok
@@ -109,11 +109,11 @@ Funkcionális terv
 
 Fizikai környezet:
 	Vásárolt softwarekomponensek és külső rendszerek
-		A Libraries mappában a PDFben exportáláshoz szükséges pdfbox library, a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
+		A Libraries mappában a PDFben exportáláshoz szükséges pdfbox library, a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található. Ezen kívül a kliens és szerver programok a Netty könyvtárat használják az egymáshoz való kapcsolódáshoz.
 	Hardver és hálózati topológia
-		Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor_rft címen. Az adatok itt vannak tárolva és innen vannak kiolvasva.
+		Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor_rft címen. Az adatok itt vannak tárolva és innen vannak kiolvasva. A kiszolgáló programhoz tetszőleges gépen az ügyfél program csatlakozik.
 	Fizikai alrendszerek
-		A futtató gép és az online adatbázis.
+		A kliens és szerver programokat futtató gép(el) és az online adatbázis.
 	Fejlesztő eszközök
 		NetBeans nevű Java fejlesztői környezetben készült a program.
 	Keretrendszer
@@ -123,22 +123,22 @@ Absztrakt domain modell:
 	Domainspecifikáció, fogalmak
 
 	Absztrakt komponensek, ezek kapcsolatai
-		Egy online adatbázis és a program, ami kapcsolódik hozzá. A programon belüli file-ok és komponensek (Dolgozo, Employee_add, Employee_list, Employee_page, Export_PDF,MainPage, Registrtation) is kapcsolódnak egymáshoz. A programnak kliens és szerver oldali része is van amik kapcsolódnak egymáshoz.
+		Egy online adatbázis, a kiszolgáló program ami kapcsolódik hozzá, és az ügyfél program ami a kiszolgálóhoz kapcsolódik. A programon belüli file-ok és komponensek (Dolgozo, Employee_add, Employee_list, Employee_page, Export_PDF,MainPage, Registrtation) is kapcsolódnak egymáshoz. A programnak kliens és szerver oldali része is van amik kapcsolódnak egymáshoz.
 
 Architekturális terv:
 	Egy architekturális tervezési minta
 		háromrétegű alkalmazás
 	Az alkalmazás rétegei, fő komponensei, ezek kapcsolatai
-		rétegei: adatbázis, szerver oldali program, kliens oldali program. fő komponensei: adatbázis, kliens program, szerver program, ezek kapcsolatai: mysql-connectorral
+		rétegei: adatbázis, szerver oldali program, kliens oldali program. fő komponensei: adatbázis, kliens program, szerver program, ezek kapcsolatai: mysql-connectorral, nettyvel
 	Változások kezelése
 		kezelve vannak
 	Rendszer bővíthetősége
 		a programot bővíteni lehet programozóknak
 	Biztonsági funkciók
-		hibák le vannak kezelve, bejelentkezés és hitelesítés
+		hibák le vannak kezelve, bejelentkezés és hitelesítés szerver és kliens között. 
 Adatbázisterv:
 	Logikai adatmodell
-		A felhasználók, a tárolt dolgozók adatai és a városok és irányítószámaik külön  táblákban vannak eltárolva. A dologozók adatai között szereplő város mező kapcsolódik a városok táblájában lévő név mezőhöz.
+		A felhasználók, a tárolt dolgozók adatai és a városok és irányítószámaik külön táblákban vannak eltárolva. A dologozók adatai között szereplő város mező kapcsolódik a városok táblájában lévő név mezőhöz.
 		A "felhasznalo" tábla tartalmazza a felhasználók adatait, ezért az azok tárolására szánt mezők lettek itt létrehozva.
 		A "felhasznalo" tábla mezői:
 			- A legfeljebb 11 számjegyű egész szám azonosító (id), ami automatikusan hozzá van rendelve minden egyes felvitt felhasználóhoz, ez az elsődleges kulcs.
@@ -163,18 +163,27 @@ Adatbázisterv:
 
 Implementációs terv:
 	Perzisztencia osztályok
-		Database.java (kliens oldalon van igazából)
+		Database.java
 	Üzleti logika osztályai
-		nincs
+		AFP_Labor_A.java
+		Dolgozo.java
+		MainPage.java
+		Server.java
+		ServerHandler.java
+		ServerInitializer.java
 	Kliens oldal osztályai
-		APF_Labor_A
-		Dolgozo
-		Employee_add
-		Employee_list
-		Employee_page
-		Export_PDF
-		MainPage
-		Registrtation
+		APF_Labor_A_Kliens.java
+		Client.java
+		ClientHandler.java
+		ClientInitializer.java
+		Database.java
+		Dolgozo.java
+		Employee_add.java
+		Employee_list.java
+		Employee_page.java
+		Export_PDF.java
+		MainPage.java
+		Registration.java
 
 Tesztterv:
 	Teszteljük úgy mint ahogy a használati esetekben le van írva, mint ahogy a funkcióknál is le van írva, meg a követelményeknél is le van írva
