@@ -15,23 +15,23 @@ amit nyomon lehet követni és rendesen dokumentálni
 
 
 A rendszer célja:
-	Dolgozók adatainak tárolása és visszaolvasása online adatbázisból hibátlanul. Új felhasználók és új dolgozók és ezek adatainak felvitele, módosítása és listaszerű megjelenítése. Hitelesítés bejelentkezéssel és regiszrációval.
+	Dolgozók adatainak tárolása és visszaolvasása online adatbázisból hibátlanul. Új felhasználók és új dolgozók és ezek adatainak felvitele, módosítása és listaszerű megjelenítése. Hitelesítés bejelentkezéssel és regisztrációval.
 	Nem cél semmi más ami nincs leírva, kivéve ha egyértelműen következik ezekből vagy magától értetődő.
 
 Projektterv:
 	Projektszerepkörök, felelősségek
 		programozó - programoz, a program kódjában
-		csoportvezető - javasolja hogy nagyjából mit kellene csinálni
+		csoportvezető - javasolja, hogy nagyjából mit kellene csinálni
 		dokumentáló - dokumentációt írja
 		tesztelő - a program tesztelését végzi
 	Projektmunkások és felelősségeik
-		Tóth Zsolt - programozó, dokumentáló, csoportvezető
+		Tóth Zsolt - programozó, dokumentáló, csoportvezető  (a program 2018-as verziójánál)
 		Tüzes Balázs - programozó, dokumentáló, tesztelő
 		Tüzes Dániel - programozó, dokumentáló, tesztelő
 	Ütemterv
-		Trellora kiírt feladatok és időpontok alapján
+		Trello-ra kiírt feladatok és időpontok alapján
 	Mérföldkövek
-		Trellora a tantárgy csoportba kiírt felsorolás alapján:
+		Trello-ra a tantárgy csoportba kiírt felsorolás alapján:
 			Mockup eszköz keresés
 			Mockup tervezés
 			Funkcionális specifikáció írása
@@ -63,27 +63,23 @@ Funkcionális terv
 	Rendszerhasználati esetek és lefutásaik:::
 
 - Dolgozók adatainak felvitele:
-	Az Employee_list-en a felvitel gombbal az Employee_add.java jön be, ahol teljesen új dolgozókat lehet felvinni az adatbázisba, az egyes helyekre beírt adatokkal. Az itteni felvitel gombra kattintva lesz a szerver programnak elküldve az adat, amit a ServerHandler.java channelRead0 metódusa kap meg, és ezután a létrehozott Database példány dolgoz fel a dolgozo_insert metódus bevitt adatokkal való meghívásával, ezután lesz az adartbázishoz hozzáadva az új rekord. A kép szövegű objektum alatti feltöltés gombbal lehetne képet feltölteni.
+	Az Employee_list-en a felvitel gombbal az Employee_add.java jön be, ahol teljesen új dolgozókat lehet felvinni az adatbázisba, az egyes helyekre beírt adatokkal. Az itteni felvitel gombra kattintva lesz a szerver programnak elküldve az adat, amit a ServerHandler.java channelRead0 metódusa kap meg, és ezután a létrehozott Database példány dolgoz fel a dolgozo_insert metódus bevitt adatokkal való meghívásával, ezután lesz az adatbázishoz hozzáadva az új rekord. A kép szövegű objektum alatti feltöltés gombbal lehetne képet feltölteni.
 
 - Dolgozók adatainak tárolása
 	Az ingyenes online adatbázis meghatározatlan ideig tárolja a felvitt adatokat.
 
 - Dolgozók adatainak módosítása
-	A lista elemekre való dupla kattintáskor bejön az Employee_page.java, aminek átadódik a public static index változó értéke, ami az éppen általunk kiválasztott dolgozó indexe a sorban, ami alapján a megfelelő dolgozó adatait fogja kilistázni az oldalra, nem az id alapján hanem az adatbázis táblában a sorszáma alapján. Itt a kiválasztott dolgozó adatai lesznek kijelezve módosítható módon, szövegdobozokban felsorolva, címkékkel ellátva, amik elmagyarázzák hogy mik is azok. Az itt felül lévő módosítás gombbal lehet a beírt módosításokat felvinni az adatbázisba az eredeti adatok helyére. A gomb megnyomására az adatok elküldődnek a szerver programnak, ahol a ServerHandler.java channelRead0 metódusa megkapja, és meghívja a Database példány dolgozomodosit metódusát ami módosítja az adatbázisban a rekordot.
+	A lista elemekre való dupla kattintáskor bejön az Employee_page.java, aminek átadódik a public static index változó értéke, ami az éppen általunk kiválasztott dolgozó indexe a sorban, ami alapján a megfelelő dolgozó adatait fogja kilistázni az oldalra, nem az id alapján hanem az adatbázis táblában a sorszáma alapján. Itt a kiválasztott dolgozó adatai lesznek kijelezve módosítható módon, szövegdobozokban felsorolva, címkékkel ellátva, amik elmagyarázzák, hogy mik is azok. Az itt felül lévő módosítás gombbal lehet a beírt módosításokat felvinni az adatbázisba az eredeti adatok helyére. A gomb megnyomására az adatok elküldődnek a szerver programnak, ahol a ServerHandler.java channelRead0 metódusa megkapja, és meghívja a Database példány dolgozomodosit metódusát ami módosítja az adatbázisban a rekordot.
 	A gomb megnyomásakor egy felugró üzenet jelzi, hogy az adatok az adatbázisban sikeresen módosításra kerültek-e vagy sem.
 
 - A tárolt adatok: Név, Szül.év, fizetés, Lakcím
 	Az adatbázisban és a programban is megfelelő helyen, megfelelő típussal, megfelelő formátumban kerülhetnek tárolásra, megfelelő címkézéssel
 
 - Profilkép feltöltésének lehetősége.
-	Nincs megvalósítva, az Employee_add.java és az Employee_page.java filokban ott van a helye  a profilképeknek, adatbázisban nincs hely kialakítva neki
-
-- Dokumentum exportálás adatokból PDF-be vagy bármilyen formátumba (word).
-	Az Export_PDf.java-ban a PDFben exportáláshoz szükséges kód van.
-	Az Employee_page-ben export gombra PDF formátumban kiexportálná az adatlapot. A kép szövegű objektum helyén az adott dolgozóhoz az adatbázisba felvitt kép jelenne meg. A kép alatt levő módosítás gombbal lehetne a képet módosítani.
+	Nincs megvalósítva, az Employee_add.java és az Employee_page.java filokban ott van a helye a profilképeknek, adatbázisban nincs hely kialakítva neki
 
 - Bejelentkezési funkció
-	MainPage.java-n név és jelszó mezők amikbe be lehet írni a nevet és jelszót, amiket majd a bejelentkezéshez összehasonlít a program az adatbázisban lévőkkel. A jelszó mezőben a karakterek el vannak rejtve. A bejelentkezés gomb megnyomásával a kredenciálok elküldődnek a szerver programnak, ahol a ServerHandler.java channelRead0 metódusa által meghívódik a Database.java osztály-ban definiált connect metódusa az adatbázis objektum példányának ami kapcsolatot létesít az adatbázissal, és az ugyanitt definiált login metódus ami az összehasonlítást végzi és eldönti hogy a kliensnek engedi-e a belépést. A sikertelen bejelentkezést egy felugró üzenet jelzi.
+	MainPage.java-n név és jelszó mezők amikbe be lehet írni a nevet és jelszót, amiket majd a bejelentkezéshez összehasonlít a program az adatbázisban lévőkkel. A jelszó mezőben a karakterek el vannak rejtve. A bejelentkezés gomb megnyomásával a hitelesítő adatok elküldődnek a szerver programnak, ahol a ServerHandler.java channelRead0 metódusa által meghívódik a Database.java osztály-ban definiált connect metódusa az adatbázis objektum példányának ami kapcsolatot létesít az adatbázissal, és az ugyanitt definiált login metódus ami az összehasonlítást végzi és eldönti, hogy a kliensnek engedi-e a belépést. A sikertelen bejelentkezést egy felugró üzenet jelzi.
 
 - A kinézete az előzetesen elkészített Mockupra épüljön.
 	Az ablakok háttere zöld színű, a kilépés gombok pirosak, a fejléc szövegek háttere fekete és a szövegük fehér, az elemek mérete és elrendezése, száma, helyzete, akár funkciója, és az egész, nagyban hasonlít a Pencil nevű programban előzetesen megcsinált „mockup” kinézet kivitelezéséhez.
@@ -109,11 +105,11 @@ Funkcionális terv
 
 Fizikai környezet:
 	Vásárolt softwarekomponensek és külső rendszerek
-		A Libraries mappában a PDFben exportáláshoz szükséges pdfbox library, a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található. Ezen kívül a kliens és szerver programok a Netty könyvtárat használják az egymáshoz való kapcsolódáshoz.
+		A Libraries mappában a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található. Ezen kívül a kliens és szerver programok a Netty könyvtárat használják az egymáshoz való kapcsolódáshoz.
 	Hardver és hálózati topológia
 		Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor_rft címen. Az adatok itt vannak tárolva és innen vannak kiolvasva. A kiszolgáló programhoz tetszőleges gépen az ügyfél program csatlakozik.
 	Fizikai alrendszerek
-		A kliens és szerver programokat futtató gép(el) és az online adatbázis.
+		A kliens és szerver programokat futtató gép(ek) és az online adatbázis.
 	Fejlesztő eszközök
 		NetBeans nevű Java fejlesztői környezetben készült a program.
 	Keretrendszer
@@ -123,13 +119,13 @@ Absztrakt domain modell:
 	Domainspecifikáció, fogalmak
 
 	Absztrakt komponensek, ezek kapcsolatai
-		Egy online adatbázis, a kiszolgáló program ami kapcsolódik hozzá, és az ügyfél program ami a kiszolgálóhoz kapcsolódik. A programon belüli file-ok és komponensek (Dolgozo, Employee_add, Employee_list, Employee_page, Export_PDF,MainPage, Registrtation) is kapcsolódnak egymáshoz. A programnak kliens és szerver oldali része is van amik kapcsolódnak egymáshoz.
+		Egy online adatbázis, a kiszolgáló program, ami kapcsolódik hozzá, és az ügyfél program ami a kiszolgálóhoz kapcsolódik. A programon belüli file-ok és komponensek (Dolgozo, Employee_add, Employee_list, Employee_page, MainPage, Registrtation) is kapcsolódnak egymáshoz. A programnak kliens és szerver oldali része is van amik kapcsolódnak egymáshoz.
 
 Architekturális terv:
 	Egy architekturális tervezési minta
 		háromrétegű alkalmazás
 	Az alkalmazás rétegei, fő komponensei, ezek kapcsolatai
-		rétegei: adatbázis, szerver oldali program, kliens oldali program. fő komponensei: adatbázis, kliens program, szerver program, ezek kapcsolatai: mysql-connectorral, nettyvel
+		rétegei: adatbázis, szerver oldali program, kliens oldali program. fő komponensei: adatbázis, kliens program, szerver program, ezek kapcsolatai: mysql-connector-ral, netty-vel
 	Változások kezelése
 		kezelve vannak
 	Rendszer bővíthetősége
@@ -138,12 +134,12 @@ Architekturális terv:
 		hibák le vannak kezelve, bejelentkezés és hitelesítés szerver és kliens között. 
 Adatbázisterv:
 	Logikai adatmodell
-		A felhasználók, a tárolt dolgozók adatai és a városok és irányítószámaik külön táblákban vannak eltárolva. A dologozók adatai között szereplő város mező kapcsolódik a városok táblájában lévő név mezőhöz.
+		A felhasználók, a tárolt dolgozók adatai és a városok és irányítószámaik külön táblákban vannak eltárolva. A dolgozók adatai között szereplő város mező kapcsolódik a városok táblájában lévő név mezőhöz.
 		A "felhasznalo" tábla tartalmazza a felhasználók adatait, ezért az azok tárolására szánt mezők lettek itt létrehozva.
 		A "felhasznalo" tábla mezői:
 			- A legfeljebb 11 számjegyű egész szám azonosító (id), ami automatikusan hozzá van rendelve minden egyes felvitt felhasználóhoz, ez az elsődleges kulcs.
-			- A felhasználó nevét tartalmazó legfeljebb 45 betű hosszú karaktersorozat (username), ennek tartalmát a program Regisztáció része adja át az adatbázisnak.
-			- A felhasználó jelszavát tartalmazó legfeljebb 45 karakter hosszú karaktersorozat (password), ennek tartalmát is a program Regisztáció része adja át az adatbázisnak.
+			- A felhasználó nevét tartalmazó legfeljebb 45 betű hosszú karaktersorozat (username), ennek tartalmát a program Regisztráció része adja át az adatbázisnak.
+			- A felhasználó jelszavát tartalmazó legfeljebb 45 karakter hosszú karaktersorozat (password), ennek tartalmát is a program Regisztráció része adja át az adatbázisnak.
 		A "dolgozo" tábla tartalmazza a dolgozók adatait, ezért az azok tárolására szánt mezők lettek itt létrehozva.
 		A "dolgozo" tábla mezői:
 			- A legfeljebb 11 számjegyű egész szám azonosító (id), ami automatikusan hozzá van rendelve minden egyes felvitt dolgozóhoz, ez az elsődleges kulcs.
@@ -151,7 +147,7 @@ Adatbázisterv:
 			- A dolgozó születési évét tartalmazó legfeljebb 11 karakter hosszú egész szám (szul_ev), ennek tartalmát a program Dolgozó hozzáadása része adja át az adatbázisnak, ezt ezután a dolgozó adatlapján lehet szerkeszteni.
 			- A dolgozó fizetését tartalmazó legfeljebb 11 karakter hosszú egész szám (fizetes), ennek tartalmát a program Dolgozó hozzáadása része adja át az adatbázisnak, ezt ezután a dolgozó adatlapján lehet szerkeszteni.
 			- A dolgozó lakóhelyének város részét tartalmazó legfeljebb 45 betű hosszú karaktersorozat (varos), ennek tartalmát a program Dolgozó hozzáadása része adja át az adatbázisnak, ezt ezután a dolgozó adatlapján lehet szerkeszteni.
-			- A dolgozó lakóhelyének utca és hazszám részét tartalmazó legfeljebb 45 betű hosszú karaktersorozat (utca_hsz), ennek tartalmát a program Dolgozó hozzáadása része adja át az adatbázisnak, ezt ezután a dolgozó adatlapján lehet szerkeszteni.
+			- A dolgozó lakóhelyének utca és házszám részét tartalmazó legfeljebb 45 betű hosszú karaktersorozat (utca_hsz), ennek tartalmát a program Dolgozó hozzáadása része adja át az adatbázisnak, ezt ezután a dolgozó adatlapján lehet szerkeszteni.
 		A "varos" tábla tartalmazza a városokat és irányítószámaikat.
 		A "varos" tábla mezői:
 			- A legfeljebb 11 számjegyű egész szám azonosító (irsz), , ez az elsődleges kulcs.
@@ -181,7 +177,6 @@ Implementációs terv:
 		Employee_add.java
 		Employee_list.java
 		Employee_page.java
-		Export_PDF.java
 		MainPage.java
 		Registration.java
 
@@ -199,4 +194,4 @@ Telepítési terv:
 
 Karbantartási terv:
 	Ha valamit ki kell javítani, akkor a NetBeans-ben megnézzük, hogy mi lehet a hiba, és kijavítjuk ahol lehet a hiba, vagy ami a hibát okozhatja.
-	Frissítés nem kell, a program úgy van készítve hogy mindig friss legyen, nem kell újítani rajta soha.
+	Frissítés nem kell, a program úgy van készítve, hogy mindig friss legyen, nem kell újítani rajta soha.

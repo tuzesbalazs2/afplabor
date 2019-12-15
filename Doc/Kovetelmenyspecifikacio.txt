@@ -46,7 +46,6 @@ Feladatai:
 		- Dolgozók adatainak felvitele, tárolása, módosítása, törlése.
 		- A tárolt adatok: Név, Születési év, fizetés, Lakcím.
 		- Profilkép feltöltésének lehetősége.
-		- Dokumentum exportálás adatokból PDF-be vagy bármilyen formátumba (word).
 		- Bejelentkezési funkció
 		- A kinézete az előzetesen elkészített Mockupra épüljön.
 		- Új felhasználó regisztrálásának lehetősége.

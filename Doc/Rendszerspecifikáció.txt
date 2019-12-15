@@ -24,10 +24,6 @@ Rendszerspecifikáció
 
 - Profilkép feltöltésének lehetősége.
 
-- Dokumentum exportálás adatokból PDF-be vagy bármilyen formátumba (word).
-	Az Export_PDf.java-ban a PDFben exportáláshoz szükséges kód van.
-	Az Employee_page-ben export gombra PDF formátumban kiexportálná az adatlapot. A kép szövegű objektum helyén az adott dolgozóhoz az adatbázisba felvitt kép jelenne meg. A kép alatt levő módosítás gombbal lehetne a képet módosítani.
-
 - Bejelentkezési funkció
 	MainPage.java-n név és jelszó mezők amikbe be lehet írni a nevet és jelszót, amiket majd a bejelentkezéshez összehasonlít a program az adatbázisban lévőkkel. A jelszó mezőben a karakterek el vannak rejtve. A bejelentkezés gomb megnyomásával meghívódik a Database.java-ban definiált connect metódusa az adatbázis objektum példányának ami csatlakozik az adatbázishoz, és az ugyanitt definiált login metódus, ami az összehasonlítást végzi. A sikertelen bejelentkezést egy felugró üzenet jelzi.
 
@@ -56,7 +52,7 @@ Rendszerspecifikáció
 	A külön oldalai a programnak mind külön fájlban vannak, és azon belül külön Classban, amik külön objektumokat képviselnek. Azokon belül az összes külön eleme az oldalaknak objektumokkal vannak megoldva. A Dolgozo.java-ban az adatbázisban szereplő dolgozók lennének objektumként megadva.
 
 - A működéshez szükséges interneten elérhető java Library-k beszerzése és projekthez adása.
-	A Libraries mappában a PDFben exportáláshoz szükséges pdfbox library, a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
+	A Libraries mappában a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
 
 ███5. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása.
 

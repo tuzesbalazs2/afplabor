@@ -46,6 +46,10 @@ public class ClientHandler extends SimpleChannelInboundHandler<String> {
                 //Employee_page.
                 AFP_Labor_A_Kliens.db.empage.betolt(msgsplit);
         }
+         if ("dolgozomodosit".equals(msgsplit[0])) {
+                //Employee_page.
+                AFP_Labor_A_Kliens.db.dolgozo_update(msgsplit);
+        }
         
     }
 

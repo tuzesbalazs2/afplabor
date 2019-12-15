@@ -101,9 +101,6 @@ public class Database {
             
         }
 
-             
-                         
-            
         
     }
 
@@ -205,7 +202,7 @@ public class Database {
 return "dolgozomodositjo";
             } catch (Exception e) {
               //System.out.println(e.getMessage());
-              return "dolgozomodosítHiba";
+              return "dolgozomodosíthiba";
               //JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }

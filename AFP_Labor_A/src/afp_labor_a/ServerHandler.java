@@ -105,7 +105,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
                 }
                                 if ("dolgozomodosit".equals(msgsplit[0])){
 //                AFP_Labor_A.db.connect();
-                c.writeAndFlush(AFP_Labor_A.db.dolgozomodosit(msgsplit));
+                c.writeAndFlush("dolgozomodosit" + "$$$" + AFP_Labor_A.db.dolgozomodosit(msgsplit) + "$$$" + '\n');
                 
           
 
