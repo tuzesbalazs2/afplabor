@@ -29,8 +29,6 @@ public class Employee_add extends javax.swing.JFrame {
         Button_felvitel = new javax.swing.JButton();
         Button_kilepes = new javax.swing.JButton();
         copyright = new javax.swing.JTextPane();
-        dolgozo_neve_szoveg = new javax.swing.JTextPane();
-        dolgozo_neve_input = new javax.swing.JTextField();
         dolgozo_nev = new javax.swing.JTextField();
         dolgozo_szul_ev = new javax.swing.JTextField();
         dolgozo_fizetes = new javax.swing.JTextField();
@@ -84,21 +82,6 @@ public class Employee_add extends javax.swing.JFrame {
         copyright.setText("Copyright mindenség");
         copyright.setFocusable(false);
 
-        dolgozo_neve_szoveg.setBackground(new java.awt.Color(0, 0, 0));
-        dolgozo_neve_szoveg.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
-        dolgozo_neve_szoveg.setForeground(new java.awt.Color(255, 255, 255));
-        dolgozo_neve_szoveg.setText("Dolgozó Neve");
-        dolgozo_neve_szoveg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        dolgozo_neve_szoveg.setFocusable(false);
-
-        dolgozo_neve_input.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
-        dolgozo_neve_input.setText("Név");
-        dolgozo_neve_input.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dolgozo_neve_inputActionPerformed(evt);
-            }
-        });
-
         dolgozo_nev.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
 
         dolgozo_szul_ev.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
@@ -141,13 +124,11 @@ public class Employee_add extends javax.swing.JFrame {
                         .addGap(34, 34, 34))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(dolgozo_neve_input, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dolgozo_neve_szoveg, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(dolgozo_kep, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(40, 40, 40)
                                 .addComponent(Button_feltolt)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(nev_szoveg)
                             .addComponent(szulev_szoveg)
@@ -178,11 +159,7 @@ public class Employee_add extends javax.swing.JFrame {
                         .addComponent(dolgozo_kep, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Button_feltolt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                        .addComponent(dolgozo_neve_szoveg, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(dolgozo_neve_input, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(307, 307, 307)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(copyright, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
@@ -205,17 +182,13 @@ public class Employee_add extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(dolgozo_utca_hsz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(utcahazszam_szoveg))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
                         .addComponent(Button_felvitel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(102, 102, 102))))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void dolgozo_neve_inputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dolgozo_neve_inputActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dolgozo_neve_inputActionPerformed
 
     private void Button_felvitelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_felvitelActionPerformed
     //System.out.println("az");
@@ -303,8 +276,6 @@ dispose();
     private javax.swing.JTextField dolgozo_fizetes;
     private javax.swing.JLabel dolgozo_kep;
     private javax.swing.JTextField dolgozo_nev;
-    private javax.swing.JTextField dolgozo_neve_input;
-    private javax.swing.JTextPane dolgozo_neve_szoveg;
     private javax.swing.JTextField dolgozo_szul_ev;
     private javax.swing.JTextField dolgozo_utca_hsz;
     private javax.swing.JTextField dolgozo_varos;

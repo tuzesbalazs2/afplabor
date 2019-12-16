@@ -53,27 +53,8 @@ public class Database {
         }
     }
 
-//    public void login(String username, String password) throws ClassNotFoundException {
       public void login(String[] bejelentkeztet) throws ClassNotFoundException {
 
-//        String q_username = null;
-//        String q_password = null;
-//
-//        try {
-//            Class.forName("com.mysql.jdbc.Driver");
-//            Statement st = this.conn.createStatement();
-//            ResultSet rs = st.executeQuery("SELECT * FROM felhasznalo WHERE username='"
-//                    + username + "' AND password='" + password + "'");
-//
-//            while (rs.next()) {
-//
-//                int id = rs.getInt("id");
-//                q_username = rs.getString("username");
-//                q_password = rs.getString("password");
-//
-//            }
-
-//            if ((q_username.equals((String)username)) && (q_password.equals((String)password))) {
         try {
             if ("bejelentkezesjo".equals((String)bejelentkeztet[1])) {
 
@@ -114,11 +95,22 @@ public class Database {
     
     
 
-    public void delete(String q) throws ClassNotFoundException {
+    public void dolgozo_delete(String[] dolgozotorles) throws ClassNotFoundException {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Statement st = this.conn.createStatement();
-            //TODO..
+
+           if ("dolgozotoroljo".equals((String)dolgozotorles[1])) {
+
+           System.out.println("Sikeres törlés");
+           JOptionPane.showMessageDialog(null, "Sikeres törlés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+
+            }        
+           if ("dolgozotorolhiba".equals((String)dolgozotorles[1])) {
+
+           System.out.println("Hiba a törlésnél!");
+           JOptionPane.showMessageDialog(null, "Hiba a törlésnél!", "Hiba", JOptionPane.ERROR_MESSAGE);
+
+            }      
+            
         } catch (Exception e) {
             System.out.println("Hiba a törlésnél");
             JOptionPane.showMessageDialog(null,"Hiba a törlésnél", "Hiba", JOptionPane.ERROR_MESSAGE);
@@ -126,20 +118,7 @@ public class Database {
     }
 
     public int dolgozo_insert(String[] dolgozofelvisz) throws ClassNotFoundException {
-        try {
-//            Class.forName("com.mysql.jdbc.Driver");
-//            Statement st = this.conn.createStatement();
-//            
-//           int rowCount = st.executeUpdate("INSERT INTO dolgozo (nev, szul_ev, fizetes, varos, utca_hsz)"
-//                    + " VALUES(" + "'" + nev + "'" + ", "
-//                                 + szul_ev + ", "
-//                                 + fizetes + ", "
-//                                 + "'" + varos + "'" + ", "
-//                                 + "'" + utca_hsz + "'" + ") ");
-//           
-//           if (rowCount > 0) {
-//               return rowCount;
-//           }         
+        try {   
 
 System.out.println("dolgozo_insert lefut!");
 
@@ -163,6 +142,32 @@ System.out.println("dolgozo_insert lefut!");
         }
         return 0;
     }
+    
+        public int dolgozo_update(String[] dolgozomodosit) throws ClassNotFoundException {
+        try {   
+
+System.out.println("dolgozo_update lefut!");
+
+            if ("dolgozomodositjo".equals((String)dolgozomodosit[1])) {
+
+                System.out.println("Sikeres módosítás");
+           JOptionPane.showMessageDialog(null, "Sikeres módosítás", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+
+            }        
+            if ("dolgozomodosíthiba".equals((String)dolgozomodosit[1])) {
+
+                System.out.println("Hiba a módosítás közben!");
+           JOptionPane.showMessageDialog(null, "Hiba a módosítás közben!", "Hiba", JOptionPane.ERROR_MESSAGE);
+
+            }      
+
+           
+        } catch (Exception e) {
+            System.out.println("Hiba a módosítás közben!");  
+        JOptionPane.showMessageDialog(null, "Hiba a módosítás közben!", "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+        return 0;
+    }
 
     public void update(String q) throws ClassNotFoundException {
         try {
@@ -175,22 +180,7 @@ System.out.println("dolgozo_insert lefut!");
     }
     
     public boolean reg_insert(String[] regisztraltat) throws ClassNotFoundException {
-        try {
-            
-//            Class.forName("com.mysql.jdbc.Driver");
-//            Statement st = this.conn.createStatement();
-//            
-//            ResultSet rs = st.executeQuery("SELECT COUNT(*) AS rc FROM felhasznalo WHERE username='" + username +"'");            
-//            rs.next();
-//            int rc = rs.getInt("rc");
-//            rs.close();
-//            if(rc > 0) {
-//                return false;
-//            } 
-//            
-//            if(st.executeUpdate("INSERT INTO felhasznalo (username, password) VALUES ('" + username + "', '" + password + "')" ) > 0) {
-//               return true;
-//            }
+        try {           
 
             System.out.println("reg_insert lefut!");
 

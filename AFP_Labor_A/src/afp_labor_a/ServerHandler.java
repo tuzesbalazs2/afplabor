@@ -103,12 +103,16 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
                 c.writeAndFlush("dolgozotolt" + "$$$" + AFP_Labor_A.db.employee_page(Integer.parseInt(msgsplit[1])) + "$$$" + '\n');
                 
                 }
-                                if ("dolgozomodosit".equals(msgsplit[0])){
+                if ("dolgozomodosit".equals(msgsplit[0])){
 //                AFP_Labor_A.db.connect();
-                c.writeAndFlush(AFP_Labor_A.db.dolgozomodosit(msgsplit));
+                c.writeAndFlush("dolgozomodosit" + "$$$" + AFP_Labor_A.db.dolgozomodosit(msgsplit) + "$$$" + '\n');
+                      
+                }
+                                
+                if ("dolgozotorol".equals(msgsplit[0])){
+                //AFP_Labor_A.db.connect();
+                c.writeAndFlush("dolgozotorol" + "$$$" + AFP_Labor_A.db.dolgozo_delete(Integer.parseInt(msgsplit[1])) + "$$$" + '\n');
                 
-          
-
                 }
                 //AFP_Labor_A.db.connect();
                 //for (;;) {

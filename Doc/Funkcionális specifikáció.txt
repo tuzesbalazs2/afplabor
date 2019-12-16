@@ -44,7 +44,6 @@ Pályázat nincs.
 - Dolgozók adatainak módosítása
 - A tárolt adatok: Név, Születési év, fizetés, Lakcím
 - Profilkép feltöltésének lehetősége.
-- Dokumentum exportálás adatokból PDF-be vagy bármilyen formátumba (word).
 - Bejelentkezési funkció
 - A kinézete az előzetesen elkészített Mockupra épüljön.
 	Az ablakok háttere zöld színű, a kilépés gombok pirosak, a fejléc szövegek háttere fekete és a szövegük fehér, az elemek mérete és elrendezése, száma, helyzete, akár funkciója, és az egész, nagyban hasonlít a Pencil nevű programban előzetesen megcsinált „mockup” kinézet kivitelezéséhez.
@@ -65,7 +64,7 @@ Pályázat nincs.
 	A külön oldalai a programnak mind külön fájlban vannak, és azon belül külön Classban, amik külön objektumokat képviselnek. Azokon belül az összes külön eleme az oldalaknak objektumokkal vannak megoldva. A Dolgozo.java-ban az adatbázisban szereplő dolgozók lennének objektumként megadva.
 
 - A működéshez szükséges interneten elérhető Java Library-k beszerzése és projekthez adása.
-	A Libraries mappában a PDFben exportáláshoz szükséges pdfbox library, a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
+	A Libraries mappában a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
 
 - Három rétegű alkalmazás legyen a program
 	A program kliens-szerver-adatbázis rétegekre bontva van, a működése megfelel a három rétegű alkalmazás modellnek.
@@ -154,9 +153,6 @@ listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el l
 	
 - Profilkép feltöltésének lehetősége.
 	Ez még nincs megvalósítva.
-	
-- Dokumentum exportálás adatokból PDF-be vagy bármilyen formátumba (word).
-	A dolgozók oldalán export gombra PDF formátumban kiexportálná az adatlapot. A kép szövegű objektum helyén az adott dolgozóhoz az adatbázisba felvitt kép jelenne meg. A kép alatt levő módosítás gombbal lehetne a képet módosítani.
 
 - Bejelentkezési funkció
 	A legelső oldalon név és jelszó mezők amikbe be lehet írni a nevet és jelszót, amiket majd a bejelentkezéshez összehasonlít a program az adatbázisban lévőkkel. A jelszó mezőben a karakterek el vannak rejtve. A bejelentkezés gomb megnyomásával csatlakozik a program az adatbázishoz, és az összehasonlítást elvégzi. A sikertelen bejelentkezést egy felugró üzenet jelzi.
@@ -184,7 +180,6 @@ listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el l
 	library - könyvtárak, amik a program funkcionalitását terjesztik ki
 	funkció - képesség ami a felhasználó általi használatra van a programon belül
 	Java - a programozási nyelv amiben a program készült.
-	pdf - formázott szöveget és különféle dokumentumokban használatos elemeket tartalmazható fájltípus
 	mappa - hely az informatikai tároló eszközön
 	NetBeans - fejlesztői környezet, többek között Java-hoz
 	mockup - programozás elkezdése előtt a megrendelőnek bemutatott tervrajz a kinézetre és néhány működési elemre

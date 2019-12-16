@@ -27,22 +27,33 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="363" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="207" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="regisztralas_szoveg" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="373" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jelszomegint_regisztracio" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jelszo_regisztracio" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="nev_regisztracio" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
-                                  </Group>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="Button_kesz" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jelszo_szoveg" min="-2" max="-2" attributes="0"/>
+                                          <Component id="nev_szoveg" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jelszo_regisztracio" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="nev_regisztracio" alignment="1" min="-2" pref="179" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jelszomegint_szoveg" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jelszomegint_regisztracio" min="-2" pref="179" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="357" max="-2" attributes="0"/>
@@ -70,14 +81,23 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="regisztralas_szoveg" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-              <Component id="nev_regisztracio" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="nev_regisztracio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="nev_szoveg" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jelszo_regisztracio" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jelszo_regisztracio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jelszo_szoveg" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jelszomegint_regisztracio" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jelszomegint_regisztracio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jelszomegint_szoveg" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               <Component id="Button_kesz" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="217" max="32767" attributes="0"/>
+              <EmptySpace pref="184" max="32767" attributes="0"/>
               <Component id="copyright" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -152,6 +172,30 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button_kilepesActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nev_szoveg">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="21" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="N&#xe9;v:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jelszo_szoveg">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="21" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Jelsz&#xf3;:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jelszomegint_szoveg">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="21" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Jelsz&#xf3; ism&#xe9;t:"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

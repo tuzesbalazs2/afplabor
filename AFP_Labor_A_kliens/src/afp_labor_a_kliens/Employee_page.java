@@ -38,7 +38,7 @@ public class Employee_page extends javax.swing.JFrame {
         dolgozo_kep = new javax.swing.JLabel();
         Button_kepmodositas = new javax.swing.JButton();
         Button_modositas = new javax.swing.JButton();
-        Button_export = new javax.swing.JButton();
+        Button_torles = new javax.swing.JButton();
         Button_kilepes = new javax.swing.JButton();
         copyright = new javax.swing.JTextPane();
         nev_szoveg = new javax.swing.JLabel();
@@ -57,7 +57,7 @@ public class Employee_page extends javax.swing.JFrame {
         dolgozoneve_szoveg.setBackground(new java.awt.Color(0, 0, 0));
         dolgozoneve_szoveg.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
         dolgozoneve_szoveg.setForeground(new java.awt.Color(255, 255, 255));
-        dolgozoneve_szoveg.setText("Dolgozó Neve");
+        dolgozoneve_szoveg.setText("Dolgozó Adatlapja");
         dolgozoneve_szoveg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         dolgozoneve_szoveg.setFocusable(false);
 
@@ -74,16 +74,17 @@ public class Employee_page extends javax.swing.JFrame {
             }
         });
 
-        Button_export.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        Button_export.setText("Export");
-        Button_export.addMouseListener(new java.awt.event.MouseAdapter() {
+        Button_torles.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        Button_torles.setForeground(new java.awt.Color(255, 0, 0));
+        Button_torles.setText("Törlés");
+        Button_torles.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                Button_exportMousePressed(evt);
+                Button_torlesMousePressed(evt);
             }
         });
-        Button_export.addActionListener(new java.awt.event.ActionListener() {
+        Button_torles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button_exportActionPerformed(evt);
+                Button_torlesActionPerformed(evt);
             }
         });
 
@@ -140,7 +141,7 @@ public class Employee_page extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(Button_kepmodositas)
                                 .addComponent(copyright, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(utcahazszam_szoveg)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,11 +162,11 @@ public class Employee_page extends javax.swing.JFrame {
                             .addComponent(fizetes_adat)
                             .addComponent(utcahazszam_adat, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(dolgozoneve_szoveg, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 406, Short.MAX_VALUE)
+                        .addComponent(dolgozoneve_szoveg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Button_modositas)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Button_export)))
+                        .addComponent(Button_torles)))
                 .addGap(18, 18, 18)
                 .addComponent(Button_kilepes)
                 .addContainerGap())
@@ -178,7 +179,7 @@ public class Employee_page extends javax.swing.JFrame {
                     .addComponent(dolgozoneve_szoveg, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Button_modositas)
-                        .addComponent(Button_export)
+                        .addComponent(Button_torles)
                         .addComponent(Button_kilepes)))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,15 +217,22 @@ public class Employee_page extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Button_exportMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_exportMousePressed
-//System.out.println("PDF létrehozva");     
-// TODO add your handling code here:
+    private void Button_torlesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_torlesMousePressed
 
-    }//GEN-LAST:event_Button_exportMousePressed
+    }//GEN-LAST:event_Button_torlesMousePressed
 
-    private void Button_exportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_exportActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Button_exportActionPerformed
+    private void Button_torlesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_torlesActionPerformed
+          try {
+
+AFP_Labor_A_Kliens.uzenet = "dolgozotorol$$$" +  ind;
+
+//JOptionPane.showMessageDialog(null,"Sikeres törlés!");
+            } catch (Exception e) {
+              System.out.println(e.getMessage());
+              JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+    
+    }//GEN-LAST:event_Button_torlesActionPerformed
 
     private void Button_kilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_kilepesActionPerformed
 dispose();        
@@ -232,19 +240,10 @@ dispose();
 
     private void Button_modositasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_modositasActionPerformed
           try {
-            
-//            PreparedStatement pstmt = AFP_Labor_A_Kliens.db.conn.prepareStatement("UPDATE dolgozo SET nev = ?, szul_ev = ?, fizetes = ?, varos = ?, utca_hsz = ? WHERE id = ?");
-//    pstmt.setString(1, nev_adat.getText());
-//    pstmt.setShort(2, Short.parseShort((szulev_adat.getText())));
-//    pstmt.setInt(3, Integer.parseInt(fizetes_adat.getText()));
-//    pstmt.setString(4, varos_adat.getText());
-//    pstmt.setString(5, utcahazszam_adat.getText());
-//    pstmt.setInt(6, Employee_list.index+1);
-//    pstmt.executeUpdate();
 
 AFP_Labor_A_Kliens.uzenet = "dolgozomodosit$$$" + nev_adat.getText() + "$$$" + szulev_adat.getText() + "$$$" + fizetes_adat.getText() + "$$$" + varos_adat.getText() + "$$$" + utcahazszam_adat.getText() + "$$$" +  ind;
 
-JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
+//JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
             } catch (Exception e) {
               System.out.println(e.getMessage());
               JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);
@@ -307,10 +306,10 @@ JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Button_export;
     private javax.swing.JButton Button_kepmodositas;
     private javax.swing.JButton Button_kilepes;
     private javax.swing.JButton Button_modositas;
+    private javax.swing.JButton Button_torles;
     private javax.swing.JTextPane copyright;
     private javax.swing.JLabel dolgozo_kep;
     private javax.swing.JTextPane dolgozoneve_szoveg;

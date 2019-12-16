@@ -101,9 +101,6 @@ public class Database {
             
         }
 
-             
-                         
-            
         
     }
 
@@ -152,14 +149,22 @@ public class Database {
         }
     }
 
-    public void delete(String q) throws ClassNotFoundException {
+    public String dolgozo_delete(int ind) throws ClassNotFoundException {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Statement st = this.conn.createStatement();
-            //TODO..
+//            Class.forName("com.mysql.jdbc.Driver");
+//            Statement st = this.conn.createStatement();
+//
+//            ResultSet rs = st.executeQuery("DELETE id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo LIMIT "+ind+",1");
+//            
+            PreparedStatement pstmt = AFP_Labor_A.db.conn.prepareStatement("DELETE FROM dolgozo WHERE id=? LIMIT 1");
+    pstmt.setInt(1, ind);
+    pstmt.executeUpdate();
+
+             return "dolgozotoroljo";
         } catch (Exception e) {
+            System.out.println("Hiba a törlésnél!");  
             JOptionPane.showMessageDialog(null,"Hiba a törlésnél", "Hiba", JOptionPane.ERROR_MESSAGE);
-        }
+        } return "dolgozotorolhiba";
     }
 
     public String dolgozo_insert(String nev, short szul_ev, int fizetes, String varos, String utca_hsz) throws ClassNotFoundException {
@@ -205,7 +210,7 @@ public class Database {
 return "dolgozomodositjo";
             } catch (Exception e) {
               //System.out.println(e.getMessage());
-              return "dolgozomodosítHiba";
+              return "dolgozomodosíthiba";
               //JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }

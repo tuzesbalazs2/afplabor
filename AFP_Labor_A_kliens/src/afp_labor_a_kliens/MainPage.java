@@ -40,6 +40,8 @@ public class MainPage extends javax.swing.JFrame {
         Button_regisztracio = new javax.swing.JButton();
         rendszer_szoveg = new javax.swing.JTextPane();
         copyright = new javax.swing.JTextPane();
+        nev_szoveg = new javax.swing.JLabel();
+        jelszo_szoveg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -89,6 +91,12 @@ public class MainPage extends javax.swing.JFrame {
         copyright.setText("Copyright mindenség");
         copyright.setFocusable(false);
 
+        nev_szoveg.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
+        nev_szoveg.setText("Név:");
+
+        jelszo_szoveg.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
+        jelszo_szoveg.setText("Jelszó:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -97,18 +105,25 @@ public class MainPage extends javax.swing.JFrame {
                 .addGap(292, 292, 292)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jelszo_bejelentkezes, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                            .addComponent(nev_bejelentkezes))
-                        .addGap(323, 323, 323))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(rendszer_szoveg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(231, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(Button_regisztracio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Button_bejelentkezes, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
-                        .addGap(358, 358, 358))))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jelszo_szoveg)
+                                    .addComponent(nev_szoveg))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jelszo_bejelentkezes, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+                                    .addComponent(nev_bejelentkezes))
+                                .addGap(323, 323, 323))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(Button_regisztracio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Button_bejelentkezes, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
+                                .addGap(358, 358, 358))))))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(copyright, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -120,14 +135,18 @@ public class MainPage extends javax.swing.JFrame {
                 .addGap(66, 66, 66)
                 .addComponent(rendszer_szoveg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(95, 95, 95)
-                .addComponent(nev_bejelentkezes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nev_bejelentkezes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nev_szoveg))
                 .addGap(18, 18, 18)
-                .addComponent(jelszo_bejelentkezes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jelszo_bejelentkezes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jelszo_szoveg))
                 .addGap(48, 48, 48)
                 .addComponent(Button_bejelentkezes)
                 .addGap(18, 18, 18)
                 .addComponent(Button_regisztracio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 174, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
                 .addComponent(copyright, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -235,7 +254,9 @@ String password = jelszo_bejelentkezes.getText();
     private javax.swing.JButton Button_regisztracio;
     private javax.swing.JTextPane copyright;
     private javax.swing.JPasswordField jelszo_bejelentkezes;
+    private javax.swing.JLabel jelszo_szoveg;
     private javax.swing.JTextField nev_bejelentkezes;
+    private javax.swing.JLabel nev_szoveg;
     private javax.swing.JTextPane rendszer_szoveg;
     // End of variables declaration//GEN-END:variables
 }
