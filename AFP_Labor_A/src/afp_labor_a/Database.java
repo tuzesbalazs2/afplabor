@@ -156,7 +156,7 @@ public class Database {
 //
 //            ResultSet rs = st.executeQuery("DELETE id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo LIMIT "+ind+",1");
 //            
-            PreparedStatement pstmt = AFP_Labor_A.db.conn.prepareStatement("DELETE FROM dolgozo WHERE id=? LIMIT 1");
+            PreparedStatement pstmt = AFP_Labor_A.db.conn.prepareStatement("DELETE FROM dolgozo WHERE id IN (SELECT id FROM (SELECT id FROM dolgozo ORDER BY id ASC LIMIT ?, 1) tmp)");
     pstmt.setInt(1, ind);
     pstmt.executeUpdate();
 

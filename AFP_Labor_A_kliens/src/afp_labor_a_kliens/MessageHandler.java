@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  *
  * @author Tüzes
  */
-public class Database {
+public class MessageHandler {
 
     private final String dbaddress;
     private final String dbusername;
@@ -24,7 +24,7 @@ public class Database {
     public Employee_list empList;
     public Employee_page empage;
 
-    public Database(String dbaddress, String database, String dbusername, String dbpassword) {
+    public MessageHandler(String dbaddress, String database, String dbusername, String dbpassword) {
         this.dbaddress = dbaddress;
         this.dbusername = dbusername;
         this.dbpassword = dbpassword;
@@ -102,7 +102,8 @@ public class Database {
 
            System.out.println("Sikeres törlés");
            JOptionPane.showMessageDialog(null, "Sikeres törlés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
-
+           empage.dispose();
+           AFP_Labor_A_Kliens.uzenet = "listazas";
             }        
            if ("dolgozotorolhiba".equals((String)dolgozotorles[1])) {
 
@@ -117,7 +118,7 @@ public class Database {
         }
     }
 
-    public int dolgozo_insert(String[] dolgozofelvisz) throws ClassNotFoundException {
+    public void dolgozo_insert(String[] dolgozofelvisz) throws ClassNotFoundException {
         try {   
 
 System.out.println("dolgozo_insert lefut!");
@@ -126,7 +127,7 @@ System.out.println("dolgozo_insert lefut!");
 
                 System.out.println("Sikeres feltöltés");
            JOptionPane.showMessageDialog(null, "Sikeres feltöltés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
-
+           AFP_Labor_A_Kliens.uzenet = "listazas";
             }        
             if ("dolgozofelvitelhiba".equals((String)dolgozofelvisz[1])) {
 
@@ -140,10 +141,10 @@ System.out.println("dolgozo_insert lefut!");
             System.out.println("Hiba a feltöltéssel!");  
         JOptionPane.showMessageDialog(null, "Hiba a feltöltéssel!", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
-        return 0;
+        //return 0;
     }
     
-        public int dolgozo_update(String[] dolgozomodosit) throws ClassNotFoundException {
+        public void dolgozo_update(String[] dolgozomodosit) throws ClassNotFoundException {
         try {   
 
 System.out.println("dolgozo_update lefut!");
@@ -152,7 +153,7 @@ System.out.println("dolgozo_update lefut!");
 
                 System.out.println("Sikeres módosítás");
            JOptionPane.showMessageDialog(null, "Sikeres módosítás", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
-
+           AFP_Labor_A_Kliens.uzenet = "listazas";
             }        
             if ("dolgozomodosíthiba".equals((String)dolgozomodosit[1])) {
 
@@ -166,7 +167,7 @@ System.out.println("dolgozo_update lefut!");
             System.out.println("Hiba a módosítás közben!");  
         JOptionPane.showMessageDialog(null, "Hiba a módosítás közben!", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
-        return 0;
+        //return 0;
     }
 
     public void update(String q) throws ClassNotFoundException {
@@ -179,7 +180,7 @@ System.out.println("dolgozo_update lefut!");
         }
     }
     
-    public boolean reg_insert(String[] regisztraltat) throws ClassNotFoundException {
+    public void reg_insert(String[] regisztraltat) throws ClassNotFoundException {
         try {           
 
             System.out.println("reg_insert lefut!");
@@ -207,6 +208,6 @@ System.out.println("dolgozo_update lefut!");
             System.out.println("Hiba a beszúrásnál");
             JOptionPane.showMessageDialog(null,"Hiba a beszúrásnál", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
-        return false;
+        //return false;
     }
 }

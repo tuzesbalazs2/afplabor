@@ -183,7 +183,7 @@ public class Employee_list extends javax.swing.JFrame {
         index = jList1.locationToIndex(evt.getPoint());
         System.out.println("index: "+index);
         
-            AFP_Labor_A_Kliens.db.dolgozoldal(index);
+            AFP_Labor_A_Kliens.mh.dolgozoldal(index);
             //Employee_page empage = new Employee_page();
             //empage.setVisible(true);
             //Employee_page.betolt();

@@ -25,7 +25,7 @@ public class AFP_Labor_A_Kliens {
     //public static InputStream stream = new ByteArrayOutputStream(uzenet.getBytes(StandardCharsets.UTF_8));
     //public static InputStream stream = new ByteArrayInputStream(uzenet.getBytes(StandardCharsets.UTF_8));
     
-    public static Database db = new Database(DB_ADDRESS, DB_NAME,
+    public static MessageHandler mh = new MessageHandler(DB_ADDRESS, DB_NAME,
             DB_USERNAME, DB_PASSWORD);
     /**
      * @param args the command line arguments
