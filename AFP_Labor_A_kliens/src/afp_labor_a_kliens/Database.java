@@ -95,11 +95,22 @@ public class Database {
     
     
 
-    public void delete(String q) throws ClassNotFoundException {
+    public void dolgozo_delete(String[] dolgozotorles) throws ClassNotFoundException {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Statement st = this.conn.createStatement();
-            //TODO..
+
+           if ("dolgozotoroljo".equals((String)dolgozotorles[1])) {
+
+           System.out.println("Sikeres törlés");
+           JOptionPane.showMessageDialog(null, "Sikeres törlés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+
+            }        
+           if ("dolgozotorolhiba".equals((String)dolgozotorles[1])) {
+
+           System.out.println("Hiba a törlésnél!");
+           JOptionPane.showMessageDialog(null, "Hiba a törlésnél!", "Hiba", JOptionPane.ERROR_MESSAGE);
+
+            }      
+            
         } catch (Exception e) {
             System.out.println("Hiba a törlésnél");
             JOptionPane.showMessageDialog(null,"Hiba a törlésnél", "Hiba", JOptionPane.ERROR_MESSAGE);
