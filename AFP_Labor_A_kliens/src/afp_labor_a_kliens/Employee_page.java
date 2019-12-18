@@ -326,7 +326,7 @@ AFP_Labor_A_Kliens.uzenet = "dolgozomodosit$$$" + nev_adat.getText() + "$$$" + s
     
     public void betolt(String[] msgsplit){
         try {
-            
+            if ("dolgozoadatjo".equals(msgsplit[1])) {
     //Statement st = AFP_Labor_A_Kliens.db.conn.createStatement();
             //ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo WHERE id="+ind);
             //rs.next();
@@ -335,6 +335,8 @@ AFP_Labor_A_Kliens.uzenet = "dolgozomodosit$$$" + nev_adat.getText() + "$$$" + s
             fizetes_adat.setText(msgsplit[3]);
             varos_adat.setText(msgsplit[4]);
             utcahazszam_adat.setText(msgsplit[5]);
+            }
+            else if ("dolgozoadathiba".equals(msgsplit[1])){JOptionPane.showMessageDialog(null, "Hiba a dolgozó adatainak betöltésekor!", "Hiba", JOptionPane.ERROR_MESSAGE);}
             } catch (Exception e) {
               System.out.println(e.getMessage());
         }

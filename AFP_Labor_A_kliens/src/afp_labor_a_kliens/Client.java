@@ -77,7 +77,8 @@ public final class Client {
             if (lastWriteFuture != null) {
                 lastWriteFuture.sync();
             }
-        } finally {
+        } catch(Exception e){JOptionPane.showMessageDialog(null, "NEm lehet csatlakozni a kiszolgálóhoz!!!", "Hiba", JOptionPane.ERROR_MESSAGE);}
+        finally {
             // The connection is closed automatically on shutdown.
             group.shutdownGracefully();
         }

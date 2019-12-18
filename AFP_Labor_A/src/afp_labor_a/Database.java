@@ -124,7 +124,7 @@ public class Database {
                 lista += (rs.getInt("id") + ", Név: " + rs.getString("nev") + ", Szül. év: " + rs.getInt("szul_ev") + ", Fizetés: " + rs.getInt("fizetes") + ", Város: " + rs.getString("varos") + ", Utca, házszám: " + rs.getString("utca_hsz") + "$$$");
             }
             //String l = String.join(",", lista);
-            return lista;
+            return "listajo"+"$$$"+lista;
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"Hiba történt");
             return "listahiba";
@@ -142,7 +142,7 @@ public class Database {
             ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo LIMIT "+ind+",1");
             rs.next();
             //String l = String.join(",", lista);
-            return (rs.getString("nev")+"$$$"+Integer.toString(rs.getInt("szul_ev"))+"$$$"+Integer.toString(rs.getInt("fizetes"))+"$$$"+rs.getString("varos")+"$$$"+rs.getString("utca_hsz"));
+            return "dolgozoadatjo"+"$$$"+(rs.getString("nev")+"$$$"+Integer.toString(rs.getInt("szul_ev"))+"$$$"+Integer.toString(rs.getInt("fizetes"))+"$$$"+rs.getString("varos")+"$$$"+rs.getString("utca_hsz"));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,e);
             return "dolgozoadathiba";

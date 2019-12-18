@@ -17,16 +17,12 @@ public class AFP_Labor_A_Kliens {
     
     
 
-    public static final String DB_ADDRESS = "jdbc:mysql://85.10.205.173:3306/afplabor_rft";
-    public static final String DB_NAME = "afplabor_rft";
-    public static final String DB_USERNAME = "felhasznalo1";
-    public static final String DB_PASSWORD = "abcdefgh";
+    
     public static String uzenet = "";
     //public static InputStream stream = new ByteArrayOutputStream(uzenet.getBytes(StandardCharsets.UTF_8));
     //public static InputStream stream = new ByteArrayInputStream(uzenet.getBytes(StandardCharsets.UTF_8));
     
-    public static MessageHandler mh = new MessageHandler(DB_ADDRESS, DB_NAME,
-            DB_USERNAME, DB_PASSWORD);
+    public static MessageHandler mh = new MessageHandler();
     /**
      * @param args the command line arguments
      */

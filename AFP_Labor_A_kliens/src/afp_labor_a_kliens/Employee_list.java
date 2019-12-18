@@ -27,17 +27,18 @@ public class Employee_list extends javax.swing.JFrame {
 
     public void list(String[] lista) throws ClassNotFoundException {
         try {
-            
+            if ("listajo".equals(lista[1])) {
            DefaultListModel listModel = new DefaultListModel();
            //subList( 1, lista.length )
-           lista = Arrays.copyOfRange(lista, 1, lista.length);
+           lista = Arrays.copyOfRange(lista, 2, lista.length);
            for (String i : lista) { 
                listModel.addElement(i);
            }
            
            jList1.setModel(listModel);
             
-
+            }
+            else if ("listahiba".equals(lista[1])){JOptionPane.showMessageDialog(null,"Hiba a listázásdkor");}
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"Hiba történt");
         }

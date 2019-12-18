@@ -15,43 +15,14 @@ import javax.swing.JOptionPane;
  * @author Tüzes
  */
 public class MessageHandler {
-
-    private final String dbaddress;
-    private final String dbusername;
-    private final String dbpassword;
     
-    Connection conn;
     public Employee_list empList;
     public Employee_page empage;
 
-    public MessageHandler(String dbaddress, String database, String dbusername, String dbpassword) {
-        this.dbaddress = dbaddress;
-        this.dbusername = dbusername;
-        this.dbpassword = dbpassword;
+    public MessageHandler() {
+
     }
 
-    public void connect() throws SQLException, ClassNotFoundException {
-
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            this.conn = DriverManager.getConnection(dbaddress, dbusername, dbpassword);
-
-            if (conn != null) {
-                System.out.println("Connected to the database");
-            }
-
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Hiba az adatbázishoz kapcsolódáskor", "Hiba", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-    
-    public void close() {
-        try {
-            this.conn.close();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Hiba a kapdcsolat zárásakor", "Hiba", JOptionPane.ERROR_MESSAGE);
-        }
-    }
 
       public void login(String[] bejelentkeztet) throws ClassNotFoundException {
 
@@ -69,16 +40,6 @@ public class MessageHandler {
         }
     }
 
-    public void select(String q) throws ClassNotFoundException {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Statement st = this.conn.createStatement();
-            //TODO..
-        } catch (Exception e) {
-            System.out.println("Hiba történt");
-            JOptionPane.showMessageDialog(null,"Hiba történt");
-        }
-    }
     
     public void dolgozoldal(int ind) throws ClassNotFoundException {
         try {
@@ -170,15 +131,6 @@ System.out.println("dolgozo_update lefut!");
         //return 0;
     }
 
-    public void update(String q) throws ClassNotFoundException {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Statement st = this.conn.createStatement();
-        } catch (Exception e) {
-            System.out.println("Hiba a módosításnál");  
-            JOptionPane.showMessageDialog(null,"Hiba a módosításnál", "Hiba", JOptionPane.ERROR_MESSAGE);
-        }
-    }
     
     public void reg_insert(String[] regisztraltat) throws ClassNotFoundException {
         try {           
