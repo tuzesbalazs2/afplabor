@@ -101,7 +101,7 @@ public class MessageHandler {
            if ("dolgozotoroljo".equals((String)dolgozotorles[1])) {
 
            System.out.println("Sikeres törlés");
-           JOptionPane.showMessageDialog(null, "Sikeres törlés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+           JOptionPane.showMessageDialog(null, "Sikeres törlés", "Sikeres törlés", JOptionPane.PLAIN_MESSAGE);
            empage.dispose();
            AFP_Labor_A_Kliens.uzenet = "listazas";
             }        

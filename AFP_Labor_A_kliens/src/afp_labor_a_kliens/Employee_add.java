@@ -191,24 +191,45 @@ public class Employee_add extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_felvitelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_felvitelActionPerformed
-    //System.out.println("az");
-//    String nev = dolgozo_nev.getText();
-//    short szulev = Short.parseShort((dolgozo_szul_ev.getText()));
-//    int fizetes = Integer.parseInt(dolgozo_fizetes.getText());
-//    String varos = dolgozo_varos.getText();
-//    String utca_hsz = dolgozo_utca_hsz.getText();
+
     
     try{
-//       int insert = AFP_Labor_A_Kliens.db.dolgozo_insert(nev, szulev, varos, fizetes, utca_hsz);
-//        
-//        if (insert > 0) {
-//           System.out.println("Sikeres feltöltés");
-//           JOptionPane.showMessageDialog(null, "Sikeres feltöltés", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
-//        }
 
+        if (dolgozo_nev.getText().length() < 1 || !dolgozo_nev.getText().contains(" ")
+//      || !dolgozo_nev.getText().matches("[ a-zA-Z]+$")
+        || dolgozo_nev.getText().matches("[0-9]+$")
+        ){
+        System.out.println("A név hibásan van megadva!");  
+        JOptionPane.showMessageDialog(null, "A név hibásan van megadva!", "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+        else if (dolgozo_szul_ev.getText().length() < 4 || !dolgozo_szul_ev.getText().matches("[0-9]+$") || Integer.parseInt(dolgozo_szul_ev.getText()) < 1000 || Integer.parseInt(dolgozo_szul_ev.getText()) > 2000)
+        {
+        System.out.println("A születési év hibásan van megadva!");  
+        JOptionPane.showMessageDialog(null, "A születési év hibásan van megadva!", "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+        else if (dolgozo_fizetes.getText().length() < 1 || !dolgozo_fizetes.getText().matches("[0-9]+$") || Integer.parseInt(dolgozo_fizetes.getText()) < 7450)
+        {
+        System.out.println("A fizetés hibásan van megadva!");  
+        JOptionPane.showMessageDialog(null, "A fizetés hibásan van megadva!", "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+        else if (dolgozo_varos.getText().length() < 1
+        || dolgozo_varos.getText().matches("[0-9]+$")
+        ){
+        System.out.println("A város hibásan van megadva!");  
+        JOptionPane.showMessageDialog(null, "A város hibásan van megadva!", "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+        else if (dolgozo_utca_hsz.getText().length() < 1 || !dolgozo_utca_hsz.getText().contains(" ")
+//      || dolgozo_utca_hsz.getText().matches("[0-9]+$")
+        || !dolgozo_utca_hsz.getText().matches(".*\\d+.*")
+        ){
+        System.out.println("Az utca, házszám hibásan van megadva!");  
+        JOptionPane.showMessageDialog(null, "Az utca, házszám hibásan van megadva!", "Hiba", JOptionPane.ERROR_MESSAGE);
+        }    
+        else {
+        
 AFP_Labor_A_Kliens.uzenet = "dolgozofelvitel$$$" + dolgozo_nev.getText() + "$$$" + dolgozo_szul_ev.getText() + "$$$" + dolgozo_fizetes.getText() + "$$$" + dolgozo_varos.getText() + "$$$" + dolgozo_utca_hsz.getText();
 System.out.println("Button_felvitelActionPerformed lefut!");
-
+        }
     }
     catch(Exception e)
     {

@@ -22,8 +22,8 @@ public class AFP_Labor_A {
     public static boolean megkapta = false;
     
     public static void main(String[] args) {
-        MainPage m = new MainPage();
-        m.setVisible(true);
+//        MainPage m = new MainPage();
+//        m.setVisible(true);
         
         try {
             //EchoServer echoServer = new EchoServer();

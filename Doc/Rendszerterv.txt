@@ -172,7 +172,7 @@ Implementációs terv:
 		Client.java
 		ClientHandler.java
 		ClientInitializer.java
-		Database.java
+		MessageHandler.java
 		Dolgozo.java
 		Employee_add.java
 		Employee_list.java

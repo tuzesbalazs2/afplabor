@@ -240,8 +240,43 @@ dispose();
 
     private void Button_modositasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_modositasActionPerformed
           try {
-
+              
+        if (nev_adat.getText().length() < 1 || !nev_adat.getText().contains(" ")
+//      || !nev_adat.getText().matches("[ a-zA-Z]+$")
+        || nev_adat.getText().matches("[0-9]+$")
+        ){
+        System.out.println("A név hibásan van megadva!");  
+        JOptionPane.showMessageDialog(null, "A név hibásan van megadva!", "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+        else if (szulev_adat.getText().length() < 4 || !szulev_adat.getText().matches("[0-9]+$") || Integer.parseInt(szulev_adat.getText()) < 1000 || Integer.parseInt(szulev_adat.getText()) > 2000)
+        {
+        System.out.println("A születési év hibásan van megadva!");  
+        JOptionPane.showMessageDialog(null, "A születési év hibásan van megadva!", "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+        else if (fizetes_adat.getText().length() < 1 || !fizetes_adat.getText().matches("[0-9]+$") || Integer.parseInt(fizetes_adat.getText()) < 7450)
+        {
+        System.out.println("A fizetés hibásan van megadva!");  
+        JOptionPane.showMessageDialog(null, "A fizetés hibásan van megadva!", "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+        else if (varos_adat.getText().length() < 1
+        || varos_adat.getText().matches("[0-9]+$")
+        ){
+        System.out.println("A város hibásan van megadva!");  
+        JOptionPane.showMessageDialog(null, "A város hibásan van megadva!", "Hiba", JOptionPane.ERROR_MESSAGE);
+        }
+        else if (utcahazszam_adat.getText().length() < 1 || !utcahazszam_adat.getText().contains(" ")
+//      || utcahazszam_adat.getText().matches("[0-9]+$")
+        || !utcahazszam_adat.getText().matches(".*\\d+.*")
+        ){
+        System.out.println("Az utca, házszám hibásan van megadva!");  
+        JOptionPane.showMessageDialog(null, "Az utca, házszám hibásan van megadva!", "Hiba", JOptionPane.ERROR_MESSAGE);
+        }    
+        else {
+        
+              
+              
 AFP_Labor_A_Kliens.uzenet = "dolgozomodosit$$$" + nev_adat.getText() + "$$$" + szulev_adat.getText() + "$$$" + fizetes_adat.getText() + "$$$" + varos_adat.getText() + "$$$" + utcahazszam_adat.getText() + "$$$" +  ind;
+          }
 
 //JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
             } catch (Exception e) {

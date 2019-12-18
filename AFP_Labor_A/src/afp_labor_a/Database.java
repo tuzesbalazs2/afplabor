@@ -121,7 +121,7 @@ public class Database {
             Statement st = AFP_Labor_A.db.conn.createStatement();
             ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo");
             while (rs.next()) {
-                lista += (rs.getInt("id") + " " + rs.getString("nev") + " " + rs.getInt("szul_ev") + " " + rs.getInt("fizetes") + " " + rs.getString("varos") + " " + rs.getString("utca_hsz") + "$$$");
+                lista += (rs.getInt("id") + ", Név: " + rs.getString("nev") + ", Szül. év: " + rs.getInt("szul_ev") + ", Fizetés: " + rs.getInt("fizetes") + ", Város: " + rs.getString("varos") + ", Utca, házszám: " + rs.getString("utca_hsz") + "$$$");
             }
             //String l = String.join(",", lista);
             return lista;
