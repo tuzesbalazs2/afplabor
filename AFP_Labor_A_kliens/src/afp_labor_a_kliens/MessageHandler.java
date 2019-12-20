@@ -113,7 +113,7 @@ System.out.println("dolgozo_update lefut!");
             if ("dolgozomodositjo".equals((String)dolgozomodosit[1])) {
 
                 System.out.println("Sikeres módosítás");
-           JOptionPane.showMessageDialog(null, "Sikeres módosítás", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+           JOptionPane.showMessageDialog(null, "Sikeres módosítás", "Sikeres módosítás", JOptionPane.PLAIN_MESSAGE);
            AFP_Labor_A_Kliens.uzenet = "listazas";
             }        
             if ("dolgozomodosíthiba".equals((String)dolgozomodosit[1])) {

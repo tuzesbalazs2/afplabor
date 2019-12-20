@@ -46,7 +46,8 @@ public class Database {
             }
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Hiba az adatbázishoz kapcsolódáskor", "Hiba", JOptionPane.ERROR_MESSAGE);
+//            JOptionPane.showMessageDialog(null,"Hiba az adatbázishoz kapcsolódáskor", "Hiba", JOptionPane.ERROR_MESSAGE);
+              System.out.println("Hiba az adatbázishoz kapcsolódáskor");
         }
     }
     
@@ -54,7 +55,8 @@ public class Database {
         try {
             this.conn.close();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Hiba a kapdcsolat zárásakor", "Hiba", JOptionPane.ERROR_MESSAGE);
+//            JOptionPane.showMessageDialog(null,"Hiba a kapcsolat zárásakor", "Hiba", JOptionPane.ERROR_MESSAGE);
+              System.out.println("Hiba a kapcsolat zárásakor");
         }
     }
 
@@ -95,8 +97,9 @@ public class Database {
             
 
         } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null,"HIbás felhasználónév vagy jelszó");
-              JOptionPane.showMessageDialog(null,e);
+//            JOptionPane.showMessageDialog(null,"Hibás felhasználónév vagy jelszó");
+//              JOptionPane.showMessageDialog(null,e);
+              System.out.println("Hibás felhasználónév vagy jelszó");
             return "bejelentkezeshiba";
             
         }
@@ -110,7 +113,8 @@ public class Database {
             Statement st = this.conn.createStatement();
             //TODO..
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Hiba történt");
+//            JOptionPane.showMessageDialog(null,"Hiba történt");
+            System.out.println("Hiba történt");
         }
     }
     
@@ -119,14 +123,26 @@ public class Database {
             String lista = "";
             //String l = "";
             Statement st = AFP_Labor_A.db.conn.createStatement();
-            ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo");
+//            ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo");
+//            ResultSet rs = st.executeQuery("SELECT id, dolgozo.nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo LEFT JOIN varos ON dolgozo.varos=varos.nev");
+            ResultSet rs = st.executeQuery("SELECT id, dolgozo.nev, szul_ev, fizetes, varos, utca_hsz, irsz FROM dolgozo LEFT JOIN varos ON dolgozo.varos=varos.nev");
+            String iranyitoszam = "ismeretlen";
             while (rs.next()) {
-                lista += (rs.getInt("id") + ", Név: " + rs.getString("nev") + ", Szül. év: " + rs.getInt("szul_ev") + ", Fizetés: " + rs.getInt("fizetes") + ", Város: " + rs.getString("varos") + ", Utca, házszám: " + rs.getString("utca_hsz") + "$$$");
+                if (rs.getInt("irsz") == 0)
+                {
+                iranyitoszam = "ismeretlen";
+                }
+                else
+                {
+                iranyitoszam = rs.getString("irsz");
+                }
+                lista += (rs.getInt("id") + ", Név: " + rs.getString("nev") + ", Szül. év: " + rs.getInt("szul_ev") + ", Fizetés: " + rs.getInt("fizetes") + ", Város: " + rs.getString("varos") + ", Utca, házszám: " + rs.getString("utca_hsz") + ", Irányítószám: " + iranyitoszam + "$$$");
             }
             //String l = String.join(",", lista);
             return "listajo"+"$$$"+lista;
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Hiba történt");
+//            JOptionPane.showMessageDialog(null,"Hiba történt");
+            System.out.println("Hiba történt a listázás közben");
             return "listahiba";
         }
     }
@@ -144,7 +160,8 @@ public class Database {
             //String l = String.join(",", lista);
             return "dolgozoadatjo"+"$$$"+(rs.getString("nev")+"$$$"+Integer.toString(rs.getInt("szul_ev"))+"$$$"+Integer.toString(rs.getInt("fizetes"))+"$$$"+rs.getString("varos")+"$$$"+rs.getString("utca_hsz"));
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,e);
+//            JOptionPane.showMessageDialog(null,e);
+            System.out.println(e);
             return "dolgozoadathiba";
         }
     }
@@ -163,7 +180,7 @@ public class Database {
              return "dolgozotoroljo";
         } catch (Exception e) {
             System.out.println("Hiba a törlésnél!");  
-            JOptionPane.showMessageDialog(null,"Hiba a törlésnél", "Hiba", JOptionPane.ERROR_MESSAGE);
+//            JOptionPane.showMessageDialog(null,"Hiba a törlésnél", "Hiba", JOptionPane.ERROR_MESSAGE);
         } return "dolgozotorolhiba";
     }
 
@@ -185,8 +202,8 @@ public class Database {
            }         
            
         } catch (Exception e) {
-            System.out.println("Hiba a feltöltéssel!");  
-        JOptionPane.showMessageDialog(null, "Hiba a feltöltéssel!", "Hiba", JOptionPane.ERROR_MESSAGE);
+            System.out.println("Hiba a feltöltéssel!");
+//        JOptionPane.showMessageDialog(null, "Hiba a feltöltéssel!", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
 //        return 0;
           return "dolgozofelvitelhiba";
@@ -234,7 +251,8 @@ return "dolgozomodositjo";
             }
             
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Hiba a beszúrásnál", "Hiba", JOptionPane.ERROR_MESSAGE);
+//            JOptionPane.showMessageDialog(null,"Hiba a beszúrásnál", "Hiba", JOptionPane.ERROR_MESSAGE);
+            System.out.println("Hiba a beszúrásnál!");
         }
         return "regisztraciohiba";
     }

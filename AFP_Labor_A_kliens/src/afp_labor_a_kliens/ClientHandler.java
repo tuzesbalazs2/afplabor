@@ -22,8 +22,8 @@ public class ClientHandler extends SimpleChannelInboundHandler<String> {
        
        //String[] args = null;
        //SecureChatClient.main(args);
-       System.out.println("Sikeres feltöltés!");
-        JOptionPane.showMessageDialog(null, msg, "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+//       System.out.println("Sikeres feltöltés!");
+//        JOptionPane.showMessageDialog(null, msg, "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
         
         String[] msgsplit = {""};
         
