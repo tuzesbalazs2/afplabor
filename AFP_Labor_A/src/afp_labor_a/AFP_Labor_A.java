@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  */
 public class AFP_Labor_A {
     
-    public static final String DB_ADDRESS = "jdbc:mysql://85.10.205.173:3306/afplabor_rft";
+    public static final String DB_ADDRESS = "jdbc:mysql://85.10.205.173:3306/afplabor_rft?useSSL=false";
     public static final String DB_NAME = "afplabor_rft";
     public static final String DB_USERNAME = "felhasznalo1";
     public static final String DB_PASSWORD = "abcdefgh";

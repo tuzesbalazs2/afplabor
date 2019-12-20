@@ -89,7 +89,8 @@ public class Database {
 
              if ((q_username.equals((String)username)) && (q_password.equals((String)password))) {
                  
-                 return "bejelentkezesjo";
+                 System.out.println("Sikeres bejelentkezés!");
+                 return "bejelentkezesjo";                
              }
              
              else {return "bejelentkezesrossz";}

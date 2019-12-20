@@ -24,7 +24,7 @@ Az alábbi alap elvárások képezik ennek a teszttervnek az alapját:
 		
 		Tüzes Balázs (projekt manager és fejlesztõ)
 		Tüzes Dániel (projekt manager és fejlesztõ)
-		Tóth Zsolt (projekt manager és fejlesztõ)
+		Tóth Zsolt (projekt manager és fejlesztõ) (a program 2018-as verziójánál)
 
  4. A Tesztelési jegyzõkönyben található tesztek fajtái
 

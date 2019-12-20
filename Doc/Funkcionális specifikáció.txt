@@ -42,6 +42,7 @@ Pályázat nincs.
 - Dolgozók adatainak felvitele
 - Dolgozók adatainak tárolása
 - Dolgozók adatainak módosítása
+- Dolgozók adatainak törlése
 - A tárolt adatok: Név, Születési év, fizetés, Lakcím
 - Profilkép feltöltésének lehetősége.
 - Bejelentkezési funkció
@@ -61,10 +62,10 @@ Pályázat nincs.
 	Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor címen. Az adatok itt vannak tárolva és innen vannak kiolvasva.
 
 - A teljes projekt objektum-orientáltan lesz elkészítve, a kód további egyszerű fejlesztése érdekében.
-	A külön oldalai a programnak mind külön fájlban vannak, és azon belül külön Classban, amik külön objektumokat képviselnek. Azokon belül az összes külön eleme az oldalaknak objektumokkal vannak megoldva. A Dolgozo.java-ban az adatbázisban szereplő dolgozók lennének objektumként megadva.
+	A külön oldalai a programnak mind külön fájlban vannak, és azon belül külön Classban, amik külön objektumokat képviselnek. Azokon belül az összes külön eleme az oldalaknak objektumokkal vannak megoldva.
 
 - A működéshez szükséges interneten elérhető Java Library-k beszerzése és projekthez adása.
-	A Libraries mappában a MySQL adatbázis eléréséhez szükséges mysql-connector és az alap Java Development Kit 1.8 található.
+	A Libraries mappában a MySQL adatbázis eléréséhez szükséges mysql-connector, az alap Java Development Kit 1.8 és a Netty 4.1.43 található.
 
 - Három rétegű alkalmazás legyen a program
 	A program kliens-szerver-adatbázis rétegekre bontva van, a működése megfelel a három rétegű alkalmazás modellnek.
@@ -147,6 +148,8 @@ listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el l
 - Dolgozók adatainak módosítása
 	A lista elemekre való kattintáskor bejön a dolgozó oldala, a megfelelő dolgozó adatait fogja kilistázni az oldalra az alapján, hogy melyikre kattintottunk. Itt a kiválasztott dolgozó adatai lesznek módosítható módon, szövegdobozokban felsorolva, címkékkel ellátva, amik elmagyarázzák, hogy mik is azok. Az itt felül lévő módosítás gombbal lehet a beírt módosításokat felvinni az adatbázisba az eredeti adatok helyére.
 	A gomb megnyomásakor egy felugró üzenet jelzi, hogy az adatok az adatbázisban sikeresen módosításra kerültek-e vagy sem.
+
+- Dolgozók adatainak törlése
 
 - A tárolt adatok: Név, Születési év, Fizetés, Lakcím
 	Ezeknek az adatoknak van hely az adatbázisban és a programban is dolgozónként.

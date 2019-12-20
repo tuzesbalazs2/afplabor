@@ -15,7 +15,7 @@ amit nyomon lehet követni és rendesen dokumentálni
 
 
 A rendszer célja:
-	Dolgozók adatainak tárolása és visszaolvasása online adatbázisból hibátlanul. Új felhasználók és új dolgozók és ezek adatainak felvitele, módosítása és listaszerű megjelenítése. Hitelesítés bejelentkezéssel és regisztrációval.
+	Dolgozók adatainak tárolása és visszaolvasása online adatbázisból hibátlanul. Új felhasználók és új dolgozók és ezek adatainak felvitele, módosítása, törlése és listaszerű megjelenítése. Hitelesítés bejelentkezéssel és regisztrációval.
 	Nem cél semmi más ami nincs leírva, kivéve ha egyértelműen következik ezekből vagy magától értetődő.
 
 Projektterv:
@@ -25,7 +25,7 @@ Projektterv:
 		dokumentáló - dokumentációt írja
 		tesztelő - a program tesztelését végzi
 	Projektmunkások és felelősségeik
-		Tóth Zsolt - programozó, dokumentáló, csoportvezető  (a program 2018-as verziójánál)
+		Tóth Zsolt - programozó, dokumentáló, csoportvezető (a program 2018-as verziójánál)
 		Tüzes Balázs - programozó, dokumentáló, tesztelő
 		Tüzes Dániel - programozó, dokumentáló, tesztelő
 	Ütemterv
@@ -71,6 +71,9 @@ Funkcionális terv
 - Dolgozók adatainak módosítása
 	A lista elemekre való dupla kattintáskor bejön az Employee_page.java, aminek átadódik a public static index változó értéke, ami az éppen általunk kiválasztott dolgozó indexe a sorban, ami alapján a megfelelő dolgozó adatait fogja kilistázni az oldalra, nem az id alapján hanem az adatbázis táblában a sorszáma alapján. Itt a kiválasztott dolgozó adatai lesznek kijelezve módosítható módon, szövegdobozokban felsorolva, címkékkel ellátva, amik elmagyarázzák, hogy mik is azok. Az itt felül lévő módosítás gombbal lehet a beírt módosításokat felvinni az adatbázisba az eredeti adatok helyére. A gomb megnyomására az adatok elküldődnek a szerver programnak, ahol a ServerHandler.java channelRead0 metódusa megkapja, és meghívja a Database példány dolgozomodosit metódusát ami módosítja az adatbázisban a rekordot.
 	A gomb megnyomásakor egy felugró üzenet jelzi, hogy az adatok az adatbázisban sikeresen módosításra kerültek-e vagy sem.
+
+- Dolgozók adatainak törlése
+
 
 - A tárolt adatok: Név, Szül.év, fizetés, Lakcím
 	Az adatbázisban és a programban is megfelelő helyen, megfelelő típussal, megfelelő formátumban kerülhetnek tárolásra, megfelelő címkézéssel
@@ -119,13 +122,13 @@ Absztrakt domain modell:
 	Domainspecifikáció, fogalmak
 
 	Absztrakt komponensek, ezek kapcsolatai
-		Egy online adatbázis, a kiszolgáló program, ami kapcsolódik hozzá, és az ügyfél program ami a kiszolgálóhoz kapcsolódik. A programon belüli file-ok és komponensek (Dolgozo, Employee_add, Employee_list, Employee_page, MainPage, Registrtation) is kapcsolódnak egymáshoz. A programnak kliens és szerver oldali része is van amik kapcsolódnak egymáshoz.
+		Egy online adatbázis, a kiszolgáló program, ami kapcsolódik hozzá, és az ügyfél program ami a kiszolgálóhoz kapcsolódik. A programon belüli file-ok és komponensek (Dolgozo, Employee_add, Employee_list, Employee_page, MainPage, Registration) is kapcsolódnak egymáshoz. A programnak kliens és szerver oldali része is van, amik kapcsolódnak egymáshoz.
 
 Architekturális terv:
 	Egy architekturális tervezési minta
 		háromrétegű alkalmazás
 	Az alkalmazás rétegei, fő komponensei, ezek kapcsolatai
-		rétegei: adatbázis, szerver oldali program, kliens oldali program. fő komponensei: adatbázis, kliens program, szerver program, ezek kapcsolatai: mysql-connector-ral, netty-vel
+		rétegei: adatbázis, szerver oldali program, kliens oldali program. fő komponensei: adatbázis, kliens program, szerver program, ezek kapcsolatai: Mysql-Connector-ral, Netty-vel
 	Változások kezelése
 		kezelve vannak
 	Rendszer bővíthetősége
@@ -172,12 +175,12 @@ Implementációs terv:
 		Client.java
 		ClientHandler.java
 		ClientInitializer.java
-		MessageHandler.java
 		Dolgozo.java
 		Employee_add.java
 		Employee_list.java
 		Employee_page.java
 		MainPage.java
+		MessageHandler.java
 		Registration.java
 
 Tesztterv:
