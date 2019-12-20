@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
  * @author Tüzes
  */
 public class DatabaseTest {
-    
+    Database test = new Database("jdbc:mysql://85.10.205.173:3306/afplabor_rft?useSSL=false", "afplabor_rft", "felhasznalo1", "abcdefgh");
     public DatabaseTest() {
     }
     
@@ -61,7 +61,7 @@ public class DatabaseTest {
 //        String expResult = "";
 //        String result = instance.login(username, password);
 //        assertEquals(expResult, result);
-        Database test = new Database("jdbc:mysql://85.10.205.173:3306/afplabor_rft?useSSL=false", "afplabor_rft", "felhasznalo1", "abcdefgh");
+        test = new Database("jdbc:mysql://85.10.205.173:3306/afplabor_rft?useSSL=false", "afplabor_rft", "felhasznalo1", "abcdefgh");
         assertEquals("bejelentkezesjo", test.login("a", "a"));
         assertEquals("bejelentkezeshiba", test.login("ááááááááááá", "ááááááááááá"));        
 
@@ -85,47 +85,54 @@ public class DatabaseTest {
 //    /**
 //     * Test of list method, of class Database.
 //     */
-//    @Test
-//    public void testList() throws Exception {
-//        System.out.println("list");
-//        Database instance = null;
-//        String expResult = "";
-//        String result = instance.list();
-//        assertEquals(expResult, result);
-//    }
+    @Test
+    public void testList() throws Exception {
+        System.out.println("list");
+        //Database test = new Database("jdbc:mysql://85.10.205.173:3306/afplabor_rft?useSSL=false", "afplabor_rft", "felhasznalo1", "abcdefgh");
+        String[] msgsplit = {""};
+        msgsplit = test.list().split("\\$\\$\\$");
+        assertEquals("listajo", msgsplit[0]);
+        //assertEquals("bejelentkezeshiba", test.list());   
+    }
 //
 //    /**
 //     * Test of employee_page method, of class Database.
 //     */
-//    @Test
-//    public void testEmployee_page() throws Exception {
-//        System.out.println("employee_page");
+    @Test
+    public void testEmployee_page() throws Exception {
+        System.out.println("employee_page");
 //        int ind = 0;
 //        Database instance = null;
 //        String expResult = "";
 //        String result = instance.employee_page(ind);
 //        assertEquals(expResult, result);
-//    }
+            String[] msgsplit = {""};
+            msgsplit = test.employee_page(0).split("\\$\\$\\$");
+            assertEquals("dolgozoadatjo", msgsplit[0]);
+    }
 //
 //    /**
 //     * Test of dolgozo_delete method, of class Database.
 //     */
-//    @Test
-//    public void testDolgozo_delete() throws Exception {
-//        System.out.println("dolgozo_delete");
+    @Test
+    public void testDolgozo_delete() throws Exception {
+        System.out.println("dolgozo_delete");
 //        int ind = 0;
 //        Database instance = null;
 //        String expResult = "";
 //        String result = instance.dolgozo_delete(ind);
 //        assertEquals(expResult, result);
-//    }
+            String[] msgsplit = {""};
+            msgsplit = test.dolgozo_delete(0).split("\\$\\$\\$");
+            assertEquals("dolgozotoroljo", msgsplit[0]);
+    }
 //
 //    /**
 //     * Test of dolgozo_insert method, of class Database.
 //     */
-//    @Test
-//    public void testDolgozo_insert() throws Exception {
-//        System.out.println("dolgozo_insert");
+    @Test
+    public void testDolgozo_insert() throws Exception {
+        System.out.println("dolgozo_insert");
 //        String nev = "";
 //        short szul_ev = 0;
 //        int fizetes = 0;
@@ -135,7 +142,11 @@ public class DatabaseTest {
 //        String expResult = "";
 //        String result = instance.dolgozo_insert(nev, szul_ev, fizetes, varos, utca_hsz);
 //        assertEquals(expResult, result);
-//    }
+Short sdzulev = 10;
+         String[] msgsplit = {""};
+            msgsplit = test.dolgozo_insert("béla", sdzulev, 0, "vártalan", "utsz_hsz").split("\\$\\$\\$");
+            assertEquals("dolgozofelviteljo", msgsplit[0]);
+    }
 //
 //    /**
 //     * Test of dolgozomodosit method, of class Database.
