@@ -203,11 +203,10 @@ public class Registration extends javax.swing.JFrame {
             {
             JOptionPane.showMessageDialog(rootPane, "A jelszó nem egyezik a két mezőben!", "Hiba", JOptionPane.ERROR_MESSAGE);
             }
-            }
-            else
-            {
-            JOptionPane.showMessageDialog(rootPane, "A felhasználónév és a jelszó mezők egyike sem lehet üres!", "Hiba", JOptionPane.ERROR_MESSAGE);
-            }
+              }
+               else {
+               JOptionPane.showMessageDialog(rootPane, "A felhasználónév és a jelszó mezők egyike sem lehet üres!", "Hiba", JOptionPane.ERROR_MESSAGE);
+               }
 
         } catch (Exception ex) {
             Logger.getLogger(Registration.class.getName()).log(Level.SEVERE, null, ex);

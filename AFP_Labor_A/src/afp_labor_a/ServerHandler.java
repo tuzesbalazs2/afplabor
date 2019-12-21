@@ -82,35 +82,29 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
                 }
                 
                 if ("regisztracio".equals(msgsplit[0])){
-                //AFP_Labor_A.db.connect();
                 c.writeAndFlush("regisztracio" + "$$$" + AFP_Labor_A.db.reg_insert(msgsplit[1], msgsplit[2]) + "$$$" + '\n');
                 
                 }
                 
               if ("listazas".equals(msgsplit[0])){
-                //AFP_Labor_A.db.connect();
                 c.writeAndFlush("listazas" + "$$$" + AFP_Labor_A.db.list() + "$$$" + '\n');
                 
                 }
                 if ("dolgozofelvitel".equals(msgsplit[0])){
-                //AFP_Labor_A.db.connect();
                 c.writeAndFlush("dolgozofelvitel" + "$$$" + AFP_Labor_A.db.dolgozo_insert(msgsplit[1], Short.parseShort(msgsplit[2]), Integer.parseInt(msgsplit[3]), msgsplit[4], msgsplit[5]) + "$$$" + '\n');
                 System.out.println("dolgozo_insert meghívása lefut!");
                 
                 }
                 if ("dolgozotolt".equals(msgsplit[0])){
-                //AFP_Labor_A.db.connect();
                 c.writeAndFlush("dolgozotolt" + "$$$" + AFP_Labor_A.db.employee_page(Integer.parseInt(msgsplit[1])) + "$$$" + '\n');
                 
                 }
                 if ("dolgozomodosit".equals(msgsplit[0])){
-//                AFP_Labor_A.db.connect();
                 c.writeAndFlush("dolgozomodosit" + "$$$" + AFP_Labor_A.db.dolgozomodosit(msgsplit) + "$$$" + '\n');
                       
                 }
                                 
                 if ("dolgozotorol".equals(msgsplit[0])){
-                //AFP_Labor_A.db.connect();
                 c.writeAndFlush("dolgozotorol" + "$$$" + AFP_Labor_A.db.dolgozo_delete(Integer.parseInt(msgsplit[1])) + "$$$" + '\n');
                 
                 }

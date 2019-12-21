@@ -55,13 +55,8 @@ public class DatabaseTest {
     @Test
     public void testLogin() throws Exception {
         System.out.println("login");
-//        String username = "";
-//        String password = "";
-//        Database instance = null;
-//        String expResult = "";
-//        String result = instance.login(username, password);
-//        assertEquals(expResult, result);
-        test = new Database("jdbc:mysql://85.10.205.173:3306/afplabor_rft?useSSL=false", "afplabor_rft", "felhasznalo1", "abcdefgh");
+        
+//        test = new Database("jdbc:mysql://85.10.205.173:3306/afplabor_rft?useSSL=false", "afplabor_rft", "felhasznalo1", "abcdefgh");
         assertEquals("bejelentkezesjo", test.login("a", "a"));
         assertEquals("bejelentkezeshiba", test.login("ááááááááááá", "ááááááááááá"));        
 
@@ -69,19 +64,7 @@ public class DatabaseTest {
 //        fail("The test case is a prototype.");
     }
 
-//    /**
-//     * Test of select method, of class Database.
-//     */
-//    @Test
-//    public void testSelect() throws Exception {
-//        System.out.println("select");
-//        String q = "";
-//        Database instance = null;
-//        instance.select(q);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+
 //    /**
 //     * Test of list method, of class Database.
 //     */
@@ -101,11 +84,7 @@ public class DatabaseTest {
     @Test
     public void testEmployee_page() throws Exception {
         System.out.println("employee_page");
-//        int ind = 0;
-//        Database instance = null;
-//        String expResult = "";
-//        String result = instance.employee_page(ind);
-//        assertEquals(expResult, result);
+        
             String[] msgsplit = {""};
             msgsplit = test.employee_page(0).split("\\$\\$\\$");
             assertEquals("dolgozoadatjo", msgsplit[0]);
@@ -117,11 +96,7 @@ public class DatabaseTest {
     @Test
     public void testDolgozo_delete() throws Exception {
         System.out.println("dolgozo_delete");
-//        int ind = 0;
-//        Database instance = null;
-//        String expResult = "";
-//        String result = instance.dolgozo_delete(ind);
-//        assertEquals(expResult, result);
+        
             String[] msgsplit = {""};
             msgsplit = test.dolgozo_delete(0).split("\\$\\$\\$");
             assertEquals("dolgozotoroljo", msgsplit[0]);
@@ -133,46 +108,35 @@ public class DatabaseTest {
     @Test
     public void testDolgozo_insert() throws Exception {
         System.out.println("dolgozo_insert");
-//        String nev = "";
-//        short szul_ev = 0;
-//        int fizetes = 0;
-//        String varos = "";
-//        String utca_hsz = "";
-//        Database instance = null;
-//        String expResult = "";
-//        String result = instance.dolgozo_insert(nev, szul_ev, fizetes, varos, utca_hsz);
-//        assertEquals(expResult, result);
-Short sdzulev = 10;
+        
+Short sdzulev = 1990;
          String[] msgsplit = {""};
             msgsplit = test.dolgozo_insert("béla", sdzulev, 0, "vártalan", "utsz_hsz").split("\\$\\$\\$");
             assertEquals("dolgozofelviteljo", msgsplit[0]);
     }
-//
-//    /**
-//     * Test of dolgozomodosit method, of class Database.
-//     */
-//    @Test
-//    public void testDolgozomodosit() throws Exception {
-//        System.out.println("dolgozomodosit");
-//        String[] msgsplit = null;
-//        Database instance = null;
-//        String expResult = "";
-//        String result = instance.dolgozomodosit(msgsplit);
-//        assertEquals(expResult, result);
-//    }
-//
-//    /**
-//     * Test of reg_insert method, of class Database.
-//     */
-//    @Test
-//    public void testReg_insert() throws Exception {
-//        System.out.println("reg_insert");
-//        String username = "";
-//        String password = "";
-//        Database instance = null;
-//        String expResult = "";
-//        String result = instance.reg_insert(username, password);
-//        assertEquals(expResult, result);
-//    }
-//    
+
+    /**
+     * Test of dolgozomodosit method, of class Database.
+     */
+    @Test
+    public void testDolgozomodosit() throws Exception {
+        System.out.println("dolgozomodosit");
+         String[] stringthing = {"dolgozomodosit", "Tóth Béla", "1990", "20000", "Budapest", "József utca 10.", "1"};
+         String[] msgsplit = test.dolgozomodosit(stringthing).split("\\$\\$\\$");
+            assertEquals("dolgozomodositjo", msgsplit[0]);
+         String[] stringthing2 = {"dolgozomodosit", "Tóth Béla", "szülév", "fizetés", "Budapest", "József utca 10.", "1"};
+         String[] msgsplit2 = test.dolgozomodosit(stringthing2).split("\\$\\$\\$");
+            assertEquals("dolgozomodosíthiba", msgsplit2[0]);
+    }
+
+    /**
+     * Test of reg_insert method, of class Database.
+     */
+    @Test
+    public void testReg_insert() throws Exception {
+        System.out.println("reg_insert");
+
+        assertEquals("regisztraciorossz", test.reg_insert("d", "d"));
+    }
+    
 }

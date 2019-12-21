@@ -38,7 +38,7 @@ public class Employee_list extends javax.swing.JFrame {
            jList1.setModel(listModel);
             
             }
-            else if ("listahiba".equals(lista[1])){JOptionPane.showMessageDialog(null,"Hiba a listázásdkor");}
+            else if ("listahiba".equals(lista[1])){JOptionPane.showMessageDialog(null,"Hiba a listázáskor");}
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"Hiba történt");
         }

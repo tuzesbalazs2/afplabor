@@ -79,13 +79,6 @@ public class Database {
 
             }
 
-//            if ((q_username.equals((String)username)) && (q_password.equals((String)password))) {
-
-//                Employee_list empList = new Employee_list();
-//                empList.setVisible(true);
-                  
-
-//            }
 
              if ((q_username.equals((String)username)) && (q_password.equals((String)password))) {
                  
@@ -98,7 +91,6 @@ public class Database {
             
 
         } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null,"Hibás felhasználónév vagy jelszó");
 //              JOptionPane.showMessageDialog(null,e);
               System.out.println("Hibás felhasználónév vagy jelszó");
             return "bejelentkezeshiba";
@@ -114,7 +106,6 @@ public class Database {
             Statement st = this.conn.createStatement();
             //TODO..
         } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null,"Hiba történt");
             System.out.println("Hiba történt");
         }
     }
@@ -124,8 +115,6 @@ public class Database {
             String lista = "";
             //String l = "";
             Statement st = AFP_Labor_A.db.conn.createStatement();
-//            ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo");
-//            ResultSet rs = st.executeQuery("SELECT id, dolgozo.nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo LEFT JOIN varos ON dolgozo.varos=varos.nev");
             ResultSet rs = st.executeQuery("SELECT id, dolgozo.nev, szul_ev, fizetes, varos, utca_hsz, irsz FROM dolgozo LEFT JOIN varos ON dolgozo.varos=varos.nev");
             String iranyitoszam = "ismeretlen";
             while (rs.next()) {
@@ -142,7 +131,7 @@ public class Database {
             //String l = String.join(",", lista);
             return "listajo"+"$$$"+lista;
         } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null,"Hiba történt");
+
             System.out.println("Hiba történt a listázás közben");
             return "listahiba";
         }
@@ -169,11 +158,6 @@ public class Database {
 
     public String dolgozo_delete(int ind) throws ClassNotFoundException {
         try {
-//            Class.forName("com.mysql.jdbc.Driver");
-//            Statement st = this.conn.createStatement();
-//
-//            ResultSet rs = st.executeQuery("DELETE id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo LIMIT "+ind+",1");
-//            
             PreparedStatement pstmt = AFP_Labor_A.db.conn.prepareStatement("DELETE FROM dolgozo WHERE id IN (SELECT id FROM (SELECT id FROM dolgozo ORDER BY id ASC LIMIT ?, 1) tmp)");
     pstmt.setInt(1, ind);
     pstmt.executeUpdate();
@@ -181,7 +165,7 @@ public class Database {
              return "dolgozotoroljo";
         } catch (Exception e) {
             System.out.println("Hiba a törlésnél!");  
-//            JOptionPane.showMessageDialog(null,"Hiba a törlésnél", "Hiba", JOptionPane.ERROR_MESSAGE);
+
         } return "dolgozotorolhiba";
     }
 
@@ -204,7 +188,7 @@ public class Database {
            
         } catch (Exception e) {
             System.out.println("Hiba a feltöltéssel!");
-//        JOptionPane.showMessageDialog(null, "Hiba a feltöltéssel!", "Hiba", JOptionPane.ERROR_MESSAGE);
+
         }
 //        return 0;
           return "dolgozofelvitelhiba";
@@ -252,7 +236,7 @@ return "dolgozomodositjo";
             }
             
         } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null,"Hiba a beszúrásnál", "Hiba", JOptionPane.ERROR_MESSAGE);
+
             System.out.println("Hiba a beszúrásnál!");
         }
         return "regisztraciohiba";
