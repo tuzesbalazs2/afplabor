@@ -146,10 +146,11 @@ listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el l
 	A felvitt adatok határozatlan ideig az ingyenes online adatbázisban lesznek tárolva.	
 
 - Dolgozók adatainak módosítása
-	A lista elemekre való kattintáskor bejön a dolgozó oldala, a megfelelő dolgozó adatait fogja kilistázni az oldalra az alapján, hogy melyikre kattintottunk. Itt a kiválasztott dolgozó adatai lesznek módosítható módon, szövegdobozokban felsorolva, címkékkel ellátva, amik elmagyarázzák, hogy mik is azok. Az itt felül lévő módosítás gombbal lehet a beírt módosításokat felvinni az adatbázisba az eredeti adatok helyére.
+	A lista elemekre való dupla kattintáskor bejön a dolgozó oldala, a megfelelő dolgozó adatait fogja kilistázni az oldalra az alapján, hogy melyikre kattintottunk. Itt a kiválasztott dolgozó adatai lesznek módosítható módon, szövegdobozokban felsorolva, címkékkel ellátva, amik elmagyarázzák, hogy mik is azok. Az itt felül lévő módosítás gombbal lehet a beírt módosításokat felvinni az adatbázisba az eredeti adatok helyére.
 	A gomb megnyomásakor egy felugró üzenet jelzi, hogy az adatok az adatbázisban sikeresen módosításra kerültek-e vagy sem.
 
 - Dolgozók adatainak törlése
+	A dolgozó adatlapján a törlés gombra kattintva kitörlésre kerül az a bejegyzés.
 
 - A tárolt adatok: Név, Születési év, Fizetés, Lakcím
 	Ezeknek az adatoknak van hely az adatbázisban és a programban is dolgozónként.

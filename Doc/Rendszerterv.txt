@@ -73,7 +73,7 @@ Funkcionális terv
 	A gomb megnyomásakor egy felugró üzenet jelzi, hogy az adatok az adatbázisban sikeresen módosításra kerültek-e vagy sem.
 
 - Dolgozók adatainak törlése
-
+	Az Employee_page.java dolgozó oldalakon a törlés gombra való kattintással a szerver programnak elküldődik a törlés kérelme arra a dolgozóra vonatkozóan, ezután a szerver program ServerHandler.java channelRead0 metódusa megkapja és elindítja a Database osztály példányának  dolgozo_delete metódusát, ami ha sikeres akkor kitörlődik az adatbázisból a dolgozó rekordja, és visszaküldi a kliensprogramnak hogy sikeres volt a törlés, ahol felugró üzenet jelzi is ezt.
 
 - A tárolt adatok: Név, Szül.év, fizetés, Lakcím
 	Az adatbázisban és a programban is megfelelő helyen, megfelelő típussal, megfelelő formátumban kerülhetnek tárolásra, megfelelő címkézéssel
@@ -165,7 +165,6 @@ Implementációs terv:
 		Database.java
 	Üzleti logika osztályai
 		AFP_Labor_A.java
-		Dolgozo.java
 		MainPage.java
 		Server.java
 		ServerHandler.java
@@ -175,7 +174,6 @@ Implementációs terv:
 		Client.java
 		ClientHandler.java
 		ClientInitializer.java
-		Dolgozo.java
 		Employee_add.java
 		Employee_list.java
 		Employee_page.java
