@@ -9,22 +9,12 @@ import javax.swing.JOptionPane;
  * @author Tüzes
  */
 
-/**
- * Handles a client-side channel.
- */
+
 public class ClientHandler extends SimpleChannelInboundHandler<String> {
 
     @Override
     public void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
-        //System.err.println(msg);
-        //JOptionPane.showMessageDialog(null, "fakkk", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
-        //AFP_Labor_A_Kliens.uzenet = "megkapodott";
-       
-       //String[] args = null;
-       //SecureChatClient.main(args);
-//       System.out.println("Sikeres feltöltés!");
-//        JOptionPane.showMessageDialog(null, msg, "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
-        
+
         String[] msgsplit = {""};
         
         msgsplit = msg.split("\\$\\$\\$");
@@ -56,7 +46,7 @@ public class ClientHandler extends SimpleChannelInboundHandler<String> {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-        //JOptionPane.showMessageDialog(null, "fakkk", "Sikeres feltöltés", JOptionPane.PLAIN_MESSAGE);
+
         cause.printStackTrace();
         ctx.close();
     }

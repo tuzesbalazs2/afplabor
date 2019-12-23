@@ -226,7 +226,7 @@ public class Employee_page extends javax.swing.JFrame {
 
 AFP_Labor_A_Kliens.uzenet = "dolgozotorol$$$" +  ind;
 
-//JOptionPane.showMessageDialog(null,"Sikeres törlés!");
+
             } catch (Exception e) {
               System.out.println(e.getMessage());
               JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);
@@ -278,7 +278,7 @@ dispose();
 AFP_Labor_A_Kliens.uzenet = "dolgozomodosit$$$" + nev_adat.getText() + "$$$" + szulev_adat.getText() + "$$$" + fizetes_adat.getText() + "$$$" + varos_adat.getText() + "$$$" + utcahazszam_adat.getText() + "$$$" +  ind;
           }
 
-//JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
+        
             } catch (Exception e) {
               System.out.println(e.getMessage());
               JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);

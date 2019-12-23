@@ -22,29 +22,17 @@ import javax.swing.JOptionPane;
  * @author Tüzes
  */
 
-/**
- * Handles a server-side channel.
- */
+
 public class ServerHandler extends SimpleChannelInboundHandler<String> {
 
     static final ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
     @Override
     public void channelActive(final ChannelHandlerContext ctx) {
-        // Once session is secured, send a greeting and register the channel to the global channel
-        // list so the channel received the messages from others.
         ctx.pipeline().get(SslHandler.class).handshakeFuture().addListener(
                 new GenericFutureListener<Future<Channel>>() {
                     @Override
                     public void operationComplete(Future<Channel> future) throws Exception {
-                        //ctx.writeAndFlush("arghghgfhh\n");
-                        //ctx.writeAndFlush(
-                        //        "Welcome to " + InetAddress.getLocalHost().getHostName() + " secure chat service!\n");
-                        //ctx.writeAndFlush(
-                        //        "Your session is protected by " +
-                        //                ctx.pipeline().get(SslHandler.class).engine().getSession().getCipherSuite() +
-                        //                " cipher suite.\n");
-                            //
                         channels.add(ctx.channel());
                     }
         });
@@ -52,21 +40,13 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
 
     @Override
     public void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
-        // Send the received message to all channels but the current one.
-//        if ("megkapodott".equals(msg.toLowerCase())) {
-//                AFP_Labor_A.megkapta = true;
-//                }
 
         String[] msgsplit = {""};
 
         for (Channel c: channels) {
-            //c.writeAndFlush("fakkk");
+            
             if (c == ctx.channel())
-//            if (c != ctx.channel()) {
-//                //for (;;) {
-//                c.writeAndFlush("[" + ctx.channel().remoteAddress() + "] " + msg + '\n');
-//               // }
-//            } else
+
                 
                 
             {
@@ -74,10 +54,7 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
                 
                 if ("bejelentkezes".equals(msgsplit[0])) {
                 
-                          //AFP_Labor_A.db.connect();
-//                          AFP_Labor_A.db.login(msgsplit[1], msgsplit[2]);
-                    //c.writeAndFlush(msg + " " + msgsplit[0] + " " + msgsplit[1] + '\n');
-//                    c.writeAndFlush("bejelentkezesjo" + '\n');
+
                       c.writeAndFlush("bejelentkezes" + "$$$" + AFP_Labor_A.db.login(msgsplit[1], msgsplit[2]) + "$$$" + '\n');
                 }
                 
@@ -108,35 +85,17 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
                 c.writeAndFlush("dolgozotorol" + "$$$" + AFP_Labor_A.db.dolgozo_delete(Integer.parseInt(msgsplit[1])) + "$$$" + '\n');
                 
                 }
-                //AFP_Labor_A.db.connect();
-                //for (;;) {
-                    //JOptionPane.showMessageDialog(null, msg, "Sikerestttttt", JOptionPane.PLAIN_MESSAGE);
-//                c.writeAndFlush("[you] " + msg + '\n');
-                 // c.writeAndFlush(msg + " " + msgsplit[0] + " "
-//                          + msgsplit[1]
-                         // + '\n');
-                  
-                //}
+
             }
             
         }
-//JOptionPane.showMessageDialog(null, msg, "msg", JOptionPane.PLAIN_MESSAGE);
-        // Close the connection if the client has sent 'bye'.
+
         
         
         if ("bye".equals(msg.toLowerCase())) {
             ctx.close();
         }
-//        if ("a".equals(msg.toLowerCase())) {
-//            //try{JOptionPane.showMessageDialog(null, msg, "msg", JOptionPane.PLAIN_MESSAGE);}catch(Exception e) {System.out.println(e);}
-//               for (Channel c: channels) {
-//               
-//               
-//                   c.writeAndFlush("fakk");
-//              
-//            }
-//            //ctx.writeAndFlush("fakk");
-//        }
+
     }
 
     @Override

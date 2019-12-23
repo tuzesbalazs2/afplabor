@@ -46,7 +46,7 @@ public class Database {
             }
 
         } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null,"Hiba az adatbázishoz kapcsolódáskor", "Hiba", JOptionPane.ERROR_MESSAGE);
+
               System.out.println("Hiba az adatbázishoz kapcsolódáskor");
         }
     }
@@ -55,7 +55,7 @@ public class Database {
         try {
             this.conn.close();
         } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null,"Hiba a kapcsolat zárásakor", "Hiba", JOptionPane.ERROR_MESSAGE);
+
               System.out.println("Hiba a kapcsolat zárásakor");
         }
     }
@@ -91,7 +91,7 @@ public class Database {
             
 
         } catch (Exception e) {
-//              JOptionPane.showMessageDialog(null,e);
+
               System.out.println("Hibás felhasználónév vagy jelszó");
             return "bejelentkezeshiba";
             
@@ -104,7 +104,7 @@ public class Database {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Statement st = this.conn.createStatement();
-            //TODO..
+
         } catch (Exception e) {
             System.out.println("Hiba történt");
         }
@@ -113,7 +113,7 @@ public class Database {
     public String list() throws ClassNotFoundException {
         try {
             String lista = "";
-            //String l = "";
+
             Statement st = AFP_Labor_A.db.conn.createStatement();
             ResultSet rs = st.executeQuery("SELECT id, dolgozo.nev, szul_ev, fizetes, varos, utca_hsz, irsz FROM dolgozo LEFT JOIN varos ON dolgozo.varos=varos.nev");
             String iranyitoszam = "ismeretlen";
@@ -128,7 +128,7 @@ public class Database {
                 }
                 lista += (rs.getInt("id") + ", Név: " + rs.getString("nev") + ", Szül. év: " + rs.getInt("szul_ev") + ", Fizetés: " + rs.getInt("fizetes") + ", Város: " + rs.getString("varos") + ", Utca, házszám: " + rs.getString("utca_hsz") + ", Irányítószám: " + iranyitoszam + "$$$");
             }
-            //String l = String.join(",", lista);
+
             return "listajo"+"$$$"+lista;
         } catch (Exception e) {
 
@@ -139,18 +139,15 @@ public class Database {
     
     public String employee_page(int ind) throws ClassNotFoundException {
         try {
-            //String dolgozo = "";
-            //String l = "";
-            //JOptionPane.showMessageDialog(null,ind);
-            //ind = 4;
+
             Statement st = AFP_Labor_A.db.conn.createStatement();
-            //ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo WHERE id="+ind);
+
             ResultSet rs = st.executeQuery("SELECT id, nev, szul_ev, fizetes, varos, utca_hsz FROM dolgozo LIMIT "+ind+",1");
             rs.next();
-            //String l = String.join(",", lista);
+
             return "dolgozoadatjo"+"$$$"+(rs.getString("nev")+"$$$"+Integer.toString(rs.getInt("szul_ev"))+"$$$"+Integer.toString(rs.getInt("fizetes"))+"$$$"+rs.getString("varos")+"$$$"+rs.getString("utca_hsz"));
         } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null,e);
+
             System.out.println(e);
             return "dolgozoadathiba";
         }
@@ -182,7 +179,7 @@ public class Database {
                                  + "'" + utca_hsz + "'" + ") ");
            
            if (rowCount > 0) {
-//               return rowCount;
+
                return "dolgozofelviteljo";
            }         
            
@@ -190,14 +187,13 @@ public class Database {
             System.out.println("Hiba a feltöltéssel!");
 
         }
-//        return 0;
+
           return "dolgozofelvitelhiba";
     }
 
     public String dolgozomodosit(String[] msgsplit) throws ClassNotFoundException {
         try {
-//            int aff = 4;//Integer.parseInt(msgsplit[6]);
-            //int aff = Integer.parseInt(msgsplit[6]);
+
             PreparedStatement pstmt = AFP_Labor_A.db.conn.prepareStatement("UPDATE dolgozo SET nev = ?, szul_ev = ?, fizetes = ?, varos = ?, utca_hsz = ? WHERE id IN (SELECT id FROM (SELECT id FROM dolgozo ORDER BY id ASC LIMIT ?, 1) tmp)");
     pstmt.setString(1, msgsplit[1]);
     pstmt.setShort(2, Short.parseShort(msgsplit[2]));
@@ -206,14 +202,14 @@ public class Database {
     pstmt.setString(5, msgsplit[5]);
     pstmt.setInt(6, Integer.parseInt(msgsplit[6]));
     pstmt.executeUpdate();
-//JOptionPane.showMessageDialog(null,"Sikeres módosítás!");
-//System.out.println("Sikeres módosítás!");
-//return (msgsplit[0] + "$$$" + msgsplit[1] + "$$$" + msgsplit[2] + "$$$" + msgsplit[3] + "$$$" + msgsplit[4] + "$$$" + msgsplit[5] + "$$$" + msgsplit[6] + "$$$" + '\n');
+
+
 return "dolgozomodositjo";
             } catch (Exception e) {
               //System.out.println(e.getMessage());
+              System.out.println("Hiba történt az adatok módosítása közben: " + e.getMessage());
               return "dolgozomodosíthiba";
-              //JOptionPane.showMessageDialog(null, "Hiba: " + e.getMessage(), "Hiba", JOptionPane.ERROR_MESSAGE);
+
         }
     }
     

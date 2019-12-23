@@ -165,33 +165,11 @@ public class Registration extends javax.swing.JFrame {
     }//GEN-LAST:event_regSubmitButtonActionPerformed
 
     private void Button_keszActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_keszActionPerformed
-//        String username = nev_regisztracio.getText();
-//        String password = String.copyValueOf(jelszo_regisztracio.getPassword());
-        
-//        try {
-//            AFP_Labor_A_Kliens.db.connect();
-//            if(AFP_Labor_A_Kliens.db.reg_insert(username, password)) {
-//                JOptionPane.showMessageDialog(rootPane, "Sikeres Regisztráció!", "Sikeres regisztráció", JOptionPane.PLAIN_MESSAGE);
-//            } else {
-//                JOptionPane.showMessageDialog(rootPane, "Sikertelen regisztráció: Már létezik ilyen felhasználónév.", "Hiba", JOptionPane.ERROR_MESSAGE);
-//            }
-//            AFP_Labor_A_Kliens.db.close();
-            
-            //db.reg_insert(username, password);
+
             
                     try {
                         
-                        
-            //AFP_Labor_A_Kliens.db.connect();
-//            if(AFP_Labor_A_Kliens.db.reg_insert(username, password)) {
-//                JOptionPane.showMessageDialog(rootPane, "Sikeres Regisztráció!", "Sikeres regisztráció", JOptionPane.PLAIN_MESSAGE);
-//            } else {
-//                JOptionPane.showMessageDialog(rootPane, "Sikertelen regisztráció: Már létezik ilyen felhasználónév.", "Hiba", JOptionPane.ERROR_MESSAGE);
-//            }
-            //AFP_Labor_A_Kliens.db.close();
-            
-//            if (String.copyValueOf(jelszo_regisztracio.getPassword()) == String.copyValueOf(jelszomegint_regisztracio.getPassword())){
-//      if (String.copyValueOf(jelszo_regisztracio.getPassword()) != "" && String.copyValueOf(jelszomegint_regisztracio.getPassword()) != ""){
+
           if (!"".equals(String.copyValueOf(jelszo_regisztracio.getPassword())) && !"".equals(String.copyValueOf(jelszomegint_regisztracio.getPassword()))){
             if (String.copyValueOf(jelszo_regisztracio.getPassword()) == null ? String.copyValueOf(jelszomegint_regisztracio.getPassword()) == null : String.copyValueOf(jelszo_regisztracio.getPassword()).equals(String.copyValueOf(jelszomegint_regisztracio.getPassword()))){
             

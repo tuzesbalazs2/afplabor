@@ -19,16 +19,14 @@ import javax.swing.JOptionPane;
  * @author Tüzes
  */
 
-/**
- * Simple SSL chat client modified from {@link TelnetClient}.
- */
+
 public final class Client {
 
     static final String HOST = System.getProperty("host", "127.0.0.1");
     static final int PORT = Integer.parseInt(System.getProperty("port", "8992"));
 
     public static void main(String[] args) throws Exception {
-        // Configure SSL.
+
         final SslContext sslCtx = SslContextBuilder.forClient()
             .trustManager(InsecureTrustManagerFactory.INSTANCE).build();
 
@@ -39,47 +37,38 @@ public final class Client {
              .channel(NioSocketChannel.class)
              .handler(new ClientInitializer(sslCtx));
 
-            // Start the connection attempt.
+
             Channel ch = b.connect(HOST, PORT).sync().channel();
 
-            // Read commands from the stdin.
+
             ChannelFuture lastWriteFuture = null;
-            //BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
             for (;;) {
-                //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.messagenez, "nez", JOptionPane.PLAIN_MESSAGE);
-              //if (AFP_Labor_A_Kliens.messagenez == true){
-                //String line = in.readLine();
+
+
                 String line = AFP_Labor_A_Kliens.uzenet;
                 if ("".equals(line.toLowerCase())) {
                     continue;
                 }
-                //if (line == null) {
-                //    break;
-                //}
-                //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.uzenet, "line", JOptionPane.PLAIN_MESSAGE);
-                // Sends the received line to the server.
+
                 lastWriteFuture = ch.writeAndFlush(line + "$$$" + "\r\n");
 
-                // If user typed the 'bye' command, wait until the server closes
-                // the connection.
-                
+
                 if ("bye".equals(line.toLowerCase())) {
                     ch.closeFuture().sync();
                     break;
                 }
-                //AFP_Labor_A_Kliens.messagenez = false;
-                //break;
-              //}
+
                 AFP_Labor_A_Kliens.uzenet = "";
             }
 
-            // Wait until all messages are flushed before closing the channel.
+
             if (lastWriteFuture != null) {
                 lastWriteFuture.sync();
             }
         } catch(Exception e){JOptionPane.showMessageDialog(null, "Nem lehet csatlakozni a kiszolgálóhoz!!!", "Hiba", JOptionPane.ERROR_MESSAGE);}
         finally {
-            // The connection is closed automatically on shutdown.
+
             group.shutdownGracefully();
         }
     }

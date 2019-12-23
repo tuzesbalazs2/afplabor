@@ -177,27 +177,13 @@ String password = jelszo_bejelentkezes.getText();
        {
        AFP_Labor_A_Kliens.uzenet = "bejelentkezes$$$" + nev_bejelentkezes.getText() + "$$$" + jelszo_bejelentkezes.getText();
         }
-       //AFP_Labor_A_Kliens.messagenez = true;
-       //String[] args = null;
-       //SecureChatClient.main(args);
-       
-       //AFP_Labor_A_Kliens.stream=new ByteArrayInputStream(fukkk.getBytes(StandardCharsets.UTF_8));
-       //JOptionPane.showMessageDialog(null, AFP_Labor_A_Kliens.uzenet, "AFP_Labor_A_Kliens.uzenet", JOptionPane.PLAIN_MESSAGE);
-       //InputStream stream = new ByteArrayInputStream(uzenet.getBytes(StandardCharsets.UTF_8));
-       //System.setIn("uzenet");
-       //StringBufferInputStream stream = new StringBufferInputStream("uzenet");
-       //System.setIn(stream);
-       //JOptionPane.showMessageDialog(null,System.out, "Hiba", JOptionPane.ERROR_MESSAGE);
-       //JOptionPane.showMessageDialog(null,System.setIn(stream), "Hiba", JOptionPane.ERROR_MESSAGE);
-      //AFP_Labor_A_Kliens.db.connect();
-      //AFP_Labor_A_Kliens.db.login(username, password);      
+    
      
       
    }
    catch(Exception e)
    {
-    //  JOptionPane.showMessageDialog(this,"Hibás felhasználónév és/vagy jelszó!",
-    //  "Hiba",JOptionPane.ERROR_MESSAGE);  
+
    System.out.println("Hibás felhasználónév és/vagy jelszó!");
    JOptionPane.showMessageDialog(null, "Hibás felhasználónév és/vagy jelszó!", "Hiba", JOptionPane.ERROR_MESSAGE);
    

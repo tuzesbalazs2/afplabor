@@ -27,27 +27,6 @@ public class DatabaseTest {
     public static void tearDownClass() {
     }
 
-//    /**
-//     * Test of connect method, of class Database.
-//     */
-//    @Test
-//    public void testConnect() throws Exception {
-//        System.out.println("connect");
-//        Database instance = null;
-//        instance.connect();
-//    }
-//
-//    /**
-//     * Test of close method, of class Database.
-//     */
-//    @Test
-//    public void testClose() {
-//        System.out.println("close");
-//        Database instance = null;
-//        instance.close();
-//    }
-
-
     
      /**
      * Test of login method, of class Database.
@@ -60,8 +39,6 @@ public class DatabaseTest {
         assertEquals("bejelentkezesjo", test.login("a", "a"));
         assertEquals("bejelentkezeshiba", test.login("ááááááááááá", "ááááááááááá"));        
 
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
     }
 
 

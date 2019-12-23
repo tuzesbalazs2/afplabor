@@ -22,17 +22,13 @@ public class AFP_Labor_A {
     public static boolean megkapta = false;
     
     public static void main(String[] args) {
-//        MainPage m = new MainPage();
-//        m.setVisible(true);
+
         
         try {
-            //EchoServer echoServer = new EchoServer();
-            //echoServer.main();
-            //EchoServer.main();
-            //EchoServer.echo();//echo();
-            Server.main(args);//AFP_Labor_A.db.connect();
-            //DiscardServer.main(args);
-           // System.out.println("Próbáltam konnektolni!");
+
+            Server.main(args);
+            
+            System.out.println("Az adatbázishoz való kapcsolódás megkezdve!");
         } catch (Exception ex) {
             Logger.getLogger(AFP_Labor_A.class.getName()).log(Level.SEVERE, null, ex);
         }
