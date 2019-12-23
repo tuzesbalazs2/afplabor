@@ -222,6 +222,30 @@ Alkalmazások fejlesztése és tervezése, Projekt labor I. projekt feladat
 	A tesztelés eredménye: Megfelelt
 	Megjegyzések:
 
+	A teszt-eset leírás és célja: Dolgozó hozzáadásának megkísérlése helyes adatokkal
+	A tesztelt folyamat/funkció leírása: Dolgozók adatainak felvitele funkció
+	A tesztelés elõfeltételei: A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz.
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Balázs
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye: A kliens a szövegdobozok tartalmát elküldi a szervernek, ami ezeket feltölti az adatbázisba,
+		majd errõl tájékoztatást küld a kliensnek, ami egy üzenetet ír ki a felhasználónak, jelezve az adatfelvitel sikerességét.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések:
+
+	A teszt-eset leírás és célja: Dolgozó hozzáadásának megkísérlése helytelen adatokkal
+	A tesztelt folyamat/funkció leírása: Dolgozók adatainak felvitele funkció
+	A tesztelés elõfeltételei: A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz.
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Balázs
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye:A program nem küldi el a szervernek a szövegdobozokban található betûsorokat,
+		emellett hibaüzenetet ír ki a felhasználónak, amiben tájékoztatja õt, hogy melyik mezõ(k)be lett beírva helytelen adat.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések:
+
 	A teszt-eset leírás és célja:
 	A tesztelt folyamat/funkció leírása:
 	A tesztelés elõfeltételei:
