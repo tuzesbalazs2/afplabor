@@ -145,6 +145,83 @@ Alkalmazások fejlesztése és tervezése, Projekt labor I. projekt feladat
 	A tesztelés eredménye: Megfelelt
 	Megjegyzések: -
 
+	A teszt-eset leírás és célja: A dolgozó adatait az oldalon beírt adatokra módosítani megfelelõ adatokkal
+	A tesztelt folyamat/funkció leírása: Dolgozó adatainak módosítása
+	A tesztelés elõfeltételei:A szerver és kliens programok futása. A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz. Az adtabázisba már felvitt dolgozó(k).Helyes adatokkal bejelentkezés.
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Dániel
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye:A dolgozó oldalon a Módosítás gombra való kattintás után a beírt adatok elküldõdnek a szerverhez, ami az adatbázisban ezekre módosítja az adatokat.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések:
+
+	A teszt-eset leírás és célja: A dolgozó adatait az oldalon beírt adatokra módosítani hibás adatokkal
+	A tesztelt folyamat/funkció leírása: Dolgozó adatainak módosítása
+	A tesztelés elõfeltételei:A szerver és kliens programok futása. A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz. Az adtabázisba már felvitt dolgozó(k).Helyes adatokkal bejelentkezés.
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Dániel
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye:A dolgozó oldalon a Módosítás gombra való kattintás után a beírt adatok nem küldõdnek a szerverhez, hanem hibaüzenet jelzi hogy hibás adat van beírva
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések:
+
+	A teszt-eset leírás és célja: A kiválasztott dolgozó adatlapjának törlése az adatbázisból
+	A tesztelt folyamat/funkció leírása: Dolgozó adatlapjának törlése
+	A tesztelés elõfeltételei:A szerver és kliens programok futása. A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz. Az adtabázisba már felvitt dolgozó(k).Helyes adatokkal bejelentkezés.
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Dániel
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye:A dolgozó oldalon a TÖRLÉS gombra való kattintás után a dolgozó adatai törlõdnek az adatbázisból.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések:
+
+	A teszt-eset leírás és célja: A szerver és kliens programok kapcsolatának ellenõrzése
+	A tesztelt folyamat/funkció leírása: Kiszolgáló és Ügyfél közötti kommunikáció
+	A tesztelés elõfeltételei:A szerver és kliens programok futása
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Dániel
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye:Egy szerver és egy kliens program gondtalanul tud kommunikálni amíg mindkettõ fut.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések:
+
+	A teszt-eset leírás és célja: A szerver és kliens programok kapcsolatának ellenõrzése egyszerre több kliens programmal
+	A tesztelt folyamat/funkció leírása: Kiszolgáló és több Ügyfél közötti kommunikáció
+	A tesztelés elõfeltételei:A szerver és több kliens program futása
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Dániel
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye:Egy szerver és több kliens program gondtalanul tudnak kommunikálni amíg futnak. A megfelelõ kliensekhez megfelelõ adatot küldõdnek.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések:
+
+	A teszt-eset leírás és célja: A dolgozók listájának manuális frissítésének tesztelése
+	A tesztelt folyamat/funkció leírása: Frissítés a dolgozók listájában
+	A tesztelés elõfeltételei:A szerver és kliens programok futása. A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz. Az adtabázisba már felvitt dolgozó(k).Helyes adatokkal bejelentkezés.
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Dániel
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye:A dolgozó listánál a Frissítés gombra való kattintás után mindig az akkori legaktuálisabb adatok jelennek meg.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések:
+
+	A teszt-eset leírás és célja: A dolgozók listájának autómatikus frissítésének tesztelése
+	A tesztelt folyamat/funkció leírása: Frissítés a dolgozók listájában
+	A tesztelés elõfeltételei:A szerver és kliens programok futása. A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz. Az adtabázisba már felvitt dolgozó(k). Helyes adatokkal bejelentkezés.
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Dániel
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye:A dolgozó listánál az új dolgozó felvitele, dologó törlése, dolgozó adatainak módosítása után mindig az akkori legaktuálisabb adatok jelennek meg.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések:
+
 	A teszt-eset leírás és célja:
 	A tesztelt folyamat/funkció leírása:
 	A tesztelés elõfeltételei:
