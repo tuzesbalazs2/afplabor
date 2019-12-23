@@ -3,7 +3,7 @@ Fejlesztési dokumentáció
 
 ███1. A rendszer céljai és nem céljai.
 
-	A rendszernek célja a követelmények között leírt funkciók megvalósítása, ami a 7. pontban van leírva. a rendszernek nem célja ezeket nem csinálni, és nem célja nem ezeket csinálni.
+	A rendszernek célja a követelmények között leírt funkciók megvalósítása, ami a 7. pontban van leírva. A rendszernek nem célja ezeket nem csinálni, és nem célja nem ezeket csinálni.
 
 
 ███2. Jelenlegi helyzet leírása.
@@ -51,6 +51,7 @@ Pályázat nincs.
 - Új felhasználó regisztrálásának lehetősége.
 - Programból kilépés és ablakok bezárásának lehetősége.
 - Dolgozók adatainak listaszerű és átlátható megjelenítése.
+- Szerver-kliens kapcsolat
 
 
 ███8. programnyelvi követelmények
@@ -58,8 +59,8 @@ Pályázat nincs.
 - A feladat meghatározottan Java nyelven fog készülni
 	NetBeans nevű Java fejlesztői környezetben készül a program.
 
-- mögötte pedig egy ingyenesen elérhető MySQL adatbázis fog működni az adatok tárolásához.
-	Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor címen. Az adatok itt vannak tárolva és innen vannak kiolvasva.
+- Mögötte pedig egy ingyenesen elérhető MySQL adatbázis fog működni az adatok tárolásához.
+	Az ingyenes online adatbázis a db4free webhelyen van tárolva, és ott van csatlakozva hozzá a 85.10.205.173:3306/afplabor_rft címen. Az adatok itt vannak tárolva és innen vannak kiolvasva.
 
 - A teljes projekt objektum-orientáltan lesz elkészítve, a kód további egyszerű fejlesztése érdekében.
 	A külön oldalai a programnak mind külön fájlban vannak, és azon belül külön Classban, amik külön objektumokat képviselnek. Azokon belül az összes külön eleme az oldalaknak objektumokkal vannak megoldva.
@@ -116,8 +117,8 @@ listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el l
 	Életszerű példa:
 			Egy még be nem regisztrált felhasználó elindítja a programot, ezután a Regisztráció gombra kattint, itt megadja a kívánt felhasználónevét és jelszavát, majd a Kész gombra kattint a regisztráció befejezéséhez.
 			Egy már beregisztrált felhasználó a programot elindítja, beírja a nevét és jelszavát. Ezután az átlag szintű felhasználó bejelentkezik és a lista megjelenik a dolgozókról. Ezután rákattint duplán valamelyikre és behozza az oldalt az adatokról
-	és ahol módosítani is lehet azokat. Ki is exportálhatja az export gombbal vagy akár új dolgozókat is felvihet a felvitel gombbal. Ezután beírja az adatokat és ezeket a felvitel gomb megnyomásával fel is viszi, tetszeni fog neki, hogy az adatok már fent is vannak az adatbázisban és minden naprakész.
-	A kilépés gombokkal tud az átlag szintű felhasználó kilépni de ezt már tudja mert egyértelmű.
+	és ahol módosítani is lehet azokat. Akár új dolgozókat is felvihet a felvitel gombbal. Ezután beírja az adatokat és ezeket a felvitel gomb megnyomásával fel is viszi, tetszeni fog neki, hogy az adatok már fent is vannak az adatbázisban és minden naprakész.
+	A kilépés gombokkal tud az átlag szintű felhasználó kilépni de ezt már tudja, mert egyértelmű.
 
 
 ███11. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
@@ -169,6 +170,9 @@ listaszerű megjelenítésére, meg módosítására, meg mindenre ami már el l
 	
 - Dolgozók adatainak listaszerű és átlátható megjelenítése.
 	Sikeres Bejelentkezés után a dolgozó lista jön be, ahol az adatbázisban lévő dolgozók és adataik lesznek kilistázva, az ablak megnyílásakor.
+
+- Szerver-kliens kapcsolat
+
 
 
 

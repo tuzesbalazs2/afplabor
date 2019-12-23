@@ -5,9 +5,9 @@ Tesztelési terv
 
  1. Tesztelési terv hatóköre, célja 
 
-A tesztelési terv célja a tesztelés teljes körûségének biztosítása, a tesztelés során alkalmazott eljárások és megoldások meghatározásával.
+A tesztelési terv célja a tesztelés teljeskörûségének biztosítása, a tesztelés során alkalmazott eljárások és megoldások meghatározásával.
 
-A teszt végrehajtásáért a projekten dolgozó csapat felel hajtja végre a meghatározott módokon.
+A teszt végrehajtásáért a projekten dolgozó csapat felel és a tesztelést õk hajtják végre a meghatározott módokon.
 
 
  2.  A tesztelési terv elvárásai
@@ -63,7 +63,7 @@ Az alábbi alap elvárások képezik ennek a teszttervnek az alapját:
  6. A Tesztelés folyamata:
 
 	A tesztelõk a tesztforgatókönyvnek megfelelõen elvégzik a tesztelést és az eredményt tesztjegyzõkönyvekben dokumentálják. 
-	A teszt kimenetelést minden esetben jelenteni kell a tesztkoordinátornak. A tesztkoordinátor a szakértõkkel együtt megoldást keres a problémákra,
+	A teszt kimenetelét minden esetben jelenteni kell a tesztkoordinátornak. A tesztkoordinátor a szakértõkkel együtt megoldást keres a problémákra,
 	majd frissíti a tesztforgatókönyvet. Ha a problémát megoldották, a tesztelõ újrakezdheti a tesztelést,
 	majd dokumentálja az eredményeket. Ha a hiba továbbra is fennáll,
 	és harmadik félen múlik a megoldása, tovább kell irányítani a problémát a projekt menedzser részére döntéshozatal szempontjából. 

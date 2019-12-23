@@ -166,7 +166,17 @@ String password = jelszo_bejelentkezes.getText();
 
 
    try {
+       
+       	if (nev_bejelentkezes.getText().length() < 1) {
+	System.out.println("A név mező nem lehet üres!");  
+        JOptionPane.showMessageDialog(null, "A név mező nem lehet üres!", "Hiba", JOptionPane.ERROR_MESSAGE);}
+	else if (jelszo_bejelentkezes.getText().length() < 1) {
+	System.out.println("A jelszó mező nem lehet üres!");  
+        JOptionPane.showMessageDialog(null, "A jelszó mező nem lehet üres!", "Hiba", JOptionPane.ERROR_MESSAGE);}
+	else
+       {
        AFP_Labor_A_Kliens.uzenet = "bejelentkezes$$$" + nev_bejelentkezes.getText() + "$$$" + jelszo_bejelentkezes.getText();
+        }
        //AFP_Labor_A_Kliens.messagenez = true;
        //String[] args = null;
        //SecureChatClient.main(args);

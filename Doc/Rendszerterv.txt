@@ -97,6 +97,9 @@ Funkcionális terv
 - Dolgozók adatainak listaszerű és átlátható megjelenítése.
 	Az Employee_list.java oldalon JList elem feltöltésre kerül az ablak megnyitásakor az adatbázisból kiolvasandó dolgozó adatokkal listaszerűen megjelenítve, átláthatóan. a Frissítés gombra kattintva a lista rögtön frissül, elénk tárva a frissült adatokat.
 
+- Szerver-kliens kapcsolat
+
+
 
 	Határ osztályok
 		{A határ osztályok (presenter) a képernyők tartalmát és funkcionalitását leíró osztályok.}

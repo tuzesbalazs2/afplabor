@@ -32,11 +32,23 @@ public class MessageHandler {
                 empList = new Employee_list();
                 empList.setVisible(true);
                 System.out.println("Sikeres bejelentkezés!");
-            }         
+            }        
+            if ("bejelentkezesrossz".equals((String)bejelentkeztet[1])) {
+
+
+                System.out.println("Hibás felhasználónév vagy jelszó");
+                JOptionPane.showMessageDialog(null,"Hibás felhasználónév vagy jelszó", "Hiba", JOptionPane.ERROR_MESSAGE);
+            }
+            if ("bejelentkezeshiba".equals((String)bejelentkeztet[1])) {
+
+
+                System.out.println("Hibás felhasználónév vagy jelszó");
+                JOptionPane.showMessageDialog(null,"Hibás felhasználónév vagy jelszó", "Hiba", JOptionPane.ERROR_MESSAGE);
+            }
 
         } catch (Exception e) {
             System.out.println("Hibás felhasználónév vagy jelszó");
-            JOptionPane.showMessageDialog(null,"Hibás felhasználónév vagy jelszó");
+            JOptionPane.showMessageDialog(null,"Hibás felhasználónév vagy jelszó", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -50,7 +62,7 @@ public class MessageHandler {
             //empage.ind = ind;
         } catch (Exception e) {
             System.out.println("Hiba történt");
-            JOptionPane.showMessageDialog(null,"Hiba történt");
+            JOptionPane.showMessageDialog(null,"Hiba történt", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
     }
     

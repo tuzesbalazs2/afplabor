@@ -51,6 +51,7 @@ Feladatai:
 		- Új felhasználó regisztrálásának lehetősége.
 		- Programból kilépés és ablakok bezárásának lehetősége.
 		- Dolgozók adatainak listaszerű és átlátható megjelenítése.
+		- Szerver-kliens kapcsolat
 
 
 ███	8. programnyelvi követelmények

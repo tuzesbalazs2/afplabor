@@ -62,3 +62,96 @@ Alkalmazások fejlesztése és tervezése, Projekt labor I. projekt feladat
 		valamint az internetkapcsolattól nagyban függ a sebessége.
 		Javasolt a késõbbiekben POSTGRESql vagy saját MySql adatbázis használata biztonságosabb kapcsolati forrással.
 		
+
+	A teszt-eset leírás és célja: Bejelentkezés megkísérlése helyes felhasználói adatokkal
+	A tesztelt folyamat/funkció leírása: Bejelentkezés
+	A tesztelés elõfeltételei: A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz. Az adtabázisba már beregisztrált felhasználó(k).
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Balázs
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye: A kliens a szövegdobozok tartalmát elküldi a szervernek, ami ezeket összehasonlítja az adatbázisban található felhasználónév/jelszó párokkal.
+		A szerver az adategyezésrõl tájékoztatja a kliens, ami ekkor megnyitja a Dolgozók listája oldalt.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések: -
+
+	A teszt-eset leírás és célja: Bejelentkezés megkísérlése helytelen felhasználói adatokkal a Bejelentkezés oldal szerver és kilens oldali hibakezelésének tesztelése végett.
+	A tesztelt folyamat/funkció leírása: Bejelentkezés
+	A tesztelés elõfeltételei: A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz. Az adtabázisba már beregisztrált felhasználó(k).
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Balázs
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye: A kliens a szövegdobozok tartalmát elküldi a szervernek, ami ezeket összehasonlítja az adatbázisban található felhasználónév/jelszó párokkal.
+		A szerver nem találja ezeket a felhasználói adatokat az adatbázisban, errõl tájékoztatja a kliens, ami egy hibaüzenetet ír ki a felhasználónak, amiben tájékozataja õt a bejelentkezés sikertelenségérõl.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések: -
+
+	A teszt-eset leírás és célja: Bejelentkezés megkísérlése üresen hagyott felhasználónév és jelszó mezõkkel a Bejelentkezés oldal kliens oldali hibakezelésének tesztelése végett.
+	A tesztelt folyamat/funkció leírása: Bejelentkezés
+	A tesztelés elõfeltételei: A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz.
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Balázs
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye: A kliens a szövegdobozok tartalmát nem küldi el a szervernek. Egy hibaüzenetet ír ki a felhasználónak, amiben tájékoztatja õt arról, hogy a felhasználónév és jelszó mezõk nem maradhatnak üresen.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések: -
+
+	A teszt-eset leírás és célja: Regisztráció megkísérlése helyes, az adatbázisba még fel nem vitt felhasználói adatokkal
+	A tesztelt folyamat/funkció leírása: Bejelentkezés
+	A tesztelés elõfeltételei: A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz.
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Balázs
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye: A kliens a szövegdobozok tartalmát elküldi a szervernek, ami ezeket összehasonlítja az adatbázisban található felhasználónév/jelszó párokkal.
+		A szerver nem találja ezeket a felhasználói adatokat az adatbázisban, ezért azokat feltölti az adatbázisba. Errõl tájékoztatást küld a kliensnek, ami egy üzenetet ír ki a felhasználónak, jelezve a regisztráció sikerességét.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések: -
+
+	A teszt-eset leírás és célja: Regisztráció megkísérlése már az adatbázisban lévõ felhasználói adatokkal
+	A tesztelt folyamat/funkció leírása: Bejelentkezés
+	A tesztelés elõfeltételei: A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz. Az adtabázisba már beregisztrált felhasználó(k).
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Balázs
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye: A kliens a szövegdobozok tartalmát elküldi a szervernek, ami ezeket összehasonlítja az adatbázisban található felhasználónév/jelszó párokkal.
+		A szerver észleli, hogy ezek a felhasználói adatok már léteznek az adtatbázisban. Errõl tájékoztatást küld a kliensnek, ami egy hibaüzenetet ír ki a felhasználónak, amiben tájékoztatja õt arról, hogy ilyen felhasználó már létezik.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések: -
+
+	A teszt-eset leírás és célja: Regisztráció megkísérlése a "Jelszó" és a "Jelszó ismét" mezõkbe írt nem egyezõ szöveggel a Regisztráció oldal kliens oldali hibakezelésének tesztelése végett.
+	A tesztelt folyamat/funkció leírása: Bejelentkezés
+	A tesztelés elõfeltételei: A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz.
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Balázs
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye: A program nem küldi el a szervernek a szövegdobozokban található betûsorokat,
+		emellett hibaüzenetet ír ki a felhasználónak, amiben tájékoztatja õt, hogy a "Jelszó" és a "Jelszó ismét" mezõkbe azonos betûsort kell írnia.
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések: -
+
+	A teszt-eset leírás és célja: A dolgozók adatainak lekérdezésének megkísérlése
+	A tesztelt folyamat/funkció leírása: Adatok listázása
+	A tesztelés elõfeltételei: A kliens kapcsolódása a szerverhez, a szerver kapcsolata az adtabázishoz. Az adtabázisba már felvitt dolgozó(k).
+	A tesztelés dátuma és idõpontja: 2019. 12. 23.
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek): Tüzes Balázs
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye: A Dolgozók listája oldal betöltésénél a kliens kapcsolódik a szerverhez, ami az adatbázisból lekérdezi az összes dolgozó adatait
+	A tesztelés eredménye: Megfelelt
+	Megjegyzések: -
+
+	A teszt-eset leírás és célja:
+	A tesztelt folyamat/funkció leírása:
+	A tesztelés elõfeltételei:
+	A tesztelés dátuma és idõpontja:
+	A tesztadatok típusa:
+	A tesztet végzõ személy(ek):
+	A tesztelt rendszer beállításai:
+	A teszt-eset elvárt eredménye:
+	A tesztelés eredménye: Megfelelt / Nem felelt meg / Megfelelt megjegyzésekkel
+	Megjegyzések:
