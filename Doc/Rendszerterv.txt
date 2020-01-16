@@ -42,7 +42,7 @@ Projektterv:
 
 Üzleti folyamatok modellje:
 	Üzleti szereplők
-		mi, Tanár úr
+		Tóth Zsolt (a program 2018-as verziójánál), Tüzes Balázs, Tüzes Dániel, Tajti Tibor tanár úr
 	Üzleti folyamatok
 		bemutatjuk a programot és a dokumentációt, Trello-t, Git-et
 	Üzleti entitások		
@@ -50,9 +50,9 @@ Projektterv:
 
 Követelmények:
 	Funkcionális követelmények
-		fel van sorolva a követelményspecifikációban és a funkcionális specifikációban
+		fel van sorolva a követelményspecifikációban (7. pont) és a funkcionális specifikációban (7. pont)
 	Nemfunkcionális követelmények
-		ezek is fel vannak sorolva a követelményspecifikációban és a funkcionális specifikációban.
+		ezek is fel vannak sorolva a követelményspecifikációban (9. pont) és a funkcionális specifikációban (9. pont).
 	Törvényi előírások, szabványok
 		nem tudunk róluk
 
@@ -79,7 +79,7 @@ Funkcionális terv
 	Az adatbázisban és a programban is megfelelő helyen, megfelelő típussal, megfelelő formátumban kerülhetnek tárolásra, megfelelő címkézéssel
 
 - Profilkép feltöltésének lehetősége.
-	Nincs megvalósítva, az Employee_add.java és az Employee_page.java filokban ott van a helye a profilképeknek, adatbázisban nincs hely kialakítva neki
+	Nincs megvalósítva, az Employee_add.java és az Employee_page.java file-okban ott van a helye a profilképeknek, adatbázisban nincs hely kialakítva neki
 
 - Bejelentkezési funkció
 	MainPage.java-n név és jelszó mezők amikbe be lehet írni a nevet és jelszót, amiket majd a bejelentkezéshez összehasonlít a program az adatbázisban lévőkkel. A jelszó mezőben a karakterek el vannak rejtve. A bejelentkezés gomb megnyomásával a hitelesítő adatok elküldődnek a szerver programnak, ahol a ServerHandler.java channelRead0 metódusa által meghívódik a Database.java osztály-ban definiált connect metódusa az adatbázis objektum példányának ami kapcsolatot létesít az adatbázissal, és az ugyanitt definiált login metódus ami az összehasonlítást végzi és eldönti, hogy a kliensnek engedi-e a belépést. A sikertelen bejelentkezést egy felugró üzenet jelzi.
@@ -98,11 +98,7 @@ Funkcionális terv
 	Az Employee_list.java oldalon JList elem feltöltésre kerül az ablak megnyitásakor az adatbázisból kiolvasandó dolgozó adatokkal listaszerűen megjelenítve, átláthatóan. a Frissítés gombra kattintva a lista rögtön frissül, elénk tárva a frissült adatokat.
 
 - Szerver-kliens kapcsolat
-
-
-
-	Határ osztályok
-		{A határ osztályok (presenter) a képernyők tartalmát és funkcionalitását leíró osztályok.}
+	A kliens az elindításakor megpróbál kapcsolódni a szerverhez, amennyiben ez nem sikerül, akkor azt hibaüzenettel jelzi.
 
 
 	Képernyőtervek
@@ -185,8 +181,8 @@ Implementációs terv:
 		Registration.java
 
 Tesztterv:
-	Teszteljük úgy mint ahogy a használati esetekben le van írva, mint ahogy a funkcióknál is le van írva, meg a követelményeknél is le van írva
-	Sikeres teszt kritériuma: ha azt csinálja, mint ami le van írva hogy csinálni a kell a követelményeknél és a funkcióknál.
+	Teszteljük úgy, ahogy a használati esetekben, a funkcióknál és a követelményeknél is le van írva
+	Sikeres teszt kritériuma: ha azt csinálja, mint ami le van írva a követelményeknél és a funkcióknál.
 	
 	BŐVEBBEN ITT: Tesztelesi terv.txt
 

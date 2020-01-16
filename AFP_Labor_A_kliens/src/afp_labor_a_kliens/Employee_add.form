@@ -155,6 +155,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Felt&#xf6;lt&#xe9;s"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button_feltoltActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button_felvitel">
       <Properties>

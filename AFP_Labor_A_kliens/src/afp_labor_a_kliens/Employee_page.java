@@ -65,6 +65,11 @@ public class Employee_page extends javax.swing.JFrame {
 
         Button_kepmodositas.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         Button_kepmodositas.setText("Módosítás");
+        Button_kepmodositas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_kepmodositasActionPerformed(evt);
+            }
+        });
 
         Button_modositas.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         Button_modositas.setText("Módosítás");
@@ -285,6 +290,10 @@ AFP_Labor_A_Kliens.uzenet = "dolgozomodosit$$$" + nev_adat.getText() + "$$$" + s
         }
     
     }//GEN-LAST:event_Button_modositasActionPerformed
+
+    private void Button_kepmodositasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_kepmodositasActionPerformed
+        JOptionPane.showMessageDialog(null, "Ez a funkció jelenleg nem elérhető!", "Üzenet", JOptionPane.ERROR_MESSAGE);
+    }//GEN-LAST:event_Button_kepmodositasActionPerformed
 
     /**
      * @param args the command line arguments

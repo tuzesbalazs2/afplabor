@@ -40,7 +40,11 @@ Az alábbi alap elvárások képezik ennek a teszttervnek az alapját:
 		A prototípustesztelés (vagy másik nevén modultesztelés) célja a rendszer már mûködõ moduljainak
 		önálló tesztelése, a modulon belüli hibák azonosításának és kiküszöbölésének érdekében.
 		
-		Elfogadási teszt: 
+		Elfogadási teszt:
+
+		Az elfogadási teszt (angolul User Acceptance Test) célja a rendszer teljes funkcionalitásának vizsgálata a felhasználók szemszögébõl. 
+
+		Integrációs teszt:
 
 		Az integrációs teszt célja a rendszer más rendszerekhez történõ illesztésének vizsgálata,
  		a több rendszereken keresztül átívelõ funkciók tesztelésének érdekében. 

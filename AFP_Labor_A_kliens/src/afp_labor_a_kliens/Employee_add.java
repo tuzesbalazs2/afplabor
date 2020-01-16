@@ -58,6 +58,11 @@ public class Employee_add extends javax.swing.JFrame {
 
         Button_feltolt.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         Button_feltolt.setText("Feltöltés");
+        Button_feltolt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_feltoltActionPerformed(evt);
+            }
+        });
 
         Button_felvitel.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         Button_felvitel.setText("Felvitel");
@@ -245,6 +250,10 @@ dispose();
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_formMouseClicked
+
+    private void Button_feltoltActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_feltoltActionPerformed
+        JOptionPane.showMessageDialog(null, "Ez a funkció jelenleg nem elérhető!", "Üzenet", JOptionPane.ERROR_MESSAGE);
+    }//GEN-LAST:event_Button_feltoltActionPerformed
 
 
     /**

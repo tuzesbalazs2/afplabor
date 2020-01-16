@@ -96,7 +96,7 @@ Három rétegű modell alapján, kliens-szerver-adatbázis rétegekre bontva kel
 ███	10. A projekt határideje
 
 
-A Rendszerfejlesztés Technológiája tárgy vizsgája előttig.
+A Rendszerfejlesztés Technológiája tárgy vizsgája előttig (2020.01.17.).
 
 
 
